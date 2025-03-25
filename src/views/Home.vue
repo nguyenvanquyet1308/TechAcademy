@@ -81,6 +81,94 @@
       </div>
     </section>
 
+    <!-- About Company Section -->
+    <section class="section about-company py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="section-title text-start mb-4">Về Techzen Academy</h2>
+            <div class="about-content">
+              <p class="mb-4">Tại Techzen Academy, chúng tôi mang đến chương trình đào tạo lập trình toàn diện, từ nền tảng cơ bản đến các công nghệ hiện đại. Đội ngũ giảng viên giàu kinh nghiệm của chúng tôi sẽ hướng dẫn bạn một cách tỉ mỉ và chi tiết, giúp bạn nắm vững kiến thức và phát triển kỹ năng lập trình chuyên nghiệp.</p>
+              <p>Chương trình học tập tại Techzen Academy không chỉ tập trung vào lý thuyết, mà còn chú trọng vào tình huống thực tế. Với sự chuẩn bị kỹ lưỡng từ Techzen Academy, bạn sẽ tự tin bước vào thế giới công nghệ và sẵn sàng chinh phục những cơ hội nghề nghiệp đầy triển vọng.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-image">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Techzen Academy Team" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="section instructors py-5">
+      <div class="container">
+        <h2 class="section-title mb-5">Đội ngũ giảng viên xuất sắc</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="instructor-card text-center h-100">
+              <div class="instructor-image mb-3">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nguyễn Văn Minh" class="img-fluid rounded-circle">
+              </div>
+              <h3 class="instructor-name">Nguyễn Văn Minh</h3>
+              <p class="instructor-title text-primary">Senior Developer</p>
+              <p class="instructor-desc">10+ năm kinh nghiệm phát triển ứng dụng Enterprise, chuyên gia Java và Spring Boot</p>
+              <div class="instructor-social">
+                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="instructor-card text-center h-100">
+              <div class="instructor-image mb-3">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Trần Thị Hương" class="img-fluid rounded-circle">
+              </div>
+              <h3 class="instructor-name">Trần Thị Hương</h3>
+              <p class="instructor-title text-primary">Frontend Expert</p>
+              <p class="instructor-desc">Chuyên gia về React, Vue.js và các công nghệ frontend hiện đại với 8 năm kinh nghiệm</p>
+              <div class="instructor-social">
+                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="instructor-card text-center h-100">
+              <div class="instructor-image mb-3">
+                <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Lê Quang Đạt" class="img-fluid rounded-circle">
+              </div>
+              <h3 class="instructor-name">Lê Quang Đạt</h3>
+              <p class="instructor-title text-primary">Data Scientist</p>
+              <p class="instructor-desc">Tiến sĩ về Khoa học dữ liệu, chuyên gia về Python, Machine Learning và AI</p>
+              <div class="instructor-social">
+                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="instructor-card text-center h-100">
+              <div class="instructor-image mb-3">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Phạm Minh Tâm" class="img-fluid rounded-circle">
+              </div>
+              <h3 class="instructor-name">Phạm Minh Tâm</h3>
+              <p class="instructor-title text-primary">DevOps Engineer</p>
+              <p class="instructor-desc">Chuyên gia về Cloud Computing, Docker, Kubernetes và CI/CD với 7 năm kinh nghiệm</p>
+              <div class="instructor-social">
+                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <router-link to="/instructors" class="btn btn-outline-primary">Xem tất cả giảng viên</router-link>
+        </div>
+      </div>
+    </section>
+
     <!-- Stats Section -->
     <div class="stats-section py-5 bg-primary text-white">
       <div class="container">
@@ -690,5 +778,81 @@ export default {
   .hero-content h1 {
     font-size: 2.2rem;
   }
+}
+
+.about-company {
+  background-color: #f8f9fa;
+}
+
+.about-content {
+  font-size: 1.05rem;
+  color: #495057;
+  line-height: 1.7;
+}
+
+.about-image img {
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.instructor-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.instructor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.instructor-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #4a6bff;
+  padding: 3px;
+}
+
+.instructor-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.instructor-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.instructor-desc {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.instructor-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(74, 107, 255, 0.1);
+  color: #4a6bff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  background: #4a6bff;
+  color: white;
 }
 </style> 

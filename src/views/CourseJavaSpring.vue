@@ -1,16 +1,15 @@
 <template>
   <div class="course-java">
     <div class="header-section py-5">
-      <ThreeJSHero />
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-7 mb-4 mb-lg-0">
-            <h1 class="course-title" :class="{ 'animated': isHeaderVisible }">Lập trình Java Spring Boot</h1>
-            <p class="course-description" :class="{ 'animated': isHeaderVisible }">
+            <h1 class="course-title">Lập trình Java Spring Boot</h1>
+            <p class="course-description">
               Khóa học Java Spring Boot toàn diện giúp bạn làm chủ framework Spring Boot và xây dựng các ứng dụng web hiện đại, 
               RESTful API và hệ thống backend mạnh mẽ. Từ người mới bắt đầu đến Java developer muốn nâng cao.
             </p>
-            <div class="course-meta" :class="{ 'animated': isHeaderVisible }">
+            <div class="course-meta">
               <div class="meta-item">
                 <i class="bi bi-clock me-2"></i>
                 <span>12 tuần (36 buổi)</span>
@@ -24,13 +23,13 @@
                 <span>Học online hoặc offline</span>
               </div>
             </div>
-            <div class="course-actions" :class="{ 'animated': isHeaderVisible }">
+            <div class="course-actions">
               <button class="btn btn-primary btn-lg me-2">Đăng ký học</button>
               <button class="btn btn-outline-light btn-lg">Tải syllabus</button>
             </div>
           </div>
           <div class="col-lg-5">
-            <div class="course-image" :class="{ 'animated': isHeaderVisible }">
+            <div class="course-image">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid">
             </div>
           </div>
@@ -41,298 +40,271 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-8">
-          <ParallaxEffect :speed="0.2" direction="up">
-            <section class="section mb-5 animate-on-scroll">
-              <h2 class="section-title mb-4">Tổng quan khóa học</h2>
-              <div class="course-overview">
-                <p>Khóa học Java Spring Boot cung cấp kiến thức toàn diện về Spring framework, tập trung vào Spring Boot để xây dựng các ứng dụng Java hiện đại. Bạn sẽ học cách phát triển RESTful API, kết nối cơ sở dữ liệu, xử lý bảo mật và triển khai ứng dụng thực tế.</p>
-                <p>Được thiết kế cho cả người mới bắt đầu và các developer muốn nâng cao kỹ năng, khóa học này kết hợp lý thuyết với các dự án thực tế, giúp bạn xây dựng portfolio ấn tượng và sẵn sàng cho các vị trí Java Developer.</p>
-              </div>
-            </section>
-          </ParallaxEffect>
+          <section class="section mb-5">
+            <h2 class="section-title mb-4">Tổng quan khóa học</h2>
+            <div class="course-overview">
+              <p>Khóa học Java Spring Boot cung cấp kiến thức toàn diện về Spring framework, tập trung vào Spring Boot để xây dựng các ứng dụng Java hiện đại. Bạn sẽ học cách phát triển RESTful API, kết nối cơ sở dữ liệu, xử lý bảo mật và triển khai ứng dụng thực tế.</p>
+              <p>Được thiết kế cho cả người mới bắt đầu và các developer muốn nâng cao kỹ năng, khóa học này kết hợp lý thuyết với các dự án thực tế, giúp bạn xây dựng portfolio ấn tượng và sẵn sàng cho các vị trí Java Developer.</p>
+            </div>
+          </section>
 
-          <ParallaxEffect :speed="0.2" direction="up">
-            <section class="section mb-5 animate-on-scroll">
-              <h2 class="section-title mb-4">Bạn sẽ học được gì?</h2>
-              <div class="row">
-                <div v-for="(benefit, index) in benefits" :key="index" class="col-md-6 mb-4">
-                  <div class="benefit-item"
-                    v-motion
-                    :initial="{ opacity: 0, y: 20 }"
-                    :visible="{ opacity: 1, y: 0, transition: { delay: index * 100, duration: 500 } }"
-                  >
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>{{ benefit }}</span>
-                  </div>
+          <section class="section mb-5">
+            <h2 class="section-title mb-4">Bạn sẽ học được gì?</h2>
+            <div class="row">
+              <div v-for="(benefit, index) in benefits" :key="index" class="col-md-6 mb-4">
+                <div class="benefit-item">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <span>{{ benefit }}</span>
                 </div>
               </div>
-            </section>
-          </ParallaxEffect>
+            </div>
+          </section>
 
-          <ParallaxEffect :speed="0.15" direction="up">
-            <section class="section mb-5 animate-on-scroll">
-              <h2 class="section-title mb-4">Nội dung khóa học</h2>
-              <div class="accordion" id="courseContent">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Module 1: Cơ bản về Spring Framework
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#courseContent">
-                    <div class="accordion-body">
-                      <ul class="curriculum-list">
-                        <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Framework và lịch sử phát triển</li>
-                        <li><i class="fas fa-check-circle"></i> Spring Core và Dependency Injection</li>
-                        <li><i class="fas fa-check-circle"></i> Cấu hình Spring với Java Config và Annotations</li>
-                        <li><i class="fas fa-check-circle"></i> Spring IoC Container và Bean Life Cycle</li>
-                        <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Module 2: Spring Boot Fundamentals
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#courseContent">
-                    <div class="accordion-body">
-                      <ul class="curriculum-list">
-                        <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Boot và lợi ích</li>
-                        <li><i class="fas fa-check-circle"></i> Tạo dự án Spring Boot với Spring Initializr</li>
-                        <li><i class="fas fa-check-circle"></i> Auto-configuration và Starters</li>
-                        <li><i class="fas fa-check-circle"></i> Cấu hình ứng dụng và properties</li>
-                        <li><i class="fas fa-check-circle"></i> Tích hợp với các công cụ build (Maven, Gradle)</li>
-                        <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Module 3: Spring MVC và RESTful Web Services
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#courseContent">
-                    <div class="accordion-body">
-                      <ul class="curriculum-list">
-                        <li><i class="fas fa-check-circle"></i> Spring MVC architecture</li>
-                        <li><i class="fas fa-check-circle"></i> Controllers, RequestMapping và ModelAndView</li>
-                        <li><i class="fas fa-check-circle"></i> Xây dựng RESTful APIs với Spring Boot</li>
-                        <li><i class="fas fa-check-circle"></i> Content negotiation và HTTP status codes</li>
-                        <li><i class="fas fa-check-circle"></i> Exception handling trong RESTful services</li>
-                        <li><i class="fas fa-check-circle"></i> API documentation với Swagger/OpenAPI</li>
-                        <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Module 4: Spring Data JPA và Database Access
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#courseContent">
-                    <div class="accordion-body">
-                      <ul class="curriculum-list">
-                        <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Data JPA</li>
-                        <li><i class="fas fa-check-circle"></i> Entity mapping và Repository pattern</li>
-                        <li><i class="fas fa-check-circle"></i> CRUD operations với Spring Data repositories</li>
-                        <li><i class="fas fa-check-circle"></i> Query methods và JPQL</li>
-                        <li><i class="fas fa-check-circle"></i> Transactions và @Transactional</li>
-                        <li><i class="fas fa-check-circle"></i> Tích hợp với các databases (MySQL, PostgreSQL, H2)</li>
-                        <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      Module 5: Spring Security
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#courseContent">
-                    <div class="accordion-body">
-                      <ul class="curriculum-list">
-                        <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Security</li>
-                        <li><i class="fas fa-check-circle"></i> Authentication và Authorization</li>
-                        <li><i class="fas fa-check-circle"></i> Form-based authentication</li>
-                        <li><i class="fas fa-check-circle"></i> JWT authentication cho RESTful services</li>
-                        <li><i class="fas fa-check-circle"></i> Role-based access control</li>
-                        <li><i class="fas fa-check-circle"></i> OAuth2 và Social login</li>
-                        <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                      Module 6: Testing trong Spring Boot
-                    </button>
-                  </h2>
-                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#courseContent">
-                    <div class="accordion-body">
-                      <ul class="curriculum-list">
-                        <li><i class="fas fa-check-circle"></i> Unit testing với JUnit và Mockito</li>
-                        <li><i class="fas fa-check-circle"></i> Integration testing trong Spring Boot</li>
-                        <li><i class="fas fa-check-circle"></i> Testing web controllers và REST APIs</li>
-                        <li><i class="fas fa-check-circle"></i> Testing database operations</li>
-                        <li><i class="fas fa-check-circle"></i> Test coverage và best practices</li>
-                        <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                      Module 7: Spring Boot Microservices
-                    </button>
-                  </h2>
-                  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#courseContent">
-                    <div class="accordion-body">
-                      <ul class="curriculum-list">
-                        <li><i class="fas fa-check-circle"></i> Kiến trúc Microservices và lợi ích</li>
-                        <li><i class="fas fa-check-circle"></i> Spring Cloud ecosystem</li>
-                        <li><i class="fas fa-check-circle"></i> Service Discovery với Eureka</li>
-                        <li><i class="fas fa-check-circle"></i> API Gateway với Spring Cloud Gateway</li>
-                        <li><i class="fas fa-check-circle"></i> Circuit Breaker pattern với Resilience4j</li>
-                        <li><i class="fas fa-check-circle"></i> Distributed tracing</li>
-                        <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingEight">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                      Module 8: Containerization và Deployment
-                    </button>
-                  </h2>
-                  <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#courseContent">
-                    <div class="accordion-body">
-                      <ul class="curriculum-list">
-                        <li><i class="fas fa-check-circle"></i> Containerization với Docker</li>
-                        <li><i class="fas fa-check-circle"></i> Đóng gói ứng dụng Spring Boot với Docker</li>
-                        <li><i class="fas fa-check-circle"></i> Orchestration với Kubernetes cơ bản</li>
-                        <li><i class="fas fa-check-circle"></i> Deploying Spring Boot trên cloud platforms</li>
-                        <li><i class="fas fa-check-circle"></i> Monitoring và logging</li>
-                        <li><i class="fas fa-check-circle"></i> CI/CD pipeline</li>
-                        <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                      </ul>
-                    </div>
+          <section class="section mb-5">
+            <h2 class="section-title mb-4">Nội dung khóa học</h2>
+            <div class="accordion" id="courseContent">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Module 1: Cơ bản về Spring Framework
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#courseContent">
+                  <div class="accordion-body">
+                    <ul class="curriculum-list">
+                      <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Framework và lịch sử phát triển</li>
+                      <li><i class="fas fa-check-circle"></i> Spring Core và Dependency Injection</li>
+                      <li><i class="fas fa-check-circle"></i> Cấu hình Spring với Java Config và Annotations</li>
+                      <li><i class="fas fa-check-circle"></i> Spring IoC Container và Bean Life Cycle</li>
+                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </section>
-          </ParallaxEffect>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Module 2: Spring Boot Fundamentals
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#courseContent">
+                  <div class="accordion-body">
+                    <ul class="curriculum-list">
+                      <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Boot và lợi ích</li>
+                      <li><i class="fas fa-check-circle"></i> Tạo dự án Spring Boot với Spring Initializr</li>
+                      <li><i class="fas fa-check-circle"></i> Auto-configuration và Starters</li>
+                      <li><i class="fas fa-check-circle"></i> Cấu hình ứng dụng và properties</li>
+                      <li><i class="fas fa-check-circle"></i> Tích hợp với các công cụ build (Maven, Gradle)</li>
+                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Module 3: Spring MVC và RESTful Web Services
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#courseContent">
+                  <div class="accordion-body">
+                    <ul class="curriculum-list">
+                      <li><i class="fas fa-check-circle"></i> Spring MVC architecture</li>
+                      <li><i class="fas fa-check-circle"></i> Controllers, RequestMapping và ModelAndView</li>
+                      <li><i class="fas fa-check-circle"></i> Xây dựng RESTful APIs với Spring Boot</li>
+                      <li><i class="fas fa-check-circle"></i> Content negotiation và HTTP status codes</li>
+                      <li><i class="fas fa-check-circle"></i> Exception handling trong RESTful services</li>
+                      <li><i class="fas fa-check-circle"></i> API documentation với Swagger/OpenAPI</li>
+                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Module 4: Spring Data JPA và Database Access
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#courseContent">
+                  <div class="accordion-body">
+                    <ul class="curriculum-list">
+                      <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Data JPA</li>
+                      <li><i class="fas fa-check-circle"></i> Entity mapping và Repository pattern</li>
+                      <li><i class="fas fa-check-circle"></i> CRUD operations với Spring Data repositories</li>
+                      <li><i class="fas fa-check-circle"></i> Query methods và JPQL</li>
+                      <li><i class="fas fa-check-circle"></i> Transactions và @Transactional</li>
+                      <li><i class="fas fa-check-circle"></i> Tích hợp với các databases (MySQL, PostgreSQL, H2)</li>
+                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Module 5: Spring Security
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#courseContent">
+                  <div class="accordion-body">
+                    <ul class="curriculum-list">
+                      <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Security</li>
+                      <li><i class="fas fa-check-circle"></i> Authentication và Authorization</li>
+                      <li><i class="fas fa-check-circle"></i> Form-based authentication</li>
+                      <li><i class="fas fa-check-circle"></i> JWT authentication cho RESTful services</li>
+                      <li><i class="fas fa-check-circle"></i> Role-based access control</li>
+                      <li><i class="fas fa-check-circle"></i> OAuth2 và Social login</li>
+                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Module 6: Testing trong Spring Boot
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#courseContent">
+                  <div class="accordion-body">
+                    <ul class="curriculum-list">
+                      <li><i class="fas fa-check-circle"></i> Unit testing với JUnit và Mockito</li>
+                      <li><i class="fas fa-check-circle"></i> Integration testing trong Spring Boot</li>
+                      <li><i class="fas fa-check-circle"></i> Testing web controllers và REST APIs</li>
+                      <li><i class="fas fa-check-circle"></i> Testing database operations</li>
+                      <li><i class="fas fa-check-circle"></i> Test coverage và best practices</li>
+                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Module 7: Spring Boot Microservices
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#courseContent">
+                  <div class="accordion-body">
+                    <ul class="curriculum-list">
+                      <li><i class="fas fa-check-circle"></i> Kiến trúc Microservices và lợi ích</li>
+                      <li><i class="fas fa-check-circle"></i> Spring Cloud ecosystem</li>
+                      <li><i class="fas fa-check-circle"></i> Service Discovery với Eureka</li>
+                      <li><i class="fas fa-check-circle"></i> API Gateway với Spring Cloud Gateway</li>
+                      <li><i class="fas fa-check-circle"></i> Circuit Breaker pattern với Resilience4j</li>
+                      <li><i class="fas fa-check-circle"></i> Distributed tracing</li>
+                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    Module 8: Containerization và Deployment
+                  </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#courseContent">
+                  <div class="accordion-body">
+                    <ul class="curriculum-list">
+                      <li><i class="fas fa-check-circle"></i> Containerization với Docker</li>
+                      <li><i class="fas fa-check-circle"></i> Đóng gói ứng dụng Spring Boot với Docker</li>
+                      <li><i class="fas fa-check-circle"></i> Orchestration với Kubernetes cơ bản</li>
+                      <li><i class="fas fa-check-circle"></i> Deploying Spring Boot trên cloud platforms</li>
+                      <li><i class="fas fa-check-circle"></i> Monitoring và logging</li>
+                      <li><i class="fas fa-check-circle"></i> CI/CD pipeline</li>
+                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
         <div class="col-lg-4">
           <div class="course-sidebar">
-            <ParallaxEffect :speed="0.25" direction="up">
-              <div class="price-section mb-4 animate-on-scroll">
-                <div class="price-card">
-                  <div class="price-header">
-                    <h3>Học phí</h3>
-                    <div class="price">
-                      <span class="amount">6.500.000</span>
-                      <span class="currency">VNĐ</span>
-                    </div>
-                  </div>
-                  <div class="price-features">
-                    <ul>
-                      <li><i class="fas fa-check"></i> Tham gia đầy đủ 36 buổi học</li>
-                      <li><i class="fas fa-check"></i> Tài liệu học tập</li>
-                      <li><i class="fas fa-check"></i> Hỗ trợ 24/7</li>
-                      <li><i class="fas fa-check"></i> Chứng chỉ hoàn thành</li>
-                    </ul>
-                  </div>
-                  <div class="price-cta">
-                    <button class="btn btn-primary w-100">Đăng ký ngay</button>
+            <div class="price-section mb-4">
+              <div class="price-card">
+                <div class="price-header">
+                  <h3>Học phí</h3>
+                  <div class="price">
+                    <span class="amount">6.500.000</span>
+                    <span class="currency">VNĐ</span>
                   </div>
                 </div>
+                <div class="price-features">
+                  <ul>
+                    <li><i class="fas fa-check"></i> Tham gia đầy đủ 36 buổi học</li>
+                    <li><i class="fas fa-check"></i> Tài liệu học tập</li>
+                    <li><i class="fas fa-check"></i> Hỗ trợ 24/7</li>
+                    <li><i class="fas fa-check"></i> Chứng chỉ hoàn thành</li>
+                  </ul>
+                </div>
+                <div class="price-cta">
+                  <button class="btn btn-primary w-100">Đăng ký ngay</button>
+                </div>
               </div>
-            </ParallaxEffect>
+            </div>
 
-            <ParallaxEffect :speed="0.2" direction="up">
-              <div class="instructor-section mb-4 animate-on-scroll">
-                <h3 class="sidebar-title">Giảng viên</h3>
-                <div class="instructor-card">
-                  <div class="instructor-avatar">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lê Văn Tuấn">
-                  </div>
-                  <div class="instructor-details">
-                    <h4>Lê Văn Tuấn</h4>
-                    <p class="instructor-title">Senior Java Developer</p>
-                    <p class="instructor-bio">10+ năm kinh nghiệm phát triển ứng dụng Java Enterprise</p>
-                  </div>
+            <div class="instructor-section mb-4">
+              <h3 class="sidebar-title">Giảng viên</h3>
+              <div class="instructor-card">
+                <div class="instructor-avatar">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lê Văn Tuấn">
+                </div>
+                <div class="instructor-details">
+                  <h4>Lê Văn Tuấn</h4>
+                  <p class="instructor-title">Senior Java Developer</p>
+                  <p class="instructor-bio">10+ năm kinh nghiệm phát triển ứng dụng Java Enterprise</p>
                 </div>
               </div>
-            </ParallaxEffect>
+            </div>
 
-            <ParallaxEffect :speed="0.15" direction="up">
-              <div class="promotions-section animate-on-scroll">
-                <h3 class="sidebar-title">Ưu đãi</h3>
-                <div class="promotion-item">
-                  <div class="promotion-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                  </div>
-                  <div class="promotion-content">
-                    <h4>Đăng ký sớm</h4>
-                    <p>Giảm 15% học phí khi đăng ký trước 15/05/2023</p>
-                  </div>
+            <div class="promotions-section">
+              <h3 class="sidebar-title">Ưu đãi</h3>
+              <div class="promotion-item">
+                <div class="promotion-icon">
+                  <i class="fas fa-calendar-alt"></i>
                 </div>
-                <div class="promotion-item">
-                  <div class="promotion-icon">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <div class="promotion-content">
-                    <h4>Đăng ký nhóm</h4>
-                    <p>Giảm 12% cho mỗi học viên khi đăng ký theo nhóm</p>
-                  </div>
+                <div class="promotion-content">
+                  <h4>Đăng ký sớm</h4>
+                  <p>Giảm 15% học phí khi đăng ký trước 15/05/2023</p>
                 </div>
               </div>
-            </ParallaxEffect>
+              <div class="promotion-item">
+                <div class="promotion-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="promotion-content">
+                  <h4>Đăng ký nhóm</h4>
+                  <p>Giảm 12% cho mỗi học viên khi đăng ký theo nhóm</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <ParallaxEffect :speed="0.1" direction="down">
-      <div class="cta-section bg-primary text-white">
-        <div class="container">
-          <div class="cta-content text-center">
-            <h2 class="mb-4">Sẵn sàng trở thành Spring Boot Developer?</h2>
-            <p class="mb-4">Đăng ký ngay hôm nay để nâng cao kỹ năng và mở ra cơ hội việc làm với mức lương hấp dẫn!</p>
-            <button class="btn btn-light btn-lg">Đăng ký ngay</button>
-          </div>
+    <div class="cta-section bg-primary text-white">
+      <div class="container">
+        <div class="cta-content text-center">
+          <h2 class="mb-4">Sẵn sàng trở thành Spring Boot Developer?</h2>
+          <p class="mb-4">Đăng ký ngay hôm nay để nâng cao kỹ năng và mở ra cơ hội việc làm với mức lương hấp dẫn!</p>
+          <button class="btn btn-light btn-lg">Đăng ký ngay</button>
         </div>
       </div>
-    </ParallaxEffect>
+    </div>
   </div>
 </template>
 
 <script>
-import ThreeJSHero from '@/components/ThreeJSHero.vue'
-import ParallaxEffect from '@/components/ParallaxEffect.vue'
-
 export default {
   name: 'CourseJavaSpringView',
-  components: {
-    ThreeJSHero,
-    ParallaxEffect
-  },
   data() {
     return {
-      isHeaderVisible: false,
-      animateSections: false,
       benefits: [
         'Nắm vững kiến trúc và các thành phần của Spring Framework',
         'Xây dựng RESTful APIs với Spring Boot',
