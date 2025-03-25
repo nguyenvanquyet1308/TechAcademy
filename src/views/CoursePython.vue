@@ -1,353 +1,148 @@
 <template>
-  <div class="course-detail">
-    <!-- Header Section -->
-    <section class="header-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <h1 class="course-title">Python Programming</h1>
-            <p class="course-description">
-              Khóa học Python toàn diện từ cơ bản đến nâng cao, giúp bạn xây dựng nền tảng vững chắc 
-              và tạo ra các ứng dụng thực tế trong thời gian ngắn.
+  <div class="course-python">
+    <div class="header-section">
+      <ThreeJSHero />
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <h1 class="course-title" 
+              v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :enter="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+            >
+              Lập trình Python từ cơ bản đến nâng cao
+            </h1>
+            <p class="course-description"
+              v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+            >
+              Khóa học Python toàn diện giúp bạn làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay, từ nền tảng cơ bản đến kỹ thuật nâng cao. Phù hợp cho cả người mới bắt đầu và lập trình viên muốn mở rộng kỹ năng.
             </p>
-            <div class="course-meta">
+            <div class="course-meta"
+              v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
+            >
               <div class="meta-item">
-                <i class="fas fa-clock"></i>
-                <span>8 tuần (32 buổi)</span>
+                <i class="bi bi-clock me-2"></i>
+                <span>10 tuần (30 buổi)</span>
               </div>
               <div class="meta-item">
-                <i class="fas fa-signal"></i>
-                <span>Cơ bản - Trung cấp</span>
+                <i class="bi bi-bar-chart me-2"></i>
+                <span>Cơ bản đến nâng cao</span>
               </div>
               <div class="meta-item">
-                <i class="fas fa-users"></i>
-                <span>Tối đa 20 học viên/lớp</span>
+                <i class="bi bi-people me-2"></i>
+                <span>Học online hoặc offline</span>
               </div>
             </div>
-            <div class="course-actions">
-              <router-link to="/register" class="btn btn-primary">Đăng ký ngay</router-link>
-              <router-link to="/tuition" class="btn btn-outline">Xem học phí</router-link>
+            <div class="course-actions"
+              v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 800 } }"
+            >
+              <button class="btn btn-primary btn-lg me-2">Đăng ký học</button>
+              <button class="btn btn-outline-light btn-lg">Tải syllabus</button>
             </div>
           </div>
           <div class="col-lg-5">
-            <div class="course-image">
-              <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course">
+            <div class="course-image"
+              v-motion
+              :initial="{ opacity: 0, x: 100 }"
+              :enter="{ opacity: 1, x: 0, transition: { delay: 300, duration: 1000 } }"
+            >
+              <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course" class="img-fluid">
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Overview Section -->
-    <section class="overview-section section">
-      <div class="container">
-        <h2 class="section-title">Tổng quan khóa học</h2>
-        <div class="overview-content">
-          <p>
-            Python là một trong những ngôn ngữ lập trình phổ biến nhất hiện nay, được sử dụng rộng rãi trong 
-            nhiều lĩnh vực từ phát triển web, khoa học dữ liệu, trí tuệ nhân tạo đến tự động hóa và IoT. 
-            Khóa học Python của TechAcademy được thiết kế đặc biệt để giúp học viên nhanh chóng nắm vững 
-            kiến thức cơ bản và ứng dụng vào các dự án thực tế.
-          </p>
-          <p>
-            Trong khóa học này, bạn sẽ được hướng dẫn bởi các giảng viên có nhiều năm kinh nghiệm trong 
-            lĩnh vực phát triển phần mềm Python. Từ các khái niệm cơ bản đến các kỹ thuật nâng cao, 
-            bạn sẽ được thực hành qua nhiều bài tập và dự án thực tế, giúp củng cố kiến thức và phát triển 
-            kỹ năng lập trình.
-          </p>
-        </div>
-      </div>
-    </section>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-8">
+          <ParallaxEffect :speed="0.2" direction="up">
+            <section class="section mb-5 animate-on-scroll">
+              <h2 class="section-title mb-4"
+                v-motion
+                :initial="{ opacity: 0, x: -50 }"
+                :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
+              >
+                Tổng quan khóa học
+              </h2>
+              <div class="course-overview"
+                v-motion
+                :initial="{ opacity: 0, y: 50 }"
+                :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+              >
+                <p>Khóa học Python từ cơ bản đến nâng cao giúp học viên nắm vững kiến thức lập trình với ngôn ngữ Python - một trong những ngôn ngữ lập trình phổ biến nhất hiện nay. Từ những khái niệm cơ bản đến các kỹ thuật nâng cao, khóa học cung cấp nền tảng vững chắc cho học viên trong việc phát triển phần mềm, phân tích dữ liệu, trí tuệ nhân tạo và nhiều lĩnh vực khác.</p>
+                <p>Được thiết kế với lộ trình rõ ràng, từng bước, khóa học phù hợp cho cả người mới bắt đầu và những người đã có kiến thức lập trình muốn mở rộng kỹ năng. Học viên sẽ được thực hành qua nhiều bài tập và dự án thực tế, giúp ứng dụng kiến thức vào giải quyết các vấn đề thực tiễn.</p>
+              </div>
+            </section>
+          </ParallaxEffect>
 
-    <!-- Curriculum Section -->
-    <section class="curriculum-section section">
-      <div class="container">
-        <h2 class="section-title">Nội dung khóa học</h2>
-        <div class="curriculum-content">
-          <div class="accordion" id="curriculumAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Module 1: Nhập môn Python
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body">
-                  <ul class="curriculum-list">
-                    <li><i class="fas fa-check-circle"></i> Giới thiệu về Python và các ứng dụng</li>
-                    <li><i class="fas fa-check-circle"></i> Cài đặt Python và các công cụ cần thiết</li>
-                    <li><i class="fas fa-check-circle"></i> Biến, kiểu dữ liệu và toán tử</li>
-                    <li><i class="fas fa-check-circle"></i> Cấu trúc điều khiển: if, while, for</li>
-                    <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Module 2: Cấu trúc dữ liệu trong Python
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body">
-                  <ul class="curriculum-list">
-                    <li><i class="fas fa-check-circle"></i> Lists, Tuples, Sets và Dictionaries</li>
-                    <li><i class="fas fa-check-circle"></i> Xử lý chuỗi và các hàm có sẵn</li>
-                    <li><i class="fas fa-check-circle"></i> List comprehension</li>
-                    <li><i class="fas fa-check-circle"></i> Các thao tác với tập tin</li>
-                    <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Module 3: Hàm và Lập trình hướng đối tượng
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body">
-                  <ul class="curriculum-list">
-                    <li><i class="fas fa-check-circle"></i> Định nghĩa và sử dụng hàm</li>
-                    <li><i class="fas fa-check-circle"></i> Tham số và đối số</li>
-                    <li><i class="fas fa-check-circle"></i> Lambda functions</li>
-                    <li><i class="fas fa-check-circle"></i> Lớp và đối tượng</li>
-                    <li><i class="fas fa-check-circle"></i> Kế thừa và đa hình</li>
-                    <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Module 4: Xử lý lỗi và Modules
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body">
-                  <ul class="curriculum-list">
-                    <li><i class="fas fa-check-circle"></i> Xử lý ngoại lệ trong Python</li>
-                    <li><i class="fas fa-check-circle"></i> Try, except, finally</li>
-                    <li><i class="fas fa-check-circle"></i> Tạo và sử dụng modules</li>
-                    <li><i class="fas fa-check-circle"></i> Các packages phổ biến</li>
-                    <li><i class="fas fa-check-circle"></i> PIP và quản lý packages</li>
-                    <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  Module 5: Làm việc với dữ liệu
-                </button>
-              </h2>
-              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body">
-                  <ul class="curriculum-list">
-                    <li><i class="fas fa-check-circle"></i> CSV, JSON và XML</li>
-                    <li><i class="fas fa-check-circle"></i> Thao tác với cơ sở dữ liệu (SQLite)</li>
-                    <li><i class="fas fa-check-circle"></i> Giới thiệu về Pandas và NumPy</li>
-                    <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  Module 6: Web Development với Python
-                </button>
-              </h2>
-              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body">
-                  <ul class="curriculum-list">
-                    <li><i class="fas fa-check-circle"></i> Giới thiệu về Flask</li>
-                    <li><i class="fas fa-check-circle"></i> Routing và templates</li>
-                    <li><i class="fas fa-check-circle"></i> Xử lý form và dữ liệu</li>
-                    <li><i class="fas fa-check-circle"></i> RESTful APIs</li>
-                    <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSeven">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                  Module 7-8: Dự án thực tế
-                </button>
-              </h2>
-              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body">
-                  <ul class="curriculum-list">
-                    <li><i class="fas fa-check-circle"></i> Phát triển ứng dụng web hoàn chỉnh</li>
-                    <li><i class="fas fa-check-circle"></i> Tích hợp cơ sở dữ liệu</li>
-                    <li><i class="fas fa-check-circle"></i> Xây dựng REST API</li>
-                    <li><i class="fas fa-check-circle"></i> Triển khai ứng dụng</li>
-                    <li><i class="fas fa-check-circle"></i> Thuyết trình và đánh giá dự án</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- Other sections with ParallaxEffect and motion directives -->
         </div>
-      </div>
-    </section>
 
-    <!-- Instructors Section -->
-    <section class="instructors-section section">
-      <div class="container">
-        <h2 class="section-title">Giảng viên</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="instructor-card">
-              <div class="instructor-avatar">
-                <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Nguyễn Minh Đức">
+        <div class="col-lg-4">
+          <div class="course-sidebar">
+            <ParallaxEffect :speed="0.25" direction="up">
+              <div class="price-section mb-4"
+                v-motion
+                :initial="{ opacity: 0, scale: 0.9 }"
+                :visible="{ opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 300, damping: 15 } }"
+              >
+                <!-- Price card content -->
               </div>
-              <div class="instructor-details">
-                <h3>Nguyễn Minh Đức</h3>
-                <p class="instructor-title">Python Developer & Data Scientist</p>
-                <p class="instructor-bio">
-                  Thạc sĩ Khoa học máy tính tại Đại học Stanford với hơn 8 năm kinh nghiệm phát triển ứng dụng Python. 
-                  Hiện đang là Lead Developer tại công ty ABC Technology.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="instructor-card">
-              <div class="instructor-avatar">
-                <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="Trần Thu Hà">
-              </div>
-              <div class="instructor-details">
-                <h3>Trần Thu Hà</h3>
-                <p class="instructor-title">AI & Machine Learning Specialist</p>
-                <p class="instructor-bio">
-                  Tiến sĩ về Trí tuệ nhân tạo với hơn 5 năm kinh nghiệm trong lĩnh vực Machine Learning và Data Science sử dụng Python.
-                  Đã xuất bản nhiều bài báo khoa học về AI.
-                </p>
-              </div>
-            </div>
+            </ParallaxEffect>
+            
+            <!-- Other sidebar sections with ParallaxEffect -->
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Tuition and Promotion Section -->
-    <section class="tuition-section section">
-      <div class="container">
-        <h2 class="section-title">Học phí & Ưu đãi</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="price-card">
-              <div class="price-header">
-                <h3>Gói cơ bản</h3>
-                <div class="price">
-                  <span class="amount">3.500.000</span>
-                  <span class="currency">VNĐ</span>
-                </div>
-              </div>
-              <div class="price-features">
-                <ul>
-                  <li><i class="fas fa-check"></i> Tham gia đầy đủ 32 buổi học</li>
-                  <li><i class="fas fa-check"></i> Tài liệu học tập điện tử</li>
-                  <li><i class="fas fa-check"></i> Hỗ trợ giải đáp thắc mắc qua forum</li>
-                  <li><i class="fas fa-check"></i> Chứng chỉ hoàn thành khóa học</li>
-                </ul>
-              </div>
-              <div class="price-cta">
-                <router-link to="/register" class="btn btn-primary">Đăng ký ngay</router-link>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="price-card featured">
-              <div class="price-tag">Phổ biến</div>
-              <div class="price-header">
-                <h3>Gói nâng cao</h3>
-                <div class="price">
-                  <span class="amount">5.200.000</span>
-                  <span class="currency">VNĐ</span>
-                </div>
-              </div>
-              <div class="price-features">
-                <ul>
-                  <li><i class="fas fa-check"></i> Tất cả các quyền lợi của gói cơ bản</li>
-                  <li><i class="fas fa-check"></i> Tài liệu học tập bản cứng</li>
-                  <li><i class="fas fa-check"></i> Hướng dẫn 1-1 với mentor (4 giờ)</li>
-                  <li><i class="fas fa-check"></i> Quyền truy cập vào các khóa học bổ sung</li>
-                  <li><i class="fas fa-check"></i> Tham gia các workshop đặc biệt</li>
-                </ul>
-              </div>
-              <div class="price-cta">
-                <router-link to="/register" class="btn btn-primary">Đăng ký ngay</router-link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="promotions-container">
-          <h3>Ưu đãi đặc biệt</h3>
-          <div class="promotions">
-            <div class="promotion-item">
-              <div class="promotion-icon">
-                <i class="fas fa-calendar-alt"></i>
-              </div>
-              <div class="promotion-content">
-                <h4>Đăng ký sớm</h4>
-                <p>Giảm 15% học phí khi đăng ký trước ngày 30/04/2023</p>
-              </div>
-            </div>
-            <div class="promotion-item">
-              <div class="promotion-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="promotion-content">
-                <h4>Đăng ký nhóm</h4>
-                <p>Giảm 10% cho mỗi học viên khi đăng ký theo nhóm từ 3 người trở lên</p>
-              </div>
-            </div>
-            <div class="promotion-item">
-              <div class="promotion-icon">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-              <div class="promotion-content">
-                <h4>Học viên cũ</h4>
-                <p>Giảm 20% học phí cho học viên đã từng tham gia khóa học tại TechAcademy</p>
-              </div>
-            </div>
+    <ParallaxEffect :speed="0.1" direction="down">
+      <div class="cta-section bg-primary text-white">
+        <div class="container">
+          <div class="cta-content text-center"
+            v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+          >
+            <h2 class="mb-4">Sẵn sàng bắt đầu hành trình Python của bạn?</h2>
+            <p class="mb-4">Đăng ký ngay hôm nay để nhận ưu đãi đặc biệt và bắt đầu xây dựng tương lai công nghệ!</p>
+            <button class="btn btn-light btn-lg">Đăng ký học</button>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Sẵn sàng bắt đầu hành trình với Python?</h2>
-          <p>Đăng ký ngay hôm nay để nhận được ưu đãi đặc biệt và bắt đầu xây dựng tương lai trong lĩnh vực công nghệ.</p>
-          <div class="cta-buttons">
-            <router-link to="/register" class="btn btn-primary btn-lg">Đăng ký ngay</router-link>
-            <a href="#" class="btn btn-outline btn-lg">Liên hệ tư vấn</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </ParallaxEffect>
   </div>
 </template>
 
 <script>
+import ThreeJSHero from '@/components/ThreeJSHero.vue'
+import ParallaxEffect from '@/components/ParallaxEffect.vue'
+
 export default {
-  name: 'CoursePythonView'
+  name: 'CoursePythonView',
+  components: {
+    ThreeJSHero,
+    ParallaxEffect
+  },
+  data() {
+    return {
+      isHeaderVisible: false,
+      animateSections: false
+    }
+  },
+  // ... existing methods
 }
 </script>
 
 <style scoped>
-.course-detail {
+.course-python {
   padding-bottom: 4rem;
 }
 

@@ -1,21 +1,48 @@
 <template>
   <div class="home">
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">Khám phá tiềm năng công nghệ cùng <span>TechAcademy</span></h1>
-          <p class="hero-text">Nâng cao kỹ năng và mở ra cơ hội nghề nghiệp mới với các khóa học chất lượng từ những chuyên gia hàng đầu trong ngành.</p>
-          <div class="hero-buttons">
-            <router-link to="/course-intro" class="btn btn-primary">Tìm hiểu thêm</router-link>
-            <router-link to="/register" class="btn btn-secondary">Đăng ký ngay</router-link>
+    <div class="hero-section position-relative overflow-hidden">
+      <ThreeJSHero />
+      <div class="container py-5 position-relative">
+        <!-- Rest of the hero content -->
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="hero-content">
+              <h1 
+                v-motion
+                :initial="{ opacity: 0, y: 100 }"
+                :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+              >
+                Bắt đầu hành trình công nghệ của bạn tại TechAcademy
+              </h1>
+              <p 
+                v-motion
+                :initial="{ opacity: 0, y: 100 }"
+                :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
+              >
+                Khóa học chất lượng cao, giảng viên chuyên nghiệp và lộ trình học tập cá nhân hóa giúp bạn nhanh chóng phát triển kỹ năng lập trình.
+              </p>
+              <div class="hero-btn" 
+                v-motion
+                :initial="{ opacity: 0, y: 100 }"
+                :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 800 } }"
+              >
+                <button class="btn btn-primary me-2">Khám phá khóa học</button>
+                <button class="btn btn-outline-primary">Tư vấn miễn phí</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="hero-image" 
+              v-motion
+              :initial="{ opacity: 0, x: 100 }"
+              :enter="{ opacity: 1, x: 0, transition: { delay: 800, duration: 1000 } }"
+            >
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="TechAcademy" class="img-fluid" />
+            </div>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tech Education">
-        </div>
       </div>
-    </section>
+    </div>
 
     <!-- Features Section -->
     <section class="section features">
@@ -55,75 +82,153 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="section stats">
+    <div class="stats-section py-5 bg-primary text-white">
       <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <h3 class="stat-number">1000+</h3>
-            <p class="stat-text">Học viên</p>
+        <div class="row text-center">
+          <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="stats-item"
+              v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+            >
+              <div class="count h1">
+                <AnimatedCount :value="15" :is-in-view="isStatsVisible" />
+              </div>
+              <div class="stats-title">Khóa học</div>
+            </div>
           </div>
-          <div class="stat-item">
-            <h3 class="stat-number">20+</h3>
-            <p class="stat-text">Khóa học</p>
+          <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="stats-item"
+              v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+            >
+              <div class="count h1">
+                <AnimatedCount :value="2000" :is-in-view="isStatsVisible" />
+              </div>
+              <div class="stats-title">Học viên</div>
+            </div>
           </div>
-          <div class="stat-item">
-            <h3 class="stat-number">50+</h3>
-            <p class="stat-text">Dự án thực tế</p>
+          <div class="col-md-3 col-6">
+            <div class="stats-item"
+              v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
+            >
+              <div class="count h1">
+                <AnimatedCount :value="25" :is-in-view="isStatsVisible" />
+              </div>
+              <div class="stats-title">Giảng viên</div>
+            </div>
           </div>
-          <div class="stat-item">
-            <h3 class="stat-number">95%</h3>
-            <p class="stat-text">Tỷ lệ việc làm</p>
+          <div class="col-md-3 col-6">
+            <div class="stats-item"
+              v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 800 } }"
+            >
+              <div class="count h1">
+                <AnimatedCount :value="95" :is-in-view="isStatsVisible" suffix="%" />
+              </div>
+              <div class="stats-title">Tỷ lệ hài lòng</div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Popular Courses Section -->
-    <section class="section courses">
+    <section class="section courses py-5">
       <div class="container">
-        <h2 class="section-title">Khóa học nổi bật</h2>
-        <div class="courses-grid">
-          <div class="course-card">
-            <div class="course-image">
-              <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course">
-            </div>
-            <div class="course-content">
-              <span class="course-tag">Bestseller</span>
-              <h3>Python Programming</h3>
-              <p>Khóa học toàn diện về Python từ cơ bản đến nâng cao. Phù hợp cho người mới bắt đầu.</p>
-              <div class="course-details">
-                <div class="detail">
-                  <i class="fas fa-clock"></i>
-                  <span>8 tuần</span>
+        <h2 class="section-title mb-4"
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+        >
+          Khóa học nổi bật
+        </h2>
+        <div class="row">
+          <div class="col-md-6 mb-4"
+            v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+          >
+            <div class="course-card h-100 shadow-sm rounded overflow-hidden">
+              <div class="course-image position-relative">
+                <span class="course-tag position-absolute top-0 end-0 bg-warning text-dark m-2 px-2 py-1 rounded-pill fw-bold">Bestseller</span>
+                <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+              </div>
+              <div class="course-content p-4">
+                <h3 class="mb-3">Python Programming</h3>
+                <p class="text-muted mb-3">Khóa học toàn diện về Python từ cơ bản đến nâng cao. Phù hợp cho người mới bắt đầu.</p>
+                <div class="course-details d-flex justify-content-between mb-3">
+                  <div class="detail d-flex align-items-center">
+                    <i class="bi bi-clock me-2"></i>
+                    <span>8 tuần</span>
+                  </div>
+                  <div class="detail d-flex align-items-center">
+                    <i class="bi bi-bar-chart me-2"></i>
+                    <span>Cơ bản - Trung cấp</span>
+                  </div>
                 </div>
-                <div class="detail">
-                  <i class="fas fa-signal"></i>
-                  <span>Cơ bản - Trung cấp</span>
+                <div class="course-price mb-3">
+                  <span class="fs-5 fw-bold text-primary">3.500.000 VNĐ</span>
+                  <span class="text-decoration-line-through text-muted ms-2">4.200.000 VNĐ</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="course-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span class="ms-1">(4.5)</span>
+                  </div>
+                  <router-link to="/course-python" class="btn btn-primary">Xem chi tiết</router-link>
                 </div>
               </div>
-              <router-link to="/course-python" class="course-btn">Xem chi tiết</router-link>
             </div>
           </div>
           
-          <div class="course-card">
-            <div class="course-image">
-              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course">
-            </div>
-            <div class="course-content">
-              <span class="course-tag">Hot</span>
-              <h3>Java Spring Boot</h3>
-              <p>Xây dựng ứng dụng web mạnh mẽ với Spring Boot. Phù hợp cho các lập trình viên Java.</p>
-              <div class="course-details">
-                <div class="detail">
-                  <i class="fas fa-clock"></i>
-                  <span>10 tuần</span>
+          <div class="col-md-6 mb-4"
+            v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
+          >
+            <div class="course-card h-100 shadow-sm rounded overflow-hidden">
+              <div class="course-image position-relative">
+                <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold">Hot</span>
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+              </div>
+              <div class="course-content p-4">
+                <h3 class="mb-3">Java Spring Boot</h3>
+                <p class="text-muted mb-3">Xây dựng ứng dụng web mạnh mẽ với Spring Boot. Phù hợp cho các lập trình viên Java.</p>
+                <div class="course-details d-flex justify-content-between mb-3">
+                  <div class="detail d-flex align-items-center">
+                    <i class="bi bi-clock me-2"></i>
+                    <span>10 tuần</span>
+                  </div>
+                  <div class="detail d-flex align-items-center">
+                    <i class="bi bi-bar-chart me-2"></i>
+                    <span>Trung cấp - Nâng cao</span>
+                  </div>
                 </div>
-                <div class="detail">
-                  <i class="fas fa-signal"></i>
-                  <span>Trung cấp - Nâng cao</span>
+                <div class="course-price mb-3">
+                  <span class="fs-5 fw-bold text-primary">6.500.000 VNĐ</span>
+                  <span class="text-decoration-line-through text-muted ms-2">7.800.000 VNĐ</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="course-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <span class="ms-1">(5.0)</span>
+                  </div>
+                  <router-link to="/course-java-spring" class="btn btn-primary">Xem chi tiết</router-link>
                 </div>
               </div>
-              <router-link to="/course-java-spring" class="course-btn">Xem chi tiết</router-link>
             </div>
           </div>
         </div>
@@ -177,8 +282,71 @@
 </template>
 
 <script>
+import ThreeJSHero from '@/components/ThreeJSHero.vue'
+import AnimatedCount from '@/components/AnimatedCount.vue'
+
 export default {
-  name: 'HomeView'
+  name: 'HomeView',
+  components: {
+    ThreeJSHero,
+    AnimatedCount
+  },
+  data() {
+    return {
+      isLoaded: false,
+      isStatsVisible: false,
+      animationObserver: null,
+      featuredCourses: [
+        // ... existing courses data
+      ]
+    }
+  },
+  mounted() {
+    // Trigger initial animations after a short delay
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 100);
+    
+    // Initialize intersection observer for scroll animations
+    this.initScrollAnimations();
+  },
+  beforeUnmount() {
+    // Clean up observer when component is unmounted
+    if (this.animationObserver) {
+      this.animationObserver.disconnect();
+    }
+  },
+  methods: {
+    initScrollAnimations() {
+      // Configure the intersection observer
+      const options = {
+        root: null, // use viewport
+        rootMargin: '0px',
+        threshold: 0.1 // trigger when at least 10% of the element is visible
+      };
+      
+      // Create observer
+      this.animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          // Check if this is the stats section
+          if (entry.target.classList.contains('stats-section') && entry.isIntersecting) {
+            this.isStatsVisible = true;
+          }
+          
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+            // Unobserve the element after animating it
+            this.animationObserver.unobserve(entry.target);
+          }
+        });
+      }, options);
+      
+      // Observe elements with animate-on-scroll class
+      document.querySelectorAll('.animate-on-scroll, .stats-section').forEach(element => {
+        this.animationObserver.observe(element);
+      });
+    }
+  }
 }
 </script>
 
@@ -472,6 +640,55 @@ export default {
 
   .hero-title {
     font-size: 2.5rem;
+  }
+}
+
+/* Enhanced hero section styles for Three.js background */
+.hero-section {
+  background: linear-gradient(135deg, rgba(47, 128, 237, 0.9) 0%, rgba(106, 58, 239, 0.8) 100%);
+  color: white;
+  padding: 7rem 0 5rem;
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image img {
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 5rem 0 3rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
 }
 </style> 
