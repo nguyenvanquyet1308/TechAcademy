@@ -3,6 +3,7 @@
     <div class="container">
       <router-link class="navbar-brand" to="/">
         <span class="brand-text">Tech<span class="text-primary">Academy</span></span>
+    
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -89,7 +90,7 @@ export default {
 }
 
 .navbar-scrolled .nav-link {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   padding: 0.4rem 0.25rem;
 }
 
@@ -108,7 +109,7 @@ export default {
   font-weight: 500;
   color: #333;
   margin: 0 0.5rem;
-  padding: 0.5rem 0.25rem;
+  padding: 0.25rem 0.25rem;
   transition: all 0.2s ease;
   position: relative;
 }

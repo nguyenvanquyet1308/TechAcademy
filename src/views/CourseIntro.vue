@@ -17,7 +17,7 @@
             <p>Khóa học của chúng tôi được thiết kế đặc biệt cho những người muốn nâng cao kỹ năng trong lĩnh vực công nghệ. Dù bạn là người mới bắt đầu hay đã có kinh nghiệm, chúng tôi đều có những chương trình phù hợp để giúp bạn phát triển.</p>
             <p>Với phương pháp giảng dạy kết hợp giữa lý thuyết và thực hành, học viên sẽ được trang bị đầy đủ kiến thức và kỹ năng cần thiết để có thể tự tin ứng dụng vào công việc thực tế.</p>
             <div class="overview-highlights">
-              <div class="highlight-item">
+              <!-- <div class="highlight-item">
                 <div class="highlight-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 </div>
@@ -25,14 +25,14 @@
                   <h4>Thời lượng</h4>
                   <p>12 tuần (5 giờ/tuần)</p>
                 </div>
-              </div>
+              </div> -->
               <div class="highlight-item">
                 <div class="highlight-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                 </div>
                 <div class="highlight-text">
                   <h4>Quy mô lớp học</h4>
-                  <p>15-20 học viên/lớp</p>
+                  <p>10-15 học viên/lớp</p>
                 </div>
               </div>
               <div class="highlight-item">

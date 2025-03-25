@@ -44,7 +44,8 @@
     <!-- Features Section -->
     <section class="section features">
       <div class="container">
-        <h2 class="section-title">Điểm nổi bật của khóa học</h2>
+        <h2 class="section-title" style="font-size: 35px;">Techzen Academy
+          Nơi Kiến Tạo Tương Lai Lập Trình Viên Chuyên Nghiệp</h2>
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
@@ -240,25 +241,25 @@
           >
             <div class="course-card h-100 shadow-sm rounded overflow-hidden">
               <div class="course-image position-relative">
-                <span class="course-tag position-absolute top-0 end-0 bg-warning text-dark m-2 px-2 py-1 rounded-pill fw-bold">Bestseller</span>
-                <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold">Hot</span>
+                <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
               </div>
               <div class="course-content p-4">
-                <h3 class="mb-3">Python Programming</h3>
+                <h3 class="mb-3">Python Al</h3>
                 <p class="text-muted mb-3">Khóa học toàn diện về Python từ cơ bản đến nâng cao. Phù hợp cho người mới bắt đầu.</p>
                 <div class="course-details d-flex justify-content-between mb-3">
                   <div class="detail d-flex align-items-center">
                     <i class="bi bi-clock me-2"></i>
-                    <span>8 tuần</span>
+                    <span>5 Tháng</span>
                   </div>
                   <div class="detail d-flex align-items-center">
                     <i class="bi bi-bar-chart me-2"></i>
-                    <span>Cơ bản - Trung cấp</span>
+                    <span>Cơ bản - Nâng cao</span>
                   </div>
                 </div>
                 <div class="course-price mb-3">
-                  <span class="fs-5 fw-bold text-primary">3.500.000 VNĐ</span>
-                  <span class="text-decoration-line-through text-muted ms-2">4.200.000 VNĐ</span>
+                  <span class="fs-5 fw-bold text-primary">7.999.000 VNĐ</span>
+                  <span class="text-decoration-line-through text-muted ms-2">8.800.000 VNĐ</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="course-rating">
@@ -283,19 +284,19 @@
             <div class="course-card h-100 shadow-sm rounded overflow-hidden">
               <div class="course-image position-relative">
                 <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold">Hot</span>
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
               </div>
               <div class="course-content p-4">
-                <h3 class="mb-3">Java Spring Boot</h3>
+                <h3 class="mb-3">Java Backend</h3>
                 <p class="text-muted mb-3">Xây dựng ứng dụng web mạnh mẽ với Spring Boot. Phù hợp cho các lập trình viên Java.</p>
                 <div class="course-details d-flex justify-content-between mb-3">
                   <div class="detail d-flex align-items-center">
                     <i class="bi bi-clock me-2"></i>
-                    <span>10 tuần</span>
+                    <span>3 Tháng</span>
                   </div>
                   <div class="detail d-flex align-items-center">
                     <i class="bi bi-bar-chart me-2"></i>
-                    <span>Trung cấp - Nâng cao</span>
+                    <span>Cơ bản - Nâng cao</span>
                   </div>
                 </div>
                 <div class="course-price mb-3">
@@ -321,37 +322,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section testimonials">
-      <div class="container">
-        <h2 class="section-title">Học viên nói gì về chúng tôi</h2>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <p>"Khóa học đã giúp tôi từ một người không biết gì về lập trình trở thành một developer chuyên nghiệp. Các kiến thức được truyền đạt dễ hiểu và thực tế."</p>
-            </div>
-            <div class="testimonial-author">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nguyễn Văn A">
-              <div class="author-info">
-                <h4>Nguyễn Văn A</h4>
-                <p>Frontend Developer</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <p>"Giảng viên rất tận tâm, luôn sẵn sàng giải đáp mọi thắc mắc. Tôi đặc biệt ấn tượng với cách tiếp cận thực tế trong các bài học."</p>
-            </div>
-            <div class="testimonial-author">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Trần Thị B">
-              <div class="author-info">
-                <h4>Trần Thị B</h4>
-                <p>UX/UI Designer</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Testimonials />
 
     <!-- CTA Section -->
     <section class="section cta">
@@ -369,12 +340,14 @@
 <script>
 import ThreeJSHero from '@/components/ThreeJSHero.vue'
 import AnimatedCount from '@/components/AnimatedCount.vue'
+import Testimonials from '@/components/ui/Testimonials.vue'
 
 export default {
   name: 'HomeView',
   components: {
     ThreeJSHero,
-    AnimatedCount
+    AnimatedCount,
+    Testimonials
   },
   data() {
     return {
@@ -542,54 +515,8 @@ export default {
   opacity: 0.8;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.testimonial-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.testimonial-content {
-  padding: 30px;
-  font-style: italic;
-  color: #495057;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  padding: 20px 30px;
-  background: #f8f9fa;
-  border-top: 1px solid #eee;
-}
-
-.testimonial-author img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.author-info h4 {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-  color: #212529;
-}
-
-.author-info p {
-  color: #6c757d;
-  font-size: 0.9rem;
-}
-
 .cta {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
   color: white;
   text-align: center;
 }
@@ -719,12 +646,28 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  .hero-section {
+    padding: 8rem 0 4rem;
   }
-
-  .hero-title {
+  
+  .hero-content h1 {
     font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .hero-btn .btn {
+    width: 100%;
+    max-width: 300px;
   }
 }
 
@@ -903,7 +846,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 90%;
   z-index: 0;
   overflow: hidden;
 }

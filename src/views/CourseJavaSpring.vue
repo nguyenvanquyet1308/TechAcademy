@@ -1,36 +1,46 @@
 <template>
   <div class="course-java">
-    <div class="header-section py-5">
+    <div class="header-section py-5 animated-gradient">
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-7 mb-4 mb-lg-0">
-            <h1 class="course-title animate__animated animate__fadeInDown">Lập trình Java Spring Boot</h1>
+            <h1 class="course-title animate__animated animate__fadeInDown">Lập trình Java Back-end</h1>
             <p class="course-description animate__animated animate__fadeIn animate__delay-1s">
-              Khóa học Java Spring Boot toàn diện giúp bạn làm chủ framework Spring Boot và xây dựng các ứng dụng web hiện đại, 
-              RESTful API và hệ thống backend mạnh mẽ. Từ người mới bắt đầu đến Java developer muốn nâng cao.
+              Khóa học Java Back-end toàn diện giúp bạn làm chủ ngôn ngữ lập trình Java và xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Phù hợp cho sinh viên ngành CNTT và những người muốn nâng cao kỹ năng lập trình.
             </p>
             <div class="course-meta animate__animated animate__fadeIn animate__delay-2s">
               <div class="meta-item">
                 <i class="bi bi-clock me-2"></i>
-                <span>12 tuần (36 buổi)</span>
+                <span>3 tháng</span>
               </div>
               <div class="meta-item">
-                <i class="bi bi-bar-chart me-2"></i>
-                <span>Trung cấp</span>
+                <i class="bi bi-calendar me-2"></i>
+                <span>Khai giảng: 09/12/2024</span>
               </div>
               <div class="meta-item">
-                <i class="bi bi-people me-2"></i>
-                <span>Học online hoặc offline</span>
+                <i class="bi bi-geo-alt me-2"></i>
+                <span>Học offline tại văn phòng Techzen - Tầng 3 - Số 06 Trần Phú, Hải Châu, Đà Nẵng</span>
+              </div>
+              <div class="meta-item">
+                <i class="bi bi-calendar-week me-2"></i>
+                <span>Thứ 2, 4, 6 từ 18h00 - 21h00 hàng tuần</span>
               </div>
             </div>
             <div class="course-actions animate__animated animate__fadeIn animate__delay-3s">
-              <button class="btn btn-primary btn-lg me-2">Đăng ký học</button>
+              <button class="btn btn-primary btn-lg me-2 pulse">Đăng ký học</button>
               <button class="btn btn-outline-light btn-lg">Tải syllabus</button>
             </div>
           </div>
           <div class="col-lg-5">
-            <div class="course-image animate__animated animate__fadeInRight">
+            <div class="course-image animate__animated animate__fadeInRight parallax-element" data-speed="0.15">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col text-center">
+            <div class="scroll-indicator bounce">
+              <i class="bi bi-chevron-down text-white fs-3"></i>
             </div>
           </div>
         </div>
@@ -40,183 +50,366 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-8">
-          <section class="section mb-5">
-            <h2 class="section-title mb-4 animate__animated animate__fadeInUp">Tổng quan khóa học</h2>
-            <div class="course-overview animate__animated animate__fadeIn animate__delay-1s">
-              <p>Khóa học Java Spring Boot cung cấp kiến thức toàn diện về Spring framework, tập trung vào Spring Boot để xây dựng các ứng dụng Java hiện đại. Bạn sẽ học cách phát triển RESTful API, kết nối cơ sở dữ liệu, xử lý bảo mật và triển khai ứng dụng thực tế.</p>
-              <p>Được thiết kế cho cả người mới bắt đầu và các developer muốn nâng cao kỹ năng, khóa học này kết hợp lý thuyết với các dự án thực tế, giúp bạn xây dựng portfolio ấn tượng và sẵn sàng cho các vị trí Java Developer.</p>
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-4">Tổng quan khóa học</h2>
+            <div class="course-overview animate-on-scroll" data-animation="animate__fadeIn">
+              <p>Khóa học Java Back-end cung cấp kiến thức toàn diện về Java Core, OOP, MySQL và Spring Framework, giúp bạn xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Bạn sẽ học cách phát triển ứng dụng từ cơ bản đến nâng cao, kết nối cơ sở dữ liệu, xử lý bảo mật và triển khai ứng dụng thực tế.</p>
+              <p>Được thiết kế cho sinh viên CNTT và những người muốn chuyên sâu vào mảng phát triển Back-end với Java, khóa học này kết hợp lý thuyết với thực hành qua nhiều bài tập, giúp bạn xây dựng portfolio và sẵn sàng tham gia vào dự án thực tế.</p>
             </div>
           </section>
 
-          <section class="section mb-5">
-            <h2 class="section-title mb-4 animate__animated animate__fadeInUp">Bạn sẽ học được gì?</h2>
+          <section class="section mb-5 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-4">Đối tượng học viên</h2>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="target-audience">
+                  <ul class="list-unstyled">
+                    <li class="d-flex mb-3">
+                      <div class="icon-box me-3">
+                        <i class="bi bi-mortarboard-fill text-primary fs-4"></i>
+                      </div>
+                      <div>
+                        <h5>Sinh viên ngành CNTT và các ngành liên quan</h5>
+                        <p>Bao gồm những sinh viên muốn phát triển kỹ năng về Java Back-end để sẵn sàng tham gia vào dự án thực tế.</p>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-3">
+                      <div class="icon-box me-3">
+                        <i class="bi bi-person-fill text-primary fs-4"></i>
+                      </div>
+                      <div>
+                        <h5>Sinh viên năm 2, 3, 4</h5>
+                        <p>Đang tìm kiếm cơ hội để tiếp cận công nghệ mới, nâng cao kỹ năng lập trình, và đáp ứng nhu cầu thực tiễn của doanh nghiệp.</p>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-3">
+                      <div class="icon-box me-3">
+                        <i class="bi bi-code-slash text-primary fs-4"></i>
+                      </div>
+                      <div>
+                        <h5>Những người học muốn nâng cao kỹ năng lập trình</h5>
+                        <p>Mong muốn chuyên sâu vào mảng phát triển Back-end với Java và các công nghệ liên quan như MySQL và Spring Boot.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-4">Bạn sẽ học được gì?</h2>
             <div class="row">
               <div v-for="(benefit, index) in benefits" :key="index" class="col-md-6 mb-4">
-                <div class="benefit-item animate__animated animate__fadeInLeft" :style="{ animationDelay: index * 0.2 + 's' }">
+                <div class="benefit-item" :style="{ animationDelay: index * 0.1 + 's' }">
                   <i class="bi bi-check-circle-fill text-success me-2"></i>
                   <span>{{ benefit }}</span>
                 </div>
               </div>
             </div>
+          </section> -->
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-2">Lộ trình khóa học</h2>
+            <div class="curriculum-overview mb-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead class="table-primary">
+                        <tr>
+                          <th>STT</th>
+                          <th>Học phần</th>
+                          <th>Số buổi</th>
+                          <th>Mục tiêu</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Java Core và OOP</td>
+                          <td>10</td>
+                          <td>Hiểu và thành thạo kỹ thuật lập trình hướng đối tượng với Java.</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>MySQL</td>
+                          <td>6</td>
+                          <td>Nắm vững kiến thức cơ bản về thiết kế, thao tác với CSDL, và kỹ thuật xử lý dữ liệu.</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Spring Boot</td>
+                          <td>20</td>
+                          <td>Xây dựng API theo kiến trúc RESTful, nắm vững mô hình MVC, và thao tác với JDBC.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
-
-          <section class="section mb-5">
-            <h2 class="section-title mb-4 animate__animated animate__fadeInUp">Nội dung khóa học</h2>
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-4">Nội dung khóa học</h2>
             <div class="accordion" id="courseContent">
-              <div v-for="(module, index) in modules" :key="index" class="accordion-item animate__animated animate__fadeInUp" :style="{ animationDelay: index * 0.2 + 's' }">
+              <div v-for="(module, index) in modules" :key="index" class="accordion-item animate-on-scroll" data-animation="animate__fadeInUp" :style="{ animationDelay: index * 0.2 + 's' }">
                 <h2 class="accordion-header" id="headingOne">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Module 1: Cơ bản về Spring Framework
+                    Java Core & OOP (10 buổi)
                   </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#courseContent">
                   <div class="accordion-body">
-                    <ul class="curriculum-list">
-                      <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Framework và lịch sử phát triển</li>
-                      <li><i class="fas fa-check-circle"></i> Spring Core và Dependency Injection</li>
-                      <li><i class="fas fa-check-circle"></i> Cấu hình Spring với Java Config và Annotations</li>
-                      <li><i class="fas fa-check-circle"></i> Spring IoC Container và Bean Life Cycle</li>
-                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                    </ul>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-striped">
+                        <thead>
+                          <tr>
+                            <th>Buổi</th>
+                            <th>Chủ đề</th>
+                            <th>Nội dung</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Cài đặt môi trường<br>Chương trình đầu tiên<br>Tổng quan về Java</td>
+                            <td>- Cài đặt JDK (Java Development Kit)<br>- Cài đặt IntelliJ IDEA<br>- Chương trình đầu tiên<br>- Biến, Kiểu dữ liệu</td>
+                          </tr>
+                          <tr>
+                            <td>2, 3</td>
+                            <td>Cấu trúc điều kiện<br>Cấu trúc lặp</td>
+                            <td>- Câu lệnh điều khiển<br>- Các vòng lặp trong Java</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Debug & String</td>
+                            <td>- Debug và 1 số phương pháp debug<br>- So sánh String, StringBuilder và StringBuffer</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Mảng một chiều<br>ArrayList</td>
+                            <td>- Mảng<br>- Wrapper Class và Autoboxing/Unboxing</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Tổng quan về lập trình<br>OOP</td>
+                            <td>- OOP</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Constructor, Access<br>Static<br>Kế thừa</td>
+                            <td>- Static<br>- Kế thừa</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Đa hình<br>Abstract class, Interface</td>
+                            <td>- Đa hình<br>- Trừu tượng</td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>Java Collection</td>
+                            <td>- So sánh ArrayList và MyArrayList</td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>Exception<br>Biểu thức chính quy</td>
+                            <td>- Exception<br>- Kiểm tra chuỗi bằng Regex</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Module 2: Spring Boot Fundamentals
+                    MySQL (6 buổi)
                   </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#courseContent">
                   <div class="accordion-body">
-                    <ul class="curriculum-list">
-                      <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Boot và lợi ích</li>
-                      <li><i class="fas fa-check-circle"></i> Tạo dự án Spring Boot với Spring Initializr</li>
-                      <li><i class="fas fa-check-circle"></i> Auto-configuration và Starters</li>
-                      <li><i class="fas fa-check-circle"></i> Cấu hình ứng dụng và properties</li>
-                      <li><i class="fas fa-check-circle"></i> Tích hợp với các công cụ build (Maven, Gradle)</li>
-                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                    </ul>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-striped">
+                        <thead>
+                          <tr>
+                            <th>Buổi</th>
+                            <th>Chủ đề</th>
+                            <th>Nội dung</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>11</td>
+                            <td>Cài đặt môi trường<br>Overview database</td>
+                            <td>- Cài đặt MySQL Server và MySQL Workbench<br>- Cơ sở dữ liệu</td>
+                          </tr>
+                          <tr>
+                            <td>12, 13</td>
+                            <td>Thiết kế Cơ Sở Dữ Liệu</td>
+                            <td>- ERD</td>
+                          </tr>
+                          <tr>
+                            <td>14</td>
+                            <td>Thao tác với CSDL</td>
+                            <td>- Các loại JOIN</td>
+                          </tr>
+                          <tr>
+                            <td>15</td>
+                            <td>Group by, Having</td>
+                            <td>- Làm việc với tập hợp dữ liệu</td>
+                          </tr>
+                          <tr>
+                            <td>16</td>
+                            <td>Kiểm tra chất lượng</td>
+                            <td>- Đánh giá kết quả học tập</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Module 3: Spring MVC và RESTful Web Services
+                    Spring Boot (20 buổi)
                   </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#courseContent">
                   <div class="accordion-body">
-                    <ul class="curriculum-list">
-                      <li><i class="fas fa-check-circle"></i> Spring MVC architecture</li>
-                      <li><i class="fas fa-check-circle"></i> Controllers, RequestMapping và ModelAndView</li>
-                      <li><i class="fas fa-check-circle"></i> Xây dựng RESTful APIs với Spring Boot</li>
-                      <li><i class="fas fa-check-circle"></i> Content negotiation và HTTP status codes</li>
-                      <li><i class="fas fa-check-circle"></i> Exception handling trong RESTful services</li>
-                      <li><i class="fas fa-check-circle"></i> API documentation với Swagger/OpenAPI</li>
-                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                    </ul>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-striped">
+                        <thead>
+                          <tr>
+                            <th>Buổi</th>
+                            <th>Chủ đề</th>
+                            <th>Nội dung</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>17</td>
+                            <td>Tổng quan về web</td>
+                            <td>- Phân biệt Request và Response</td>
+                          </tr>
+                          <tr>
+                            <td>18</td>
+                            <td>CRUD theo RestFul API</td>
+                            <td>- Lombok</td>
+                          </tr>
+                          <tr>
+                            <td>19</td>
+                            <td>Mô hình MVC</td>
+                            <td>- Mô hình MVC</td>
+                          </tr>
+                          <tr>
+                            <td>20</td>
+                            <td>JDBC</td>
+                            <td>- Maven & Gradle</td>
+                          </tr>
+                          <tr>
+                            <td>21</td>
+                            <td>Kiểm tra chất lượng</td>
+                            <td>- ORM (Object-Relational Mapping)</td>
+                          </tr>
+                          <tr>
+                            <td>22</td>
+                            <td>ORM</td>
+                            <td>- ORM (Object-Relational Mapping)</td>
+                          </tr>
+                          <tr>
+                            <td>23, 24</td>
+                            <td>Spring Data JPA</td>
+                            <td>- Flyway</td>
+                          </tr>
+                          <tr>
+                            <td>25-29</td>
+                            <td>Bảo mật và Kiểm tra</td>
+                            <td>- Authentication và Authorization<br>- Spring Security<br>- JUnit, SonarLint<br>- Refresh Token</td>
+                          </tr>
+                          <tr>
+                            <td>30-36</td>
+                            <td>Case study</td>
+                            <td>- Xây dựng ứng dụng hoàn chỉnh với tính năng Authentication, Authorization</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Module 4: Spring Data JPA và Database Access
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#courseContent">
-                  <div class="accordion-body">
-                    <ul class="curriculum-list">
-                      <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Data JPA</li>
-                      <li><i class="fas fa-check-circle"></i> Entity mapping và Repository pattern</li>
-                      <li><i class="fas fa-check-circle"></i> CRUD operations với Spring Data repositories</li>
-                      <li><i class="fas fa-check-circle"></i> Query methods và JPQL</li>
-                      <li><i class="fas fa-check-circle"></i> Transactions và @Transactional</li>
-                      <li><i class="fas fa-check-circle"></i> Tích hợp với các databases (MySQL, PostgreSQL, H2)</li>
-                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                    </ul>
+            </div>
+          </section>
+
+
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-4">Lợi ích khi tham gia khóa học</h2>
+            <div class="benefits-list">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="benefit-card h-100 p-4 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary">
+                      <i class="bi bi-code-square fs-1"></i>
+                    </div>
+                    <h4 class="mb-3">Lập trình Java Core và OOP</h4>
+                    <p>Hiểu và thành thạo kỹ thuật lập trình hướng đối tượng với Java, có khả năng sử dụng các cấu trúc điều kiện, cấu trúc lặp, phương thức, và quản lý mảng một chiều.</p>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                  <div class="benefit-card h-100 p-4 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary">
+                      <i class="bi bi-database fs-1"></i>
+                    </div>
+                    <h4 class="mb-3">Làm việc với cơ sở dữ liệu MySQL</h4>
+                    <p>Nắm vững kiến thức cơ bản về thiết kế, thao tác với CSDL, và kỹ thuật xử lý dữ liệu với MySQL. Hiểu cách làm việc với các cơ chế truy vấn trong cơ sở dữ liệu.</p>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                  <div class="benefit-card h-100 p-4 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary">
+                      <i class="bi bi-gear fs-1"></i>
+                    </div>
+                    <h4 class="mb-3">Xử lý Backend với Spring Boot</h4>
+                    <p>Xây dựng API theo kiến trúc RESTful, nắm vững mô hình MVC, và thao tác với JDBC. Thành thạo ORM với Spring Data JPA, làm việc với nhiều bảng, và sử dụng các công cụ kiểm tra chất lượng mã nguồn.</p>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                  <div class="benefit-card h-100 p-4 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-danger">
+                      <i class="bi bi-building fs-1"></i>
+                    </div>
+                    <h4 class="mb-3">Thực tập tại doanh nghiệp</h4>
+                    <p>Học viên được hỗ trợ tham gia thực tập các dự án thực tế của công ty Techzen. Chứng chỉ học và thực hành tại Công ty TNHH Techzen, cùng hỗ trợ đặc biệt cho các bạn học viên năm cuối.</p>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    Module 5: Spring Security
-                  </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#courseContent">
-                  <div class="accordion-body">
-                    <ul class="curriculum-list">
-                      <li><i class="fas fa-check-circle"></i> Giới thiệu về Spring Security</li>
-                      <li><i class="fas fa-check-circle"></i> Authentication và Authorization</li>
-                      <li><i class="fas fa-check-circle"></i> Form-based authentication</li>
-                      <li><i class="fas fa-check-circle"></i> JWT authentication cho RESTful services</li>
-                      <li><i class="fas fa-check-circle"></i> Role-based access control</li>
-                      <li><i class="fas fa-check-circle"></i> OAuth2 và Social login</li>
-                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                    </ul>
-                  </div>
+            </div>
+          </section>
+
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-2">Khuyến mãi đặc biệt</h2>
+            <div class="promotions-section">
+              <div class="promotions-list">
+                <div class="promotion-item compact">
+                  <h5><i class="bi bi-tag-fill text-danger"></i> Đăng ký sớm</h5>
+                  <p class="small">Giảm 20% học phí cho học viên đăng ký trước ngày 8/3/2024.</p>
+                </div>
+                <div class="promotion-item compact">
+                  <h5><i class="bi bi-people-fill text-primary"></i> Đăng ký nhóm</h5>
+                  <p class="small">Giảm 200.000đ/người với nhóm 2 người, 500.000đ/người với nhóm 3 người trở lên.</p>
+                </div>
+                <div class="promotion-item compact">
+                  <h5><i class="bi bi-briefcase-fill text-success"></i> Cơ hội thực tập</h5>
+                  <p class="small">100% học viên được thực tập tại Techzen với cơ hội làm việc lâu dài.</p>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSix">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    Module 6: Testing trong Spring Boot
-                  </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#courseContent">
-                  <div class="accordion-body">
-                    <ul class="curriculum-list">
-                      <li><i class="fas fa-check-circle"></i> Unit testing với JUnit và Mockito</li>
-                      <li><i class="fas fa-check-circle"></i> Integration testing trong Spring Boot</li>
-                      <li><i class="fas fa-check-circle"></i> Testing web controllers và REST APIs</li>
-                      <li><i class="fas fa-check-circle"></i> Testing database operations</li>
-                      <li><i class="fas fa-check-circle"></i> Test coverage và best practices</li>
-                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSeven">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                    Module 7: Spring Boot Microservices
-                  </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#courseContent">
-                  <div class="accordion-body">
-                    <ul class="curriculum-list">
-                      <li><i class="fas fa-check-circle"></i> Kiến trúc Microservices và lợi ích</li>
-                      <li><i class="fas fa-check-circle"></i> Spring Cloud ecosystem</li>
-                      <li><i class="fas fa-check-circle"></i> Service Discovery với Eureka</li>
-                      <li><i class="fas fa-check-circle"></i> API Gateway với Spring Cloud Gateway</li>
-                      <li><i class="fas fa-check-circle"></i> Circuit Breaker pattern với Resilience4j</li>
-                      <li><i class="fas fa-check-circle"></i> Distributed tracing</li>
-                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingEight">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                    Module 8: Containerization và Deployment
-                  </button>
-                </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#courseContent">
-                  <div class="accordion-body">
-                    <ul class="curriculum-list">
-                      <li><i class="fas fa-check-circle"></i> Containerization với Docker</li>
-                      <li><i class="fas fa-check-circle"></i> Đóng gói ứng dụng Spring Boot với Docker</li>
-                      <li><i class="fas fa-check-circle"></i> Orchestration với Kubernetes cơ bản</li>
-                      <li><i class="fas fa-check-circle"></i> Deploying Spring Boot trên cloud platforms</li>
-                      <li><i class="fas fa-check-circle"></i> Monitoring và logging</li>
-                      <li><i class="fas fa-check-circle"></i> CI/CD pipeline</li>
-                      <li><i class="fas fa-check-circle"></i> Bài tập thực hành</li>
-                    </ul>
-                  </div>
+              <div class="hotline mt-4 pulse">
+                <div class="d-flex align-items-center justify-content-center">
+                  <i class="bi bi-telephone-fill text-primary me-2 fs-4"></i>
+                  <p class="mb-0 fw-bold fs-5">Hotline đăng ký: <span class="text-primary">0236 3872 999</span></p>
                 </div>
               </div>
             </div>
@@ -225,61 +418,53 @@
 
         <div class="col-lg-4">
           <div class="course-sidebar">
-            <div class="price-section mb-4 animate__animated animate__fadeInRight">
-              <div class="price-card">
-                <div class="price-header">
-                  <h3>Học phí</h3>
-                  <div class="price">
-                    <span class="amount">6.500.000</span>
-                    <span class="currency">VNĐ</span>
-                  </div>
+            <div class="price-card mb-4 animate-on-scroll" data-animation="animate__fadeInRight">
+              <div class="price-header">
+                <h3>Học phí</h3>
+                <div class="price-amount">
+                  <span class="amount">6.999.000 VND</span>
+                  <p class="text-muted">Lộ trình: 3 tháng</p>
                 </div>
+              </div>
+              <div class="price-body">
                 <div class="price-features">
-                  <ul>
-                    <li><i class="fas fa-check"></i> Tham gia đầy đủ 36 buổi học</li>
-                    <li><i class="fas fa-check"></i> Tài liệu học tập</li>
-                    <li><i class="fas fa-check"></i> Hỗ trợ 24/7</li>
-                    <li><i class="fas fa-check"></i> Chứng chỉ hoàn thành</li>
+                <ul>
+                  <li v-for="(benefit, index) in benefits" :key="index" :style="{ animationDelay: index * 0.1 + 's' }">
+                    <i class="fas fa-check"></i> {{ benefit }}
+                  </li>
+                </ul>
+              </div>
+                <button class="btn btn-primary w-100 mt-4 pulse">Đăng ký ngay</button>
+              </div>
+            </div>
+
+            <div class="instructor-card animate-on-scroll" data-animation="animate__fadeInRight">
+              <div class="instructor-body">
+              <div class="instructor-infomation">
+                <div class="instructor-avatar">
+                  <img src="../assets/images/nguyenngocquang.png" alt="Instructor">
+                </div>
+                <div class="instructor-name mt-4">NGUYỄN NGỌC QUANG</div>
+              </div>
+                <div class="instructor-title mt-2">Chuyên gia Java | Manager bộ phận phát triển web</div>
+                <div class="instructor-info mt-3">
+                  <ul class="list-unstyled">
+                    <li>
+                      <span>Master of Computer Science, ĐH Bách Khoa</span>
+                    </li>
+                    <li>
+                      <span>7+ năm kinh nghiệm với Java & Spring</span>
+                    </li>
+                    <li>
+                      <span>5+ năm kinh nghiệm đào tạo Java Backend</span>
+                    </li>
                   </ul>
                 </div>
-                <div class="price-cta">
-                  <button class="btn btn-primary w-100">Đăng ký ngay</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="instructor-section mb-4 animate__animated animate__fadeInRight animate__delay-1s">
-              <h3 class="sidebar-title">Giảng viên</h3>
-              <div class="instructor-card">
-                <div class="instructor-avatar">
-                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lê Văn Tuấn">
-                </div>
-                <div class="instructor-details">
-                  <h4>Lê Văn Tuấn</h4>
-                  <p class="instructor-title">Senior Java Developer</p>
-                  <p class="instructor-bio">10+ năm kinh nghiệm phát triển ứng dụng Java Enterprise</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="promotions-section animate__animated animate__fadeInRight animate__delay-2s">
-              <h3 class="sidebar-title">Ưu đãi</h3>
-              <div class="promotion-item">
-                <div class="promotion-icon">
-                  <i class="fas fa-calendar-alt"></i>
-                </div>
-                <div class="promotion-content">
-                  <h4>Đăng ký sớm</h4>
-                  <p>Giảm 15% học phí khi đăng ký trước 15/05/2023</p>
-                </div>
-              </div>
-              <div class="promotion-item">
-                <div class="promotion-icon">
-                  <i class="fas fa-users"></i>
-                </div>
-                <div class="promotion-content">
-                  <h4>Đăng ký nhóm</h4>
-                  <p>Giảm 12% cho mỗi học viên khi đăng ký theo nhóm</p>
+                <div class="skill-tags">
+                  <span class="skill-tag java">Java</span>
+                  <span class="skill-tag spring">Spring Boot</span>
+                  <span class="skill-tag db">MySQL</span>
+                  <span class="skill-tag api">RESTful API</span>
                 </div>
               </div>
             </div>
@@ -288,23 +473,40 @@
       </div>
     </div>
 
-    <div class="cta-section bg-primary text-white">
-      <div class="container">
-        <div class="cta-content text-center animate__animated animate__fadeInUp">
-          <h2 class="mb-4">Sẵn sàng trở thành Spring Boot Developer?</h2>
-          <p class="mb-4">Đăng ký ngay hôm nay để nâng cao kỹ năng và mở ra cơ hội việc làm với mức lương hấp dẫn!</p>
-          <button class="btn btn-light btn-lg">Đăng ký ngay</button>
-        </div>
+    <div class="cta-section py-5 animated-gradient animate-on-scroll" data-animation="animate__fadeIn">
+      <div class="container py-4 text-center text-white">
+        <h2 class="mb-4">Sẵn sàng để bắt đầu hành trình Java của bạn?</h2>
+        <p class="mb-4">Đừng bỏ lỡ cơ hội nâng cao kỹ năng và mở rộng cơ hội nghề nghiệp!</p>
+        <button class="btn btn-light btn-lg pulse">Đăng ký học ngay</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Testimonials from '@/components/ui/Testimonials.vue'
+
 export default {
   name: 'CourseJavaSpringView',
+  components: {
+    Testimonials
+  },
   data() {
     return {
+      courseTestimonials: [
+        {
+          content: '"Khóa học Java Backend này đã giúp tôi có được kiến thức toàn diện về lập trình backend. Đặc biệt phần Spring Boot đã giúp tôi tự tin xây dựng API hoàn chỉnh."',
+          avatar: 'https://randomuser.me/api/portraits/men/28.jpg',
+          name: 'Lê Minh Tuấn',
+          title: 'Java Developer tại FPT Software'
+        },
+        {
+          content: '"Mentor rất tận tâm, kiến thức chuyên sâu về Java và Spring. Tôi đặc biệt ấn tượng với cách giảng viên áp dụng các dự án thực tế vào bài giảng."',
+          avatar: 'https://randomuser.me/api/portraits/women/33.jpg',
+          name: 'Hoàng Thị Nga',
+          title: 'Sinh viên Đại học Bách Khoa'
+        }
+      ],
       benefits: [
         'Nắm vững kiến trúc và các thành phần của Spring Framework',
         'Xây dựng RESTful APIs với Spring Boot',
@@ -325,24 +527,81 @@ export default {
           ]
         },
         // ... Add other modules here
-      ]
+      ],
+      animatedElements: [], // For tracking scroll-triggered animations
+      scrollObserver: null  // Intersection Observer for scroll animations
     }
   },
   mounted() {
-    // Add scroll animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-        }
+    // Initialize scroll-triggered animations
+    this.initializeScrollAnimations();
+    
+    // Add subtle background animation
+    this.initializeBackgroundEffects();
+  },
+  beforeUnmount() {
+    // Clean up observers when component is destroyed
+    if (this.scrollObserver) {
+      this.scrollObserver.disconnect();
+    }
+    
+    // Remove any event listeners
+    window.removeEventListener('scroll', this.handleParallaxEffect);
+  },
+  methods: {
+    initializeScrollAnimations() {
+      // Configure the intersection observer
+      const options = {
+        root: null, // use viewport
+        rootMargin: '0px',
+        threshold: 0.1 // trigger when at least 10% of the element is visible
+      };
+      
+      this.scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add animation class when element comes into view
+            entry.target.classList.add('animate__animated');
+            
+            const animationType = entry.target.dataset.animation || 'animate__fadeIn';
+            entry.target.classList.add(animationType);
+            
+            // Unobserve after animation is triggered
+            this.scrollObserver.unobserve(entry.target);
+          }
+        });
+      }, options);
+      
+      // Select elements to observe
+      this.animatedElements = document.querySelectorAll('.animate-on-scroll');
+      this.animatedElements.forEach(element => {
+        this.scrollObserver.observe(element);
       });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('.section').forEach((section) => {
-      observer.observe(section);
-    });
+    },
+    
+    initializeBackgroundEffects() {
+      // Add parallax scrolling effect to header
+      window.addEventListener('scroll', this.handleParallaxEffect);
+      
+      // Initialize animated background effect for header
+      const headerSection = document.querySelector('.header-section');
+      if (headerSection) {
+        // Add animated gradient to header
+        headerSection.classList.add('animated-gradient');
+      }
+    },
+    
+    handleParallaxEffect() {
+      const scrollPosition = window.scrollY;
+      
+      // Parallax effect for header
+      const headerElements = document.querySelectorAll('.parallax-element');
+      headerElements.forEach(element => {
+        const speed = element.dataset.speed || 0.3;
+        const yPos = -(scrollPosition * speed);
+        element.style.transform = `translateY(${yPos}px)`;
+      });
+    }
   }
 }
 </script>
@@ -454,11 +713,16 @@ export default {
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
-
+.instructor-infomation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .instructor-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
   overflow: hidden;
 }
 
@@ -867,5 +1131,448 @@ html {
 
 .course-image img:hover {
   transform: scale(1.02);
+}
+
+.skill-tag.java {
+  background-color: #5382a1;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.skill-tag.spring {
+  background-color: #6db33f;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.skill-tag.db {
+  background-color: #00758f;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.skill-tag.api {
+  background-color: #ff6c37;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+/* Làm nổi bật lộ trình học */
+.curriculum-overview {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+.curriculum-overview .table {
+  margin-bottom: 0;
+}
+
+.curriculum-overview .table th {
+  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 1rem;
+}
+
+.curriculum-overview .table td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.curriculum-overview .table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.curriculum-overview .table tbody tr:hover {
+  background-color: #f8f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 107, 255, 0.1);
+}
+
+.target-audience li {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.target-audience li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(47, 128, 237, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructor-info li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.golden-opportunity {
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border-top: 5px solid #2f80ed;
+}
+
+.golden-opportunity::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/images/pattern-bg.png');
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.golden-opportunity .lead {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.opportunity-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.opportunity-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  background: #f0f7ff;
+}
+
+.opportunity-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: rgba(47, 128, 237, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotline {
+  background: linear-gradient(135deg, #f6f9fc 0%, #eef4fd 100%);
+  border-left: 4px solid #2f80ed;
+}
+
+.contact-info {
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.promotions-section {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.promotions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.promotion-item.compact {
+  background: white;
+  border-radius: 6px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.promotion-item.compact:hover {
+  transform: translateX(3px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.promotion-item.compact .promotion-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  font-size: 0.9rem;
+}
+
+.promotion-item.compact .promotion-content h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.promotion-item.compact .promotion-content p {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* Add animated background gradient */
+.animated-gradient {
+  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Enhanced button animations */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  z-index: -1;
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover:before {
+  left: 100%;
+}
+
+/* Animated section headers */
+.section-title {
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2f80ed 0%, #56ccf2 100%);
+  transition: width 0.5s ease;
+}
+
+.section-title:hover:after {
+  width: 100px;
+}
+
+/* Enhanced accordion animations */
+.accordion-item {
+  overflow: hidden;
+}
+
+.accordion-button {
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  color: #2f80ed;
+  box-shadow: 0 5px 15px rgba(47, 128, 237, 0.1);
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg) scale(1.2);
+}
+
+/* Card hover effects with 3D tilt */
+.price-card, .instructor-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.price-card:hover, .instructor-card:hover {
+  transform: translateY(-5px) rotateX(3deg) rotateY(3deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Staggered animation for list items */
+.benefit-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpStaggered 0.5s ease forwards;
+}
+
+@keyframes fadeInUpStaggered {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating elements */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Pulse animation for CTA elements */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(74, 107, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(74, 107, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(74, 107, 255, 0);
+  }
+}
+
+/* Enhanced animations for table rows */
+.curriculum-overview .table tbody tr {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.curriculum-overview .table tbody tr:hover {
+  opacity: 1;
+  background-color: #f0f4ff;
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(74, 107, 255, 0.15);
+  z-index: 1;
+}
+
+/* Advanced skill tag animations */
+.skill-tag {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-tag:after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.skill-tag:hover:after {
+  opacity: 1;
+  transform: rotate(45deg) translate(-10%, -10%);
+}
+
+/* Typewriter effect for important text */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #4a6bff;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #4a6bff }
+}
+
+/* Arrow bounce animation for scroll indicators */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Progress bar animation */
+.progress-bar {
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+.progress-animated {
+  width: 100%;
 }
 </style> 
