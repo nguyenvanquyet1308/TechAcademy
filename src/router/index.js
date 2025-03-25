@@ -9,6 +9,12 @@ import Reviews from '../views/Reviews.vue'
 import FAQ from '../views/FAQ.vue'
 import CoursePython from '../views/CoursePython.vue'
 import CourseJavaSpring from '../views/CourseJavaSpring.vue'
+import AdminLogin from '../views/admin/AdminLogin.vue'
+import AdminDashboard from '../views/admin/AdminDashboard.vue'
+import AdminCourses from '../views/admin/AdminCourses.vue'
+import AdminInstructors from '../views/admin/AdminInstructors.vue'
+import AdminBlog from '../views/admin/AdminBlog.vue'
+import AdminStudents from '../views/admin/AdminStudents.vue'
 
 const routes = [
   {
@@ -60,6 +66,41 @@ const routes = [
     path: '/course-java-spring',
     name: 'course-java-spring',
     component: CourseJavaSpring
+  },
+  {
+    path: '/admin/login',
+    name: 'admin-login',
+    component: AdminLogin,
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AdminDashboard,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/admin/courses',
+    name: 'admin-courses',
+    component: AdminCourses,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/admin/instructors',
+    name: 'admin-instructors',
+    component: AdminInstructors,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/admin/blog',
+    name: 'admin-blog',
+    component: AdminBlog,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/admin/students',
+    name: 'admin-students',
+    component: AdminStudents,
+    meta: { requiresAuth: true }
   }
 ]
 

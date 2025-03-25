@@ -4,12 +4,12 @@
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-7 mb-4 mb-lg-0">
-            <h1 class="course-title">Lập trình Java Spring Boot</h1>
-            <p class="course-description">
+            <h1 class="course-title animate__animated animate__fadeInDown">Lập trình Java Spring Boot</h1>
+            <p class="course-description animate__animated animate__fadeIn animate__delay-1s">
               Khóa học Java Spring Boot toàn diện giúp bạn làm chủ framework Spring Boot và xây dựng các ứng dụng web hiện đại, 
               RESTful API và hệ thống backend mạnh mẽ. Từ người mới bắt đầu đến Java developer muốn nâng cao.
             </p>
-            <div class="course-meta">
+            <div class="course-meta animate__animated animate__fadeIn animate__delay-2s">
               <div class="meta-item">
                 <i class="bi bi-clock me-2"></i>
                 <span>12 tuần (36 buổi)</span>
@@ -23,13 +23,13 @@
                 <span>Học online hoặc offline</span>
               </div>
             </div>
-            <div class="course-actions">
+            <div class="course-actions animate__animated animate__fadeIn animate__delay-3s">
               <button class="btn btn-primary btn-lg me-2">Đăng ký học</button>
               <button class="btn btn-outline-light btn-lg">Tải syllabus</button>
             </div>
           </div>
           <div class="col-lg-5">
-            <div class="course-image">
+            <div class="course-image animate__animated animate__fadeInRight">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid">
             </div>
           </div>
@@ -41,18 +41,18 @@
       <div class="row">
         <div class="col-lg-8">
           <section class="section mb-5">
-            <h2 class="section-title mb-4">Tổng quan khóa học</h2>
-            <div class="course-overview">
+            <h2 class="section-title mb-4 animate__animated animate__fadeInUp">Tổng quan khóa học</h2>
+            <div class="course-overview animate__animated animate__fadeIn animate__delay-1s">
               <p>Khóa học Java Spring Boot cung cấp kiến thức toàn diện về Spring framework, tập trung vào Spring Boot để xây dựng các ứng dụng Java hiện đại. Bạn sẽ học cách phát triển RESTful API, kết nối cơ sở dữ liệu, xử lý bảo mật và triển khai ứng dụng thực tế.</p>
               <p>Được thiết kế cho cả người mới bắt đầu và các developer muốn nâng cao kỹ năng, khóa học này kết hợp lý thuyết với các dự án thực tế, giúp bạn xây dựng portfolio ấn tượng và sẵn sàng cho các vị trí Java Developer.</p>
             </div>
           </section>
 
           <section class="section mb-5">
-            <h2 class="section-title mb-4">Bạn sẽ học được gì?</h2>
+            <h2 class="section-title mb-4 animate__animated animate__fadeInUp">Bạn sẽ học được gì?</h2>
             <div class="row">
               <div v-for="(benefit, index) in benefits" :key="index" class="col-md-6 mb-4">
-                <div class="benefit-item">
+                <div class="benefit-item animate__animated animate__fadeInLeft" :style="{ animationDelay: index * 0.2 + 's' }">
                   <i class="bi bi-check-circle-fill text-success me-2"></i>
                   <span>{{ benefit }}</span>
                 </div>
@@ -61,9 +61,9 @@
           </section>
 
           <section class="section mb-5">
-            <h2 class="section-title mb-4">Nội dung khóa học</h2>
+            <h2 class="section-title mb-4 animate__animated animate__fadeInUp">Nội dung khóa học</h2>
             <div class="accordion" id="courseContent">
-              <div class="accordion-item">
+              <div v-for="(module, index) in modules" :key="index" class="accordion-item animate__animated animate__fadeInUp" :style="{ animationDelay: index * 0.2 + 's' }">
                 <h2 class="accordion-header" id="headingOne">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Module 1: Cơ bản về Spring Framework
@@ -225,7 +225,7 @@
 
         <div class="col-lg-4">
           <div class="course-sidebar">
-            <div class="price-section mb-4">
+            <div class="price-section mb-4 animate__animated animate__fadeInRight">
               <div class="price-card">
                 <div class="price-header">
                   <h3>Học phí</h3>
@@ -248,7 +248,7 @@
               </div>
             </div>
 
-            <div class="instructor-section mb-4">
+            <div class="instructor-section mb-4 animate__animated animate__fadeInRight animate__delay-1s">
               <h3 class="sidebar-title">Giảng viên</h3>
               <div class="instructor-card">
                 <div class="instructor-avatar">
@@ -262,7 +262,7 @@
               </div>
             </div>
 
-            <div class="promotions-section">
+            <div class="promotions-section animate__animated animate__fadeInRight animate__delay-2s">
               <h3 class="sidebar-title">Ưu đãi</h3>
               <div class="promotion-item">
                 <div class="promotion-icon">
@@ -290,7 +290,7 @@
 
     <div class="cta-section bg-primary text-white">
       <div class="container">
-        <div class="cta-content text-center">
+        <div class="cta-content text-center animate__animated animate__fadeInUp">
           <h2 class="mb-4">Sẵn sàng trở thành Spring Boot Developer?</h2>
           <p class="mb-4">Đăng ký ngay hôm nay để nâng cao kỹ năng và mở ra cơ hội việc làm với mức lương hấp dẫn!</p>
           <button class="btn btn-light btn-lg">Đăng ký ngay</button>
@@ -312,8 +312,37 @@ export default {
         'Xây dựng ứng dụng web với Spring MVC và Thymeleaf',
         'Xác thực và bảo mật với Spring Security',
         'Phát triển và triển khai ứng dụng Spring Boot'
+      ],
+      modules: [
+        {
+          title: 'Module 1: Cơ bản về Spring Framework',
+          content: [
+            'Giới thiệu về Spring Framework và lịch sử phát triển',
+            'Spring Core và Dependency Injection',
+            'Cấu hình Spring với Java Config và Annotations',
+            'Spring IoC Container và Bean Life Cycle',
+            'Bài tập thực hành'
+          ]
+        },
+        // ... Add other modules here
       ]
     }
+  },
+  mounted() {
+    // Add scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.section').forEach((section) => {
+      observer.observe(section);
+    });
   }
 }
 </script>
@@ -680,5 +709,163 @@ export default {
     flex-direction: column;
     gap: 1rem;
   }
+}
+
+/* Add animation classes */
+.animate__animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate__fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.animate__fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animate__delay-1s {
+  animation-delay: 1s;
+}
+
+.animate__delay-2s {
+  animation-delay: 2s;
+}
+
+.animate__delay-3s {
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Add hover effects */
+.benefit-item {
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateX(10px);
+}
+
+.price-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-card {
+  transition: transform 0.3s ease;
+}
+
+.instructor-card:hover {
+  transform: scale(1.02);
+}
+
+.promotion-item {
+  transition: transform 0.3s ease;
+}
+
+.promotion-item:hover {
+  transform: translateX(5px);
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add accordion animation */
+.accordion-button:not(.collapsed) {
+  transition: all 0.3s ease;
+}
+
+.accordion-body {
+  transition: all 0.3s ease;
+}
+
+/* Add image hover effect */
+.course-image img {
+  transition: transform 0.3s ease;
+}
+
+.course-image img:hover {
+  transform: scale(1.02);
 }
 </style> 

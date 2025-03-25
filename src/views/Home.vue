@@ -1,16 +1,21 @@
 <template>
   <div class="home">
     <div class="hero-section position-relative overflow-hidden">
-      <ThreeJSHero />
+      <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="@/assets/video/vd1.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+      </div>
       <div class="container py-5 position-relative">
-        <!-- Rest of the hero content -->
-        <div class="row align-items-center">
-          <div class="col-md-6">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
             <div class="hero-content">
               <h1 
                 v-motion
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+                class="display-4 fw-bold mb-4"
               >
                 Bắt đầu hành trình công nghệ của bạn tại TechAcademy
               </h1>
@@ -18,6 +23,7 @@
                 v-motion
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
+                class="lead mb-5"
               >
                 Khóa học chất lượng cao, giảng viên chuyên nghiệp và lộ trình học tập cá nhân hóa giúp bạn nhanh chóng phát triển kỹ năng lập trình.
               </p>
@@ -26,18 +32,9 @@
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 800 } }"
               >
-                <button class="btn btn-primary me-2">Khám phá khóa học</button>
-                <button class="btn btn-outline-primary">Tư vấn miễn phí</button>
+                <button class="btn btn-primary btn-lg me-3">Khám phá khóa học</button>
+                <button class="btn btn-outline-light btn-lg">Tư vấn miễn phí</button>
               </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="hero-image" 
-              v-motion
-              :initial="{ opacity: 0, x: 100 }"
-              :enter="{ opacity: 1, x: 0, transition: { delay: 800, duration: 1000 } }"
-            >
-              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="TechAcademy" class="img-fluid" />
             </div>
           </div>
         </div>
@@ -731,52 +728,96 @@ export default {
   }
 }
 
-/* Enhanced hero section styles for Three.js background */
+/* Update hero section styles */
 .hero-section {
-  background: linear-gradient(135deg, rgba(47, 128, 237, 0.9) 0%, rgba(106, 58, 239, 0.8) 100%);
+  background: none;
   color: white;
-  padding: 7rem 0 5rem;
+  padding: 12rem 0 8rem;
   position: relative;
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-content h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn .btn {
+  padding: 1rem 2rem;
   font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
-.hero-image {
-  position: relative;
+.hero-btn .btn-primary {
+  background: #4a6bff;
+  border-color: #4a6bff;
+}
+
+.hero-btn .btn-primary:hover {
+  background: #3557d4;
+  border-color: #3557d4;
+  transform: translateY(-2px);
+}
+
+.hero-btn .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Update video overlay */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
   z-index: 1;
-}
-
-.hero-image img {
-  border-radius: 8px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 5rem 0 3rem;
+    padding: 8rem 0 4rem;
   }
   
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .hero-btn .btn {
+    width: 100%;
+    max-width: 300px;
   }
 }
 
@@ -854,5 +895,52 @@ export default {
 .social-icon:hover {
   background: #4a6bff;
   color: white;
+}
+
+/* Add video background styles */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+}
+
+/* Add animation for video fade in */
+.video-background {
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style> 
