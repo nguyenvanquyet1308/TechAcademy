@@ -27,7 +27,7 @@
               </div>
             </div>
             <div class="course-actions animate__animated animate__fadeIn animate__delay-3s">
-              <button class="btn btn-primary btn-lg me-2 pulse">Đăng ký học</button>
+              <button @click="showRegistrationModal = true" class="btn btn-primary btn-lg me-2 pulse">Đăng ký học</button>
               <button class="btn btn-outline-light btn-lg">Tải syllabus</button>
             </div>
           </div>
@@ -434,7 +434,7 @@
                   </li>
                 </ul>
               </div>
-               <router-link to="/register">  <button class="btn btn-primary w-100 mt-4 pulse">Đăng ký ngay</button> </router-link>
+              <button @click="showRegistrationModal = true" class="btn btn-primary w-100 mt-4 pulse">Đăng ký ngay</button> 
               </div>
             </div>
 
@@ -442,21 +442,20 @@
               <div class="instructor-body">
               <div class="instructor-infomation">
                 <div class="instructor-avatar">
-                  <img src="../assets/images/nguyenngocquang.png" alt="Instructor">
+                  <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
                 </div>
                 <div class="instructor-name mt-4">NGUYỄN NGỌC QUANG</div>
               </div>
-                <div class="instructor-title mt-2">Chuyên gia Java | Manager bộ phận phát triển web</div>
+                <div class="instructor-title mt-2">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</div>
                 <div class="instructor-info mt-3">
                   <ul class="list-unstyled">
-                    <li>
-                      <span>Master of Computer Science, ĐH Bách Khoa</span>
+                    <li class="d-flex align-items-baseline mb-2">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                      <span>7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.</span>
                     </li>
-                    <li>
-                      <span>7+ năm kinh nghiệm với Java & Spring</span>
-                    </li>
-                    <li>
-                      <span>5+ năm kinh nghiệm đào tạo Java Backend</span>
+                    <li class="d-flex align-items-baseline mb-2">
+                      <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                      <span>6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên, từ các bạn mới bắt đầu đến những người đã có nền tảng.</span>
                     </li>
                   </ul>
                 </div>
@@ -477,7 +476,140 @@
       <div class="container py-4 text-center text-white">
         <h2 class="mb-4">Sẵn sàng để bắt đầu hành trình Java của bạn?</h2>
         <p class="mb-4">Đừng bỏ lỡ cơ hội nâng cao kỹ năng và mở rộng cơ hội nghề nghiệp!</p>
-      <router-link to="/register"> <button class="btn btn-light btn-lg pulse">Đăng ký học ngay</button> </router-link>
+      <router-link to="/register"> <button @click="showRegistrationModal = true" class="btn btn-light btn-lg pulse">Đăng ký học ngay</button> </router-link>
+      </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal" v-if="showRegistrationModal">
+      <div class="modal-content registration-modal-content">
+        <span class="close-btn" @click="showRegistrationModal = false">&times;</span>
+        <h2>Đăng ký khóa học</h2>
+        <p>Hoàn thành mẫu đăng ký dưới đây để bắt đầu hành trình học tập cùng chúng tôi</p>
+        
+        <form @submit.prevent="submitForm">
+          <div class="form-group">
+            <label for="fullName">Họ và tên <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="fullName" 
+              v-model="form.fullName" 
+              :class="{ 'error': errors.fullName }"
+              required
+            >
+            <span class="error-message" v-if="errors.fullName">{{ errors.fullName }}</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              v-model="form.email"
+              :class="{ 'error': errors.email }"
+              required
+            >
+            <span class="error-message" v-if="errors.email">{{ errors.email }}</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Số điện thoại <span class="required">*</span></label>
+            <input 
+              type="tel" 
+              id="phone" 
+              v-model="form.phone"
+              :class="{ 'error': errors.phone }"
+              required
+            >
+            <span class="error-message" v-if="errors.phone">{{ errors.phone }}</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="course">Khóa học đăng ký</label>
+            <input 
+              type="text" 
+              id="course" 
+              v-model="form.course"
+              disabled
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="experience">Kinh nghiệm lập trình</label>
+            <select id="experience" v-model="form.experience">
+              <option value="beginner">Mới bắt đầu</option>
+              <option value="intermediate">Có kinh nghiệm cơ bản</option>
+              <option value="advanced">Có kiến thức chuyên sâu</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Ghi chú thêm</label>
+            <textarea 
+              id="message" 
+              v-model="form.message"
+              rows="4"
+            ></textarea>
+          </div>
+          
+          <div class="form-group checkbox">
+            <input 
+              type="checkbox" 
+              id="terms" 
+              v-model="form.terms"
+              :class="{ 'error': errors.terms }"
+              required
+            >
+            <label for="terms">
+              Tôi đồng ý với <a href="#" @click.prevent="showTerms = true">điều khoản và điều kiện</a> <span class="required">*</span>
+            </label>
+            <span class="error-message" v-if="errors.terms">{{ errors.terms }}</span>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" :disabled="isSubmitting">
+              {{ isSubmitting ? 'Đang gửi...' : 'Đăng ký ngay' }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" v-if="showSuccessModal">
+      <div class="modal-content success-modal-content">
+        <span class="close-btn" @click="showSuccessModal = false">&times;</span>
+        <div class="success-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h2>Đăng ký thành công!</h2>
+        <p>Cảm ơn bạn đã đăng ký khóa học. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
+        <button class="btn" @click="showSuccessModal = false">Đóng</button>
+      </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal" v-if="showTerms">
+      <div class="modal-content terms-content">
+        <span class="close-btn" @click="showTerms = false">&times;</span>
+        <h2>Điều khoản và điều kiện</h2>
+        <div class="terms-text">
+          <h3>1. Điều khoản sử dụng</h3>
+          <p>Bằng việc đăng ký và tham gia khóa học tại TechAcademy, học viên đồng ý tuân theo các điều khoản và điều kiện được nêu dưới đây.</p>
+          
+          <h3>2. Thanh toán và hoàn tiền</h3>
+          <p>Học viên cần thanh toán đầy đủ học phí trước khi bắt đầu khóa học. Trong trường hợp học viên muốn rút khỏi khóa học, chính sách hoàn tiền sẽ được áp dụng theo quy định của TechAcademy.</p>
+          
+          <h3>3. Tài liệu học tập</h3>
+          <p>Tất cả tài liệu học tập được cung cấp trong khóa học đều thuộc bản quyền của TechAcademy. Học viên không được sao chép, phân phối hoặc sử dụng các tài liệu này cho mục đích thương mại mà không có sự cho phép bằng văn bản từ TechAcademy.</p>
+          
+          <h3>4. Chứng chỉ</h3>
+          <p>Chứng chỉ hoàn thành khóa học sẽ được cấp cho học viên đáp ứng đầy đủ các yêu cầu của khóa học, bao gồm tham gia các buổi học và hoàn thành các bài tập, dự án theo quy định.</p>
+          
+          <h3>5. Quy tắc ứng xử</h3>
+          <p>Học viên cần tuân thủ các quy tắc ứng xử trong suốt quá trình học tập, tôn trọng giảng viên và các học viên khác, không có hành vi gây rối hoặc làm ảnh hưởng đến môi trường học tập.</p>
+        </div>
+        <button class="btn" @click="acceptTerms">Tôi đồng ý</button>
       </div>
     </div>
   </div>
@@ -529,7 +661,21 @@ export default {
         // ... Add other modules here
       ],
       animatedElements: [], // For tracking scroll-triggered animations
-      scrollObserver: null  // Intersection Observer for scroll animations
+      scrollObserver: null,  // Intersection Observer for scroll animations
+      showRegistrationModal: false,
+      showSuccessModal: false,
+      showTerms: false,
+      form: {
+        fullName: '',
+        email: '',
+        phone: '',
+        course: 'Lập trình Java Back-end',
+        experience: 'beginner',
+        message: '',
+        terms: false
+      },
+      errors: {},
+      isSubmitting: false
     }
   },
   mounted() {
@@ -601,6 +747,63 @@ export default {
         const yPos = -(scrollPosition * speed);
         element.style.transform = `translateY(${yPos}px)`;
       });
+    },
+    submitForm() {
+      // Validate form
+      this.errors = {};
+      
+      if (!this.form.fullName.trim()) {
+        this.errors.fullName = 'Vui lòng nhập họ và tên';
+      }
+      
+      if (!this.form.email.trim()) {
+        this.errors.email = 'Vui lòng nhập email';
+      } else if (!this.validateEmail(this.form.email)) {
+        this.errors.email = 'Email không hợp lệ';
+      }
+      
+      if (!this.form.phone.trim()) {
+        this.errors.phone = 'Vui lòng nhập số điện thoại';
+      }
+      
+      if (!this.form.terms) {
+        this.errors.terms = 'Vui lòng đồng ý với điều khoản và điều kiện';
+      }
+      
+      // If there are no errors, process the form
+      if (Object.keys(this.errors).length === 0) {
+        this.isSubmitting = true;
+        
+        // Simulate API call for form submission
+        setTimeout(() => {
+          this.isSubmitting = false;
+          this.showRegistrationModal = false;
+          this.showSuccessModal = true;
+          this.resetForm();
+        }, 1500);
+      }
+    },
+    
+    validateEmail(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    },
+    
+    resetForm() {
+      this.form = {
+        fullName: '',
+        email: '',
+        phone: '',
+        course: 'Lập trình Java Back-end',
+        experience: 'beginner',
+        message: '',
+        terms: false
+      };
+    },
+    
+    acceptTerms() {
+      this.form.terms = true;
+      this.showTerms = false;
     }
   }
 }
@@ -1231,9 +1434,16 @@ html {
 }
 
 .instructor-info li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-size: 0.9rem;
   color: #4a5568;
+  line-height: 1.4;
+}
+
+.instructor-info .bi {
+  color: #4a6bff;
+  font-size: 0.8rem;
+  flex-shrink: 0;
 }
 
 .skill-tags {
@@ -1577,5 +1787,201 @@ html {
 
 .progress-animated {
   width: 100%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 95%;
+  max-height: 95vh;
+  overflow-y: auto;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.registration-modal-content {
+  width: 600px;
+  padding: 30px;
+}
+
+.success-modal-content {
+  width: 450px;
+  padding: 40px;
+  text-align: center;
+}
+
+.terms-content {
+  width: 700px;
+  padding: 30px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #dc3545;
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #212529;
+}
+
+.modal p {
+  color: #6c757d;
+  margin-bottom: 25px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #4a6bff;
+  outline: none;
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+}
+
+.error-message {
+  display: block;
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.required {
+  color: #dc3545;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+}
+
+.checkbox input {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.checkbox label {
+  margin-bottom: 0;
+}
+
+.checkbox a {
+  color: #4a6bff;
+  text-decoration: none;
+}
+
+.checkbox a:hover {
+  text-decoration: underline;
+}
+
+.form-actions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Success Modal Styles */
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(74, 107, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: #4a6bff;
+}
+
+/* Terms Modal Styles */
+.terms-text {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+.terms-text h3 {
+  font-size: 1.2rem;
+  margin: 20px 0 10px;
+  color: #212529;
+}
+
+.terms-text p {
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .registration-modal-content,
+  .success-modal-content,
+  .terms-content {
+    width: 100%;
+    padding: 20px;
+  }
 }
 </style> 

@@ -21,8 +21,8 @@
               Nội dung khóa học
             </a>
             <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-              <li><router-link class="dropdown-item" to="/course-python">Python Programming</router-link></li>
-              <li><router-link class="dropdown-item" to="/course-java-spring">Java Spring Boot</router-link></li>
+              <li><router-link class="dropdown-item" to="/course-python">Python Al</router-link></li>
+              <li><router-link class="dropdown-item" to="/course-java-spring">Java Backend</router-link></li>
               <li><hr class="dropdown-divider"></li>
               <li><router-link class="dropdown-item" to="/course-content">Tất cả khóa học</router-link></li>
             </ul>

@@ -34,15 +34,17 @@
           <ul class="footer-contact">
             <li class="d-flex mb-3">
               <i class="bi bi-geo-alt me-3"></i>
-              <p class="mb-0">Tầng 3,Số 06 Trần Phú, Hải Châu, TP.Đà Nẵng</p>
+              <p class="mb-0">Tầng 3,
+                06 Trần Phú, Thạch Thang, Hải Châu, Đà Nẵng</p>
             </li>
             <li class="d-flex mb-3">
               <i class="bi bi-envelope me-3"></i>
-              <p class="mb-0">info@techacademy.edu.vn</p>
+              <p class="mb-0">academy@techzen.vn</p>
             </li>
             <li class="d-flex mb-3">
               <i class="bi bi-telephone me-3"></i>
-              <p class="mb-0">(028) 3847 1234</p>
+              <p class="mb-0">
+                093 550 56 40</p>
             </li>
           </ul>
           <div class="mt-4">
@@ -53,7 +55,7 @@
       <hr class="mt-5 border-secondary">
       <div class="row mt-4">
         <div class="col-md-6 text-center text-md-start">
-          <p class="mb-md-0">© 2023 TechAcademy. Tất cả quyền được bảo lưu.</p>
+          <p class="mb-md-0">© 2025 TechAcademy. Tất cả quyền được bảo lưu.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <router-link to="/privacy" class="text-white me-3">Chính sách bảo mật</router-link>

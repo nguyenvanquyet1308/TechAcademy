@@ -32,8 +32,8 @@
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 800 } }"
               >
-                <button class="btn btn-primary btn-lg me-3">Khám phá khóa học</button>
-                <button class="btn btn-outline-light btn-lg">Tư vấn miễn phí</button>
+               <router-link to = "course-content"> <button class="btn btn-primary btn-lg me-3 animated-btn">Khám phá khóa học</button> </router-link>
+                <button class="btn btn-outline-light btn-lg animated-btn">Tư vấn miễn phí</button>
               </div>
             </div>
           </div>
@@ -44,32 +44,60 @@
     <!-- Features Section -->
     <section class="section features">
       <div class="container">
-        <h2 class="section-title" style="font-size: 35px;">Techzen Academy
-          Nơi Kiến Tạo Tương Lai Lập Trình Viên Chuyên Nghiệp</h2>
+        <h2 
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+          class="section-title" 
+          style="font-size: 35px;"
+        >
+          Techzen Academy
+          Nơi Kiến Tạo Tương Lai Lập Trình Viên Chuyên Nghiệp
+        </h2>
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visible="{ opacity: 1, x: 0, transition: { delay: 200, duration: 800 } }"
+            class="feature-card"
+          >
+            <div class="feature-icon pulse-animation">
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
             </div>
             <h3>Giảng viên chuyên nghiệp</h3>
             <p>Đội ngũ giảng viên giàu kinh nghiệm, hiện đang là những chuyên gia trong ngành công nghệ.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visible="{ opacity: 1, x: 0, transition: { delay: 400, duration: 800 } }"
+            class="feature-card"
+          >
+            <div class="feature-icon pulse-animation">
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
             </div>
             <h3>Chương trình cập nhật</h3>
             <p>Nội dung khóa học luôn được cập nhật với công nghệ mới nhất trong thị trường.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visible="{ opacity: 1, x: 0, transition: { delay: 600, duration: 800 } }"
+            class="feature-card"
+          >
+            <div class="feature-icon pulse-animation">
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
             </div>
             <h3>Thực hành thực tế</h3>
             <p>Tập trung vào các dự án thực tế, giúp học viên nhanh chóng áp dụng kiến thức vào công việc.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visible="{ opacity: 1, x: 0, transition: { delay: 800, duration: 800 } }"
+            class="feature-card"
+          >
+            <div class="feature-icon pulse-animation">
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
             <h3>Hỗ trợ 24/7</h3>
@@ -80,18 +108,28 @@
     </section>
 
     <!-- About Company Section -->
-    <section class="section about-company py-5 bg-light">
+    <section class="section about-company py-5 bg-light parallax-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 mb-4 mb-lg-0">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: -100 }"
+            :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
+            class="col-lg-6 mb-4 mb-lg-0"
+          >
             <h2 class="section-title text-start mb-4">Về Techzen Academy</h2>
             <div class="about-content">
               <p class="mb-4">Tại Techzen Academy, chúng tôi mang đến chương trình đào tạo lập trình toàn diện, từ nền tảng cơ bản đến các công nghệ hiện đại. Đội ngũ giảng viên giàu kinh nghiệm của chúng tôi sẽ hướng dẫn bạn một cách tỉ mỉ và chi tiết, giúp bạn nắm vững kiến thức và phát triển kỹ năng lập trình chuyên nghiệp.</p>
               <p>Chương trình học tập tại Techzen Academy không chỉ tập trung vào lý thuyết, mà còn chú trọng vào tình huống thực tế. Với sự chuẩn bị kỹ lưỡng từ Techzen Academy, bạn sẽ tự tin bước vào thế giới công nghệ và sẵn sàng chinh phục những cơ hội nghề nghiệp đầy triển vọng.</p>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="about-image">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: 100 }"
+            :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
+            class="col-lg-6"
+          >
+            <div class="about-image floating-animation">
               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Techzen Academy Team" class="img-fluid rounded shadow">
             </div>
           </div>
@@ -103,18 +141,33 @@
     <section class="section agile-scrum py-5">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 mb-4 mb-lg-0">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, scale: 0.9 }"
+            :visible="{ opacity: 1, scale: 1, transition: { duration: 800 } }"
+            class="col-lg-6 mb-4 mb-lg-0"
+          >
             <div class="agile-scrum-image">
               <img src="../assets/images/agile.png" alt="Agile Scrum Methodology" class="img-fluid rounded shadow">
             </div>
           </div>
-          <div class="col-lg-6">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: 100 }"
+            :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
+            class="col-lg-6"
+          >
             <h2 class="section-title text-start mb-4">Phương pháp Agile Scrum</h2>
             <div class="agile-scrum-content">
               <p class="mb-4">Tại Techzen, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm.</p>
               
               <div class="agile-principles mt-4">
-                <div class="principle-item d-flex align-items-start mb-3">
+                <div 
+                  v-motion
+                  :initial="{ opacity: 0, x: 50 }"
+                  :visible="{ opacity: 1, x: 0, transition: { delay: 200, duration: 600 } }"
+                  class="principle-item d-flex align-items-start mb-3"
+                >
                   <div class="principle-icon me-3">
                     <i class="bi bi-kanban text-primary fs-4"></i>
                   </div>
@@ -124,7 +177,12 @@
                   </div>
                 </div>
                 
-                <div class="principle-item d-flex align-items-start mb-3">
+                <div 
+                  v-motion
+                  :initial="{ opacity: 0, x: 50 }"
+                  :visible="{ opacity: 1, x: 0, transition: { delay: 400, duration: 600 } }"
+                  class="principle-item d-flex align-items-start mb-3"
+                >
                   <div class="principle-icon me-3">
                     <i class="bi bi-people text-primary fs-4"></i>
                   </div>
@@ -134,7 +192,12 @@
                   </div>
                 </div>
                 
-                <div class="principle-item d-flex align-items-start">
+                <div 
+                  v-motion
+                  :initial="{ opacity: 0, x: 50 }"
+                  :visible="{ opacity: 1, x: 0, transition: { delay: 600, duration: 600 } }"
+                  class="principle-item d-flex align-items-start"
+                >
                   <div class="principle-icon me-3">
                     <i class="bi bi-graph-up text-primary fs-4"></i>
                   </div>
@@ -143,7 +206,12 @@
                     <p>Sprint Review là cuộc họp để nhóm Scrum trình bày sản phẩm cho khách hàng và nhận phản hồi.</p>
                   </div>
                 </div>
-                <div class="principle-item d-flex align-items-start">
+                <div 
+                  v-motion
+                  :initial="{ opacity: 0, x: 50 }"
+                  :visible="{ opacity: 1, x: 0, transition: { delay: 800, duration: 600 } }"
+                  class="principle-item d-flex align-items-start"
+                >
                   <div class="principle-icon me-3">
                     <i class="bi bi-calendar-check text-primary fs-4"></i>            
                   </div>
@@ -153,9 +221,14 @@
                   </div>
                 </div>
               </div>
-              <div class="mt-4">
+              <div 
+                v-motion
+                :initial="{ opacity: 0, y: 30 }"
+                :visible="{ opacity: 1, y: 0, transition: { delay: 1000, duration: 600 } }"
+                class="mt-4"
+              >
                 <a href="https://techzen.vn/strategic/" target="_blank" rel="noopener noreferrer">
-                   <button class="btn btn-outline-primary">Tìm hiểu thêm về phương pháp Agile tại Techzen</button>
+                   <button class="btn btn-outline-primary animated-btn">Tìm hiểu thêm về phương pháp Agile tại Techzen</button>
                </a>
               </div>
             </div>
@@ -165,75 +238,75 @@
     </section>
 
     <!-- Instructors Section -->
-    <section class="section instructors py-5">
+    <section class="section instructors py-5 bg-light-gradient">
       <div class="container">
-        <h2 class="section-title mb-5">Đội ngũ giảng viên xuất sắc</h2>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="instructor-card text-center h-100">
+        <h2 
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+          class="section-title mb-5"
+        >
+          Đội ngũ giảng viên xuất sắc
+        </h2>
+        <div class="row d-flex justify-content-center">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, y: 100 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+            class="col-lg-3 col-md-6 mb-4"
+          >
+            <div class="instructor-card text-center h-100 card-hover">
               <div class="instructor-image mb-3">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nguyễn Văn Minh" class="img-fluid rounded-circle">
+                <img src="../assets/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
               </div>
-              <h3 class="instructor-name">Nguyễn Văn Minh</h3>
-              <p class="instructor-title text-primary">Senior Developer</p>
-              <p class="instructor-desc">10+ năm kinh nghiệm phát triển ứng dụng Enterprise, chuyên gia Java và Spring Boot</p>
-              <div class="instructor-social">
+              <h3 class="instructor-name">Huỳnh Hải Thiên</h3>
+              <p class="instructor-title text-primary">Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm</p>
+              <p class="instructor-desc">Thạc sĩ AI - Institute of Science Tokyo
+                    7+ năm kinh nghiệm AI tại Nhật Bản
+                    6+ năm đào tạo Fresher IT & AI</p>
+              <div class="instructor-social fade-in">
                 <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
                 <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="instructor-card text-center h-100">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, y: 100 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
+            class="col-lg-3 col-md-6 mb-4"
+          >
+            <div class="instructor-card text-center h-100 card-hover">
               <div class="instructor-image mb-3">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Trần Thị Hương" class="img-fluid rounded-circle">
+                <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
               </div>
-              <h3 class="instructor-name">Trần Thị Hương</h3>
-              <p class="instructor-title text-primary">Frontend Expert</p>
-              <p class="instructor-desc">Chuyên gia về React, Vue.js và các công nghệ frontend hiện đại với 8 năm kinh nghiệm</p>
-              <div class="instructor-social">
-                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="instructor-card text-center h-100">
-              <div class="instructor-image mb-3">
-                <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Lê Quang Đạt" class="img-fluid rounded-circle">
-              </div>
-              <h3 class="instructor-name">Lê Quang Đạt</h3>
-              <p class="instructor-title text-primary">Data Scientist</p>
-              <p class="instructor-desc">Tiến sĩ về Khoa học dữ liệu, chuyên gia về Python, Machine Learning và AI</p>
-              <div class="instructor-social">
-                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="instructor-card text-center h-100">
-              <div class="instructor-image mb-3">
-                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Phạm Minh Tâm" class="img-fluid rounded-circle">
-              </div>
-              <h3 class="instructor-name">Phạm Minh Tâm</h3>
-              <p class="instructor-title text-primary">DevOps Engineer</p>
-              <p class="instructor-desc">Chuyên gia về Cloud Computing, Docker, Kubernetes và CI/CD với 7 năm kinh nghiệm</p>
-              <div class="instructor-social">
+              <h3 class="instructor-name">Nguyễn Ngọc Quang</h3>
+              <p class="instructor-title text-primary">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</p>
+              <p class="instructor-desc">
+                7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.
+                6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên,
+                 từ các bạn mới bắt đầu đến những người đã có nền tảng.
+              </p>
+              <div class="instructor-social fade-in">
                 <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
                 <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-center mt-4">
-          <router-link to="/instructors" class="btn btn-outline-primary">Xem tất cả giảng viên</router-link>
+        <div 
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }"
+          class="text-center mt-4"
+        >
+          <router-link to="/instructors" class="btn btn-outline-primary animated-btn">Xem tất cả giảng viên</router-link>
         </div>
       </div>
     </section>
 
     <!-- Stats Section -->
-    <div class="stats-section py-5 bg-primary text-white">
+    <div class="stats-section py-5 bg-primary text-white parallax-bg">
       <div class="container">
         <div class="row text-center">
           <div class="col-md-3 col-6 mb-4 mb-md-0">
@@ -304,9 +377,9 @@
             :initial="{ opacity: 0, y: 50 }"
             :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
           >
-            <div class="course-card h-100 shadow-sm rounded overflow-hidden">
+            <div class="course-card h-100 shadow-sm rounded overflow-hidden card-hover">
               <div class="course-image position-relative">
-                <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold">Hot</span>
+                <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold flash-animation">Hot</span>
                 <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
               </div>
               <div class="course-content p-4">
@@ -335,7 +408,7 @@
                     <i class="bi bi-star-half text-warning"></i>
                     <span class="ms-1">(4.5)</span>
                   </div>
-                  <router-link to="/course-python" class="btn btn-primary">Xem chi tiết</router-link>
+                  <router-link to="/course-python" class="btn btn-primary animated-btn">Xem chi tiết</router-link>
                 </div>
               </div>
             </div>
@@ -346,9 +419,9 @@
             :initial="{ opacity: 0, y: 50 }"
             :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
           >
-            <div class="course-card h-100 shadow-sm rounded overflow-hidden">
+            <div class="course-card h-100 shadow-sm rounded overflow-hidden card-hover">
               <div class="course-image position-relative">
-                <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold">Hot</span>
+                <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold flash-animation">Hot</span>
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
               </div>
               <div class="course-content p-4">
@@ -377,7 +450,7 @@
                     <i class="bi bi-star-fill text-warning"></i>
                     <span class="ms-1">(5.0)</span>
                   </div>
-                  <router-link to="/course-java-spring" class="btn btn-primary">Xem chi tiết</router-link>
+                  <router-link to="/course-java-spring" class="btn btn-primary animated-btn">Xem chi tiết</router-link>
                 </div>
               </div>
             </div>
@@ -390,12 +463,17 @@
     <Testimonials />
 
     <!-- CTA Section -->
-    <section class="section cta">
+    <section class="section cta animated-background">
       <div class="container">
-        <div class="cta-content">
+        <div 
+          v-motion
+          :initial="{ opacity: 0, scale: 0.9 }"
+          :visible="{ opacity: 1, scale: 1, transition: { duration: 800 } }"
+          class="cta-content"
+        >
           <h2>Sẵn sàng bắt đầu hành trình học tập của bạn?</h2>
           <p>Đăng ký ngay hôm nay để nhận được ưu đãi đặc biệt và sự hỗ trợ từ đội ngũ chuyên gia của chúng tôi.</p>
-          <router-link to="/register" class="btn">Đăng ký ngay</router-link>
+          <router-link to="/register" class="btn pulse-btn">Đăng ký ngay</router-link>
         </div>
       </div>
     </section>
@@ -858,8 +936,9 @@ export default {
 }
 
 .instructor-image img {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 190px;
+  border-radius: 50%;
   object-fit: cover;
   border: 3px solid #4a6bff;
   padding: 3px;
@@ -1013,5 +1092,191 @@ export default {
   font-size: 0.95rem;
   margin-bottom: 0;
   color: #6c757d;
+}
+
+/* New Animation Styles */
+.animated-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.animated-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.animated-btn:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.animated-btn:hover:after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+.card-hover {
+  transition: all 0.4s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #4a6bff;
+}
+
+.feature-card {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(74, 107, 255, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(74, 107, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(74, 107, 255, 0);
+  }
+}
+
+.floating-animation {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.flash-animation {
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instructor-card:hover .fade-in {
+  opacity: 1;
+}
+
+.parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.bg-light-gradient {
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+}
+
+.animated-background {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pulse-btn {
+  animation: pulse-light 2s infinite;
+  background: white;
+  color: #4a6bff;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.pulse-btn:hover {
+  background: #4a6bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+@keyframes pulse-light {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
 </style> 

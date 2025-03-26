@@ -80,7 +80,7 @@
                 </select>
               </div>
               
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="referral">Bạn biết đến chúng tôi qua đâu?</label>
                 <select id="referral" v-model="form.referral">
                   <option value="social-media">Mạng xã hội</option>
@@ -89,7 +89,7 @@
                   <option value="blog">Blog/Forum</option>
                   <option value="other">Khác</option>
                 </select>
-              </div>
+              </div> -->
               
               <div class="form-group">
                 <label for="message">Ghi chú thêm</label>
@@ -131,7 +131,7 @@
                 </div>
                 <div>
                   <h4>Địa chỉ</h4>
-                  <p>123 Đường Công Nghệ, Quận 1, TP. HCM</p>
+                  <p>Số 06 Trần Phú, Thạch Thang, Hải Châu, Đà Nẵng</p>
                 </div>
               </div>
               <div class="info-item">
@@ -140,7 +140,8 @@
                 </div>
                 <div>
                   <h4>Điện thoại</h4>
-                  <p>(84) 123 456 789</p>
+                  <p>
+                    093 550 56 40</p>
                 </div>
               </div>
               <div class="info-item">
@@ -149,7 +150,8 @@
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p>info@techacademy.edu.vn</p>
+                  <p>
+                    academy@techzen.vn</p>
                 </div>
               </div>
             </div>
@@ -164,10 +166,10 @@
                 <h4>Tôi có cần laptop riêng không?</h4>
                 <p>Có, học viên cần có máy tính cá nhân để tham gia học tập và làm bài tập.</p>
               </div>
-              <div class="faq-item">
+              <!-- <div class="faq-item">
                 <h4>Phương thức thanh toán?</h4>
                 <p>Chúng tôi chấp nhận thanh toán qua chuyển khoản ngân hàng, thẻ tín dụng hoặc tiền mặt.</p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

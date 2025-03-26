@@ -141,7 +141,7 @@
             </div>
           </div>
           <div class="agile-image">
-            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Agile Scrum Methodology">
+            <img src="../assets/images/agile.png" alt="Agile Scrum Methodology" class="img-fluid rounded shadow">
           </div>
         </div>
       </div>
@@ -462,12 +462,12 @@ export default {
 }
 
 .cta h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .cta p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 30px;
   opacity: 0.9;
 }
@@ -588,13 +588,13 @@ export default {
 }
 
 .principle-content h4 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1rem;
   color: #212529;
 }
 
 .principle-content p {
   color: #6c757d;
   margin-bottom: 0;
+  font-size: 14px;
 }
 </style> 
