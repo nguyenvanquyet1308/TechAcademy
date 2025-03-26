@@ -30,9 +30,9 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/instructors" active-class="active">Giảng viên</router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link" to="/tuition" active-class="active">Học phí & Ưu đãi</router-link>
-          </li>
+          </li> -->
           <li class="nav-item">
             <router-link class="nav-link" to="/reviews" active-class="active">Đánh giá học viên</router-link>
           </li>

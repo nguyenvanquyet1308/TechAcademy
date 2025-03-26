@@ -107,7 +107,7 @@
               </div>
             </div>
           </section> -->
-          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+          <section class="section animate-on-scroll" data-animation="animate__fadeInUp">
             <h2 class="section-title mb-2">Lộ trình khóa học</h2>
             <div class="curriculum-overview mb-4">
               <div class="row">
@@ -434,7 +434,7 @@
                   </li>
                 </ul>
               </div>
-                <button class="btn btn-primary w-100 mt-4 pulse">Đăng ký ngay</button>
+               <router-link to="/register">  <button class="btn btn-primary w-100 mt-4 pulse">Đăng ký ngay</button> </router-link>
               </div>
             </div>
 
@@ -477,7 +477,7 @@
       <div class="container py-4 text-center text-white">
         <h2 class="mb-4">Sẵn sàng để bắt đầu hành trình Java của bạn?</h2>
         <p class="mb-4">Đừng bỏ lỡ cơ hội nâng cao kỹ năng và mở rộng cơ hội nghề nghiệp!</p>
-        <button class="btn btn-light btn-lg pulse">Đăng ký học ngay</button>
+      <router-link to="/register"> <button class="btn btn-light btn-lg pulse">Đăng ký học ngay</button> </router-link>
       </div>
     </div>
   </div>
@@ -702,6 +702,9 @@ export default {
 .accordion-button:not(.collapsed) {
   background-color: rgba(47, 128, 237, 0.1);
   color: #2f80ed;
+  font-weight: 600;
+  padding: 1.2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .instructor-card {
@@ -721,7 +724,7 @@ export default {
 }
 .instructor-avatar {
   width: 100px;
-  height: 100px;
+  height: 110px;
   border-radius: 20%;
   overflow: hidden;
 }

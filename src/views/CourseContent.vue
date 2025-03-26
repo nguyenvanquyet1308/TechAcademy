@@ -2,7 +2,7 @@
   <div class="course-content">
     <!-- Page Header -->
     <section class="page-header">
-      <div class="container">
+      <div class="container-fluid px-0">
         <h1 class="page-title">Nội dung khóa học</h1>
         <p class="page-description">Khám phá chi tiết các chương trình và bài giảng trong khóa học của chúng tôi</p>
       </div>
@@ -101,7 +101,7 @@
     </section>
 
     <!-- Curriculum Section -->
-    <section class="section curriculum">
+    <!-- <section class="section curriculum">
       <div class="container">
         <div class="curriculum-intro">
           <h2 class="section-title">Chương trình học chi tiết</h2>
@@ -306,7 +306,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Materials Section -->
     <section class="section materials">
@@ -403,7 +403,7 @@
 
     <!-- CTA Section -->
     <section class="section cta">
-      <div class="container">
+      <div class="container-fluid px-0">
         <div class="cta-content">
           <h2>Sẵn sàng để bắt đầu hành trình học tập?</h2>
           <p>Đăng ký ngay để tham gia khóa học và nâng cao kỹ năng của bạn!</p>
@@ -434,13 +434,21 @@ export default {
 .page-header {
   background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
   color: white;
-  padding: 60px 0;
+  padding: 80px 0;
   text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .page-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .page-description {
@@ -448,6 +456,7 @@ export default {
   max-width: 700px;
   margin: 0 auto;
   opacity: 0.9;
+  padding: 0 20px;
 }
 
 .curriculum-intro {
@@ -701,20 +710,36 @@ export default {
   background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
   color: white;
   text-align: center;
+  width: 100vw;
+  margin: 0;
+  padding: 80px 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .cta-content {
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cta .container-fluid {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
 }
 
 .cta h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .cta p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 30px;
   opacity: 0.9;
 }
@@ -723,11 +748,17 @@ export default {
   background: white;
   color: #4a6bff;
   font-size: 1.1rem;
-  padding: 12px 30px;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .cta .btn:hover {
   background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 992px) {

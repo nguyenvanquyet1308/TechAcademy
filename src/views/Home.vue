@@ -99,6 +99,71 @@
       </div>
     </section>
 
+    <!-- Agile Scrum Methodology Section -->
+    <section class="section agile-scrum py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="agile-scrum-image">
+              <img src="../assets/images/agile.png" alt="Agile Scrum Methodology" class="img-fluid rounded shadow">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title text-start mb-4">Phương pháp Agile Scrum</h2>
+            <div class="agile-scrum-content">
+              <p class="mb-4">Tại Techzen, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm.</p>
+              
+              <div class="agile-principles mt-4">
+                <div class="principle-item d-flex align-items-start mb-3">
+                  <div class="principle-icon me-3">
+                    <i class="bi bi-kanban text-primary fs-4"></i>
+                  </div>
+                  <div>
+                    <h5>Sprint Planning</h5>
+                    <p>Sprint Planning là cuộc họp để nhóm Scrum xác định mục tiêu của sprint và lập kế hoạch cho việc hoàn thành các mục tiêu đó.</p>
+                  </div>
+                </div>
+                
+                <div class="principle-item d-flex align-items-start mb-3">
+                  <div class="principle-icon me-3">
+                    <i class="bi bi-people text-primary fs-4"></i>
+                  </div>
+                  <div>
+                    <h5>Daily Scrum</h5>
+                    <p>Daily Scrum là cuộc họp ngắn hàng ngày của nhóm Scrum để thảo luận về tiến độ công việc và các vấn đề cần giải quyết</p>
+                  </div>
+                </div>
+                
+                <div class="principle-item d-flex align-items-start">
+                  <div class="principle-icon me-3">
+                    <i class="bi bi-graph-up text-primary fs-4"></i>
+                  </div>
+                  <div>
+                    <h5>Sprint Review</h5>
+                    <p>Sprint Review là cuộc họp để nhóm Scrum trình bày sản phẩm cho khách hàng và nhận phản hồi.</p>
+                  </div>
+                </div>
+                <div class="principle-item d-flex align-items-start">
+                  <div class="principle-icon me-3">
+                    <i class="bi bi-calendar-check text-primary fs-4"></i>            
+                  </div>
+                  <div>
+                    <h5>Sprint Retrospective</h5>
+                    <p>Sprint Retrospective là cuộc họp để nhóm Scrum phản ánh về sprint vừa qua và tìm ra các cách để cải thiện trong sprint tiếp theo.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <a href="https://techzen.vn/strategic/" target="_blank" rel="noopener noreferrer">
+                   <button class="btn btn-outline-primary">Tìm hiểu thêm về phương pháp Agile tại Techzen</button>
+               </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Instructors Section -->
     <section class="section instructors py-5">
       <div class="container">
@@ -885,5 +950,68 @@ export default {
   to {
     opacity: 1;
   }
+}
+
+/* Agile Scrum Section Styles */
+.agile-scrum {
+  background-color: #fff;
+  position: relative;
+}
+
+.agile-scrum-image img {
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+.agile-scrum-image:hover img {
+  transform: scale(1.03);
+}
+
+.agile-scrum-content {
+  font-size: 1.05rem;
+  color: #495057;
+  line-height: 1.7;
+}
+
+.principle-item {
+  transition: transform 0.3s ease;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.principle-item:hover {
+  background-color: rgba(74, 107, 255, 0.05);
+  transform: translateX(10px);
+}
+
+.principle-icon {
+  background-color: rgba(74, 107, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.principle-item:hover .principle-icon {
+  background-color: rgba(74, 107, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.principle-item h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #212529;
+}
+
+.principle-item p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: #6c757d;
 }
 </style> 

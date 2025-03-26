@@ -250,7 +250,7 @@ export default {
 }
 
 .page-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 

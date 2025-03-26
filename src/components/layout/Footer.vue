@@ -34,7 +34,7 @@
           <ul class="footer-contact">
             <li class="d-flex mb-3">
               <i class="bi bi-geo-alt me-3"></i>
-              <p class="mb-0">Tầng 8, Tòa nhà Quang Trung Software City, Q.12, TP. HCM</p>
+              <p class="mb-0">Tầng 3,Số 06 Trần Phú, Hải Châu, TP.Đà Nẵng</p>
             </li>
             <li class="d-flex mb-3">
               <i class="bi bi-envelope me-3"></i>
@@ -68,6 +68,7 @@
 export default {
   name: 'Footer'
 }
+import logo from "@/assets/images/logo.jpg";
 </script>
 
 <style scoped>
