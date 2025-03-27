@@ -470,29 +470,47 @@
               </div>
             </div>
 
-            <div class="promotions-section mb-4 animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.5s">
-              <h3 class="sidebar-title">Ưu đãi đặc biệt</h3>
-              <div class="promotion-item">
-                <div class="promotion-icon pulse">
-                  <i class="fas fa-calendar-alt"></i>
+            <section class="section  animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-2 fs-3 ">Khuyến mãi đặc biệt</h2>
+            <div class="promotions-section">
+              <div class="promotions-list">
+                <div class="promotion-item compact d-flex align-items-start">
+                  <div class="promotion-icon me-2">
+                    <i class="bi bi-tag-fill text-danger"></i>
+                  </div>
+                  <div>
+                    <h5>Đăng ký sớm</h5>
+                    <p class="small mb-0">Giảm 20% học phí cho học viên đăng ký trước ngày 8/3/2024.</p>
+                  </div>
                 </div>
-                <div class="promotion-content">
-                  <h4>Đăng ký trước</h4>
-                  <p>Giảm ngay 20% khi đăng ký trước 08/3</p>
+                <div class="promotion-item compact d-flex align-items-start">
+                  <div class="promotion-icon me-2">
+                    <i class="bi bi-people-fill text-primary"></i>
+                  </div>
+                  <div>
+                    <h5>Đăng ký nhóm</h5>
+                    <p class="small mb-0">Giảm 200.000đ/người với nhóm 2 người, 500.000đ/người với nhóm 3 người trở lên.</p>
+                  </div>
+                </div>
+                <div class="promotion-item compact d-flex align-items-start">
+                  <div class="promotion-icon me-2">
+                    <i class="bi bi-briefcase-fill text-success"></i>
+                  </div>
+                  <div>
+                    <h5>Cơ hội thực tập</h5>
+                    <p class="small mb-0">100% học viên được thực tập tại Techzen với cơ hội làm việc lâu dài.</p>
+                  </div>
                 </div>
               </div>
-              <div class="promotion-item">
-                <div class="promotion-icon pulse">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="promotion-content">
-                  <h4>100% thực tập tại Techzen</h4>
-                  <p>Cơ hội việc làm hấp dẫn</p>
+              <div class="hotline mt-4 pulse">
+                <div class="d-flex align-items-center justify-content-center">
+                  <i class="bi bi-telephone-fill text-primary me-2 fs-4"></i>
+                  <p class="mb-0 fw-bold fs-5">Hotline đăng ký: <span class="text-primary">093 550 56 40</span></p>
                 </div>
               </div>
             </div>
-
-            <div class="course-location mt-4 animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.7s">
+          </section>
+            <div class="course-location  animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.7s">
               <h3 class="sidebar-title">Địa điểm học</h3>
               <div class="location-card p-3 border rounded">
                 <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i> 06 Trần Phú, Hải Châu, Đà Nẵng</p>
@@ -811,9 +829,6 @@ export default {
 </script>
 
 <style scoped>
-.course-python {
-  padding-bottom: 4rem;
-}
 
 .header-section {
   background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
