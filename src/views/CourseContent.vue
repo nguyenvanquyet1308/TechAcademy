@@ -21,7 +21,6 @@
           <div class="course-card">
             <div class="course-image">
               <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python AI Course">
-              <div class="course-badge">Nổi bật</div>
             </div>
             <div class="course-content">
               <h3 class="course-name">Lập trình Python AI</h3>
@@ -61,7 +60,6 @@
           <div class="course-card">
             <div class="course-image">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course">
-              <div class="course-badge new">Sắp khai giảng</div>
             </div>
             <div class="course-content">
               <h3 class="course-name">Lập trình Java Back-end</h3>

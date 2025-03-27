@@ -1,21 +1,21 @@
 <template>
   <div class="home">
-    <div class="hero-section position-relative overflow-hidden">
+    <div class="hero-section position-relative">
       <div class="video-background">
         <video autoplay muted loop playsinline>
           <source src="@/assets/video/vd1.mp4" type="video/mp4">
         </video>
-        <div class="video-overlay"></div>
+        <div class="video-overlay gradient-overlay"></div>
       </div>
-      <div class="container py-5 position-relative">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
+      <div class="container h-100 position-relative">
+        <div class="row h-100 align-items-center justify-content-center">
+          <div class="col-lg-8 text-center">
             <div class="hero-content">
               <h1 
                 v-motion
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
-                class="display-4 fw-bold mb-4"
+                class="display-4 fw-bold mb-4 text-glow"
               >
                 Bắt đầu hành trình công nghệ của bạn tại TechAcademy
               </h1>
@@ -23,7 +23,7 @@
                 v-motion
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
-                class="lead mb-5"
+                class="lead mb-5 text-light"
               >
                 Khóa học chất lượng cao, giảng viên chuyên nghiệp và lộ trình học tập cá nhân hóa giúp bạn nhanh chóng phát triển kỹ năng lập trình.
               </p>
@@ -32,27 +32,32 @@
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 800 } }"
               >
-               <router-link to = "course-content"> <button class="btn btn-primary btn-lg me-3 animated-btn">Khám phá khóa học</button> </router-link>
+               <router-link to="course-content"><button class="btn btn-glow btn-lg me-3 animated-btn">Khám phá khóa học</button></router-link>
                 <button class="btn btn-outline-light btn-lg animated-btn">Tư vấn miễn phí</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="hero-shape-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
+      </div>
     </div>
 
     <!-- Features Section -->
-    <section class="section features">
+    <section class="section features diagonal-section">
       <div class="container">
         <h2 
           v-motion
           :initial="{ opacity: 0, y: 50 }"
           :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
-          class="section-title" 
+          class="section-title with-line" 
           style="font-size: 35px;"
         >
-          Techzen Academy
-          Nơi Kiến Tạo Tương Lai Lập Trình Viên Chuyên Nghiệp
+          <span class="text-gradient">Techzen Academy</span>
+          <br>Nơi Kiến Tạo Tương Lai Lập Trình Viên Chuyên Nghiệp
         </h2>
         <div class="features-grid">
           <div 
@@ -117,10 +122,36 @@
             :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
             class="col-lg-6 mb-4 mb-lg-0"
           >
-            <h2 class="section-title text-start mb-4">Về Techzen Academy</h2>
+            <h2 class="section-title text-start mb-4 with-side-line">Về Techzen Academy</h2>
             <div class="about-content">
               <p class="mb-4">Tại Techzen Academy, chúng tôi mang đến chương trình đào tạo lập trình toàn diện, từ nền tảng cơ bản đến các công nghệ hiện đại. Đội ngũ giảng viên giàu kinh nghiệm của chúng tôi sẽ hướng dẫn bạn một cách tỉ mỉ và chi tiết, giúp bạn nắm vững kiến thức và phát triển kỹ năng lập trình chuyên nghiệp.</p>
               <p>Chương trình học tập tại Techzen Academy không chỉ tập trung vào lý thuyết, mà còn chú trọng vào tình huống thực tế. Với sự chuẩn bị kỹ lưỡng từ Techzen Academy, bạn sẽ tự tin bước vào thế giới công nghệ và sẵn sàng chinh phục những cơ hội nghề nghiệp đầy triển vọng.</p>
+            </div>
+            <div class="about-stats mt-5">
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h3 class="stat-number">100+</h3>
+                      <p class="stat-text">Học viên</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <i class="bi bi-award-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h3 class="stat-number">98%</h3>
+                      <p class="stat-text">Tỷ lệ hài lòng</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div 
@@ -129,8 +160,12 @@
             :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
             class="col-lg-6"
           >
-            <div class="about-image floating-animation">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Techzen Academy Team" class="img-fluid rounded shadow">
+            <div class="about-image-wrapper">
+              <div class="about-image floating-animation">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Techzen Academy Team" class="img-fluid rounded shadow">
+              </div>
+              <div class="about-pattern pattern-dots"></div>
+              <div class="about-shape shape-circle"></div>
             </div>
           </div>
         </div>
@@ -138,7 +173,7 @@
     </section>
 
     <!-- Agile Scrum Methodology Section -->
-    <section class="section agile-scrum py-5">
+    <section class="section agile-scrum py-5 wave-section">
       <div class="container">
         <div class="row">
           <div 
@@ -149,6 +184,10 @@
           >
             <div class="agile-scrum-image">
               <img src="../assets/images/agile.png" alt="Agile Scrum Methodology" class="img-fluid rounded shadow">
+              <div class="image-badge">
+                <span>Agile</span>
+                <span>Methodology</span>
+              </div>
             </div>
           </div>
           <div 
@@ -157,7 +196,7 @@
             :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
             class="col-lg-6"
           >
-            <h2 class="section-title text-start mb-4">Phương pháp Agile Scrum</h2>
+            <h2 class="section-title text-start mb-4 with-side-line">Phương pháp Agile Scrum</h2>
             <div class="agile-scrum-content">
               <p class="mb-4">Tại Techzen, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm.</p>
               
@@ -228,86 +267,24 @@
                 class="mt-4"
               >
                 <a href="https://techzen.vn/strategic/" target="_blank" rel="noopener noreferrer">
-                   <button class="btn btn-outline-primary animated-btn">Tìm hiểu thêm về phương pháp Agile tại Techzen</button>
+                   <button class="btn btn-outline-gradient animated-btn">Tìm hiểu thêm về phương pháp Agile tại Techzen</button>
                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Instructors Section -->
-    <section class="section instructors py-5 bg-light-gradient">
-      <div class="container">
-        <h2 
-          v-motion
-          :initial="{ opacity: 0, y: 50 }"
-          :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
-          class="section-title mb-5"
-        >
-          Đội ngũ giảng viên xuất sắc
-        </h2>
-        <div class="row d-flex justify-content-center">
-          <div 
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
-            class="col-lg-3 col-md-6 mb-4"
-          >
-            <div class="instructor-card text-center h-100 card-hover">
-              <div class="instructor-image mb-3">
-                <img src="../assets/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
-              </div>
-              <h3 class="instructor-name">Huỳnh Hải Thiên</h3>
-              <p class="instructor-title text-primary">Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm</p>
-              <p class="instructor-desc">Thạc sĩ AI - Institute of Science Tokyo
-                    7+ năm kinh nghiệm AI tại Nhật Bản
-                    6+ năm đào tạo Fresher IT & AI</p>
-              <div class="instructor-social fade-in">
-                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-              </div>
-            </div>
-          </div>
-          <div 
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
-            class="col-lg-3 col-md-6 mb-4"
-          >
-            <div class="instructor-card text-center h-100 card-hover">
-              <div class="instructor-image mb-3">
-                <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
-              </div>
-              <h3 class="instructor-name">Nguyễn Ngọc Quang</h3>
-              <p class="instructor-title text-primary">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</p>
-              <p class="instructor-desc">
-                7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.
-                6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên,
-                 từ các bạn mới bắt đầu đến những người đã có nền tảng.
-              </p>
-              <div class="instructor-social fade-in">
-                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div 
-          v-motion
-          :initial="{ opacity: 0, y: 30 }"
-          :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }"
-          class="text-center mt-4"
-        >
-          <router-link to="/instructors" class="btn btn-outline-primary animated-btn">Xem tất cả giảng viên</router-link>
-        </div>
+      <div class="wave-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
       </div>
     </section>
 
     <!-- Stats Section -->
-    <div class="stats-section py-5 bg-primary text-white parallax-bg">
-      <div class="container">
+    <div class="stats-section py-5 text-white parallax-bg">
+      <div class="stats-overlay"></div>
+      <div class="container position-relative">
         <div class="row text-center">
           <div class="col-md-3 col-6 mb-4 mb-md-0">
             <div class="stats-item"
@@ -315,8 +292,11 @@
               :initial="{ opacity: 0, y: 50 }"
               :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
             >
+              <div class="stats-icon">
+                <i class="bi bi-journal-code"></i>
+              </div>
               <div class="count h1">
-                <AnimatedCount :value="15" :is-in-view="isStatsVisible" />
+                <AnimatedCount :value="2" :is-in-view="isStatsVisible" />
               </div>
               <div class="stats-title">Khóa học</div>
             </div>
@@ -327,8 +307,11 @@
               :initial="{ opacity: 0, y: 50 }"
               :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
             >
+              <div class="stats-icon">
+                <i class="bi bi-people"></i>
+              </div>
               <div class="count h1">
-                <AnimatedCount :value="2000" :is-in-view="isStatsVisible" />
+                <AnimatedCount :value="100" :is-in-view="isStatsVisible" />
               </div>
               <div class="stats-title">Học viên</div>
             </div>
@@ -339,8 +322,11 @@
               :initial="{ opacity: 0, y: 50 }"
               :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
             >
+              <div class="stats-icon">
+                <i class="bi bi-person-badge"></i>
+              </div>
               <div class="count h1">
-                <AnimatedCount :value="25" :is-in-view="isStatsVisible" />
+                <AnimatedCount :value="2" :is-in-view="isStatsVisible" />
               </div>
               <div class="stats-title">Giảng viên</div>
             </div>
@@ -351,8 +337,11 @@
               :initial="{ opacity: 0, y: 50 }"
               :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 800 } }"
             >
+              <div class="stats-icon">
+                <i class="bi bi-emoji-smile"></i>
+              </div>
               <div class="count h1">
-                <AnimatedCount :value="95" :is-in-view="isStatsVisible" suffix="%" />
+                <AnimatedCount :value="98" :is-in-view="isStatsVisible" suffix="%" />
               </div>
               <div class="stats-title">Tỷ lệ hài lòng</div>
             </div>
@@ -361,10 +350,88 @@
       </div>
     </div>
 
-    <!-- Popular Courses Section -->
-    <section class="section courses py-5">
+    <!-- Instructors Section -->
+    <section class="section instructors py-5 bg-glass">
       <div class="container">
-        <h2 class="section-title mb-4"
+        <h2 
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+          class="section-title mb-5 with-line"
+        >
+          Đội ngũ giảng viên xuất sắc
+        </h2>
+        <div class="row d-flex justify-content-center">
+          <div 
+            v-motion
+            :initial="{ opacity: 0, y: 100 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+            class="col-lg-4 col-md-6 mb-4"
+          >
+            <div class="instructor-card-modern text-center h-100">
+              <div class="instructor-card-inner">
+                <div class="instructor-image mb-3">
+                  <img src="../assets/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
+                </div>
+                <h3 class="instructor-name">Huỳnh Hải Thiên</h3>
+                <p class="instructor-title">Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm</p>
+                <div class="instructor-desc">
+                  <p>Thạc sĩ AI - Institute of Science Tokyo
+                        7+ năm kinh nghiệm AI tại Nhật Bản
+                        6+ năm đào tạo Fresher IT & AI</p>
+                </div>
+                <div class="instructor-social fade-in">
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div 
+            v-motion
+            :initial="{ opacity: 0, y: 100 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
+            class="col-lg-4 col-md-6 mb-4"
+          >
+            <div class="instructor-card-modern text-center h-100">
+              <div class="instructor-card-inner">
+                <div class="instructor-image mb-3">
+                  <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
+                </div>
+                <h3 class="instructor-name">Nguyễn Ngọc Quang</h3>
+                <p class="instructor-title">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</p>
+                <div class="instructor-desc">
+                  <p>7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.
+                  6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên,
+                   từ các bạn mới bắt đầu đến những người đã có nền tảng.</p>
+                </div>
+                <div class="instructor-social fade-in">
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div 
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }"
+          class="text-center mt-4"
+        >
+          <router-link to="/instructors" class="btn btn-outline-gradient animated-btn">Xem tất cả giảng viên</router-link>
+        </div>
+      </div>
+      <div class="bg-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+      </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <section class="section courses py-5 courses-diagonal">
+      <div class="container">
+        <h2 class="section-title mb-4 with-line"
           v-motion
           :initial="{ opacity: 0, y: 30 }"
           :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
@@ -377,15 +444,21 @@
             :initial="{ opacity: 0, y: 50 }"
             :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
           >
-            <div class="course-card h-100 shadow-sm rounded overflow-hidden card-hover">
+            <div class="course-card-modern h-100 shadow-sm rounded overflow-hidden">
               <div class="course-image position-relative">
-                <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold flash-animation">Hot</span>
+                <div class="course-overlay"></div>
+                <span class="course-tag position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill fw-bold flash-animation">Hot</span>
                 <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                <div class="course-hover-info">
+                  <h3 class="text-white mb-2">Python Al</h3>
+                  <p class="text-white-50 mb-3">Làm chủ ngôn ngữ lập trình Python và ứng dụng vào AI với giảng viên giàu kinh nghiệm từ Nhật Bản</p>
+                  <router-link to="/course-python" class="btn btn-light btn-sm">Xem chi tiết</router-link>
+                </div>
               </div>
               <div class="course-content p-4">
                 <h3 class="mb-3">Python Al</h3>
                 <p class="text-muted mb-3">Khóa học toàn diện về Python từ cơ bản đến nâng cao. Phù hợp cho người mới bắt đầu.</p>
-                <div class="course-details d-flex justify-content-between mb-3">
+                <div class="course-details-modern">
                   <div class="detail d-flex align-items-center">
                     <i class="bi bi-clock me-2"></i>
                     <span>5 Tháng</span>
@@ -394,21 +467,23 @@
                     <i class="bi bi-bar-chart me-2"></i>
                     <span>Cơ bản - Nâng cao</span>
                   </div>
-                </div>
-                <div class="course-price mb-3">
-                  <span class="fs-5 fw-bold text-primary">7.999.000 VNĐ</span>
-                  <span class="text-decoration-line-through text-muted ms-2">8.800.000 VNĐ</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="course-rating">
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-half text-warning"></i>
-                    <span class="ms-1">(4.5)</span>
+                  <div class="detail d-flex align-items-center">
+                    <div class="course-rating">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <span class="ms-1">(4.5)</span>
+                    </div>
                   </div>
-                  <router-link to="/course-python" class="btn btn-primary animated-btn">Xem chi tiết</router-link>
+                </div>
+                <div class="course-price-action mt-4 d-flex justify-content-between align-items-center">
+                  <div class="course-price">
+                    <span class="new-price">7.999.000 VNĐ</span>
+                    <span class="old-price">8.800.000 VNĐ</span>
+                  </div>
+                  <router-link to="/course-python" class="btn btn-primary btn-sm animated-btn">Xem chi tiết</router-link>
                 </div>
               </div>
             </div>
@@ -419,15 +494,21 @@
             :initial="{ opacity: 0, y: 50 }"
             :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
           >
-            <div class="course-card h-100 shadow-sm rounded overflow-hidden card-hover">
+            <div class="course-card-modern h-100 shadow-sm rounded overflow-hidden">
               <div class="course-image position-relative">
-                <span class="course-tag position-absolute top-0 end-0 bg-danger text-white m-2 px-2 py-1 rounded-pill fw-bold flash-animation">Hot</span>
+                <div class="course-overlay"></div>
+                <span class="course-tag position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill fw-bold flash-animation">Hot</span>
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                <div class="course-hover-info">
+                  <h3 class="text-white mb-2">Java Backend</h3>
+                  <p class="text-white-50 mb-3">Xây dựng ứng dụng web mạnh mẽ với Spring Boot dưới sự hướng dẫn của chuyên gia hàng đầu</p>
+                  <router-link to="/course-java-spring" class="btn btn-light btn-sm">Xem chi tiết</router-link>
+                </div>
               </div>
               <div class="course-content p-4">
                 <h3 class="mb-3">Java Backend</h3>
                 <p class="text-muted mb-3">Xây dựng ứng dụng web mạnh mẽ với Spring Boot. Phù hợp cho các lập trình viên Java.</p>
-                <div class="course-details d-flex justify-content-between mb-3">
+                <div class="course-details-modern">
                   <div class="detail d-flex align-items-center">
                     <i class="bi bi-clock me-2"></i>
                     <span>3 Tháng</span>
@@ -436,21 +517,23 @@
                     <i class="bi bi-bar-chart me-2"></i>
                     <span>Cơ bản - Nâng cao</span>
                   </div>
-                </div>
-                <div class="course-price mb-3">
-                  <span class="fs-5 fw-bold text-primary">6.500.000 VNĐ</span>
-                  <span class="text-decoration-line-through text-muted ms-2">7.800.000 VNĐ</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="course-rating">
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <span class="ms-1">(5.0)</span>
+                  <div class="detail d-flex align-items-center">
+                    <div class="course-rating">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <span class="ms-1">(5.0)</span>
+                    </div>
                   </div>
-                  <router-link to="/course-java-spring" class="btn btn-primary animated-btn">Xem chi tiết</router-link>
+                </div>
+                <div class="course-price-action mt-4 d-flex justify-content-between align-items-center">
+                  <div class="course-price">
+                    <span class="new-price">6.500.000 VNĐ</span>
+                    <span class="old-price">7.800.000 VNĐ</span>
+                  </div>
+                  <router-link to="/course-java-spring" class="btn btn-primary btn-sm animated-btn">Xem chi tiết</router-link>
                 </div>
               </div>
             </div>
@@ -463,17 +546,23 @@
     <Testimonials />
 
     <!-- CTA Section -->
-    <section class="section cta animated-background">
+    <section class="section cta-modern">
       <div class="container">
         <div 
           v-motion
           :initial="{ opacity: 0, scale: 0.9 }"
           :visible="{ opacity: 1, scale: 1, transition: { duration: 800 } }"
-          class="cta-content"
+          class="cta-content-modern"
         >
           <h2>Sẵn sàng bắt đầu hành trình học tập của bạn?</h2>
           <p>Đăng ký ngay hôm nay để nhận được ưu đãi đặc biệt và sự hỗ trợ từ đội ngũ chuyên gia của chúng tôi.</p>
-          <router-link to="/register" class="btn pulse-btn">Đăng ký ngay</router-link>
+          <router-link to="/register" class="btn btn-glow-white">Đăng ký ngay</router-link>
+          <div class="cta-particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -790,27 +879,28 @@ export default {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 8rem 0 4rem;
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0 80px;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+    margin-top: 0;
   }
   
   .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.1rem;
+    font-size: 2.2rem;
   }
   
   .hero-btn {
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
   }
   
   .hero-btn .btn {
     width: 100%;
-    max-width: 300px;
   }
 }
 
@@ -818,16 +908,61 @@ export default {
 .hero-section {
   background: none;
   color: white;
-  padding: 12rem 0 8rem;
-  position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+  backdrop-filter: blur(5px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 60px;
+}
+
+.hero-shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.hero-shape-divider .shape-fill {
+  fill: #FFFFFF;
 }
 
 .hero-content h1 {
@@ -838,340 +973,116 @@ export default {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.95;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.hero-btn .btn {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
-
-.hero-btn .btn-primary {
-  background: #4a6bff;
-  border-color: #4a6bff;
-}
-
-.hero-btn .btn-primary:hover {
-  background: #3557d4;
-  border-color: #3557d4;
-  transform: translateY(-2px);
-}
-
-.hero-btn .btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-}
-
-/* Update video overlay */
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 8rem 0 4rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-  
-  .hero-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
-  
-  .hero-btn .btn {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-.about-company {
-  background-color: #f8f9fa;
-}
-
-.about-content {
-  font-size: 1.05rem;
-  color: #495057;
-  line-height: 1.7;
-}
-
-.about-image img {
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.instructor-card {
-  background: white;
-  border-radius: 8px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.instructor-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-.instructor-image img {
-  width: 160px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #4a6bff;
-  padding: 3px;
-}
-
-.instructor-name {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #212529;
-}
-
-.instructor-title {
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.instructor-desc {
-  color: #6c757d;
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-}
-
-.instructor-social {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(74, 107, 255, 0.1);
-  color: #4a6bff;
-  transition: background 0.3s, color 0.3s;
-}
-
-.social-icon:hover {
-  background: #4a6bff;
+.btn-glow {
+  background: linear-gradient(45deg, #4a6bff, #6a3aef);
+  border: none;
   color: white;
-}
-
-/* Add video background styles */
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90%;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.video-background video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translateX(-50%) translateY(-50%);
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+  position: relative;
   z-index: 1;
-}
-
-/* Add animation for video fade in */
-.video-background {
-  animation: fadeIn 1.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Agile Scrum Section Styles */
-.agile-scrum {
-  background-color: #fff;
-  position: relative;
-}
-
-.agile-scrum-image img {
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  transition: transform 0.5s ease;
-}
-
-.agile-scrum-image:hover img {
-  transform: scale(1.03);
-}
-
-.agile-scrum-content {
-  font-size: 1.05rem;
-  color: #495057;
-  line-height: 1.7;
-}
-
-.principle-item {
-  transition: transform 0.3s ease;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.principle-item:hover {
-  background-color: rgba(74, 107, 255, 0.05);
-  transform: translateX(10px);
-}
-
-.principle-icon {
-  background-color: rgba(74, 107, 255, 0.1);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.3s ease;
-}
-
-.principle-item:hover .principle-icon {
-  background-color: rgba(74, 107, 255, 0.2);
-  transform: scale(1.1);
-}
-
-.principle-item h5 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #212529;
-}
-
-.principle-item p {
-  font-size: 0.95rem;
-  margin-bottom: 0;
-  color: #6c757d;
-}
-
-/* New Animation Styles */
-.animated-btn {
-  position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(74, 107, 255, 0.5);
 }
 
-.animated-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
-}
-
-.animated-btn:after {
+.btn-glow:before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #6a3aef, #4a6bff);
   opacity: 0;
-  border-radius: 100%;
-  transform: scale(1, 1) translate(-50%);
-  transform-origin: 50% 50%;
+  z-index: -1;
+  transition: opacity 0.5s;
 }
 
-.animated-btn:hover:after {
-  animation: ripple 1s ease-out;
+.btn-glow:hover:before {
+  opacity: 1;
 }
 
-@keyframes ripple {
-  0% {
-    transform: scale(0, 0);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(20, 20);
-    opacity: 0;
-  }
+.btn-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(74, 107, 255, 0.5);
 }
 
-.card-hover {
-  transition: all 0.4s ease;
-  border-bottom: 3px solid transparent;
+.gradient-overlay {
+  background: linear-gradient(135deg, rgba(26,32,44,0.8) 0%, rgba(113,54,186,0.6) 100%);
 }
 
-.card-hover:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #4a6bff;
+.text-gradient {
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.section-title.with-line {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.section-title.with-line:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  border-radius: 5px;
+}
+
+.diagonal-section {
+  position: relative;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 150px 0;
+  margin-top: -2px;
+  clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
 }
 
 .feature-card {
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.feature-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(74, 107, 255, 0.05), rgba(106, 58, 239, 0.05));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.feature-card:hover:before {
+  opacity: 1;
 }
 
 .feature-card:hover {
   transform: translateY(-15px) scale(1.03);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.pulse-animation {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(74, 107, 255, 0.4);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(74, 107, 255, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(74, 107, 255, 0);
-  }
 }
 
 .floating-animation {
@@ -1277,6 +1188,630 @@ export default {
   }
   100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.section-title.with-side-line {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.section-title.with-side-line:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4a6bff, #a74dff);
+  border-radius: 5px;
+}
+
+.about-company {
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.about-content {
+  font-size: 1.05rem;
+  color: #495057;
+  line-height: 1.7;
+}
+
+.about-image-wrapper {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+}
+
+.about-image {
+  position: relative;
+  z-index: 2;
+}
+
+.about-image img {
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transition: all 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.about-pattern {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.pattern-dots {
+  background-image: radial-gradient(#4a6bff 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.2;
+}
+
+.about-shape {
+  position: absolute;
+  z-index: 0;
+}
+
+.shape-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(74, 107, 255, 0.1), rgba(106, 58, 239, 0.1));
+  top: -30px;
+  left: -30px;
+}
+
+.about-stats {
+  position: relative;
+  z-index: 2;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4a6bff, #a74dff);
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.wave-section {
+  position: relative;
+  background-color: white;
+  padding: 120px 0 160px;
+  overflow: hidden;
+}
+
+.wave-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(74, 107, 255, 0.03), rgba(106, 58, 239, 0.03));
+  z-index: 0;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.wave-bottom .shape-fill {
+  fill: #4A6BFF;
+  opacity: 0.1;
+}
+
+.stats-section {
+  position: relative;
+  background: linear-gradient(135deg, #4a6bff, #a74dff);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.stats-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: 20px 20px;
+  z-index: 1;
+}
+
+.stats-item {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.stats-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stats-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.count {
+  font-weight: 700;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.stats-title {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.agile-scrum-image {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.agile-scrum-image img {
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transition: all 0.5s ease;
+}
+
+.image-badge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: linear-gradient(135deg, #4a6bff, #a74dff);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transform: rotate(-5deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline-gradient {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #4a6bff, #a74dff);
+  border-image-slice: 1;
+  color: #4a6bff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gradient:hover {
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  color: white;
+  border-image: none;
+  border: 2px solid #4a6bff;
+}
+
+.bg-glass {
+  position: relative;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(236, 240, 255, 0.9));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+.bg-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(74, 107, 255, 0.1), rgba(167, 77, 255, 0.1));
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.circle-2 {
+  width: 500px;
+  height: 500px;
+  bottom: -200px;
+  right: -200px;
+}
+
+.instructor-card-modern {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+}
+
+.instructor-card-modern:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+}
+
+.instructor-card-modern:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-card-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.instructor-image {
+  position: relative;
+  width: 140px;
+  height: 160px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-image:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(74, 107, 255, 0.1), rgba(167, 77, 255, 0.1));
+  z-index: 1;
+}
+
+.instructor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.instructor-card-modern:hover .instructor-image img {
+  transform: scale(1.1);
+}
+
+.instructor-name {
+  font-size: 1.4rem;
+  margin: 1rem 0 0.5rem;
+  color: #212529;
+  font-weight: 700;
+}
+
+.instructor-title {
+  color: #4a6bff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.instructor-desc {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.instructor-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.instructor-card-modern:hover .instructor-social {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.courses-diagonal {
+  position: relative;
+  background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+  padding: 150px 0;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+.course-card-modern {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.course-card-modern:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.course-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.course-hover-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+.course-card-modern:hover .course-overlay {
+  opacity: 1;
+}
+
+.course-card-modern:hover .course-hover-info {
+  transform: translateY(0);
+}
+
+.course-tag {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.course-content {
+  position: relative;
+  z-index: 1;
+}
+
+.course-details-modern {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  color: #6c757d;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.detail {
+  font-size: 0.85rem;
+}
+
+.course-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4a6bff;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: #adb5bd;
+}
+
+.cta-modern {
+  position: relative;
+  background: linear-gradient(135deg, #4a6bff 0%, #a74dff 100%);
+  padding: 120px 0;
+  color: white;
+  overflow: hidden;
+}
+
+.cta-content-modern {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+}
+
+.cta-content-modern h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-content-modern p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-glow-white {
+  background: white;
+  color: #4a6bff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px 40px;
+  border-radius: 30px;
+  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+  border: none;
+}
+
+.btn-glow-white:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+  background: white;
+  color: #a74dff;
+}
+
+.cta-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 10s infinite ease-in-out;
+}
+
+.particle-1 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.particle-3 {
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.particle-4 {
+  width: 120px;
+  height: 120px;
+  top: 70%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  50% {
+    transform: translateY(0) translateX(40px);
+  }
+  75% {
+    transform: translateY(30px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
   }
 }
 </style> 

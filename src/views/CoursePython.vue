@@ -38,7 +38,7 @@
           </div>
           <div class="col-lg-5">
             <div class="course-image animate__animated animate__fadeInRight parallax-element" data-speed="0.15">
-              <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python Course" class="img-fluid">
+              <img src="../assets/images/pythonAl.png" style="width: 390px; height: 320px;" alt="Python Course" class="img-fluid">
             </div>
           </div>
         </div>

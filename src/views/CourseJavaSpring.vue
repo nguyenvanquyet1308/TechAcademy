@@ -28,12 +28,11 @@
             </div>
             <div class="course-actions animate__animated animate__fadeIn animate__delay-3s">
               <button @click="showRegistrationModal = true" class="btn btn-primary btn-lg me-2 pulse">Đăng ký học</button>
-              <button class="btn btn-outline-light btn-lg">Tải syllabus</button>
             </div>
           </div>
           <div class="col-lg-5">
             <div class="course-image animate__animated animate__fadeInRight parallax-element" data-speed="0.15">
-              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course" class="img-fluid">
+              <img src="../assets/images/javabackend.png" style="width: 440px; height: 380px;" alt="Python Course" class="img-fluid">
             </div>
           </div>
         </div>
@@ -394,7 +393,7 @@
             <div class="promotions-section">
               <div class="promotions-list">
                 <div class="promotion-item compact">
-                  <h5><i class="bi bi-tag-fill text-danger"></i> Đăng ký sớm</h5>
+                  <h5 class=""><i class="bi bi-tag-fill text-danger"></i> Đăng ký sớm</h5>
                   <p class="small">Giảm 20% học phí cho học viên đăng ký trước ngày 8/3/2024.</p>
                 </div>
                 <div class="promotion-item compact">
@@ -409,7 +408,7 @@
               <div class="hotline mt-4 pulse">
                 <div class="d-flex align-items-center justify-content-center">
                   <i class="bi bi-telephone-fill text-primary me-2 fs-4"></i>
-                  <p class="mb-0 fw-bold fs-5">Hotline đăng ký: <span class="text-primary">0236 3872 999</span></p>
+                  <p class="mb-0 fw-bold fs-5">Hotline đăng ký: <span class="text-primary">093 550 56 40</span></p>
                 </div>
               </div>
             </div>
@@ -466,6 +465,33 @@
                   <span class="skill-tag api">RESTful API</span>
                 </div>
               </div>
+            </div>
+            <div class="promotions-section mb-4 animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.5s">
+              <h3 class="sidebar-title">Ưu đãi đặc biệt</h3>
+              <div class="promotion-item">
+                <div class="promotion-icon pulse">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="promotion-content">
+                  <h4>Đăng ký trước</h4>
+                  <p>Giảm ngay 20% khi đăng ký trước 08/3</p>
+                </div>
+              </div>
+              <div class="promotion-item">
+                <div class="promotion-icon pulse">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="promotion-content">
+                  <h4>100% thực tập tại Techzen</h4>
+                  <p>Cơ hội việc làm hấp dẫn</p>
+                </div>
+              </div>
+              <div class="course-location mt-4 animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.7s">
+              <h3 class="sidebar-title">Địa điểm học</h3>
+              <div class="location-card p-3 border rounded">
+                <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i> 06 Trần Phú, Hải Châu, Đà Nẵng</p>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -813,6 +839,9 @@ export default {
 .course-detail {
   padding-bottom: 4rem;
 }
+.sidebar-title{
+  font-size: 20px;
+}
 
 .header-section {
   background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
@@ -1063,8 +1092,8 @@ export default {
 }
 
 .promotion-icon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background: rgba(47, 128, 237, 0.1);
   display: flex;
   align-items: center;
@@ -1077,11 +1106,13 @@ export default {
 .promotion-content h4 {
   margin-bottom: 0.5rem;
   color: #2c3e50;
+  font-size: 15px;
 }
 
 .promotion-content p {
   color: #6c757d;
   margin: 0;
+  font-size: 15px;
 }
 
 .cta-section {
