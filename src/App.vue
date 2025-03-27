@@ -19,13 +19,17 @@ export default {
       const fromDepth = from.path.split('/').length
       this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
     }
-  }
+  },
+  computed: {
+    isAdminRoute() {
+      return this.$route.path.startsWith("/admin");
+    },
+  },
 }
 </script>
-
 <template>
   <div id="app">
-    <NavBar />
+    <NavBar v-if="!isAdminRoute" />
     <main>
       <router-view v-slot="{ Component }">
         <transition :name="transitionName" mode="out-in">
@@ -33,7 +37,7 @@ export default {
         </transition>
       </router-view>
     </main>
-    <Footer />
+    <Footer v-if="!isAdminRoute" />
   </div>
 </template>
 

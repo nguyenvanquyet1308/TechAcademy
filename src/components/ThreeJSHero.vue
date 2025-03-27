@@ -1,5 +1,8 @@
 <template>
   <div class="hero-background"></div>
+  <div>
+      
+  </div>
 </template>
 
 <script>

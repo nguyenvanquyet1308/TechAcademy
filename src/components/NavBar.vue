@@ -52,8 +52,15 @@
 </template>
 
 <script>
+import { Dropdown } from 'bootstrap'
+
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  mounted() {
+    // Initialize all dropdowns
+    const dropdownElementList = document.querySelectorAll('[data-bs-toggle="dropdown"]')
+    const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new Dropdown(dropdownToggleEl))
+  }
 }
 </script>
 

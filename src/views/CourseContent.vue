@@ -2,14 +2,104 @@
   <div class="course-content">
     <!-- Page Header -->
     <section class="page-header">
-      <div class="container">
+      <div class="container-fluid px-0">
         <h1 class="page-title">Nội dung khóa học</h1>
         <p class="page-description">Khám phá chi tiết các chương trình và bài giảng trong khóa học của chúng tôi</p>
       </div>
     </section>
 
+    <!-- Available Courses Section -->
+    <section class="section available-courses">
+      <div class="container">
+        <div class="courses-intro">
+          <h2 class="section-title">Các khóa học hiện có</h2>
+          <p class="courses-desc">Chúng tôi cung cấp các khóa học chất lượng cao với nội dung cập nhật, phương pháp giảng dạy hiện đại và đội ngũ giảng viên giàu kinh nghiệm.</p>
+        </div>
+
+        <div class="courses-grid">
+          <!-- Python AI Course -->
+          <div class="course-card">
+            <div class="course-image">
+              <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python AI Course">
+            </div>
+            <div class="course-content">
+              <h3 class="course-name">Lập trình Python AI</h3>
+              <div class="course-details">
+                <div class="detail-item">
+                  <span class="detail-icon"><i class="bi bi-clock"></i></span>
+                  <span class="detail-text">5 tháng (64 buổi)</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon"><i class="bi bi-calendar"></i></span>
+                  <span class="detail-text">Khai giảng: 25/03/2025</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
+                  <span class="detail-text">Offline tại văn phòng Techzen</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon"><i class="bi bi-people"></i></span>
+                  <span class="detail-text">Thứ 3, 5, 7 (18:30 - 20:30)</span>
+                </div>
+              </div>
+              <p class="course-brief">Khóa học Python AI toàn diện giúp bạn làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay, từ nền tảng cơ bản đến ứng dụng AI. Tập trung vào thực hành và dự án thực tế, phù hợp cho cả người mới bắt đầu và lập trình viên muốn nâng cao kỹ năng.</p>
+              <div class="course-highlights">
+                <span>Python Core & OOP</span>
+                <span>MySQL</span>
+                <span>FastAPI</span>
+                <span>AI Integration</span>
+              </div>
+              <div class="course-footer">
+                <div class="course-price">7.999.000đ</div>
+                <router-link to="/course-python" class="btn btn-outline-primary">Xem chi tiết</router-link>
+              </div>
+            </div>
+          </div>
+
+          <!-- Java Backend Course -->
+          <div class="course-card">
+            <div class="course-image">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course">
+            </div>
+            <div class="course-content">
+              <h3 class="course-name">Lập trình Java Back-end</h3>
+              <div class="course-details">
+                <div class="detail-item">
+                  <span class="detail-icon"><i class="bi bi-clock"></i></span>
+                  <span class="detail-text">3 tháng</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon"><i class="bi bi-calendar"></i></span>
+                  <span class="detail-text">Khai giảng: 09/12/2024</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
+                  <span class="detail-text">Học offline tại văn phòng Techzen</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon"><i class="bi bi-people"></i></span>
+                  <span class="detail-text">Thứ 2, 4, 6 (18:00 - 21:00)</span>
+                </div>
+              </div>
+              <p class="course-brief">Khóa học Java Back-end toàn diện giúp bạn làm chủ ngôn ngữ lập trình Java và xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Phù hợp cho sinh viên ngành CNTT và những người muốn nâng cao kỹ năng lập trình.</p>
+              <div class="course-highlights">
+                <span>Java Core & OOP</span>
+                <span>MySQL</span>
+                <span>Spring Boot</span>
+                <span>RESTful API</span>
+              </div>
+              <div class="course-footer">
+                <div class="course-price">6.999.000đ</div>
+                <router-link to="/course-java-spring" class="btn btn-outline-primary">Xem chi tiết</router-link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Curriculum Section -->
-    <section class="section curriculum">
+    <!-- <section class="section curriculum">
       <div class="container">
         <div class="curriculum-intro">
           <h2 class="section-title">Chương trình học chi tiết</h2>
@@ -214,7 +304,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Materials Section -->
     <section class="section materials">
@@ -311,7 +401,7 @@
 
     <!-- CTA Section -->
     <section class="section cta">
-      <div class="container">
+      <div class="container-fluid px-0">
         <div class="cta-content">
           <h2>Sẵn sàng để bắt đầu hành trình học tập?</h2>
           <p>Đăng ký ngay để tham gia khóa học và nâng cao kỹ năng của bạn!</p>
@@ -342,13 +432,21 @@ export default {
 .page-header {
   background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
   color: white;
-  padding: 60px 0;
+  padding: 80px 0;
   text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .page-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .page-description {
@@ -356,6 +454,7 @@ export default {
   max-width: 700px;
   margin: 0 auto;
   opacity: 0.9;
+  padding: 0 20px;
 }
 
 .curriculum-intro {
@@ -609,20 +708,36 @@ export default {
   background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
   color: white;
   text-align: center;
+  width: 100vw;
+  margin: 0;
+  padding: 80px 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .cta-content {
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cta .container-fluid {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
 }
 
 .cta h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .cta p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 30px;
   opacity: 0.9;
 }
@@ -631,11 +746,17 @@ export default {
   background: white;
   color: #4a6bff;
   font-size: 1.1rem;
-  padding: 12px 30px;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .cta .btn:hover {
   background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 992px) {
@@ -651,6 +772,146 @@ export default {
 
   .cta h2 {
     font-size: 2rem;
+  }
+}
+
+/* Available Courses Styles */
+.courses-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.courses-desc {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.course-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.course-card:hover .course-image img {
+  transform: scale(1.05);
+}
+
+.course-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #212529;
+}
+
+.course-details {
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.detail-icon {
+  margin-right: 10px;
+  color: #4a6bff;
+}
+
+.course-brief {
+  color: #6c757d;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.course-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.course-highlights span {
+  background: rgba(74, 107, 255, 0.1);
+  color: #4a6bff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.course-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4a6bff;
+}
+
+.course-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #4a6bff;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.course-badge.new {
+  background: #ff6b6b;
+}
+
+@media (max-width: 992px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style> 

@@ -30,25 +30,76 @@
         </div>
       </div>
     </div>
-
-    <div class="testimonial-section">
+    <div class="social-media-testimonials-section">
       <div class="container">
-        <h2 class="section-title">Câu chuyện thành công</h2>
-        <div class="row">
-          <div class="col-md-6 mb-4" v-for="(testimonial, index) in testimonials" :key="index">
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <p>"{{ testimonial.content }}"</p>
-              </div>
-              <div class="testimonial-author">
-                <h4>{{ testimonial.name }}</h4>
-                <p>{{ testimonial.position }}</p>
-              </div>
+        <h2 class="section-title">Chia sẻ từ cộng đồng</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 mb-4">
+            <div class="facebook-post-container">
+              <iframe 
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechzenacademy.vn%2Fposts%2Fpfbid02jFt1xV7nftsJgrtpCisPhok7LrGCXvhnZUuxnvfrmFLYiWLZWRMwgXFfUF1NdCQAl&show_text=true&width=500" 
+                width="500" 
+                height="755" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              ></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="facebook-post-container mb-4">
+              <iframe 
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechzenacademy.vn%2Fposts%2Fpfbid02qBtjE8AxsfxGVWwSa8YZ5Hr2bD5YQUEPgRkJZnhyNR2AbMCGPBuJNk7GwtaGJPCdl&show_text=true&width=500" 
+                width="500" 
+                height="250" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              ></iframe>
+            </div>
+            <div class="facebook-post-container">
+              <iframe 
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftechzenacademy.vn%2Fposts%2Fpfbid0jf2vag2AvBRh6ke9eP8CfMXsv9uYFvujCXwWC76i348kD769o3Y6wFEJTC9Eu4QNl&show_text=true&width=500" 
+                width="500" 
+                height="430" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              ></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="video-testimonial-section">
+      <div class="container">
+        <h2 class="section-title">Video Đánh Giá</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="video-container">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/Goyte9ylIwo" 
+                title="Đánh giá từ học viên TechAcademy" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
   </div>
 </template>
 
@@ -238,6 +289,63 @@ export default {
   margin: 0.2rem 0;
   color: #6c757d;
   font-size: 0.9rem;
+}
+
+.video-testimonial-section {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.social-media-testimonials-section {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background-color: #f9f9fa;
+  border-radius: 8px;
+}
+
+.facebook-post-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facebook-post-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.facebook-post-container iframe {
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
