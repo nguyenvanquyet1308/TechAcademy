@@ -1537,7 +1537,7 @@ export default {
 .instructor-image {
   position: relative;
   width: 140px;
-  height: 160px;
+  height: 180px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;

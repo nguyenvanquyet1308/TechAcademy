@@ -36,45 +36,30 @@
         </div>
       </div>
 
+      <!-- Loading State -->
+      <div v-if="loading" class="text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3 text-muted">Đang tải dữ liệu giảng viên...</p>
+      </div>
+
+      <!-- Error State -->
+      <div v-else-if="error" class="alert alert-danger">
+        <i class="bi bi-exclamation-triangle me-2"></i>
+        {{ error }}
+        <button class="btn btn-outline-danger btn-sm ms-3" @click="fetchInstructors">Thử lại</button>
+      </div>
+
       <!-- Instructors Grid -->
-      <div class="row">
+      <div v-else class="row">
         <div v-for="instructor in filteredInstructors" :key="instructor.id" class="col-xl-3 col-md-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <div class="text-center pt-4">
-              <img :src="instructor.avatar" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="Instructor avatar">
-              <h5 class="card-title">{{ instructor.name }}</h5>
-              <p class="card-subtitle text-muted">{{ instructor.title }}</p>
-            </div>
-            <div class="card-body">
-              <div class="mb-3">
-                <p class="card-text text-truncate">{{ instructor.bio }}</p>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <small class="text-muted"><i class="bi bi-book me-1"></i> {{ instructor.coursesCount }} khóa học</small>
-                <small class="text-muted"><i class="bi bi-people me-1"></i> {{ instructor.studentsCount }} học viên</small>
-              </div>
-              <div class="instructor-skills mb-3">
-                <div class="d-flex flex-wrap gap-1">
-                  <span v-for="(skill, index) in instructor.skills" :key="index" class="badge bg-light text-dark">
-                    {{ skill }}
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer bg-white">
-              <div class="d-flex justify-content-between">
-                <button class="btn btn-sm btn-outline-primary" @click="openEditModal(instructor)">
-                  <i class="bi bi-pencil me-1"></i> Sửa
-                </button>
-                <button class="btn btn-sm btn-outline-info" @click="viewInstructor(instructor)">
-                  <i class="bi bi-eye me-1"></i> Xem
-                </button>
-                <button class="btn btn-sm btn-outline-danger" @click="confirmDelete(instructor)">
-                  <i class="bi bi-trash"></i>
-                </button>
-              </div>
-            </div>
-          </div>
+          <instructor-card 
+            :instructor="instructor"
+            @edit="openEditModal"
+            @view="viewInstructor"
+            @delete="confirmDelete"
+          />
         </div>
 
         <!-- Empty State -->
@@ -96,91 +81,12 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form @submit.prevent="saveInstructor">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="instructorName" class="form-label">Họ tên <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="instructorName" v-model="currentInstructor.name" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="instructorTitle" class="form-label">Chức danh <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="instructorTitle" v-model="currentInstructor.title" required>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label for="instructorBio" class="form-label">Giới thiệu <span class="text-danger">*</span></label>
-                      <textarea class="form-control" id="instructorBio" rows="3" v-model="currentInstructor.bio" required></textarea>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="instructorEmail" class="form-label">Email <span class="text-danger">*</span></label>
-                      <input type="email" class="form-control" id="instructorEmail" v-model="currentInstructor.email" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="instructorPhone" class="form-label">Số điện thoại</label>
-                      <input type="tel" class="form-control" id="instructorPhone" v-model="currentInstructor.phone">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="instructorAvatar" class="form-label">URL ảnh đại diện <span class="text-danger">*</span></label>
-                      <input type="url" class="form-control" id="instructorAvatar" v-model="currentInstructor.avatar" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="instructorSpecialty" class="form-label">Chuyên môn <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="instructorSpecialty" v-model="currentInstructor.specialty" required>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label for="instructorSkills" class="form-label">Kỹ năng (phân cách bằng dấu phẩy)</label>
-                      <input type="text" class="form-control" id="instructorSkills" v-model="skillsInput" placeholder="e.g. JavaScript, Vue.js, Node.js">
-                    </div>
-                  </div>
-                  <div class="col-md-12" v-if="skillsInput">
-                    <div class="mb-3">
-                      <label class="form-label d-block">Kỹ năng đã chọn:</label>
-                      <div class="d-flex flex-wrap gap-2">
-                        <span v-for="(skill, index) in parsedSkills" :key="index" class="badge bg-secondary">
-                          {{ skill }}
-                          <i class="bi bi-x ms-1" role="button" @click="removeSkill(index)"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label class="form-label">LinkedIn</label>
-                      <div class="input-group">
-                        <span class="input-group-text"><i class="bi bi-linkedin"></i></span>
-                        <input type="url" class="form-control" v-model="currentInstructor.linkedin">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label class="form-label">GitHub</label>
-                      <div class="input-group">
-                        <span class="input-group-text"><i class="bi bi-github"></i></span>
-                        <input type="url" class="form-control" v-model="currentInstructor.github">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer px-0 pb-0">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                  <button type="submit" class="btn btn-primary">Lưu giảng viên</button>
-                </div>
-              </form>
+              <instructor-form 
+                :instructor="currentInstructor"
+                :submit-button-text="isEditMode ? 'Cập nhật giảng viên' : 'Thêm giảng viên'"
+                @save="saveInstructor"
+                @cancel="instructorModal.hide()"
+              />
             </div>
           </div>
         </div>
@@ -200,7 +106,10 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-              <button type="button" class="btn btn-danger" @click="deleteInstructor">Xóa giảng viên</button>
+              <button type="button" class="btn btn-danger" @click="deleteInstructor" :disabled="isDeleting">
+                <span v-if="isDeleting" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                {{ isDeleting ? 'Đang xóa...' : 'Xóa giảng viên' }}
+              </button>
             </div>
           </div>
         </div>
@@ -215,51 +124,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" v-if="currentInstructor.id">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img :src="currentInstructor.avatar" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Instructor avatar">
-                  <h4>{{ currentInstructor.name }}</h4>
-                  <p class="text-muted">{{ currentInstructor.title }}</p>
-                  <div class="social-links mt-3">
-                    <a v-if="currentInstructor.linkedin" :href="currentInstructor.linkedin" target="_blank" class="btn btn-outline-primary btn-sm me-2">
-                      <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a v-if="currentInstructor.github" :href="currentInstructor.github" target="_blank" class="btn btn-outline-dark btn-sm">
-                      <i class="bi bi-github"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-8">
-                  <div class="mb-4">
-                    <h5>Giới thiệu</h5>
-                    <p>{{ currentInstructor.bio }}</p>
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-md-6">
-                      <h5>Thông tin liên hệ</h5>
-                      <p><i class="bi bi-envelope me-2"></i>{{ currentInstructor.email }}</p>
-                      <p v-if="currentInstructor.phone"><i class="bi bi-telephone me-2"></i>{{ currentInstructor.phone }}</p>
-                    </div>
-                    <div class="col-md-6">
-                      <h5>Chuyên môn</h5>
-                      <p>{{ currentInstructor.specialty }}</p>
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <h5>Kỹ năng</h5>
-                    <div class="d-flex flex-wrap gap-2">
-                      <span v-for="(skill, index) in currentInstructor.skills" :key="index" class="badge bg-primary">
-                        {{ skill }}
-                      </span>
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <h5>Khóa học</h5>
-                    <p v-if="currentInstructor.coursesCount === 0" class="text-muted">Chưa có khóa học nào.</p>
-                    <p v-else><strong>{{ currentInstructor.coursesCount }}</strong> khóa học với <strong>{{ currentInstructor.studentsCount }}</strong> học viên</p>
-                  </div>
-                </div>
-              </div>
+              <instructor-detail :instructor="currentInstructor" />
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
@@ -275,11 +140,17 @@
 <script>
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import { Modal } from 'bootstrap'
+import { InstructorCard, InstructorForm, InstructorDetail } from '../../components/admin/instructors'
+import * as instructorService from '../../api/services/instructorService';
+import Swal from 'sweetalert2';
 
 export default {
   name: 'AdminInstructors',
   components: {
-    AdminLayout
+    AdminLayout,
+    InstructorCard,
+    InstructorForm,
+    InstructorDetail
   },
   data() {
     return {
@@ -291,75 +162,16 @@ export default {
       // State
       isEditMode: false,
       currentInstructor: this.getEmptyInstructor(),
-      skillsInput: '',
+      loading: false,
+      error: null,
+      isDeleting: false,
       
       // Filters
       searchQuery: '',
       selectedSpecialty: '',
       
-      // Sample Data
-      instructors: [
-        { 
-          id: 1, 
-          name: 'Nguyễn Văn A', 
-          title: 'Senior Frontend Developer',
-          bio: 'Chuyên gia phát triển frontend với hơn 8 năm kinh nghiệm. Đã tham gia phát triển nhiều ứng dụng web lớn và phức tạp.',
-          email: 'nguyenvana@techzen.edu.vn',
-          phone: '0901234567',
-          avatar: 'https://randomuser.me/api/portraits/men/32.jpg', 
-          specialty: 'Web Development',
-          skills: ['HTML/CSS', 'JavaScript', 'Vue.js', 'React', 'Angular'],
-          coursesCount: 3,
-          studentsCount: 230,
-          linkedin: 'https://linkedin.com/in/nguyenvana',
-          github: 'https://github.com/nguyenvana'
-        },
-        { 
-          id: 2, 
-          name: 'Trần Thị B', 
-          title: 'Mobile App Developer',
-          bio: 'Chuyên gia phát triển ứng dụng di động với 5 năm kinh nghiệm trong các dự án React Native và Flutter.',
-          email: 'tranthib@techzen.edu.vn',
-          phone: '0901234568',
-          avatar: 'https://randomuser.me/api/portraits/women/44.jpg', 
-          specialty: 'Mobile Development',
-          skills: ['React Native', 'Flutter', 'JavaScript', 'TypeScript', 'Firebase'],
-          coursesCount: 2,
-          studentsCount: 180,
-          linkedin: 'https://linkedin.com/in/tranthib',
-          github: 'https://github.com/tranthib'
-        },
-        { 
-          id: 3, 
-          name: 'Lê Văn C', 
-          title: 'Database Architect',
-          bio: 'Chuyên gia về cơ sở dữ liệu với hơn 10 năm kinh nghiệm. Thành thạo cả SQL và NoSQL, cũng như các kỹ thuật tối ưu hóa hiệu suất.',
-          email: 'levanc@techzen.edu.vn',
-          phone: '0901234569',
-          avatar: 'https://randomuser.me/api/portraits/men/68.jpg', 
-          specialty: 'Database Management',
-          skills: ['SQL', 'MongoDB', 'PostgreSQL', 'Redis', 'Database Design'],
-          coursesCount: 4,
-          studentsCount: 320,
-          linkedin: 'https://linkedin.com/in/levanc',
-          github: 'https://github.com/levanc'
-        },
-        { 
-          id: 4, 
-          name: 'Phạm Thị D', 
-          title: 'DevOps Engineer',
-          bio: 'Chuyên gia về DevOps với hơn 6 năm kinh nghiệm. Thành thạo các công cụ CI/CD, container và orchestration.',
-          email: 'phamthid@techzen.edu.vn',
-          phone: '0901234570',
-          avatar: 'https://randomuser.me/api/portraits/women/65.jpg', 
-          specialty: 'DevOps',
-          skills: ['Docker', 'Kubernetes', 'Jenkins', 'AWS', 'CI/CD'],
-          coursesCount: 1,
-          studentsCount: 150,
-          linkedin: 'https://linkedin.com/in/phamthid',
-          github: 'https://github.com/phamthid'
-        }
-      ]
+      // Data
+      instructors: []
     }
   },
   
@@ -370,25 +182,25 @@ export default {
     },
     
     filteredInstructors() {
-      return this.instructors.filter(instructor => {
-        const matchSearch = !this.searchQuery || 
-          instructor.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-          instructor.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-          instructor.bio.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-          instructor.skills.some(skill => skill.toLowerCase().includes(this.searchQuery.toLowerCase()));
-        
-        const matchSpecialty = !this.selectedSpecialty || instructor.specialty === this.selectedSpecialty;
-        
-        return matchSearch && matchSpecialty;
-      });
-    },
-    
-    parsedSkills() {
-      if (!this.skillsInput) return [];
-      return this.skillsInput.split(',')
-        .map(skill => skill.trim())
-        .filter(skill => skill.length > 0);
+      if (this.searchQuery || this.selectedSpecialty) {
+        return this.instructors.filter(instructor => {
+          const matchSearch = !this.searchQuery || 
+            instructor.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+            instructor.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+            instructor.bio.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+            (instructor.skills && instructor.skills.some(skill => skill.toLowerCase().includes(this.searchQuery.toLowerCase())));
+          
+          const matchSpecialty = !this.selectedSpecialty || instructor.specialty === this.selectedSpecialty;
+          
+          return matchSearch && matchSpecialty;
+        });
+      }
+      return this.instructors;
     }
+  },
+  
+  created() {
+    this.fetchInstructors();
   },
   
   mounted() {
@@ -399,14 +211,57 @@ export default {
   },
   
   methods: {
+    async fetchInstructors() {
+      this.loading = true;
+      this.error = null;
+      
+      try {
+        const response = await instructorService.getAllInstructors();
+        this.instructors = response.data;
+      } catch (error) {
+        console.error('Error fetching instructors:', error);
+        this.error = 'Không thể tải dữ liệu giảng viên. Vui lòng thử lại sau.';
+      } finally {
+        this.loading = false;
+      }
+    },
+    
     // Filter methods
     applyFilters() {
       // Filters are applied via computed property
+      // If the search or specialty is complex, we could make API calls here
+      if (this.searchQuery && this.searchQuery.length > 2) {
+        // Optionally, we could debounce this for better performance
+        this.fetchFilteredInstructors();
+      }
+    },
+    
+    async fetchFilteredInstructors() {
+      this.loading = true;
+      
+      try {
+        let response;
+        if (this.selectedSpecialty) {
+          response = await instructorService.getInstructorsBySpecialty(this.selectedSpecialty);
+        } else if (this.searchQuery) {
+          response = await instructorService.searchInstructors(this.searchQuery);
+        } else {
+          response = await instructorService.getAllInstructors();
+        }
+        
+        this.instructors = response.data;
+      } catch (error) {
+        console.error('Error filtering instructors:', error);
+        this.error = 'Không thể lọc dữ liệu giảng viên. Vui lòng thử lại sau.';
+      } finally {
+        this.loading = false;
+      }
     },
     
     resetFilters() {
       this.searchQuery = '';
       this.selectedSpecialty = '';
+      this.fetchInstructors();
     },
     
     // Helper methods
@@ -428,24 +283,16 @@ export default {
       };
     },
     
-    removeSkill(index) {
-      const skills = this.parsedSkills;
-      skills.splice(index, 1);
-      this.skillsInput = skills.join(', ');
-    },
-    
     // Modal methods
     openAddModal() {
       this.isEditMode = false;
       this.currentInstructor = this.getEmptyInstructor();
-      this.skillsInput = '';
       this.instructorModal.show();
     },
     
     openEditModal(instructor) {
       this.isEditMode = true;
-      this.currentInstructor = JSON.parse(JSON.stringify(instructor)); // Deep copy
-      this.skillsInput = instructor.skills.join(', ');
+      this.currentInstructor = { ...instructor }; // Clone to avoid direct mutation
       this.instructorModal.show();
       
       // Close other modals if open
@@ -455,7 +302,7 @@ export default {
     },
     
     viewInstructor(instructor) {
-      this.currentInstructor = JSON.parse(JSON.stringify(instructor)); // Deep copy
+      this.currentInstructor = { ...instructor }; // Clone to avoid direct mutation
       this.viewModal.show();
     },
     
@@ -464,36 +311,67 @@ export default {
       this.deleteModal.show();
     },
     
-    // Save and Delete methods
-    saveInstructor() {
-      // Set skills from input
-      this.currentInstructor.skills = this.parsedSkills;
-      
-      if (this.isEditMode) {
-        // Update existing instructor
-        const index = this.instructors.findIndex(i => i.id === this.currentInstructor.id);
-        if (index !== -1) {
-          this.instructors.splice(index, 1, this.currentInstructor);
+    // API methods
+    async saveInstructor(instructor) {
+      try {
+        if (this.isEditMode) {
+          // Update existing instructor
+          await instructorService.updateInstructor(instructor.id, instructor);
+          
+          // Update the local data
+          const index = this.instructors.findIndex(i => i.id === instructor.id);
+          if (index !== -1) {
+            this.instructors.splice(index, 1, instructor);
+          }
+          
+          Swal.fire({
+                icon: 'success',
+                title: 'Cập nhật giảng viên thành công!',
+                showConfirmButton: false,
+                timer: 1500,
+            });      
+          } else {
+          // Add new instructor
+          const response = await instructorService.createInstructor(instructor);
+          
+          // Add to the local data
+          this.instructors.push(response.data);
+          Swal.fire({
+                icon: 'success',
+                title: 'Thêm giảng viên thành công!',
+                showConfirmButton: false,
+                timer: 1500,
+            });
         }
-      } else {
-        // Add new instructor
-        this.currentInstructor.id = Math.max(0, ...this.instructors.map(i => i.id)) + 1;
-        this.currentInstructor.coursesCount = 0;
-        this.currentInstructor.studentsCount = 0;
-        this.instructors.push(this.currentInstructor);
+        
+        // Close the modal
+        this.instructorModal.hide();
+      } catch (error) {
+        console.error('Error saving instructor:', error);
+        this.$toast.error('Có lỗi xảy ra khi lưu thông tin giảng viên. Vui lòng thử lại sau.');
       }
-      
-      this.instructorModal.hide();
-      // In a real application, you would save to backend here
     },
     
-    deleteInstructor() {
-      const index = this.instructors.findIndex(i => i.id === this.currentInstructor.id);
-      if (index !== -1) {
-        this.instructors.splice(index, 1);
+    async deleteInstructor() {
+      this.isDeleting = true;
+      
+      try {
+        await instructorService.deleteInstructor(this.currentInstructor.id);
+        
+        // Remove from the local data
+        const index = this.instructors.findIndex(i => i.id === this.currentInstructor.id);
+        if (index !== -1) {
+          this.instructors.splice(index, 1);
+        }
+        
+        this.$toast.success('Xóa giảng viên thành công!');
+        this.deleteModal.hide();
+      } catch (error) {
+        console.error('Error deleting instructor:', error);
+        this.$toast.error('Có lỗi xảy ra khi xóa giảng viên. Vui lòng thử lại sau.');
+      } finally {
+        this.isDeleting = false;
       }
-      this.deleteModal.hide();
-      // In a real application, you would delete from backend here
     }
   }
 }
