@@ -32,7 +32,7 @@
           </div>
           <div class="col-lg-5">
             <div class="course-image animate__animated animate__fadeInRight parallax-element" data-speed="0.15">
-              <img src="../assets/images/javabackend.png" style="width: 440px; height: 380px;" alt="Python Course" class="img-fluid">
+              <img src="../assets/images/khoahocjava.jpg" style="width: 540px; height: 480px;" alt="Python Course" class="img-fluid">
             </div>
           </div>
         </div>

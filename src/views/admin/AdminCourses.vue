@@ -121,7 +121,7 @@
                       <input type="text" class="form-control" id="courseTitle" v-model="currentCourse.title" required>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <!-- <div class="col-md-4">
                     <div class="mb-3">
                       <label for="courseCategory" class="form-label">Danh mục <span class="text-danger">*</span></label>
                       <select class="form-select" id="courseCategory" v-model="currentCourse.categoryId" required>
@@ -130,7 +130,7 @@
                         </option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-md-12">
                     <div class="mb-3">
                       <label for="courseShortDesc" class="form-label">Mô tả ngắn <span class="text-danger">*</span></label>
@@ -356,6 +356,9 @@
 <script>
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import { Modal } from 'bootstrap'
+import axios from 'axios'
+
+const API_URL = 'http://localhost:8080/api'; // Update this to your actual API base URL
 
 export default {
   name: 'AdminCourses',
@@ -380,177 +383,14 @@ export default {
         status: ''
       },
       
-      // Sample Data
-      categories: [
-        { id: 1, name: 'Web Development' },
-        { id: 2, name: 'Mobile Development' },
-        { id: 3, name: 'Programming Languages' },
-        { id: 4, name: 'Database Management' },
-        { id: 5, name: 'DevOps' },
-        { id: 6, name: 'Data Science' }
-      ],
+      // Data from API
+      categories: [],
+      instructors: [],
+      courses: [],
       
-      instructors: [
-        { 
-          id: 1, 
-          name: 'Nguyễn Văn A', 
-          specialty: 'Web Development', 
-          avatar: 'https://randomuser.me/api/portraits/men/32.jpg' 
-        },
-        { 
-          id: 2, 
-          name: 'Trần Thị B', 
-          specialty: 'Mobile Development', 
-          avatar: 'https://randomuser.me/api/portraits/women/44.jpg' 
-        },
-        { 
-          id: 3, 
-          name: 'Lê Văn C', 
-          specialty: 'Database Management', 
-          avatar: 'https://randomuser.me/api/portraits/men/68.jpg' 
-        },
-        { 
-          id: 4, 
-          name: 'Phạm Thị D', 
-          specialty: 'DevOps', 
-          avatar: 'https://randomuser.me/api/portraits/women/65.jpg' 
-        }
-      ],
-      
-      courses: [
-        {
-          id: 1,
-          title: 'Web Development with Vue.js',
-          shortDescription: 'Học cách xây dựng ứng dụng web hiện đại với Vue.js',
-          description: 'Khóa học này sẽ dạy bạn cách xây dựng các ứng dụng web đơn trang (SPA) hiện đại sử dụng Vue.js từ cơ bản đến nâng cao. Bạn sẽ học cách tạo các component, quản lý trạng thái với Vuex, định tuyến với Vue Router và gọi API từ ứng dụng Vue.',
-          thumbnail: 'https://vuejs.org/images/logo.png',
-          price: 1500000,
-          duration: 40,
-          level: 'intermediate',
-          rating: 4.7,
-          enrolledCount: 230,
-          status: 'active',
-          categoryId: 1,
-          instructorId: 1,
-          curriculum: [
-            {
-              title: 'Giới thiệu Vue.js',
-              lessons: [
-                { title: 'Vue.js là gì?', duration: 10 },
-                { title: 'Cài đặt môi trường phát triển', duration: 15 },
-                { title: 'Ứng dụng Vue đầu tiên', duration: 20 }
-              ]
-            },
-            {
-              title: 'Components và Props',
-              lessons: [
-                { title: 'Vue Components', duration: 25 },
-                { title: 'Props và truyền dữ liệu', duration: 20 },
-                { title: 'Component Events', duration: 15 }
-              ]
-            }
-          ]
-        },
-        {
-          id: 2,
-          title: 'React Native for Mobile Apps',
-          shortDescription: 'Xây dựng ứng dụng mobile đa nền tảng với React Native',
-          description: 'Trong khóa học này, bạn sẽ học cách phát triển ứng dụng di động cho cả iOS và Android bằng React Native. Bạn sẽ hiểu về cấu trúc của một ứng dụng React Native, cách tạo các component UI, điều hướng, và kết nối với API.',
-          thumbnail: 'https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg',
-          price: 1800000,
-          duration: 45,
-          level: 'intermediate',
-          rating: 4.8,
-          enrolledCount: 180,
-          status: 'active',
-          categoryId: 2,
-          instructorId: 2,
-          curriculum: [
-            {
-              title: 'Cơ bản về React Native',
-              lessons: [
-                { title: 'Giới thiệu React Native', duration: 15 },
-                { title: 'Cài đặt môi trường phát triển', duration: 25 },
-                { title: 'Ứng dụng React Native đầu tiên', duration: 20 }
-              ]
-            },
-            {
-              title: 'UI Components',
-              lessons: [
-                { title: 'React Native Core Components', duration: 30 },
-                { title: 'Styling trong React Native', duration: 25 },
-                { title: 'FlexBox Layout', duration: 20 }
-              ]
-            }
-          ]
-        },
-        {
-          id: 3,
-          title: 'SQL for Database Management',
-          shortDescription: 'Làm chủ SQL và quản lý cơ sở dữ liệu hiệu quả',
-          description: 'Khóa học SQL này cung cấp kiến thức từ cơ bản đến nâng cao về ngôn ngữ truy vấn SQL và các kỹ thuật quản lý cơ sở dữ liệu. Bạn sẽ học cách thiết kế database, tối ưu hóa truy vấn và bảo mật dữ liệu.',
-          thumbnail: 'https://www.freecodecamp.org/news/content/images/2023/01/SQL.png',
-          price: 1200000,
-          duration: 30,
-          level: 'beginner',
-          rating: 4.5,
-          enrolledCount: 320,
-          status: 'active',
-          categoryId: 4,
-          instructorId: 3,
-          curriculum: [
-            {
-              title: 'Cơ bản về SQL',
-              lessons: [
-                { title: 'Giới thiệu về Databases', duration: 15 },
-                { title: 'Tạo bảng và định nghĩa dữ liệu', duration: 20 },
-                { title: 'Các lệnh INSERT, UPDATE, DELETE', duration: 25 }
-              ]
-            },
-            {
-              title: 'Truy vấn nâng cao',
-              lessons: [
-                { title: 'JOINs trong SQL', duration: 30 },
-                { title: 'Subqueries', duration: 25 },
-                { title: 'Aggregate Functions', duration: 20 }
-              ]
-            }
-          ]
-        },
-        {
-          id: 4,
-          title: 'Docker và Kubernetes',
-          shortDescription: 'Triển khai ứng dụng với container và điều phối',
-          description: 'Khóa học này sẽ hướng dẫn bạn cách sử dụng Docker để container hóa ứng dụng và Kubernetes để điều phối container trong môi trường sản xuất. Bạn sẽ học cách tạo Docker image, quản lý container và triển khai ứng dụng lên cluster Kubernetes.',
-          thumbnail: 'https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png',
-          price: 2000000,
-          duration: 50,
-          level: 'advanced',
-          rating: 4.9,
-          enrolledCount: 150,
-          status: 'upcoming',
-          categoryId: 5,
-          instructorId: 4,
-          curriculum: [
-            {
-              title: 'Docker Fundamentals',
-              lessons: [
-                { title: 'Giới thiệu về containers', duration: 15 },
-                { title: 'Dockerfile và Docker images', duration: 25 },
-                { title: 'Docker Compose', duration: 20 }
-              ]
-            },
-            {
-              title: 'Kubernetes',
-              lessons: [
-                { title: 'Kubernetes Architecture', duration: 30 },
-                { title: 'Pods, Services và Deployments', duration: 35 },
-                { title: 'Triển khai ứng dụng thực tế', duration: 40 }
-              ]
-            }
-          ]
-        }
-      ]
+      // Loading state
+      loading: false,
+      error: null
     }
   },
   
@@ -574,9 +414,291 @@ export default {
     this.courseModal = new Modal(this.$refs.courseModal);
     this.deleteModal = new Modal(this.$refs.deleteModal);
     this.viewModal = new Modal(this.$refs.viewModal);
+    
+    // Fetch data from API
+    this.fetchCourses();
+    this.fetchCategories();
+    this.fetchInstructors();
   },
   
   methods: {
+    // API methods
+    async fetchCourses() {
+      try {
+        this.loading = true;
+        const response = await axios.get(`${API_URL}/courses`);
+        // Transform API data to match our component's structure
+        this.courses = response.data.map(course => this.mapApiCourseToLocal(course));
+        this.loading = false;
+      } catch (error) {
+        console.error('Error fetching courses:', error);
+        this.error = 'Failed to load courses';
+        this.loading = false;
+      }
+    },
+    
+    async fetchCategories() {
+      try {
+        // Replace with your actual categories API endpoint
+        const response = await axios.get(`${API_URL}/categories`);
+        this.categories = response.data;
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    },
+    
+    async fetchInstructors() {
+      try {
+        // Replace with your actual instructors API endpoint
+        const response = await axios.get(`${API_URL}/instructors`);
+        this.instructors = response.data;
+      } catch (error) {
+        console.error('Error fetching instructors:', error);
+      }
+    },
+    
+    // Data mapping methods
+    mapApiCourseToLocal(apiCourse) {
+      return {
+        id: apiCourse.id,
+        title: apiCourse.name,
+        shortDescription: apiCourse.description?.substring(0, 100) || '',
+        description: apiCourse.description,
+        thumbnail: apiCourse.thumbnail,
+        price: apiCourse.price,
+        duration: apiCourse.duration,
+        level: apiCourse.level,
+        rating: 0, // Add if your API provides this
+        enrolledCount: apiCourse.studentsCount || 0,
+        status: apiCourse.isActive ? 'active' : 'draft', // Map isActive to status
+        categoryId: 1, // Update if your API provides category
+        instructorId: apiCourse.instructorId,
+        curriculum: this.mapApiCurriculumToLocal(apiCourse.chapters)
+      };
+    },
+    
+    mapApiCurriculumToLocal(chapters) {
+      if (!chapters || chapters.length === 0) {
+        return [{
+          title: '',
+          lessons: [{ title: '', duration: 0 }]
+        }];
+      }
+      
+      return chapters.map(chapter => ({
+        id: chapter.id,
+        title: chapter.title,
+        position: chapter.position,
+        lessons: chapter.lessons.map(lesson => ({
+          id: lesson.id,
+          title: lesson.title,
+          duration: lesson.duration,
+          position: lesson.position,
+          content: lesson.content,
+          videoUrl: lesson.videoUrl
+        }))
+      }));
+    },
+    
+    mapLocalCourseToApi(localCourse) {
+      return {
+        id: localCourse.id,
+        name: localCourse.title,
+        description: localCourse.description,
+        price: localCourse.price,
+        thumbnail: localCourse.thumbnail,
+        duration: localCourse.duration,
+        level: localCourse.level,
+        instructorId: localCourse.instructorId,
+        isActive: localCourse.status === 'active',
+        chapters: this.mapLocalCurriculumToApi(localCourse.curriculum, localCourse.id)
+      };
+    },
+    
+    mapLocalCurriculumToApi(curriculum, courseId) {
+      return curriculum.map((module, index) => ({
+        id: module.id,
+        title: module.title,
+        position: index + 1,
+        courseId: courseId,
+        lessons: module.lessons.map((lesson, lIndex) => ({
+          id: lesson.id,
+          title: lesson.title,
+          duration: lesson.duration,
+          position: lIndex + 1,
+          chapterId: module.id,
+          content: lesson.content || '',
+          videoUrl: lesson.videoUrl || ''
+        }))
+      }));
+    },
+    
+    // CRUD methods
+    async saveCourse() {
+      try {
+        this.loading = true;
+        const courseData = this.mapLocalCourseToApi(this.currentCourse);
+        
+        let savedCourse;
+        if (this.isEditMode) {
+          // Update existing course
+          const response = await axios.put(`${API_URL}/courses/${courseData.id}`, courseData);
+          savedCourse = response.data;
+          
+          // Update chapters and lessons
+          await this.updateCurriculum(savedCourse.id, this.currentCourse.curriculum);
+          
+          const index = this.courses.findIndex(c => c.id === savedCourse.id);
+          if (index !== -1) {
+            this.courses.splice(index, 1, this.mapApiCourseToLocal(savedCourse));
+          }
+        } else {
+          // Add new course
+          const response = await axios.post(`${API_URL}/courses`, courseData);
+          savedCourse = response.data;
+          
+          // Create chapters and lessons
+          await this.createCurriculum(savedCourse.id, this.currentCourse.curriculum);
+          
+          this.courses.push(this.mapApiCourseToLocal(savedCourse));
+        }
+        
+        this.loading = false;
+        this.courseModal.hide();
+        // Reload courses to get fresh data
+        this.fetchCourses();
+      } catch (error) {
+        console.error('Error saving course:', error);
+        this.error = 'Failed to save course';
+        this.loading = false;
+      }
+    },
+    
+    async updateCurriculum(courseId, curriculum) {
+      // Get existing chapters
+      const response = await axios.get(`${API_URL}/courses/${courseId}/chapters`);
+      const existingChapters = response.data;
+      
+      // Process each chapter
+      for (const module of curriculum) {
+        let chapterId;
+        
+        if (module.id) {
+          // Update existing chapter
+          await axios.put(`${API_URL}/courses/chapters/${module.id}`, {
+            id: module.id,
+            title: module.title,
+            position: module.position,
+            courseId: courseId
+          });
+          chapterId = module.id;
+        } else {
+          // Create new chapter
+          const chapterResponse = await axios.post(`${API_URL}/courses/${courseId}/chapters`, {
+            title: module.title,
+            position: module.position || 1,
+            courseId: courseId
+          });
+          chapterId = chapterResponse.data.id;
+        }
+        
+        // Process lessons for this chapter
+        await this.updateLessons(chapterId, module.lessons);
+      }
+      
+      // Delete chapters that are no longer present
+      const currentChapterIds = curriculum.filter(m => m.id).map(m => m.id);
+      for (const chapter of existingChapters) {
+        if (!currentChapterIds.includes(chapter.id)) {
+          await axios.delete(`${API_URL}/courses/chapters/${chapter.id}`);
+        }
+      }
+    },
+    
+    async createCurriculum(courseId, curriculum) {
+      for (const [index, module] of curriculum.entries()) {
+        // Create chapter
+        const chapterResponse = await axios.post(`${API_URL}/courses/${courseId}/chapters`, {
+          title: module.title,
+          position: index + 1,
+          courseId: courseId
+        });
+        
+        const chapterId = chapterResponse.data.id;
+        
+        // Create lessons for this chapter
+        for (const [lIndex, lesson] of module.lessons.entries()) {
+          await axios.post(`${API_URL}/courses/chapters/${chapterId}/lessons`, {
+            title: lesson.title,
+            duration: lesson.duration,
+            position: lIndex + 1,
+            chapterId: chapterId,
+            content: lesson.content || '',
+            videoUrl: lesson.videoUrl || ''
+          });
+        }
+      }
+    },
+    
+    async updateLessons(chapterId, lessons) {
+      // Get existing lessons
+      const response = await axios.get(`${API_URL}/courses/chapters/${chapterId}/lessons`);
+      const existingLessons = response.data;
+      
+      // Process each lesson
+      for (const [index, lesson] of lessons.entries()) {
+        if (lesson.id) {
+          // Update existing lesson
+          await axios.put(`${API_URL}/courses/lessons/${lesson.id}`, {
+            id: lesson.id,
+            title: lesson.title,
+            duration: lesson.duration,
+            position: index + 1,
+            chapterId: chapterId,
+            content: lesson.content || '',
+            videoUrl: lesson.videoUrl || ''
+          });
+        } else {
+          // Create new lesson
+          await axios.post(`${API_URL}/courses/chapters/${chapterId}/lessons`, {
+            title: lesson.title,
+            duration: lesson.duration,
+            position: index + 1,
+            chapterId: chapterId,
+            content: lesson.content || '',
+            videoUrl: lesson.videoUrl || ''
+          });
+        }
+      }
+      
+      // Delete lessons that are no longer present
+      const currentLessonIds = lessons.filter(l => l.id).map(l => l.id);
+      for (const lesson of existingLessons) {
+        if (!currentLessonIds.includes(lesson.id)) {
+          await axios.delete(`${API_URL}/courses/lessons/${lesson.id}`);
+        }
+      }
+    },
+    
+    async deleteCourse() {
+      try {
+        this.loading = true;
+        await axios.delete(`${API_URL}/courses/${this.currentCourse.id}`);
+        
+        const index = this.courses.findIndex(c => c.id === this.currentCourse.id);
+        if (index !== -1) {
+          this.courses.splice(index, 1);
+        }
+        
+        this.loading = false;
+        this.deleteModal.hide();
+      } catch (error) {
+        console.error('Error deleting course:', error);
+        this.error = 'Failed to delete course';
+        this.loading = false;
+      }
+    },
+    
     // Filter methods
     applyFilters() {
       // Filters are applied via computed property
@@ -604,8 +726,8 @@ export default {
         rating: 0,
         enrolledCount: 0,
         status: 'draft',
-        categoryId: this.categories ? this.categories[0]?.id : null,
-        instructorId: this.instructors ? this.instructors[0]?.id : null,
+        categoryId: this.categories && this.categories.length > 0 ? this.categories[0].id : null,
+        instructorId: this.instructors && this.instructors.length > 0 ? this.instructors[0].id : null,
         curriculum: [
           {
             title: '',
@@ -710,35 +832,6 @@ export default {
         this.addLesson(moduleIndex);
       }
     },
-    
-    // Save and Delete methods
-    saveCourse() {
-      if (this.isEditMode) {
-        // Update existing course
-        const index = this.courses.findIndex(c => c.id === this.currentCourse.id);
-        if (index !== -1) {
-          this.courses.splice(index, 1, this.currentCourse);
-        }
-      } else {
-        // Add new course
-        this.currentCourse.id = Math.max(0, ...this.courses.map(c => c.id)) + 1;
-        this.currentCourse.rating = 0;
-        this.currentCourse.enrolledCount = 0;
-        this.courses.push(this.currentCourse);
-      }
-      
-      this.courseModal.hide();
-      // In a real application, you would save to backend here
-    },
-    
-    deleteCourse() {
-      const index = this.courses.findIndex(c => c.id === this.currentCourse.id);
-      if (index !== -1) {
-        this.courses.splice(index, 1);
-      }
-      this.deleteModal.hide();
-      // In a real application, you would delete from backend here
-    }
   }
 }
 </script>
