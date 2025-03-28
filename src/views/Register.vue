@@ -96,21 +96,6 @@
                   rows="4"
                 ></textarea>
               </div>
-              
-              <div class="form-group checkbox">
-                <input 
-                  type="checkbox" 
-                  id="terms" 
-                  v-model="form.terms"
-                  :class="{ 'error': errors.terms }"
-                  required
-                >
-                <label for="terms">
-                  Tôi đồng ý với <a href="#" @click.prevent="showTerms = true">điều khoản và điều kiện</a> <span class="required">*</span>
-                </label>
-                <span class="error-message" v-if="errors.terms">{{ errors.terms }}</span>
-              </div>
-              
               <div class="form-actions">
                 <button type="submit" class="btn btn-primary" :disabled="isSubmitting">
                   {{ isSubmitting ? 'Đang gửi...' : 'Đăng ký ngay' }}
@@ -187,29 +172,6 @@
     </div>
 
     <!-- Terms Modal -->
-    <div class="modal" v-if="showTerms">
-      <div class="modal-content terms-content">
-        <span class="close-btn" @click="showTerms = false">&times;</span>
-        <h2>Điều khoản và điều kiện</h2>
-        <div class="terms-text">
-          <h3>1. Điều khoản sử dụng</h3>
-          <p>Bằng việc đăng ký và tham gia khóa học tại TechAcademy, học viên đồng ý tuân theo các điều khoản và điều kiện được nêu dưới đây.</p>
-          
-          <h3>2. Thanh toán và hoàn tiền</h3>
-          <p>Học viên cần thanh toán đầy đủ học phí trước khi bắt đầu khóa học. Trong trường hợp học viên muốn rút khỏi khóa học, chính sách hoàn tiền sẽ được áp dụng theo quy định của TechAcademy.</p>
-          
-          <h3>3. Tài liệu học tập</h3>
-          <p>Tất cả tài liệu học tập được cung cấp trong khóa học đều thuộc bản quyền của TechAcademy. Học viên không được sao chép, phân phối hoặc sử dụng các tài liệu này cho mục đích thương mại mà không có sự cho phép bằng văn bản từ TechAcademy.</p>
-          
-          <h3>4. Chứng chỉ</h3>
-          <p>Chứng chỉ hoàn thành khóa học sẽ được cấp cho học viên đáp ứng đầy đủ các yêu cầu của khóa học, bao gồm tham gia các buổi học và hoàn thành các bài tập, dự án theo quy định.</p>
-          
-          <h3>5. Quy tắc ứng xử</h3>
-          <p>Học viên cần tuân thủ các quy tắc ứng xử trong suốt quá trình học tập, tôn trọng giảng viên và các học viên khác, không có hành vi gây rối hoặc làm ảnh hưởng đến môi trường học tập.</p>
-        </div>
-        <button class="btn" @click="acceptTerms">Tôi đồng ý</button>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -226,7 +188,6 @@ export default {
         experience: 'beginner',
         referral: 'social-media',
         message: '',
-        terms: false
       },
       errors: {},
       isSubmitting: false,
@@ -254,10 +215,6 @@ export default {
       
       if (!this.form.course) {
         this.errors.course = 'Vui lòng chọn khóa học';
-      }
-      
-      if (!this.form.terms) {
-        this.errors.terms = 'Vui lòng đồng ý với điều khoản và điều kiện';
       }
       
       return Object.keys(this.errors).length === 0;
@@ -340,7 +297,6 @@ export default {
         experience: 'beginner',
         referral: 'social-media',
         message: '',
-        terms: false
       };
     },
     acceptTerms() {
