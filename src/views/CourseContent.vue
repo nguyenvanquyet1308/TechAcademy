@@ -70,7 +70,7 @@
                 </div>
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-calendar"></i></span>
-                  <span class="detail-text">Khai giảng: 09/12/2024</span>
+                  <span class="detail-text">Khai giảng: 09/5/2025</span>
                 </div>
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>

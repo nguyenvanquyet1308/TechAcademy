@@ -15,7 +15,7 @@
                 v-motion
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
-                class="display-4 fw-bold mb-4 text-glow"
+                class="display-4 fw-bold mb-4 text-white"
               >
                 Bắt đầu hành trình công nghệ của bạn tại TechAcademy
               </h1>

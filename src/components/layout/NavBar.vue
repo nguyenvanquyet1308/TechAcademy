@@ -2,44 +2,41 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" :class="{'navbar-scrolled': scrolled}">
     <div class="container">
       <router-link class="navbar-brand" to="/">
-        <img src="@/assets/images/logo.png" alt="TechAcademy Logo"  class="logo-img">
+        <img src="@/assets/images/logo.png" alt="TechAcademy Logo" class="logo-img">
       </router-link>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" @click="toggleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" :class="{'show': isNavbarOpen}" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <router-link class="nav-link" to="/" exact-active-class="active">Trang chủ</router-link>
+            <router-link class="nav-link" to="/" exact-active-class="active" @click="closeNavbar">Trang chủ</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/course-intro" active-class="active">Giới thiệu</router-link>
+            <router-link class="nav-link" to="/course-intro" active-class="active" @click="closeNavbar">Giới thiệu</router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Nội dung khóa học
             </a>
             <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-              <li><router-link class="dropdown-item" to="/course-python">Python Al</router-link></li>
-              <li><router-link class="dropdown-item" to="/course-java-spring">Java Backend</router-link></li>
+              <li><router-link class="dropdown-item" to="/course-python" @click="closeNavbar">Python AI</router-link></li>
+              <li><router-link class="dropdown-item" to="/course-java-spring" @click="closeNavbar">Java Backend</router-link></li>
               <li><hr class="dropdown-divider"></li>
-              <li><router-link class="dropdown-item" to="/course-content">Tất cả khóa học</router-link></li>
+              <li><router-link class="dropdown-item" to="/course-content" @click="closeNavbar">Tất cả khóa học</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/instructors" active-class="active">Giảng viên</router-link>
-          </li>
-          <!-- <li class="nav-item">
-            <router-link class="nav-link" to="/tuition" active-class="active">Học phí & Ưu đãi</router-link>
-          </li> -->
-          <li class="nav-item">
-            <router-link class="nav-link" to="/reviews" active-class="active">Đánh giá học viên</router-link>
+            <router-link class="nav-link" to="/instructors" active-class="active" @click="closeNavbar">Giảng viên</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/faq" active-class="active">FAQ</router-link>
+            <router-link class="nav-link" to="/reviews" active-class="active" @click="closeNavbar">Đánh giá học viên</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="btn btn-primary text-white ms-lg-3 px-4 py-2" to="/register">Đăng ký ngay</router-link>
+            <router-link class="nav-link" to="/faq" active-class="active" @click="closeNavbar">FAQ</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="btn btn-primary text-white ms-lg-3 px-4 py-2" to="/register" @click="closeNavbar">Đăng ký ngay</router-link>
           </li>
         </ul>
       </div>
@@ -52,8 +49,9 @@ export default {
   name: 'NavBar',
   data() {
     return {
-      scrolled: false
-    }
+      scrolled: false,
+      isNavbarOpen: false
+    };
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
@@ -64,9 +62,15 @@ export default {
   methods: {
     handleScroll() {
       this.scrolled = window.scrollY > 50;
+    },
+    toggleNavbar() {
+      this.isNavbarOpen = !this.isNavbarOpen;
+    },
+    closeNavbar() {
+      this.isNavbarOpen = false;
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -169,6 +173,33 @@ export default {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+.slide-fade-enter-active {
+  animation: slideDown 0.3s ease-out forwards;
+}
+.slide-fade-leave-active {
+  animation: slideUp 0.3s ease-in forwards;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20px);
+    opacity: 0;
   }
 }
 
