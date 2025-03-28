@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" :class="{'navbar-scrolled': scrolled}">
     <div class="container">
       <router-link class="navbar-brand" to="/">
-        <img src="@/assets/images/logo.png" alt="TechAcademy Logo" class="logo-img">
+        <img src="@/assets/images/logo.png" alt="TechAcademy Logo"  class="logo-img">
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -112,7 +112,7 @@ export default {
 }
 
 .navbar-scrolled .logo-img {
-  height: 30px;
+   height:50px;
 }
 
 .nav-link {
@@ -128,7 +128,15 @@ export default {
 .nav-link:hover, .nav-link.active {
   color: #4a6bff !important;
 }
-
+.logo-img {
+  width: 180px; /* Điều chỉnh kích thước */
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Tạo hiệu ứng bóng */
+  transition: transform 0.3s ease-in-out;
+  background-color: #007bff; /* Màu xanh Bootstrap */
+  padding: 5px; /* Khoảng cách viền */
+  border-radius: 10px; /* Bo góc */
+}
 .nav-link:after {
   content: '';
   position: absolute;

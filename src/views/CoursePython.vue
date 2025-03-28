@@ -645,20 +645,6 @@
             ></textarea>
           </div>
           
-          <div class="form-group checkbox">
-            <input 
-              type="checkbox" 
-              id="terms" 
-              v-model="form.terms"
-              :class="{ 'error': errors.terms }"
-              required
-            >
-            <label for="terms">
-              Tôi đồng ý với <a href="#" @click.prevent="showTerms = true">điều khoản và điều kiện</a> <span class="required">*</span>
-            </label>
-            <span class="error-message" v-if="errors.terms">{{ errors.terms }}</span>
-          </div>
-          
           <div class="form-actions">
             <button type="submit" class="btn btn-primary" :disabled="isSubmitting">
               {{ isSubmitting ? 'Đang gửi...' : 'Đăng ký ngay' }}
@@ -821,7 +807,7 @@ export default {
     submitForm() {
       // Validate form
       this.errors = {};
-      
+      console.log("chạy tơi sdya ")
       if (!this.form.fullName.trim()) {
         this.errors.fullName = 'Vui lòng nhập họ và tên';
       }
@@ -835,22 +821,72 @@ export default {
       if (!this.form.phone.trim()) {
         this.errors.phone = 'Vui lòng nhập số điện thoại';
       }
-      
-      if (!this.form.terms) {
-        this.errors.terms = 'Vui lòng đồng ý với điều khoản và điều kiện';
-      }
-      
       // If there are no errors, process the form
       if (Object.keys(this.errors).length === 0) {
         this.isSubmitting = true;
         
-        // Simulate API call for form submission
-        setTimeout(() => {
+        // Chuẩn bị dữ liệu để gửi đến Google Sheets
+        const formData = {
+          fullName: this.form.fullName,
+          email: this.form.email,
+          phone: this.form.phone,
+          course: this.form.course,
+          experience: this.form.experience,
+          message: this.form.message,
+          timestamp: new Date().toLocaleString()
+        };
+        
+        // URL của Google Apps Script web app - cần thay thế bằng URL thực tế của bạn
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwD0eXTln4nJMqlBTtIQp3JoBTHcSRmkIvf0c68JltfIadcKZH-cskCWVk_N140DDH6BQ/exec';
+        
+        // Tạo URL encoded string từ dữ liệu
+        const urlEncodedData = Object.keys(formData)
+          .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(formData[key])}`)
+          .join('&');
+        
+        // Gửi dữ liệu đến Google Sheets
+        console.log('Đang gửi dữ liệu đến:', scriptURL);
+        console.log('Dữ liệu gửi đi:', formData);
+        
+        fetch(scriptURL, {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          },
+          body: urlEncodedData
+        })
+        .then(response => {
+          // Kiểm tra nếu response là text hoặc json
+          const contentType = response.headers.get("content-type");
+          if (contentType && contentType.includes("application/json")) {
+            return response.json();
+          } else {
+            return response.text().then(text => {
+              // Nếu là "Added.." thì coi như thành công
+              if (text.includes("Added")) {
+                return { result: "success" };
+              }
+              return { result: "error", error: text };
+            });
+          }
+        })
+        .then(data => {
+          console.log('Phản hồi từ server:', data);
+          if (data.result === 'success') {
+            this.isSubmitting = false;
+            this.showRegistrationModal = false;
+            this.showSuccessModal = true;
+            this.resetForm();
+          } else {
+            this.isSubmitting = false;
+            alert('Lỗi: ' + data.error);
+          }
+        })
+        .catch(error => {
+          console.error('Lỗi:', error);
           this.isSubmitting = false;
-          this.showRegistrationModal = false;
-          this.showSuccessModal = true;
-          this.resetForm();
-        }, 1500);
+          alert('Có lỗi xảy ra khi gửi đơn đăng ký. Vui lòng thử lại sau.');
+        });
       }
     },
     
