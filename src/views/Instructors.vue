@@ -17,19 +17,23 @@
         <div class="instructors-grid">
           <div class="instructor-card">
             <div class="instructor-image">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nguyễn Văn A">
+              <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
             </div>
             <div class="instructor-content">
-              <h3 class="instructor-name">TS. Nguyễn Văn A</h3>
-              <p class="instructor-position">Giám đốc Công nghệ, ABC Tech</p>
-              <p class="instructor-description">Với hơn 15 năm kinh nghiệm trong phát triển phần mềm và 8 năm giảng dạy, TS. Nguyễn Văn A sẽ mang đến những kiến thức chuyên sâu về kiến trúc phần mềm và quy trình phát triển.</p>
+              <h3 class="instructor-name">Nguyễn Ngọc Quang</h3>
+              <p class="instructor-position">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</p>
+              <p class="instructor-description">
+7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.
+6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên,
+ từ các bạn mới bắt đầu đến những người đã có nền tảng.</p>
               <div class="instructor-expertise">
                 <h4>Chuyên môn:</h4>
                 <div class="expertise-tags">
-                  <span>Kiến trúc phần mềm</span>
-                  <span>DevOps</span>
-                  <span>Cloud Computing</span>
-                  <span>Microservices</span>
+                  
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>MySQL</span>
+                  <span>RESTful API</span>
                 </div>
               </div>
               <div class="instructor-social">
@@ -48,19 +52,20 @@
 
           <div class="instructor-card">
             <div class="instructor-image">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lê Thị B">
+              <img src="../assets/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
             </div>
             <div class="instructor-content">
-              <h3 class="instructor-name">ThS. Lê Thị B</h3>
-              <p class="instructor-position">Lead Software Engineer, XYZ Solutions</p>
-              <p class="instructor-description">ThS. Lê Thị B đã có hơn 10 năm kinh nghiệm trong lĩnh vực phát triển web và ứng dụng di động. Với kinh nghiệm làm việc tại nhiều tập đoàn công nghệ lớn, cô sẽ chia sẻ những kinh nghiệm thực tế quý báu.</p>
+              <h3 class="instructor-name">Huỳnh Hải Thiên</h3>
+              <p class="instructor-position">Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm</p>
+              <p class="instructor-description">7 năm tập trung triển khai các dự án công nghệ cao cấp, từ xây dựng ứng dụng web đến các giải pháp doanh nghiệp phức tạp,6 năm đồng hành cùng hàng ngàn học viên,
+                 từ những người mới chập chững đến các lập trình viên chuyên nghiệp, xây dựng nền tảng vững chắc cho sự nghiệp IT.</p>
               <div class="instructor-expertise">
                 <h4>Chuyên môn:</h4>
                 <div class="expertise-tags">
-                  <span>Frontend Development</span>
-                  <span>UI/UX</span>
-                  <span>Mobile App Development</span>
-                  <span>Progressive Web Apps</span>
+                  <span>Python</span>
+                  <span>AI & ML</span>
+                  <span>FastAPI</span>
+                  <span>MySQL</span>
                 </div>
               </div>
               <div class="instructor-social">
@@ -77,36 +82,6 @@
             </div>
           </div>
 
-          <div class="instructor-card">
-            <div class="instructor-image">
-              <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Trần Văn C">
-            </div>
-            <div class="instructor-content">
-              <h3 class="instructor-name">KS. Trần Văn C</h3>
-              <p class="instructor-position">Backend Developer, DEF Corporation</p>
-              <p class="instructor-description">KS. Trần Văn C chuyên về phát triển backend và cơ sở dữ liệu với 8 năm kinh nghiệm. Anh sẽ hướng dẫn học viên xây dựng hệ thống backend hiệu quả, an toàn và có khả năng mở rộng.</p>
-              <div class="instructor-expertise">
-                <h4>Chuyên môn:</h4>
-                <div class="expertise-tags">
-                  <span>Backend Development</span>
-                  <span>Database Design</span>
-                  <span>API Development</span>
-                  <span>Security</span>
-                </div>
-              </div>
-              <div class="instructor-social">
-                <a href="#" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-                <a href="#" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                </a>
-                <a href="#" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -250,7 +225,7 @@ export default {
 }
 
 .page-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 

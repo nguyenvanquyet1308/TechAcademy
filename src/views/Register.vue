@@ -62,11 +62,8 @@
                   required
                 >
                   <option value="" disabled selected>-- Chọn khóa học --</option>
-                  <option value="web-development">Phát triển Web</option>
-                  <option value="mobile-development">Phát triển Ứng dụng Di động</option>
-                  <option value="data-science">Khoa học Dữ liệu</option>
-                  <option value="ui-ux">Thiết kế UI/UX</option>
-                  <option value="devops">DevOps & Cloud</option>
+                  <option value="Python AI">Python AI</option>
+                  <option value="Java Backend">Java Backend</option>
                 </select>
                 <span class="error-message" v-if="errors.course">{{ errors.course }}</span>
               </div>
@@ -74,13 +71,13 @@
               <div class="form-group">
                 <label for="experience">Kinh nghiệm lập trình</label>
                 <select id="experience" v-model="form.experience">
-                  <option value="beginner">Mới bắt đầu</option>
-                  <option value="intermediate">Có kinh nghiệm cơ bản</option>
-                  <option value="advanced">Có kiến thức chuyên sâu</option>
+                  <option value="Mới bắt đầu">Mới bắt đầu</option>
+                  <option value="Có kinh nghiệm cơ bản">Có kinh nghiệm cơ bản</option>
+                  <option value="Có kiến thức chuyên sâu">Có kiến thức chuyên sâu</option>
                 </select>
               </div>
               
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="referral">Bạn biết đến chúng tôi qua đâu?</label>
                 <select id="referral" v-model="form.referral">
                   <option value="social-media">Mạng xã hội</option>
@@ -89,7 +86,7 @@
                   <option value="blog">Blog/Forum</option>
                   <option value="other">Khác</option>
                 </select>
-              </div>
+              </div> -->
               
               <div class="form-group">
                 <label for="message">Ghi chú thêm</label>
@@ -99,21 +96,6 @@
                   rows="4"
                 ></textarea>
               </div>
-              
-              <div class="form-group checkbox">
-                <input 
-                  type="checkbox" 
-                  id="terms" 
-                  v-model="form.terms"
-                  :class="{ 'error': errors.terms }"
-                  required
-                >
-                <label for="terms">
-                  Tôi đồng ý với <a href="#" @click.prevent="showTerms = true">điều khoản và điều kiện</a> <span class="required">*</span>
-                </label>
-                <span class="error-message" v-if="errors.terms">{{ errors.terms }}</span>
-              </div>
-              
               <div class="form-actions">
                 <button type="submit" class="btn btn-primary" :disabled="isSubmitting">
                   {{ isSubmitting ? 'Đang gửi...' : 'Đăng ký ngay' }}
@@ -131,7 +113,7 @@
                 </div>
                 <div>
                   <h4>Địa chỉ</h4>
-                  <p>123 Đường Công Nghệ, Quận 1, TP. HCM</p>
+                  <p>Số 06 Trần Phú, Thạch Thang, Hải Châu, Đà Nẵng</p>
                 </div>
               </div>
               <div class="info-item">
@@ -140,7 +122,8 @@
                 </div>
                 <div>
                   <h4>Điện thoại</h4>
-                  <p>(84) 123 456 789</p>
+                  <p>
+                    093 550 56 40</p>
                 </div>
               </div>
               <div class="info-item">
@@ -149,7 +132,8 @@
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p>info@techacademy.edu.vn</p>
+                  <p>
+                    academy@techzen.vn</p>
                 </div>
               </div>
             </div>
@@ -164,10 +148,10 @@
                 <h4>Tôi có cần laptop riêng không?</h4>
                 <p>Có, học viên cần có máy tính cá nhân để tham gia học tập và làm bài tập.</p>
               </div>
-              <div class="faq-item">
+              <!-- <div class="faq-item">
                 <h4>Phương thức thanh toán?</h4>
                 <p>Chúng tôi chấp nhận thanh toán qua chuyển khoản ngân hàng, thẻ tín dụng hoặc tiền mặt.</p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -188,29 +172,6 @@
     </div>
 
     <!-- Terms Modal -->
-    <div class="modal" v-if="showTerms">
-      <div class="modal-content terms-content">
-        <span class="close-btn" @click="showTerms = false">&times;</span>
-        <h2>Điều khoản và điều kiện</h2>
-        <div class="terms-text">
-          <h3>1. Điều khoản sử dụng</h3>
-          <p>Bằng việc đăng ký và tham gia khóa học tại TechAcademy, học viên đồng ý tuân theo các điều khoản và điều kiện được nêu dưới đây.</p>
-          
-          <h3>2. Thanh toán và hoàn tiền</h3>
-          <p>Học viên cần thanh toán đầy đủ học phí trước khi bắt đầu khóa học. Trong trường hợp học viên muốn rút khỏi khóa học, chính sách hoàn tiền sẽ được áp dụng theo quy định của TechAcademy.</p>
-          
-          <h3>3. Tài liệu học tập</h3>
-          <p>Tất cả tài liệu học tập được cung cấp trong khóa học đều thuộc bản quyền của TechAcademy. Học viên không được sao chép, phân phối hoặc sử dụng các tài liệu này cho mục đích thương mại mà không có sự cho phép bằng văn bản từ TechAcademy.</p>
-          
-          <h3>4. Chứng chỉ</h3>
-          <p>Chứng chỉ hoàn thành khóa học sẽ được cấp cho học viên đáp ứng đầy đủ các yêu cầu của khóa học, bao gồm tham gia các buổi học và hoàn thành các bài tập, dự án theo quy định.</p>
-          
-          <h3>5. Quy tắc ứng xử</h3>
-          <p>Học viên cần tuân thủ các quy tắc ứng xử trong suốt quá trình học tập, tôn trọng giảng viên và các học viên khác, không có hành vi gây rối hoặc làm ảnh hưởng đến môi trường học tập.</p>
-        </div>
-        <button class="btn" @click="acceptTerms">Tôi đồng ý</button>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -227,7 +188,6 @@ export default {
         experience: 'beginner',
         referral: 'social-media',
         message: '',
-        terms: false
       },
       errors: {},
       isSubmitting: false,
@@ -257,10 +217,6 @@ export default {
         this.errors.course = 'Vui lòng chọn khóa học';
       }
       
-      if (!this.form.terms) {
-        this.errors.terms = 'Vui lòng đồng ý với điều khoản và điều kiện';
-      }
-      
       return Object.keys(this.errors).length === 0;
     },
     validateEmail(email) {
@@ -271,12 +227,65 @@ export default {
       if (this.validateForm()) {
         this.isSubmitting = true;
         
-        // Simulate API call
-        setTimeout(() => {
-          this.isSubmitting = false;
-          this.showSuccessModal = true;
-          this.resetForm();
-        }, 1500);
+        // Chuẩn bị dữ liệu để gửi đến Google Sheets
+        const formData = {
+          fullName: this.form.fullName,
+          email: this.form.email,
+          phone: this.form.phone,
+          course: this.form.course,
+          experience: this.form.experience,
+          message: this.form.message,
+          timestamp: new Date().toLocaleString()
+        };
+        
+        // URL của Google Apps Script web app - cần thay thế bằng URL thực tế của bạn
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwD0eXTln4nJMqlBTtIQp3JoBTHcSRmkIvf0c68JltfIadcKZH-cskCWVk_N140DDH6BQ/exec';
+        
+        // Tạo URL encoded string từ dữ liệu
+        const urlEncodedData = Object.keys(formData)
+          .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(formData[key])}`)
+          .join('&');
+        
+        // Gửi dữ liệu đến Google Sheets
+        console.log('Đang gửi dữ liệu đến:', scriptURL);
+        console.log('Dữ liệu gửi đi:', formData);
+        
+        fetch(scriptURL, {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          },
+          body: urlEncodedData
+        })
+        .then(response => {
+          // Kiểm tra nếu response là text hoặc json
+          const contentType = response.headers.get("content-type");
+          if (contentType && contentType.includes("application/json")) {
+            return response.json();
+          } else {
+            return response.text().then(text => {
+              // Nếu là "Added.." thì coi như thành công
+              if (text.includes("Added")) {
+                return { result: "success" };
+              }
+              return { result: "error", error: text };
+            });
+          }
+        })
+        .then(data => {
+          console.log('Phản hồi từ server:', data);
+          if (data.result === 'success') {
+            this.isSubmitting = false;
+            this.showSuccessModal = true;
+            this.resetForm();
+          } else {
+            this.isSubmitting = false;
+            alert('Lỗi: ' + data.error);
+          }
+        })
+        .catch(error => {
+          console.error('Lỗi:', error);
+        });
       }
     },
     resetForm() {
@@ -288,7 +297,6 @@ export default {
         experience: 'beginner',
         referral: 'social-media',
         message: '',
-        terms: false
       };
     },
     acceptTerms() {
