@@ -1,10 +1,10 @@
 <template>
-  <div class="course-java">
+  <div class="course-java font-lato">
     <div class="header-section py-5 animated-gradient">
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-7 mb-4 mb-lg-0">
-            <h1 class="course-title animate__animated animate__fadeInDown">Lập trình Java Back-end</h1>
+            <h1 class="course-title animate__animated animate__fadeInDown font-lato-bold">Lập trình Java Back-end</h1>
             <p class="course-description animate__animated animate__fadeIn animate__delay-1s">
               Khóa học Java Back-end toàn diện giúp bạn làm chủ ngôn ngữ lập trình Java và xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Phù hợp cho sinh viên ngành CNTT và những người muốn nâng cao kỹ năng lập trình.
             </p>
@@ -15,7 +15,7 @@
               </div>
               <div class="meta-item">
                 <i class="bi bi-calendar me-2"></i>
-                <span>Khai giảng: 09/12/2024</span>
+                <span>Khai giảng: 09/5/2025</span>
               </div>
               <div class="meta-item">
                 <i class="bi bi-geo-alt me-2"></i>
@@ -32,7 +32,7 @@
           </div>
           <div class="col-lg-5">
             <div class="course-image animate__animated animate__fadeInRight parallax-element" data-speed="0.15">
-              <img src="../assets/images/javabackend.png" style="width: 440px; height: 380px;" alt="Python Course" class="img-fluid">
+              <img src="../assets/images/khoahocjava.jpg" style="width: 540px; height: 480px;" alt="Python Course" class="img-fluid">
             </div>
           </div>
         </div>
@@ -50,44 +50,44 @@
       <div class="row">
         <div class="col-lg-8">
           <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-4">Tổng quan khóa học</h2>
+            <h2 class="section-title mb-3 font-lato-bold">Tổng quan khóa học</h2>
             <div class="course-overview animate-on-scroll" data-animation="animate__fadeIn">
               <p>Khóa học Java Back-end cung cấp kiến thức toàn diện về Java Core, OOP, MySQL và Spring Framework, giúp bạn xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Bạn sẽ học cách phát triển ứng dụng từ cơ bản đến nâng cao, kết nối cơ sở dữ liệu, xử lý bảo mật và triển khai ứng dụng thực tế.</p>
-              <p>Được thiết kế cho sinh viên CNTT và những người muốn chuyên sâu vào mảng phát triển Back-end với Java, khóa học này kết hợp lý thuyết với thực hành qua nhiều bài tập, giúp bạn xây dựng portfolio và sẵn sàng tham gia vào dự án thực tế.</p>
+              <p class="mb-2">Được thiết kế cho sinh viên CNTT và những người muốn chuyên sâu vào mảng phát triển Back-end với Java, khóa học này kết hợp lý thuyết với thực hành qua nhiều bài tập, giúp bạn xây dựng portfolio và sẵn sàng tham gia vào dự án thực tế.</p>
             </div>
           </section>
 
-          <section class="section mb-5 animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-4">Đối tượng học viên</h2>
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-3 font-lato-bold">Đối tượng học viên</h2>
             <div class="row">
               <div class="col-md-12">
                 <div class="target-audience">
                   <ul class="list-unstyled">
-                    <li class="d-flex mb-3">
+                    <li class="d-flex mb-2">
                       <div class="icon-box me-3">
                         <i class="bi bi-mortarboard-fill text-primary fs-4"></i>
                       </div>
                       <div>
                         <h5>Sinh viên ngành CNTT và các ngành liên quan</h5>
-                        <p>Bao gồm những sinh viên muốn phát triển kỹ năng về Java Back-end để sẵn sàng tham gia vào dự án thực tế.</p>
+                        <p class="mb-1">Bao gồm những sinh viên muốn phát triển kỹ năng về Java Back-end để sẵn sàng tham gia vào dự án thực tế.</p>
                       </div>
                     </li>
-                    <li class="d-flex mb-3">
+                    <li class="d-flex mb-2">
                       <div class="icon-box me-3">
                         <i class="bi bi-person-fill text-primary fs-4"></i>
                       </div>
                       <div>
                         <h5>Sinh viên năm 2, 3, 4</h5>
-                        <p>Đang tìm kiếm cơ hội để tiếp cận công nghệ mới, nâng cao kỹ năng lập trình, và đáp ứng nhu cầu thực tiễn của doanh nghiệp.</p>
+                        <p class="mb-1">Đang tìm kiếm cơ hội để tiếp cận công nghệ mới, nâng cao kỹ năng lập trình, và đáp ứng nhu cầu thực tiễn của doanh nghiệp.</p>
                       </div>
                     </li>
-                    <li class="d-flex mb-3">
+                    <li class="d-flex mb-2">
                       <div class="icon-box me-3">
                         <i class="bi bi-code-slash text-primary fs-4"></i>
                       </div>
                       <div>
                         <h5>Những người học muốn nâng cao kỹ năng lập trình</h5>
-                        <p>Mong muốn chuyên sâu vào mảng phát triển Back-end với Java và các công nghệ liên quan như MySQL và Spring Boot.</p>
+                        <p class="mb-1">Mong muốn chuyên sâu vào mảng phát triển Back-end với Java và các công nghệ liên quan như MySQL và Spring Boot.</p>
                       </div>
                     </li>
                   </ul>
@@ -95,20 +95,10 @@
               </div>
             </div>
           </section>
-          <!-- <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-4">Bạn sẽ học được gì?</h2>
-            <div class="row">
-              <div v-for="(benefit, index) in benefits" :key="index" class="col-md-6 mb-4">
-                <div class="benefit-item" :style="{ animationDelay: index * 0.1 + 's' }">
-                  <i class="bi bi-check-circle-fill text-success me-2"></i>
-                  <span>{{ benefit }}</span>
-                </div>
-              </div>
-            </div>
-          </section> -->
-          <section class="section animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-2">Lộ trình khóa học</h2>
-            <div class="curriculum-overview mb-4">
+          
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-3 font-lato-bold">Lộ trình khóa học</h2>
+            <div class="curriculum-overview mb-3">
               <div class="row">
                 <div class="col-md-12">
                   <div class="table-responsive">
@@ -147,12 +137,17 @@
               </div>
             </div>
           </section>
+          
           <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-4">Nội dung khóa học</h2>
+            <h2 class="section-title mb-3 font-lato-bold">
+              <i class="bi bi-book-fill text-primary me-2"></i>
+              Nội dung khóa học
+            </h2>
             <div class="accordion" id="courseContent">
               <div v-for="(module, index) in modules" :key="index" class="accordion-item animate-on-scroll" data-animation="animate__fadeInUp" :style="{ animationDelay: index * 0.2 + 's' }">
                 <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="bi bi-filetype-java text-primary me-2"></i>
                     Java Core & OOP (10 buổi)
                   </button>
                 </h2>
@@ -222,6 +217,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="bi bi-database-fill fs-5 text-primary me-2"></i>
                     MySQL (6 buổi)
                   </button>
                 </h2>
@@ -271,6 +267,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="bi bi-gear-fill fs-5 text-primary me-2"></i>
                     Spring Boot (20 buổi)
                   </button>
                 </h2>
@@ -340,13 +337,12 @@
             </div>
           </section>
 
-
           <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-4">Lợi ích khi tham gia khóa học</h2>
+            <h2 class="section-title mb-3 font-lato-bold">Lợi ích khi tham gia khóa học</h2>
             <div class="benefits-list">
               <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="benefit-card h-100 p-4 border rounded shadow-sm">
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
                     <div class="benefit-icon mb-3 text-primary">
                       <i class="bi bi-code-square fs-1"></i>
                     </div>
@@ -355,8 +351,8 @@
                   </div>
                 </div>
                 
-                <div class="col-md-6 mb-4">
-                  <div class="benefit-card h-100 p-4 border rounded shadow-sm">
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
                     <div class="benefit-icon mb-3 text-primary">
                       <i class="bi bi-database fs-1"></i>
                     </div>
@@ -365,8 +361,8 @@
                   </div>
                 </div>
                 
-                <div class="col-md-6 mb-4">
-                  <div class="benefit-card h-100 p-4 border rounded shadow-sm">
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
                     <div class="benefit-icon mb-3 text-primary">
                       <i class="bi bi-gear fs-1"></i>
                     </div>
@@ -375,8 +371,8 @@
                   </div>
                 </div>
                 
-                <div class="col-md-6 mb-4">
-                  <div class="benefit-card h-100 p-4 border rounded shadow-sm">
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
                     <div class="benefit-icon mb-3 text-danger">
                       <i class="bi bi-building fs-1"></i>
                     </div>
@@ -394,7 +390,7 @@
           <div class="course-sidebar">
             <div class="price-card mb-4 animate-on-scroll" data-animation="animate__fadeInRight">
               <div class="price-header">
-                <h3>Học phí</h3>
+                <h3 class="font-lato-bold">Học phí</h3>
                 <div class="price-amount">
                   <span class="amount">6.999.000 VND</span>
                   <p class="text-muted">Lộ trình: 3 tháng</p>
@@ -418,7 +414,7 @@
                 <div class="instructor-avatar">
                   <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
                 </div>
-                <div class="instructor-name mt-4">NGUYỄN NGỌC QUANG</div>
+                <div class="instructor-name mt-4 font-lato-bold">NGUYỄN NGỌC QUANG</div>
               </div>
                 <div class="instructor-title mt-2">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</div>
                 <div class="instructor-info mt-3">
@@ -441,7 +437,51 @@
                 </div>
               </div>
             </div>
-          <section class="section  animate-on-scroll" data-animation="animate__fadeInUp">
+
+            <div class="countdown-card mb-4 animate-on-scroll" data-animation="animate__fadeInRight">
+              <div class="card-header bg-primary text-white">
+                <h4 class="mb-0"><i class="bi bi-calendar-event me-2"></i> Lịch khai giảng sắp tới</h4>
+              </div>
+              <div class="card-body text-center">
+                <div class="opening-date">
+                  <span class="date-label">Ngày khai giảng:</span>
+                  <h3 class="mb-3 text-primary">09/5/2025</h3>
+                </div>
+                <div class="countdown-timer">
+                  <div class="row g-2">
+                    <div class="col-3">
+                      <div class="countdown-box">
+                        <div class="countdown-value" id="countdown-days">--</div>
+                        <div class="countdown-label">Ngày</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="countdown-box">
+                        <div class="countdown-value" id="countdown-hours">--</div>
+                        <div class="countdown-label">Giờ</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="countdown-box">
+                        <div class="countdown-value" id="countdown-minutes">--</div>
+                        <div class="countdown-label">Phút</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="countdown-box">
+                        <div class="countdown-value" id="countdown-seconds">--</div>
+                        <div class="countdown-label">Giây</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <button @click="showRegistrationModal = true" class="btn btn-primary pulse">Đăng ký ngay</button>
+                </div>
+              </div>
+            </div>
+
+          <section class="section animate-on-scroll" data-animation="animate__fadeInUp">
             <h2 class="section-title mb-2 fs-3 ">Khuyến mãi đặc biệt</h2>
             <div class="promotions-section">
               <div class="promotions-list">
@@ -571,21 +611,6 @@
               rows="4"
             ></textarea>
           </div>
-          
-          <div class="form-group checkbox">
-            <input 
-              type="checkbox" 
-              id="terms" 
-              v-model="form.terms"
-              :class="{ 'error': errors.terms }"
-              required
-            >
-            <label for="terms">
-              Tôi đồng ý với <a href="#" @click.prevent="showTerms = true">điều khoản và điều kiện</a> <span class="required">*</span>
-            </label>
-            <span class="error-message" v-if="errors.terms">{{ errors.terms }}</span>
-          </div>
-          
           <div class="form-actions">
             <button type="submit" class="btn btn-primary" :disabled="isSubmitting">
               {{ isSubmitting ? 'Đang gửi...' : 'Đăng ký ngay' }}
@@ -680,6 +705,7 @@ export default {
         },
         // ... Add other modules here
       ],
+      countdownInterval: null,
       animatedElements: [], // For tracking scroll-triggered animations
       scrollObserver: null,  // Intersection Observer for scroll animations
       showRegistrationModal: false,
@@ -704,6 +730,9 @@ export default {
     
     // Add subtle background animation
     this.initializeBackgroundEffects();
+    
+    // Initialize countdown timer
+    this.startCountdown();
   },
   beforeUnmount() {
     // Clean up observers when component is destroyed
@@ -713,6 +742,11 @@ export default {
     
     // Remove any event listeners
     window.removeEventListener('scroll', this.handleParallaxEffect);
+    
+    // Clear the countdown interval
+    if (this.countdownInterval) {
+      clearInterval(this.countdownInterval);
+    }
   },
   methods: {
     initializeScrollAnimations() {
@@ -771,7 +805,7 @@ export default {
     submitForm() {
       // Validate form
       this.errors = {};
-      
+      console.log("chạy tơi sdya ")
       if (!this.form.fullName.trim()) {
         this.errors.fullName = 'Vui lòng nhập họ và tên';
       }
@@ -785,22 +819,72 @@ export default {
       if (!this.form.phone.trim()) {
         this.errors.phone = 'Vui lòng nhập số điện thoại';
       }
-      
-      if (!this.form.terms) {
-        this.errors.terms = 'Vui lòng đồng ý với điều khoản và điều kiện';
-      }
-      
       // If there are no errors, process the form
       if (Object.keys(this.errors).length === 0) {
         this.isSubmitting = true;
         
-        // Simulate API call for form submission
-        setTimeout(() => {
+        // Chuẩn bị dữ liệu để gửi đến Google Sheets
+        const formData = {
+          fullName: this.form.fullName,
+          email: this.form.email,
+          phone: this.form.phone,
+          course: this.form.course,
+          experience: this.form.experience,
+          message: this.form.message,
+          timestamp: new Date().toLocaleString()
+        };
+        
+        // URL của Google Apps Script web app - cần thay thế bằng URL thực tế của bạn
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwD0eXTln4nJMqlBTtIQp3JoBTHcSRmkIvf0c68JltfIadcKZH-cskCWVk_N140DDH6BQ/exec';
+        
+        // Tạo URL encoded string từ dữ liệu
+        const urlEncodedData = Object.keys(formData)
+          .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(formData[key])}`)
+          .join('&');
+        
+        // Gửi dữ liệu đến Google Sheets
+        console.log('Đang gửi dữ liệu đến:', scriptURL);
+        console.log('Dữ liệu gửi đi:', formData);
+        
+        fetch(scriptURL, {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          },
+          body: urlEncodedData
+        })
+        .then(response => {
+          // Kiểm tra nếu response là text hoặc json
+          const contentType = response.headers.get("content-type");
+          if (contentType && contentType.includes("application/json")) {
+            return response.json();
+          } else {
+            return response.text().then(text => {
+              // Nếu là "Added.." thì coi như thành công
+              if (text.includes("Added")) {
+                return { result: "success" };
+              }
+              return { result: "error", error: text };
+            });
+          }
+        })
+        .then(data => {
+          console.log('Phản hồi từ server:', data);
+          if (data.result === 'success') {
+            this.isSubmitting = false;
+            this.showRegistrationModal = false;
+            this.showSuccessModal = true;
+            this.resetForm();
+          } else {
+            this.isSubmitting = false;
+            alert('Lỗi: ' + data.error);
+          }
+        })
+        .catch(error => {
+          console.error('Lỗi:', error);
           this.isSubmitting = false;
-          this.showRegistrationModal = false;
-          this.showSuccessModal = true;
-          this.resetForm();
-        }, 1500);
+          alert('Có lỗi xảy ra khi gửi đơn đăng ký. Vui lòng thử lại sau.');
+        });
       }
     },
     
@@ -824,23 +908,83 @@ export default {
     acceptTerms() {
       this.form.terms = true;
       this.showTerms = false;
-    }
+    },
+    
+    startCountdown() {
+      // Set the opening date (May 9, 2025)
+      const openingDate = new Date(2025, 4, 9).getTime(); // Tháng 0-11 trong JavaScript, tháng 5 = 4
+      
+      // Update the countdown every second
+      this.countdownInterval = setInterval(() => {
+        // Get the current date and time
+        const now = new Date().getTime();
+        
+        // Calculate the time remaining
+        const timeRemaining = openingDate - now;
+        
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        
+        // Update the countdown elements
+        const daysElement = document.getElementById('countdown-days');
+        const hoursElement = document.getElementById('countdown-hours');
+        const minutesElement = document.getElementById('countdown-minutes');
+        const secondsElement = document.getElementById('countdown-seconds');
+        
+        if (daysElement) daysElement.innerText = days;
+        if (hoursElement) hoursElement.innerText = hours < 10 ? `0${hours}` : hours;
+        if (minutesElement) minutesElement.innerText = minutes < 10 ? `0${minutes}` : minutes;
+        if (secondsElement) secondsElement.innerText = seconds < 10 ? `0${seconds}` : seconds;
+        
+        // If the countdown is over, clear the interval
+        if (timeRemaining < 0) {
+          clearInterval(this.countdownInterval);
+          if (daysElement) daysElement.innerText = '00';
+          if (hoursElement) hoursElement.innerText = '00';
+          if (minutesElement) minutesElement.innerText = '00';
+          if (secondsElement) secondsElement.innerText = '00';
+        }
+      }, 1000);
+    },
   }
 }
 </script>
 
 <style scoped>
 .course-detail {
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
-.sidebar-title{
+
+.sidebar-title {
   font-size: 20px;
+}
+
+/* Font styles */
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-lato-bold {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.font-sf-mono {
+  font-family: 'SF Mono', monospace;
+}
+
+/* Apply SF Mono to code sections */
+.code-block {
+  font-family: 'SF Mono', monospace;
 }
 
 .header-section {
   background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
   color: white;
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .course-title {
@@ -850,15 +994,15 @@ export default {
 
 .course-description {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   opacity: 0.9;
 }
 
 .course-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .meta-item {
@@ -879,12 +1023,11 @@ export default {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 2.5rem;
   color: #2c3e50;
   position: relative;
 }
@@ -930,6 +1073,7 @@ export default {
   color: #2f80ed;
   font-weight: 600;
   padding: 1.2rem;
+  font-size: 20px;
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -948,8 +1092,8 @@ export default {
   align-items: center;
 }
 .instructor-avatar {
-  width: 100px;
-  height: 110px;
+  width: 150px;
+  height: 170px;
   border-radius: 20%;
   overflow: hidden;
 }
@@ -1542,7 +1686,6 @@ html {
   border-radius: 8px;
   padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.5rem;
 }
 
 .promotions-list {
@@ -2007,5 +2150,60 @@ html {
     width: 100%;
     padding: 20px;
   }
+}
+
+.countdown-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.countdown-card .card-header {
+  padding: 1rem;
+  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+}
+
+.countdown-card .card-body {
+  padding: 1.5rem;
+}
+
+.opening-date {
+  margin-bottom: 1.5rem;
+}
+
+.date-label {
+  font-size: 1rem;
+  color: #6c757d;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.countdown-timer {
+  margin: 1rem 0;
+}
+
+.countdown-box {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.countdown-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2f80ed;
+}
+
+.countdown-label {
+  font-size: 0.8rem;
+  color: #6c757d;
 }
 </style> 

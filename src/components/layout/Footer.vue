@@ -70,7 +70,7 @@
 export default {
   name: 'Footer'
 }
-import logo from "@/assets/images/logo.jpg";
+import logo from "@/assets/images/logo.png";
 </script>
 
 <style scoped>
