@@ -62,11 +62,8 @@
                   required
                 >
                   <option value="" disabled selected>-- Chọn khóa học --</option>
-                  <option value="web-development">Phát triển Web</option>
-                  <option value="mobile-development">Phát triển Ứng dụng Di động</option>
-                  <option value="data-science">Khoa học Dữ liệu</option>
-                  <option value="ui-ux">Thiết kế UI/UX</option>
-                  <option value="devops">DevOps & Cloud</option>
+                  <option value="Python AI">Python AI</option>
+                  <option value="Java Backend">Java Backend</option>
                 </select>
                 <span class="error-message" v-if="errors.course">{{ errors.course }}</span>
               </div>
@@ -74,9 +71,9 @@
               <div class="form-group">
                 <label for="experience">Kinh nghiệm lập trình</label>
                 <select id="experience" v-model="form.experience">
-                  <option value="beginner">Mới bắt đầu</option>
-                  <option value="intermediate">Có kinh nghiệm cơ bản</option>
-                  <option value="advanced">Có kiến thức chuyên sâu</option>
+                  <option value="Mới bắt đầu">Mới bắt đầu</option>
+                  <option value="Có kinh nghiệm cơ bản">Có kinh nghiệm cơ bản</option>
+                  <option value="Có kiến thức chuyên sâu">Có kiến thức chuyên sâu</option>
                 </select>
               </div>
               
@@ -273,12 +270,65 @@ export default {
       if (this.validateForm()) {
         this.isSubmitting = true;
         
-        // Simulate API call
-        setTimeout(() => {
-          this.isSubmitting = false;
-          this.showSuccessModal = true;
-          this.resetForm();
-        }, 1500);
+        // Chuẩn bị dữ liệu để gửi đến Google Sheets
+        const formData = {
+          fullName: this.form.fullName,
+          email: this.form.email,
+          phone: this.form.phone,
+          course: this.form.course,
+          experience: this.form.experience,
+          message: this.form.message,
+          timestamp: new Date().toLocaleString()
+        };
+        
+        // URL của Google Apps Script web app - cần thay thế bằng URL thực tế của bạn
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwD0eXTln4nJMqlBTtIQp3JoBTHcSRmkIvf0c68JltfIadcKZH-cskCWVk_N140DDH6BQ/exec';
+        
+        // Tạo URL encoded string từ dữ liệu
+        const urlEncodedData = Object.keys(formData)
+          .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(formData[key])}`)
+          .join('&');
+        
+        // Gửi dữ liệu đến Google Sheets
+        console.log('Đang gửi dữ liệu đến:', scriptURL);
+        console.log('Dữ liệu gửi đi:', formData);
+        
+        fetch(scriptURL, {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          },
+          body: urlEncodedData
+        })
+        .then(response => {
+          // Kiểm tra nếu response là text hoặc json
+          const contentType = response.headers.get("content-type");
+          if (contentType && contentType.includes("application/json")) {
+            return response.json();
+          } else {
+            return response.text().then(text => {
+              // Nếu là "Added.." thì coi như thành công
+              if (text.includes("Added")) {
+                return { result: "success" };
+              }
+              return { result: "error", error: text };
+            });
+          }
+        })
+        .then(data => {
+          console.log('Phản hồi từ server:', data);
+          if (data.result === 'success') {
+            this.isSubmitting = false;
+            this.showSuccessModal = true;
+            this.resetForm();
+          } else {
+            this.isSubmitting = false;
+            alert('Lỗi: ' + data.error);
+          }
+        })
+        .catch(error => {
+          console.error('Lỗi:', error);
+        });
       }
     },
     resetForm() {

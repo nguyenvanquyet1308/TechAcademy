@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home home-container">
     <div class="hero-section position-relative">
       <div class="video-background">
         <video autoplay muted loop playsinline>
@@ -162,7 +162,7 @@
           >
             <div class="about-image-wrapper">
               <div class="about-image floating-animation">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Techzen Academy Team" class="img-fluid rounded shadow">
+                <img src="../assets/images/techacademy.jpg" alt="Techzen Academy Team" class="img-fluid rounded shadow">
               </div>
               <div class="about-pattern pattern-dots"></div>
               <div class="about-shape shape-circle"></div>
@@ -641,6 +641,38 @@ export default {
 </script>
 
 <style scoped>
+/* Áp dụng font Lato cho toàn bộ trang Home */
+.home-container {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Áp dụng các kiểu font cụ thể */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+.subtitle {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; /* Light */
+}
+
+.feature-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+.feature-description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+/* Áp dụng SF Mono cho các phần code */
+.code-block, pre, code {
+  font-family: 'SF Mono', monospace;
+  font-weight: normal;
+}
+
 .hero {
   padding: 80px 0;
   background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);

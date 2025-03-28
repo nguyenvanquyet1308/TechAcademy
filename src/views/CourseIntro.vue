@@ -1,10 +1,10 @@
 <template>
-  <div class="course-intro">
+  <div class="course-intro font-lato">
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="page-title">Giới thiệu khóa học</h1>
-        <p class="page-description">Hiểu rõ hơn về khóa học của chúng tôi và những lợi ích mà bạn sẽ nhận được</p>
+        <h1 class="page-title font-lato-bold">Giới thiệu khóa học</h1>
+        <p class="page-description font-lato">Hiểu rõ hơn về khóa học của chúng tôi và những lợi ích mà bạn sẽ nhận được</p>
       </div>
     </section>
 
@@ -62,35 +62,35 @@
     <!-- Objectives Section -->
     <section class="section objectives">
       <div class="container">
-        <h2 class="section-title">Mục tiêu khóa học</h2>
+        <h2 class="section-title font-lato-bold">Mục tiêu khóa học</h2>
         <div class="objectives-grid">
           <div class="objective-card">
             <div class="objective-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </div>
-            <h3>Hiểu sâu về kiến thức nền tảng</h3>
-            <p>Nắm vững các khái niệm cơ bản và nền tảng trong lĩnh vực công nghệ</p>
+            <h3 class="font-lato-bold">Hiểu sâu về kiến thức nền tảng</h3>
+            <p class="font-lato">Nắm vững các khái niệm cơ bản và nền tảng trong lĩnh vực công nghệ</p>
           </div>
           <div class="objective-card">
             <div class="objective-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
             </div>
-            <h3>Phát triển kỹ năng thực hành</h3>
-            <p>Thực hành với các dự án thực tế để áp dụng kiến thức vào công việc</p>
+            <h3 class="font-lato-bold">Phát triển kỹ năng thực hành</h3>
+            <p class="font-lato">Thực hành với các dự án thực tế để áp dụng kiến thức vào công việc</p>
           </div>
           <div class="objective-card">
             <div class="objective-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M1.05 12H7"></path><path d="M17.01 12h5.95"></path></svg>
             </div>
-            <h3>Nâng cao tư duy giải quyết vấn đề</h3>
-            <p>Rèn luyện tư duy phân tích và giải quyết các vấn đề phức tạp</p>
+            <h3 class="font-lato-bold">Nâng cao tư duy giải quyết vấn đề</h3>
+            <p class="font-lato">Rèn luyện tư duy phân tích và giải quyết các vấn đề phức tạp</p>
           </div>
           <div class="objective-card">
             <div class="objective-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
             </div>
-            <h3>Xây dựng portfolio cá nhân</h3>
-            <p>Tạo dựng portfolio với các dự án chất lượng để thu hút nhà tuyển dụng</p>
+            <h3 class="font-lato-bold">Xây dựng portfolio cá nhân</h3>
+            <p class="font-lato">Tạo dựng portfolio với các dự án chất lượng để thu hút nhà tuyển dụng</p>
           </div>
         </div>
       </div>
@@ -156,7 +156,7 @@
     <!-- Benefits Section -->
     <section class="section benefits">
       <div class="container">
-        <h2 class="section-title">Lợi ích khi tham gia khóa học</h2>
+        <h2 class="section-title font-lato-bold">Lợi ích khi tham gia khóa học</h2>
         <div class="benefits-container">
           <div class="benefits-image">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lợi ích khóa học">
@@ -236,11 +236,11 @@
     <section class="section cta">
       <div class="container">
         <div class="cta-content">
-          <h2>Bạn đã sẵn sàng nâng cao kỹ năng của mình?</h2>
-          <p>Đăng ký ngay hôm nay để bắt đầu hành trình học tập và phát triển sự nghiệp.</p>
+          <h2 class="font-lato-bold">Bạn đã sẵn sàng nâng cao kỹ năng của mình?</h2>
+          <p class="font-lato">Đăng ký ngay hôm nay để bắt đầu hành trình học tập và phát triển sự nghiệp.</p>
           <div class="cta-buttons">
-            <router-link to="/course-content" class="btn btn-secondary">Xem nội dung khóa học</router-link>
-            <router-link to="/register" class="btn">Đăng ký ngay</router-link>
+            <router-link to="/course-content" class="btn btn-secondary font-lato">Xem nội dung khóa học</router-link>
+            <router-link to="/register" class="btn font-lato">Đăng ký ngay</router-link>
           </div>
         </div>
       </div>
@@ -822,5 +822,41 @@ export default {
 .animated-benefit:hover .benefit-content h3 {
   color: #4a6bff;
   transform: translateX(5px);
+}
+
+/* Font Classes */
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-lato-bold {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.font-sf-mono {
+  font-family: 'SF Mono', monospace;
+}
+
+/* Apply fonts to specific elements */
+.page-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.section-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.objective-card h3,
+.benefit-card h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.btn {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
 }
 </style> 
