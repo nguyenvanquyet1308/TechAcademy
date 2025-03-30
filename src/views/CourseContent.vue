@@ -22,16 +22,12 @@
             <div class="course-image">
               <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python AI Course">
             </div>
-            <div class="course-content">
-              <h3 class="course-name font-lato-bold">Lập trình Python AI</h3>
+            <div class="course-content" style="padding: 20px;">
+              <h3 class="course-name font-lato-bold fs-2">Lập trình Python AI</h3>
               <div class="course-details">
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-clock"></i></span>
                   <span class="detail-text">5 tháng (64 buổi)</span>
-                </div>
-                <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-calendar"></i></span>
-                  <span class="detail-text">Khai giảng: 25/03/2025</span>
                 </div>
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
@@ -50,7 +46,7 @@
                 <span class="font-lato">AI Integration</span>
               </div>
               <div class="course-footer">
-                <div class="course-price font-lato-bold">7.999.000đ</div>
+                <div class="course-price font-lato-bold fs-3">7.999.000đ</div>
                 <router-link to="/course-python" class="btn btn-outline-primary font-lato">Xem chi tiết</router-link>
               </div>
             </div>
@@ -61,16 +57,12 @@
             <div class="course-image">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course">
             </div>
-            <div class="course-content">
-              <h3 class="course-name font-lato-bold">Lập trình Java Back-end</h3>
+            <div class="course-content" style="padding: 20px;">
+              <h3 class="course-name font-lato-bold fs-2">Lập trình Java Back-end</h3>
               <div class="course-details">
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-clock"></i></span>
                   <span class="detail-text">3 tháng</span>
-                </div>
-                <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-calendar"></i></span>
-                  <span class="detail-text">Khai giảng: 09/5/2025</span>
                 </div>
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
@@ -89,7 +81,7 @@
                 <span class="font-lato">RESTful API</span>
               </div>
               <div class="course-footer">
-                <div class="course-price font-lato-bold">6.999.000đ</div>
+                <div class="course-price font-lato-bold  fs-3">6.999.000đ</div>
                 <router-link to="/course-java-spring" class="btn btn-outline-primary font-lato">Xem chi tiết</router-link>
               </div>
             </div>
@@ -430,7 +422,7 @@ export default {
 
 <style scoped>
 .page-header {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  background: #0d6efd;
   color: white;
   padding: 80px 0;
   text-align: center;
@@ -705,7 +697,7 @@ export default {
 }
 
 .cta {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  background: #0d6efd;
   color: white;
   text-align: center;
   width: 100vw;
@@ -828,7 +820,6 @@ export default {
 }
 
 .course-content {
-  padding: 25px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -843,6 +834,7 @@ export default {
 
 .course-details {
   margin-bottom: 15px;
+  font-size: 17px;
 }
 
 .detail-item {
@@ -861,6 +853,7 @@ export default {
   color: #6c757d;
   margin-bottom: 20px;
   flex-grow: 1;
+  font-size: 18px;
 }
 
 .course-highlights {
@@ -914,21 +907,6 @@ export default {
     grid-template-columns: 1fr;
   }
 }
-
-/* Font Classes */
-.font-lato {
-  font-family: 'Lato', sans-serif;
-}
-
-.font-lato-bold {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-}
-
-.font-sf-mono {
-  font-family: 'SF Mono', monospace;
-}
-
 /* Apply fonts to specific elements */
 .page-title {
   font-family: 'Lato', sans-serif;

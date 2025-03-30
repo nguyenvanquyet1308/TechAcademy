@@ -7,10 +7,19 @@
         </video>
         <div class="video-overlay gradient-overlay"></div>
       </div>
-      <div class="container h-100 position-relative">
+     
+      <div class="hero-shape-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="container h-100 position-relative">
         <div class="row h-100 align-items-center justify-content-center">
           <div class="col-lg-8 text-center">
-            <div class="hero-content">
+            <div class="hero-content"  v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }">
               <h1 
                 v-motion
                 :initial="{ opacity: 0, y: 100 }"
@@ -32,19 +41,13 @@
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 800 } }"
               >
-               <router-link to="course-content"><button class="btn btn-glow btn-lg me-3 animated-btn">Khám phá khóa học</button></router-link>
-                <button class="btn btn-outline-light btn-lg animated-btn">Tư vấn miễn phí</button>
+               <router-link to="course-content"><button class="btn btn-light btn-lg me-3">Khám phá khóa học</button></router-link>
+                <!-- <button class="btn btn-outline-light btn-lg animated-btn">Tư vấn miễn phí</button> -->
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="hero-shape-divider">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-        </svg>
-      </div>
-    </div>
 
     <!-- Features Section -->
     <section class="section features diagonal-section">
@@ -53,10 +56,10 @@
           v-motion
           :initial="{ opacity: 0, y: 50 }"
           :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
-          class="section-title with-line" 
+          class="section-title " 
           style="font-size: 35px;"
         >
-          <span class="text-gradient">Techzen Academy</span>
+          <span class="text-gradient fs-1">Techzen Academy</span>
           <br>Nơi Kiến Tạo Tương Lai Lập Trình Viên Chuyên Nghiệp
         </h2>
         <div class="features-grid">
@@ -67,7 +70,7 @@
             class="feature-card"
           >
             <div class="feature-icon pulse-animation">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
             </div>
             <h3>Giảng viên chuyên nghiệp</h3>
             <p>Đội ngũ giảng viên giàu kinh nghiệm, hiện đang là những chuyên gia trong ngành công nghệ.</p>
@@ -79,7 +82,7 @@
             class="feature-card"
           >
             <div class="feature-icon pulse-animation">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
             </div>
             <h3>Chương trình cập nhật</h3>
             <p>Nội dung khóa học luôn được cập nhật với công nghệ mới nhất trong thị trường.</p>
@@ -91,7 +94,7 @@
             class="feature-card"
           >
             <div class="feature-icon pulse-animation">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
             </div>
             <h3>Thực hành thực tế</h3>
             <p>Tập trung vào các dự án thực tế, giúp học viên nhanh chóng áp dụng kiến thức vào công việc.</p>
@@ -103,7 +106,7 @@
             class="feature-card"
           >
             <div class="feature-icon pulse-animation">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
             <h3>Hỗ trợ 24/7</h3>
             <p>Đội ngũ hỗ trợ luôn sẵn sàng giải đáp mọi thắc mắc trong suốt quá trình học tập.</p>
@@ -122,7 +125,7 @@
             :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
             class="col-lg-6 mb-4 mb-lg-0"
           >
-            <h2 class="section-title text-start mb-4 with-side-line">Về Techzen Academy</h2>
+            <h2 class="section-title text-start fs-1 mb-4 with-side-line">Về Techzen Academy</h2>
             <div class="about-content">
               <p class="mb-4">Tại Techzen Academy, chúng tôi mang đến chương trình đào tạo lập trình toàn diện, từ nền tảng cơ bản đến các công nghệ hiện đại. Đội ngũ giảng viên giàu kinh nghiệm của chúng tôi sẽ hướng dẫn bạn một cách tỉ mỉ và chi tiết, giúp bạn nắm vững kiến thức và phát triển kỹ năng lập trình chuyên nghiệp.</p>
               <p>Chương trình học tập tại Techzen Academy không chỉ tập trung vào lý thuyết, mà còn chú trọng vào tình huống thực tế. Với sự chuẩn bị kỹ lưỡng từ Techzen Academy, bạn sẽ tự tin bước vào thế giới công nghệ và sẵn sàng chinh phục những cơ hội nghề nghiệp đầy triển vọng.</p>
@@ -198,7 +201,7 @@
           >
             <h2 class="section-title text-start mb-4 with-side-line">Phương pháp Agile Scrum</h2>
             <div class="agile-scrum-content">
-              <p class="mb-4">Tại Techzen, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm.</p>
+              <p class="mb-4">Phương pháp <strong>Agile Scrum</strong> là <span class="text-gradient fw-bold">điểm mạnh nổi bật</span> của Techzen Academy trong đào tạo và phát triển phần mềm. Khi tham gia các khóa học tại Techzen, học viên không chỉ được học lý thuyết mà còn được <span class="highlight-text">thực hành trực tiếp</span> theo quy trình Agile Scrum chuyên nghiệp, giúp sẵn sàng hòa nhập vào môi trường công nghiệp thực tế.</p>
               
               <div class="agile-principles mt-4">
                 <div 
@@ -211,8 +214,8 @@
                     <i class="bi bi-kanban text-primary fs-4"></i>
                   </div>
                   <div>
-                    <h5>Sprint Planning</h5>
-                    <p>Sprint Planning là cuộc họp để nhóm Scrum xác định mục tiêu của sprint và lập kế hoạch cho việc hoàn thành các mục tiêu đó.</p>
+                    <h5>Sprint Planning trong học tập</h5>
+                    <p>Học viên được tham gia vào các buổi Sprint Planning để lên kế hoạch học tập, thiết lập mục tiêu cụ thể và lộ trình hoàn thành dự án trong từng giai đoạn học tập.</p>
                   </div>
                 </div>
                 
@@ -226,8 +229,8 @@
                     <i class="bi bi-people text-primary fs-4"></i>
                   </div>
                   <div>
-                    <h5>Daily Scrum</h5>
-                    <p>Daily Scrum là cuộc họp ngắn hàng ngày của nhóm Scrum để thảo luận về tiến độ công việc và các vấn đề cần giải quyết</p>
+                    <h5>Daily Scrum thực tế</h5>
+                    <p>Học viên được trải nghiệm các buổi Daily Scrum ngắn gọn, hiệu quả để báo cáo tiến độ, chia sẻ khó khăn và đề xuất giải pháp - kỹ năng thiết yếu trong môi trường làm việc thực tế.</p>
                   </div>
                 </div>
                 
@@ -241,8 +244,8 @@
                     <i class="bi bi-graph-up text-primary fs-4"></i>
                   </div>
                   <div>
-                    <h5>Sprint Review</h5>
-                    <p>Sprint Review là cuộc họp để nhóm Scrum trình bày sản phẩm cho khách hàng và nhận phản hồi.</p>
+                    <h5>Demo và Sprint Review</h5>
+                    <p>Mỗi giai đoạn học tập kết thúc bằng buổi demo sản phẩm và Sprint Review, giúp học viên rèn luyện kỹ năng thuyết trình, đón nhận phản hồi và liên tục cải thiện sản phẩm của mình.</p>
                   </div>
                 </div>
                 <div 
@@ -255,8 +258,8 @@
                     <i class="bi bi-calendar-check text-primary fs-4"></i>            
                   </div>
                   <div>
-                    <h5>Sprint Retrospective</h5>
-                    <p>Sprint Retrospective là cuộc họp để nhóm Scrum phản ánh về sprint vừa qua và tìm ra các cách để cải thiện trong sprint tiếp theo.</p>
+                    <h5>Retrospective và cải tiến liên tục</h5>
+                    <p>Học viên được hướng dẫn phương pháp tự đánh giá và cải tiến liên tục thông qua các buổi Retrospective, giúp phát triển tư duy cầu tiến - phẩm chất quan trọng của lập trình viên chuyên nghiệp.</p>
                   </div>
                 </div>
               </div>
@@ -267,7 +270,7 @@
                 class="mt-4"
               >
                 <a href="https://techzen.vn/strategic/" target="_blank" rel="noopener noreferrer">
-                   <button class="btn btn-outline-gradient animated-btn">Tìm hiểu thêm về phương pháp Agile tại Techzen</button>
+                   <button class="btn btn-outline-gradient animated-btn">Khám phá điểm mạnh Agile Scrum tại Techzen Academy</button>
                </a>
               </div>
             </div>
@@ -357,7 +360,7 @@
           v-motion
           :initial="{ opacity: 0, y: 50 }"
           :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
-          class="section-title mb-5 with-line"
+          class="section-title mb-5 fs-1"
         >
           Đội ngũ giảng viên xuất sắc
         </h2>
@@ -431,7 +434,7 @@
     <!-- Popular Courses Section -->
     <section class="section courses py-5 courses-diagonal">
       <div class="container">
-        <h2 class="section-title mb-4 with-line"
+        <h2 class="section-title mb-4"
           v-motion
           :initial="{ opacity: 0, y: 30 }"
           :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }"
@@ -460,12 +463,12 @@
                 <p class="text-muted mb-3">Khóa học toàn diện về Python từ cơ bản đến nâng cao. Phù hợp cho người mới bắt đầu.</p>
                 <div class="course-details-modern">
                   <div class="detail d-flex align-items-center">
-                    <i class="bi bi-clock me-2"></i>
-                    <span>5 Tháng</span>
+                    <i class="bi bi-clock me-2 fs-3"></i>
+                    <span class= "fs-5">5 Tháng</span>
                   </div>
                   <div class="detail d-flex align-items-center">
-                    <i class="bi bi-bar-chart me-2"></i>
-                    <span>Cơ bản - Nâng cao</span>
+                    <i class="bi bi-bar-chart me-2 fs-3"></i>
+                    <span >Cơ bản - Nâng cao</span>
                   </div>
                   <div class="detail d-flex align-items-center">
                     <div class="course-rating">
@@ -480,10 +483,10 @@
                 </div>
                 <div class="course-price-action mt-4 d-flex justify-content-between align-items-center">
                   <div class="course-price">
-                    <span class="new-price">7.999.000 VNĐ</span>
-                    <span class="old-price">8.800.000 VNĐ</span>
+                    <span class="new-price ">7.999.000 VNĐ</span>
+                    <span class="old-price ">8.800.000 VNĐ</span>
                   </div>
-                  <router-link to="/course-python" class="btn btn-primary btn-sm animated-btn">Xem chi tiết</router-link>
+                  <router-link to="/course-python" class="btn btn-primary btn-sm animated-btn fs-5">Xem chi tiết</router-link>
                 </div>
               </div>
             </div>
@@ -510,11 +513,11 @@
                 <p class="text-muted mb-3">Xây dựng ứng dụng web mạnh mẽ với Spring Boot. Phù hợp cho các lập trình viên Java.</p>
                 <div class="course-details-modern">
                   <div class="detail d-flex align-items-center">
-                    <i class="bi bi-clock me-2"></i>
-                    <span>3 Tháng</span>
+                    <i class="bi bi-clock me-2 fs-3"></i>
+                    <span class="fs-5">3 Tháng</span>
                   </div>
                   <div class="detail d-flex align-items-center">
-                    <i class="bi bi-bar-chart me-2"></i>
+                    <i class="bi bi-bar-chart me-2 fs-3"></i>
                     <span>Cơ bản - Nâng cao</span>
                   </div>
                   <div class="detail d-flex align-items-center">
@@ -533,7 +536,7 @@
                     <span class="new-price">6.500.000 VNĐ</span>
                     <span class="old-price">7.800.000 VNĐ</span>
                   </div>
-                  <router-link to="/course-java-spring" class="btn btn-primary btn-sm animated-btn">Xem chi tiết</router-link>
+                  <router-link to="/course-java-spring" class="btn btn-primary btn-sm animated-btn fs-5">Xem chi tiết</router-link>
                 </div>
               </div>
             </div>
@@ -557,12 +560,6 @@
           <h2>Sẵn sàng bắt đầu hành trình học tập của bạn?</h2>
           <p>Đăng ký ngay hôm nay để nhận được ưu đãi đặc biệt và sự hỗ trợ từ đội ngũ chuyên gia của chúng tôi.</p>
           <router-link to="/register" class="btn btn-glow-white">Đăng ký ngay</router-link>
-          <div class="cta-particles">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-            <div class="particle particle-4"></div>
-          </div>
         </div>
       </div>
     </section>
@@ -726,32 +723,101 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
+  text-align: center;
+  border: 1px solid rgba(74, 107, 255, 0.1);
+  background: linear-gradient(145deg, #ffffff, #f0f8ff);
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
+  background: linear-gradient(145deg, #e8f9ff, #f0f8ff);
+  box-shadow: 0 15px 30px rgba(74, 107, 255, 0.15);
+  border: 1px solid rgba(74, 107, 255, 0.2);
 }
 
 .feature-icon {
-  width: 70px;
-  height: 70px;
-  background: rgba(74, 107, 255, 0.1);
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(145deg, rgba(74, 107, 255, 0.1), rgba(106, 58, 239, 0.2));
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #4a6bff;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 20px rgba(74, 107, 255, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.feature-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(74, 107, 255, 0.2), rgba(106, 58, 239, 0.3));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover .feature-icon::before {
+  opacity: 1;
 }
 
 .feature-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-bottom: 15px;
   color: #212529;
+  font-weight: 700;
+  background: linear-gradient(90deg, #333, #666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .feature-card p {
+  font-size: 1.2rem;
   color: #6c757d;
+  font-weight: 500;
+}
+
+.pulse-animation {
+  position: relative;
+}
+
+.pulse-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(74, 107, 255, 0.4);
+  opacity: 0;
+  z-index: -1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
 }
 
 .stats {
@@ -844,6 +910,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .course-content {
   padding: 25px;
+  position: relative;
+  z-index: 1;
+  background: #D9EAFD;
 }
 
 .course-tag {
@@ -971,7 +1040,7 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(5px);
   padding: 2.5rem;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.3);
+  background: #0d6efd;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 60px;
@@ -1055,12 +1124,16 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
   color: transparent;
   display: inline-block;
+  font-weight: 800;
+  text-shadow: 0 5px 15px rgba(74, 107, 255, 0.2);
 }
 
 .section-title.with-line {
   position: relative;
   padding-bottom: 20px;
   margin-bottom: 40px;
+  font-weight: 800;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .section-title.with-line:after {
@@ -1069,15 +1142,16 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 100px;
+  width: 120px;
   height: 5px;
   background: linear-gradient(90deg, #4a6bff, #a74dff);
   border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(74, 107, 255, 0.3);
 }
 
 .diagonal-section {
   position: relative;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
   padding: 150px 0;
   margin-top: -2px;
   clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
@@ -1248,9 +1322,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-content {
-  font-size: 1.05rem;
+  font-size: 1.4rem;
   color: #495057;
   line-height: 1.7;
+  font-weight: 520;
 }
 
 .about-image-wrapper {
@@ -1642,7 +1717,7 @@ h1, h2, h3, h4, h5, h6 {
 .course-card-modern {
   position: relative;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background: white;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
@@ -1651,7 +1726,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .course-card-modern:hover {
   transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 20px 40px rgba(74, 107, 255, 0.15) !important;
+  border: 1px solid rgba(74, 107, 255, 0.1);
 }
 
 .course-image {
@@ -1691,15 +1767,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .course-tag {
   background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
   z-index: 2;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
 }
 
-.course-content {
-  position: relative;
-  z-index: 1;
+.course-content h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #212529;
+  background: linear-gradient(90deg, #333, #555);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.course-content p {
+  font-size: 1.5rem;
+  color: #6c757d;
+  font-weight: 500;
 }
 
 .course-details-modern {
@@ -1711,9 +1800,18 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
-
 .detail {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.detail i {
+  color: #4a6bff;
+  font-size: 1.2rem;
+}
+
+.course-rating i {
+  font-size: 1.1rem;
 }
 
 .course-price {
@@ -1722,15 +1820,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .new-price {
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   font-weight: 700;
   color: #4a6bff;
 }
 
 .old-price {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   text-decoration: line-through;
   color: #adb5bd;
+}
+
+.animated-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.animated-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(74, 107, 255, 0.8), rgba(106, 58, 239, 0.8));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animated-btn:hover::before {
+  opacity: 1;
 }
 
 .cta-modern {
@@ -1751,7 +1875,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-content-modern h2 {
   font-size: 2.8rem;
-  font-weight: 800;
   margin-bottom: 20px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -1845,5 +1968,59 @@ h1, h2, h3, h4, h5, h6 {
   100% {
     transform: translateY(0) translateX(0);
   }
+}
+
+.highlight-text {
+  color: #4a6bff;
+  font-weight: 700;
+  position: relative;
+  padding: 0 5px;
+  background: rgba(74, 107, 255, 0.1);
+  border-radius: 4px;
+}
+
+.principle-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(74, 107, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.principle-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(74, 107, 255, 0.1);
+  border: 1px solid rgba(74, 107, 255, 0.2);
+}
+
+.principle-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(74, 107, 255, 0.1), rgba(106, 58, 239, 0.1));
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(74, 107, 255, 0.1);
+}
+
+.principle-item h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #212529;
+  background: linear-gradient(90deg, #333, #666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.principle-item p {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
 }
 </style> 

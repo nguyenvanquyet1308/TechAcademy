@@ -256,7 +256,7 @@ export default {
 
 <style scoped>
 .page-header {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  background: #0d6efd;
   color: white;
   padding: 60px 0;
   text-align: center;
@@ -282,7 +282,7 @@ export default {
 }
 
 .overview-text h2 {
-  font-size: 2.3rem;
+  font-size: 2.9rem;
   margin-bottom: 20px;
   color: #212529;
 }
@@ -291,6 +291,7 @@ export default {
   margin-bottom: 20px;
   color: #495057;
   line-height: 1.7;
+  font-size: 1.3rem;
 }
 
 .overview-highlights {
@@ -350,11 +351,12 @@ export default {
 
 .objective-card:hover {
   transform: translateY(-10px);
+  background: linear-gradient(145deg, #e8f9ff, #f0f8ff);
 }
 
 .objective-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background: rgba(74, 107, 255, 0.1);
   border-radius: 50%;
   display: flex;
@@ -365,13 +367,15 @@ export default {
 }
 
 .objective-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin-bottom: 15px;
   color: #212529;
 }
 
 .objective-card p {
   color: #6c757d;
+  font-size: 1.2rem;
+
 }
 
 .benefits {

@@ -239,7 +239,7 @@ export default {
         };
         
         // URL của Google Apps Script web app - cần thay thế bằng URL thực tế của bạn
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwD0eXTln4nJMqlBTtIQp3JoBTHcSRmkIvf0c68JltfIadcKZH-cskCWVk_N140DDH6BQ/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxWaH4JisBQDeb_HV4_cVKRmdTJtjOX2AdcrSIjQXGuvs_6erJuRAG44KFEdy7XGD79RQ/exec';
         
         // Tạo URL encoded string từ dữ liệu
         const urlEncodedData = Object.keys(formData)

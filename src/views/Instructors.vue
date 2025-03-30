@@ -89,11 +89,21 @@
     <!-- Guest Lecturers Section -->
     <section class="section guest-lecturers">
       <div class="container">
-        <h2 class="section-title">Giảng viên thỉnh giảng</h2>
-        <p class="section-desc">Ngoài đội ngũ giảng viên chính, khóa học còn có sự tham gia của các chuyên gia từ các doanh nghiệp hàng đầu</p>
+        <h2 class="section-title" v-motion
+          :initial="{ opacity: 0, y: 100 }"
+          :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }">
+          Giảng viên thỉnh giảng
+        </h2>
+        <p class="section-desc" v-motion
+          :initial="{ opacity: 0 }"
+          :enter="{ opacity: 1, transition: { delay: 400, duration: 800 } }">
+          Ngoài đội ngũ giảng viên chính, khóa học còn có sự tham gia của các chuyên gia từ các doanh nghiệp hàng đầu
+        </p>
         
         <div class="lecturers-grid">
-          <div class="lecturer-card">
+          <div class="lecturer-card" v-motion
+            :initial="{ opacity: 0, scale: 0.8 }"
+            :enter="{ opacity: 1, scale: 1, transition: { delay: 200, duration: 600 } }">
             <div class="lecturer-image">
               <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Phạm Thị D">
             </div>
@@ -105,7 +115,9 @@
             </div>
           </div>
 
-          <div class="lecturer-card">
+          <div class="lecturer-card" v-motion
+            :initial="{ opacity: 0, scale: 0.8 }"
+            :enter="{ opacity: 1, scale: 1, transition: { delay: 400, duration: 600 } }">
             <div class="lecturer-image">
               <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Hoàng Văn E">
             </div>
@@ -117,7 +129,9 @@
             </div>
           </div>
 
-          <div class="lecturer-card">
+          <div class="lecturer-card" v-motion
+            :initial="{ opacity: 0, scale: 0.8 }"
+            :enter="{ opacity: 1, scale: 1, transition: { delay: 600, duration: 600 } }">
             <div class="lecturer-image">
               <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Đỗ Thị F">
             </div>
@@ -129,7 +143,9 @@
             </div>
           </div>
 
-          <div class="lecturer-card">
+          <div class="lecturer-card" v-motion
+            :initial="{ opacity: 0, scale: 0.8 }"
+            :enter="{ opacity: 1, scale: 1, transition: { delay: 800, duration: 600 } }">
             <div class="lecturer-image">
               <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="Vũ Văn G">
             </div>
@@ -218,7 +234,7 @@ export default {
 
 <style scoped>
 .page-header {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  background: #0d6efd;
   color: white;
   padding: 60px 0;
   text-align: center;
@@ -354,11 +370,12 @@ export default {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
   padding-bottom: 20px;
-  transition: transform 0.3s;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
 
 .lecturer-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .lecturer-image {
@@ -372,6 +389,11 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.lecturer-card:hover .lecturer-image img {
+  transform: scale(1.1);
 }
 
 .lecturer-name {
