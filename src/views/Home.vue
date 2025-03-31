@@ -176,7 +176,7 @@
     </section>
 
     <!-- Agile Scrum Methodology Section -->
-    <section class="section agile-scrum py-5 wave-section">
+    <!-- <section class="section agile-scrum py-5 wave-section">
       <div class="container">
         <div class="row">
           <div 
@@ -282,7 +282,7 @@
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
       </div>
-    </section>
+    </section> -->
 
     <!-- Stats Section -->
     <div class="stats-section py-5 text-white parallax-bg">
@@ -1786,7 +1786,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .course-content p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #6c757d;
   font-weight: 500;
 }

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h2 class="footer-logo">TechZen <span class="text-primary">Academy</span></h2>
+          <h2 class="footer-logo">Techzen <span class="text-primary">Academy</span></h2>
           <p class="mt-3">Trung tâm đào tạo lập trình chuyên nghiệp. Với đội ngũ giảng viên giàu kinh nghiệm, chúng tôi cam kết mang đến các khóa học chất lượng cao.</p>
           <div class="social-links mt-4">
             <a href="#" class="me-3"><i class="bi bi-facebook fs-5"></i></a>
@@ -55,7 +55,7 @@
       <hr class="mt-5 border-secondary">
       <div class="row mt-4">
         <div class="col-md-6 text-center text-md-start">
-          <p class="mb-md-0">© 2025 TechAcademy. Tất cả quyền được bảo lưu.</p>
+          <p class="mb-md-0">© 2025 Techzen Academy. Tất cả quyền được bảo lưu.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <router-link to="/privacy" class="text-white me-3">Chính sách bảo mật</router-link>

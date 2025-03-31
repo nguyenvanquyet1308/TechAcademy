@@ -2,7 +2,7 @@
   <div class="faq-container">
     <div class="page-header">
       <h1>Câu hỏi thường gặp</h1>
-      <p class="lead">Giải đáp những thắc mắc phổ biến về khóa học tại TechAcademy</p>
+      <p class="lead">Giải đáp những thắc mắc phổ biến về khóa học tại Techzen Academy</p>
     </div>
 
     <div class="faq-section">

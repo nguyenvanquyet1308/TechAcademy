@@ -404,7 +404,8 @@
                 <div class="price-features">
                 <ul>
                   <li v-for="(benefit, index) in benefits" :key="index" :style="{ animationDelay: index * 0.1 + 's' }">
-                    <i class="fas fa-check"></i> {{ benefit }}
+                    <i class="bi bi-check-circle-fill text-primary "></i>
+                    {{ benefit }}
                   </li>
                 </ul>
               </div>

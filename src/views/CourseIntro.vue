@@ -3,8 +3,87 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="page-title font-lato-bold">Giới thiệu khóa học</h1>
-        <p class="page-description font-lato">Hiểu rõ hơn về khóa học của chúng tôi và những lợi ích mà bạn sẽ nhận được</p>
+        <h1 class="page-title font-lato-bold">Giới thiệu Techzen Academy</h1>
+        <p class="page-description font-lato">Nơi Kiến Tạo Tương Lai Lập Trình Viên Chuyên Nghiệp</p>
+      </div>
+    </section>
+
+    <!-- Techzen Company & Academy Introduction Section -->
+    <section class="section company-intro" v-motion
+             :initial="{ opacity: 0 }"
+             :visible="{ opacity: 1, transition: { duration: 800 } }">
+      <div class="container">
+        <div class="company-intro-content">
+          <div class="company-cards">
+         
+            
+            <div class="company-card" v-motion
+                 :initial="{ opacity: 0, y: 50 }"
+                 :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+              </div>
+              <h3>Technical</h3>
+              <p>Thể hiện cam kết cung cấp giải pháp công nghệ tiên tiến, chất lượng cao, luôn đổi mới để đáp ứng nhu cầu khách hàng và xu hướng xã hội của Techzen.</p>
+            </div>
+            
+            <div class="company-card" v-motion
+                 :initial="{ opacity: 0, y: 50 }"
+                 :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path></svg>
+              </div>
+              <h3>Zen Philosophy</h3>
+              <p>Zen bắt nguồn từ chữ Hán "Thiền" trong Phật Giáo Nhật Bản. "Thiền" theo quan niệm của Nhật Bản còn có nghĩa là 心(Tâm). Chúng tôi muốn phổ biến văn hóa "Thiền" vào Techzen.</p>
+            </div>
+            <div class="company-card" v-motion
+                 :initial="{ opacity: 0, y: 50 }"
+                 :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 600 } }">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <h3>Global</h3>
+              <p>Chữ "Z" là chữ cái cuối cùng trong bảng chữ cái tiếng Anh, tượng trưng cho sự vươn ra toàn cầu. Techzen mong muốn trở thành một công ty công nghệ hàng đầu, cung cấp dịch vụ ổn định và an toàn cho khách hàng trên toàn cầu.</p>
+            </div>
+          </div>
+          
+          <div class="academy-intro" v-motion
+               :initial="{ opacity: 0, scale: 0.9 }"
+               :visible="{ opacity: 1, scale: 1, transition: { delay: 800, duration: 800 } }">
+            <div class="academy-content">
+              <h3 class="academy-title">Techzen Academy</h3>
+              <p>Tại <strong>Techzen Academy</strong>, chúng tôi mang đến chương trình đào tạo lập trình toàn diện, <strong>từ nền tảng cơ bản đến các công nghệ hiện đại. Đội ngũ giảng viên giàu kinh nghiệm</strong> của chúng tôi sẽ hướng dẫn bạn một cách tỉ mỉ và chi tiết, giúp bạn nắm vững kiến thức và <strong>phát triển kỹ năng lập trình chuyên nghiệp</strong>.</p>
+              <p>Chương trình học tập tại Techzen Academy không chỉ tập trung vào lý thuyết, mà còn chú trọng vào tình huống thực tế. Với sự chuẩn bị kỹ lưỡng từ Techzen Academy, bạn sẽ tự tin bước vào thế giới công nghệ và sẵn sàng chinh phục những cơ hội nghề nghiệp đầy triển vọng.</p>
+              
+              <div class="company-info">
+                <div class="info-item">
+                  <span class="info-label">Thành lập:</span>
+                  <span class="info-value">14/01/2022</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Địa chỉ:</span>
+                  <span class="info-value">06 Trần Phú, P. Thạch Thang, Q. Hải Châu, TP. Đà Nẵng</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Liên hệ:</span>
+                  <span class="info-value">0236 628 1189 | contact@techzen.vn</span>
+                </div>
+              </div>
+            </div>
+            <div class="instructor-highlight">
+              <div class="instructor-card">
+                <div class="instructor-image">
+                  <img src="../assets/images/CEO.png" alt="CEO Le Duy Linh" onerror="this.src='https://via.placeholder.com/150?text=CEO'">
+                </div>
+                <div class="instructor-details">
+                  <h4>Lê Duy Linh</h4>
+                  <p class="instructor-title">CEO Techzen</p>
+                  <p class="instructor-desc">Đã trực tiếp đào tạo phát triển Agile cho nhân sự tại Việt Nam, Trung Quốc và Nhật Bản</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -51,8 +130,7 @@
                :initial="{ opacity: 0, x: 100 }"
                :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }">
             <div class="image-container">
-             
-              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Khóa học công nghệ" class="animated-image">
+              <img src="../assets/images/academy1.jpg" alt="Khóa học công nghệ" class="animated-image">
             </div>
           </div>
         </div>
@@ -63,7 +141,9 @@
     <section class="section objectives">
       <div class="container">
         <h2 class="section-title font-lato-bold">Mục tiêu khóa học</h2>
-        <div class="objectives-grid">
+        <div class="objectives-grid"  v-motion
+               :initial="{ opacity: 0, x: 100 }"
+               :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }">
           <div class="objective-card">
             <div class="objective-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -100,12 +180,16 @@
     <section class="section agile-scrum">
       <div class="container">
         <h2 class="section-title">Phương pháp Agile Scrum</h2>
-        <div class="agile-content">
+        <div class="agile-content" v-motion
+               :initial="{ opacity: 0, x: 100 }"
+               :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }" >
           <div class="agile-text">
-            <p>Tại Techzen, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm. Học viên sẽ được tiếp cận và làm quen với phương pháp làm việc chuyên nghiệp này ngay từ khi học tập.</p>
+            <p>Tại Techzen, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm. Học viên sẽ được tiếp cận và làm quen với phương pháp làm việc chuyên nghiệp này ngay từ khi bắt đầu khóa học.</p>
           </div>
           
-          <div class="agile-image">
+          <div class="agile-image"  v-motion
+               :initial="{ opacity: 0, x: 100 }"
+               :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }" >
             <img src="../assets/images/agile.png" alt="Agile Scrum Methodology" class="img-fluid rounded shadow">
           </div>
         </div>
@@ -160,7 +244,7 @@
         <h2 class="section-title font-lato-bold">Lợi ích khi tham gia khóa học</h2>
         <div class="benefits-container">
           <div class="benefits-image">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lợi ích khóa học">
+            <img src="../assets/images/academy2.jpg" alt="Lợi ích khóa học">
           </div>
           <div class="benefits-list">
             <div class="benefit-item">
@@ -437,6 +521,7 @@ export default {
 
 .audience-card:hover {
   transform: translateY(-10px);
+  background: linear-gradient(145deg, #e8f9ff, #f0f8ff);
 }
 
 .audience-icon {
@@ -456,6 +541,7 @@ export default {
   margin-bottom: 10px;
   color: #212529;
   display: flex;
+  font-weight: 600;
   align-items: center;
   justify-content: center;
 }
@@ -628,7 +714,7 @@ export default {
 }
 
 .principle-content h4 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #212529;
   margin-bottom: 10px;
   font-weight: 600;
@@ -637,7 +723,7 @@ export default {
 .principle-content p {
   color: #6c757d;
   margin-bottom: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -837,6 +923,7 @@ export default {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-weight: 550;
 }
 
 .animated-benefit {
@@ -942,5 +1029,297 @@ export default {
 .btn {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
+}
+
+/* Company Introduction Section Styles */
+.company-intro {
+  padding: 60px 0;
+  background: linear-gradient(to right, #f8f9fa, #e9f2ff);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-intro:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="none"/><path d="M0,0L100,100" stroke="rgba(74, 107, 255, 0.05)" stroke-width="1"/><path d="M100,0L0,100" stroke="rgba(74, 107, 255, 0.05)" stroke-width="1"/></svg>');
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.company-intro-content {
+  position: relative;
+  z-index: 1;
+}
+
+.company-logo-area {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130%;
+  height: 130%;
+  background: radial-gradient(circle, rgba(74, 107, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.company-motto {
+  font-size: 1.2rem;
+  color: #495057;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.company-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.company-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.company-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(74, 107, 255, 0.1);
+}
+
+.company-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.company-card:hover:before {
+  transform: scaleX(1);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(74, 107, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #4a6bff;
+  transition: all 0.3s ease;
+}
+
+.company-card:hover .card-icon {
+  background: #4a6bff;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.company-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #212529;
+  font-weight: 700;
+}
+
+.company-card p {
+  color: #495057;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.academy-intro {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.academy-intro:hover {
+  box-shadow: 0 20px 50px rgba(74, 107, 255, 0.1);
+}
+
+.academy-content {
+  padding: 40px;
+}
+
+.academy-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #212529;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.academy-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  border-radius: 2px;
+}
+
+.academy-content p {
+  color: #495057;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.company-info {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.info-item {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #495057;
+}
+
+.info-label {
+  font-weight: 700;
+  color: #212529;
+  margin-right: 10px;
+}
+
+.instructor-highlight {
+  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructor-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.instructor-image {
+  width: 125px;
+  height: 150px;
+  min-width: 125px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instructor-details h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #212529;
+  font-weight: 700;
+}
+
+.instructor-title {
+  color: #4a6bff;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.instructor-desc {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .academy-intro {
+    grid-template-columns: 1fr;
+  }
+  
+  .instructor-highlight {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .academy-content {
+    padding: 30px;
+  }
+  
+  .instructor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .instructor-image {
+    margin: 0 auto 20px;
+  }
 }
 </style> 
