@@ -22,16 +22,12 @@
             <div class="course-image">
               <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python AI Course">
             </div>
-            <div class="course-content">
-              <h3 class="course-name font-lato-bold">Lập trình Python AI</h3>
+            <div class="course-content" style="padding: 20px;">
+              <h3 class="course-name font-lato-bold fs-2">Lập trình Python AI</h3>
               <div class="course-details">
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-clock"></i></span>
                   <span class="detail-text">5 tháng (64 buổi)</span>
-                </div>
-                <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-calendar"></i></span>
-                  <span class="detail-text">Khai giảng: 25/03/2025</span>
                 </div>
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
@@ -50,7 +46,7 @@
                 <span class="font-lato">AI Integration</span>
               </div>
               <div class="course-footer">
-                <div class="course-price font-lato-bold">7.999.000đ</div>
+                <div class="course-price font-lato-bold fs-3">7.999.000đ</div>
                 <router-link to="/course-python" class="btn btn-outline-primary font-lato">Xem chi tiết</router-link>
               </div>
             </div>
@@ -61,16 +57,12 @@
             <div class="course-image">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course">
             </div>
-            <div class="course-content">
-              <h3 class="course-name font-lato-bold">Lập trình Java Back-end</h3>
+            <div class="course-content" style="padding: 20px;">
+              <h3 class="course-name font-lato-bold fs-2">Lập trình Java Back-end</h3>
               <div class="course-details">
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-clock"></i></span>
-                  <span class="detail-text">3 tháng</span>
-                </div>
-                <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-calendar"></i></span>
-                  <span class="detail-text">Khai giảng: 09/5/2025</span>
+                  <span class="detail-text">3 tháng (36 buổi)</span>
                 </div>
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
@@ -89,7 +81,7 @@
                 <span class="font-lato">RESTful API</span>
               </div>
               <div class="course-footer">
-                <div class="course-price font-lato-bold">6.999.000đ</div>
+                <div class="course-price font-lato-bold  fs-3">6.999.000đ</div>
                 <router-link to="/course-java-spring" class="btn btn-outline-primary font-lato">Xem chi tiết</router-link>
               </div>
             </div>
@@ -313,28 +305,28 @@
         <div class="materials-grid">
           <div class="material-card">
             <div class="material-icon">
-              <i class="bi bi-book"></i>
+              <i class="bi bi-book fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Sách và tài liệu điện tử</h3>
             <p class="font-lato">Học viên được cung cấp sách và tài liệu tham khảo đã được biên soạn kỹ lưỡng, cập nhật với xu hướng mới nhất.</p>
           </div>
           <div class="material-card">
             <div class="material-icon">
-              <i class="bi bi-camera-video"></i>
+              <i class="bi bi-camera-video fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Video bài giảng</h3>
             <p class="font-lato">Bài giảng được quay lại thành video, giúp học viên có thể xem lại sau khi buổi học kết thúc.</p>
           </div>
           <div class="material-card">
             <div class="material-icon">
-              <i class="bi bi-laptop"></i>
+              <i class="bi bi-laptop fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Workshop và lab thực hành</h3>
             <p class="font-lato">Nội dung workshop được thiết kế theo hình thức thực hành, giúp học viên áp dụng kiến thức vào thực tế.</p>
           </div>
           <div class="material-card">
             <div class="material-icon">
-              <i class="bi bi-people"></i>
+              <i class="bi bi-people fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Cộng đồng học tập</h3>
             <p class="font-lato">Truy cập vào cộng đồng học tập trực tuyến, nơi học viên có thể trao đổi, hỏi đáp và học hỏi lẫn nhau.</p>
@@ -430,7 +422,7 @@ export default {
 
 <style scoped>
 .page-header {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  background: #0d6efd;
   color: white;
   padding: 80px 0;
   text-align: center;
@@ -617,11 +609,12 @@ export default {
 
 .material-card:hover {
   transform: translateY(-10px);
+  background: linear-gradient(145deg, #e8f9ff, #f0f8ff);
 }
 
 .material-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background: rgba(74, 107, 255, 0.1);
   border-radius: 50%;
   display: flex;
@@ -632,13 +625,15 @@ export default {
 }
 
 .material-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   color: #212529;
 }
 
 .material-card p {
   color: #6c757d;
+  font-size: 1rem;
+
 }
 
 .section-desc {
@@ -705,7 +700,7 @@ export default {
 }
 
 .cta {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  background: #0d6efd;
   color: white;
   text-align: center;
   width: 100vw;
@@ -828,7 +823,6 @@ export default {
 }
 
 .course-content {
-  padding: 25px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -843,6 +837,7 @@ export default {
 
 .course-details {
   margin-bottom: 15px;
+  font-size: 17px;
 }
 
 .detail-item {
@@ -861,6 +856,7 @@ export default {
   color: #6c757d;
   margin-bottom: 20px;
   flex-grow: 1;
+  font-size: 18px;
 }
 
 .course-highlights {
@@ -914,21 +910,6 @@ export default {
     grid-template-columns: 1fr;
   }
 }
-
-/* Font Classes */
-.font-lato {
-  font-family: 'Lato', sans-serif;
-}
-
-.font-lato-bold {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-}
-
-.font-sf-mono {
-  font-family: 'SF Mono', monospace;
-}
-
 /* Apply fonts to specific elements */
 .page-title {
   font-family: 'Lato', sans-serif;

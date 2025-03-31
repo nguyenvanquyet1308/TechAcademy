@@ -4,10 +4,10 @@
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-7 mb-4 mb-lg-0">
-            <h1 class="course-title animate__animated animate__fadeInDown">
+            <h1 class="course-title animate__animated animate__fadeInDown fs-1">
               Lập trình Python AI
             </h1>
-            <p class="course-description animate__animated animate__fadeIn animate__delay-1s">
+            <p class="course-description animate__animated animate__fadeIn animate__delay-1s fs-4">
               Khóa học Python AI toàn diện giúp bạn làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay, từ nền tảng cơ bản đến ứng dụng AI. Tập trung vào thực hành và dự án thực tế, phù hợp cho cả người mới bắt đầu và lập trình viên muốn nâng cao kỹ năng.
             </p>
             <div class="course-meta animate__animated animate__fadeIn animate__delay-2s">
@@ -19,10 +19,10 @@
                 <i class="bi bi-bar-chart me-2"></i>
                 <span>Cơ bản đến nâng cao</span>
               </div>
-              <div class="meta-item">
+              <!-- <div class="meta-item">
                 <i class="bi bi-calendar me-2"></i>
                 <span>Khai giảng: 25/03/2025</span>
-              </div>
+              </div> -->
               <div class="meta-item">
                 <i class="bi bi-geo-alt me-2"></i>
                 <span>Offline tại văn phòng Techzen</span>
@@ -32,8 +32,8 @@
                 <span>Thứ 3, 5, 7 (18:30 - 20:30)</span>
               </div>
             </div>
-            <div class="course-actions animate__animated animate__fadeIn animate__delay-3s">
-              <router-link to="register" > <button class="btn btn-primary btn-lg me-2 pulse">Đăng ký học</button> </router-link>
+            <div class="course-actions animate__animated animate__fadeIn animate__delay-2s">
+              <button @click="showRegistrationModal = true" class="btn-light btn-lg me-2 pulse">Đăng ký học</button>
             </div>
           </div>
           <div class="col-lg-5">
@@ -468,7 +468,7 @@
                 </div>
               </div>
             </div>
-
+<!-- 
             <div class="countdown-card mb-4 animate-on-scroll" data-animation="animate__fadeInRight">
               <div class="card-header bg-primary text-white">
                 <h4 class="mb-0"><i class="bi bi-calendar-event me-2"></i> Lịch khai giảng sắp tới</h4>
@@ -510,9 +510,9 @@
                   <button @click="showRegistrationModal = true" class="btn btn-primary pulse">Đăng ký ngay</button>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-          <section class="section  animate-on-scroll" data-animation="animate__fadeInUp">
+          <section class="section animate-on-scroll" data-animation="animate__fadeInUp">
             <h2 class="section-title mb-2 fs-3 ">Khuyến mãi đặc biệt</h2>
             <div class="promotions-section">
               <div class="promotions-list">
@@ -552,12 +552,12 @@
               </div>
             </div>
           </section>
-            <div class="course-location  animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.7s">
+            <!-- <div class="course-location  animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.7s">
               <h3 class="sidebar-title">Địa điểm học</h3>
               <div class="location-card p-3 border rounded">
                 <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i> 06 Trần Phú, Hải Châu, Đà Nẵng</p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -837,7 +837,7 @@ export default {
         };
         
         // URL của Google Apps Script web app - cần thay thế bằng URL thực tế của bạn
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwD0eXTln4nJMqlBTtIQp3JoBTHcSRmkIvf0c68JltfIadcKZH-cskCWVk_N140DDH6BQ/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxWaH4JisBQDeb_HV4_cVKRmdTJtjOX2AdcrSIjQXGuvs_6erJuRAG44KFEdy7XGD79RQ/exec';
         
         // Tạo URL encoded string từ dữ liệu
         const urlEncodedData = Object.keys(formData)
@@ -958,7 +958,7 @@ export default {
 <style scoped>
 
 .header-section {
-  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+  background: #0d6efd;
   color: white;
   padding: 3rem 0;
 }
@@ -1003,6 +1003,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 18px;
 }
 
 .course-actions {
@@ -1062,6 +1063,7 @@ export default {
 .icon-box {
   width: 50px;
   height: 50px;
+  font-size: 30px;
   background: rgba(74, 107, 255, 0.1);
   border-radius: 8px;
   display: flex;
@@ -1123,6 +1125,22 @@ export default {
 .benefit-card:hover {
   transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+.btn-light {
+   display: inline-block;
+   padding: 0.75rem 1.5rem;
+   border-radius: 4px;
+   text-decoration: none;
+   transition: all 0.3s;
+   font-weight: 600;
+   border: 2px solid #2f80ed;
+}
+.btn-light:hover{
+  background: rgba(255, 255, 255, 0.1);
+
+}
+.course-overview p {
+  font-size: 18px;
 }
 
 .price-card {
@@ -1348,7 +1366,7 @@ export default {
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+  background: #0d6efd;
   color: white;
   padding: 4rem 0;
   text-align: center;

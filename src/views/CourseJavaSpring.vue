@@ -1,33 +1,37 @@
 <template>
   <div class="course-java font-lato">
-    <div class="header-section py-5 animated-gradient">
+    <div class="header-section py-5 ">
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-7 mb-4 mb-lg-0">
-            <h1 class="course-title animate__animated animate__fadeInDown font-lato-bold">Lập trình Java Back-end</h1>
-            <p class="course-description animate__animated animate__fadeIn animate__delay-1s">
+            <h1 class="course-title fs-1 animate__animated animate__fadeInDown font-lato-bold">Lập trình Java Back-end</h1>
+            <p class="course-description animate__animated animate__fadeIn animate__delay-1s fs-4">
               Khóa học Java Back-end toàn diện giúp bạn làm chủ ngôn ngữ lập trình Java và xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Phù hợp cho sinh viên ngành CNTT và những người muốn nâng cao kỹ năng lập trình.
             </p>
             <div class="course-meta animate__animated animate__fadeIn animate__delay-2s">
               <div class="meta-item">
                 <i class="bi bi-clock me-2"></i>
-                <span>3 tháng</span>
+                <span>3 tháng (36 buổi)</span>
               </div>
               <div class="meta-item">
+                <i class="bi bi-bar-chart me-2"></i>
+                <span>Cơ bản đến nâng cao</span>
+              </div>
+              <!-- <div class="meta-item">
                 <i class="bi bi-calendar me-2"></i>
                 <span>Khai giảng: 09/5/2025</span>
-              </div>
+              </div> -->
               <div class="meta-item">
                 <i class="bi bi-geo-alt me-2"></i>
-                <span>Học offline tại văn phòng Techzen - Tầng 3 - Số 06 Trần Phú, Hải Châu, Đà Nẵng</span>
+                <span>Học offline tại văn phòng Techzen</span>
               </div>
               <div class="meta-item">
                 <i class="bi bi-calendar-week me-2"></i>
                 <span>Thứ 2, 4, 6 từ 18h00 - 21h00 hàng tuần</span>
               </div>
             </div>
-            <div class="course-actions animate__animated animate__fadeIn animate__delay-3s">
-              <button @click="showRegistrationModal = true" class="btn btn-primary btn-lg me-2 pulse">Đăng ký học</button>
+            <div class="course-actions animate__animated animate__fadeIn animate__delay-2s">
+              <button @click="showRegistrationModal = true" class="btn btn-light btn-lg me-2 pulse">Đăng ký học</button>
             </div>
           </div>
           <div class="col-lg-5">
@@ -437,7 +441,7 @@
                 </div>
               </div>
             </div>
-
+<!-- 
             <div class="countdown-card mb-4 animate-on-scroll" data-animation="animate__fadeInRight">
               <div class="card-header bg-primary text-white">
                 <h4 class="mb-0"><i class="bi bi-calendar-event me-2"></i> Lịch khai giảng sắp tới</h4>
@@ -479,7 +483,7 @@
                   <button @click="showRegistrationModal = true" class="btn btn-primary pulse">Đăng ký ngay</button>
                 </div>
               </div>
-            </div>
+            </div> -->
 
           <section class="section animate-on-scroll" data-animation="animate__fadeInUp">
             <h2 class="section-title mb-2 fs-3 ">Khuyến mãi đặc biệt</h2>
@@ -521,12 +525,12 @@
               </div>
             </div>
           </section>
-          <div class="course-location  animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.7s">
+          <!-- <div class="course-location  animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.7s">
               <h3 class="sidebar-title">Địa điểm học</h3>
               <div class="location-card p-3 border rounded">
                 <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i> 06 Trần Phú, Hải Châu, Đà Nẵng</p>
           </div>
-          </div>
+          </div> -->
           </div>
         </div>
       </div>
@@ -831,11 +835,11 @@ export default {
           course: this.form.course,
           experience: this.form.experience,
           message: this.form.message,
-          timestamp: new Date().toLocaleString()
+          timestamp: Date.now()  // Trả về số milliseconds từ 01/01/1970
         };
         
         // URL của Google Apps Script web app - cần thay thế bằng URL thực tế của bạn
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwD0eXTln4nJMqlBTtIQp3JoBTHcSRmkIvf0c68JltfIadcKZH-cskCWVk_N140DDH6BQ/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxWaH4JisBQDeb_HV4_cVKRmdTJtjOX2AdcrSIjQXGuvs_6erJuRAG44KFEdy7XGD79RQ/exec';
         
         // Tạo URL encoded string từ dữ liệu
         const urlEncodedData = Object.keys(formData)
@@ -982,7 +986,7 @@ export default {
 }
 
 .header-section {
-  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+  background: #0d6efd;
   color: white;
   padding: 3rem 0;
 }
@@ -1009,6 +1013,9 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.meta-item span{
+  font-size: 18px;
 }
 
 .course-actions {

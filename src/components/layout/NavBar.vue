@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" :class="{'navbar-scrolled': scrolled}">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary shadow-sm" :class="{'navbar-scrolled': scrolled}">
     <div class="container">
       <router-link class="navbar-brand" to="/">
         <img src="@/assets/images/logo.png" alt="TechAcademy Logo" class="logo-img">
@@ -95,6 +95,7 @@ export default {
 .navbar-scrolled .nav-link {
   font-size: 0.8rem;
   padding: 0.4rem 0.25rem;
+  color: black;
 }
 
 .navbar-brand {
@@ -108,7 +109,7 @@ export default {
 }
 
 .logo-img {
-  height: 35px;
+  height: 45px;
   width: auto;
   margin-right: 10px;
   vertical-align: middle;
@@ -116,13 +117,17 @@ export default {
 }
 
 .navbar-scrolled .logo-img {
-   height:50px;
+   height:40px;
+   /* background: #0d6efd;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+   border-radius: 8px;
+   padding: 8px; */
 }
 
 .nav-link {
   font-size: 0.95rem;
   font-weight: 500;
-  color: #333;
+  color: white;
   margin: 0 0.5rem;
   padding: 0.25rem 0.25rem;
   transition: all 0.2s ease;
@@ -130,23 +135,14 @@ export default {
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #4a6bff !important;
-}
-.logo-img {
-  width: 180px; /* Điều chỉnh kích thước */
-  height: auto;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Tạo hiệu ứng bóng */
-  transition: transform 0.3s ease-in-out;
-  background-color: #007bff; /* Màu xanh Bootstrap */
-  padding: 5px; /* Khoảng cách viền */
-  border-radius: 10px; /* Bo góc */
+  color: black !important;
 }
 .nav-link:after {
   content: '';
   position: absolute;
   width: 0;
   height: 2px;
-  background: #4a6bff;
+  background: #030303;
   left: 0;
   bottom: 0;
   transition: width 0.3s;

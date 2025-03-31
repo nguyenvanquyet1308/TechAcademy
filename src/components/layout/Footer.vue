@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h2 class="footer-logo">Tech<span class="text-primary">Academy</span></h2>
+          <h2 class="footer-logo">TechZen <span class="text-primary">Academy</span></h2>
           <p class="mt-3">Trung tâm đào tạo lập trình chuyên nghiệp. Với đội ngũ giảng viên giàu kinh nghiệm, chúng tôi cam kết mang đến các khóa học chất lượng cao.</p>
           <div class="social-links mt-4">
             <a href="#" class="me-3"><i class="bi bi-facebook fs-5"></i></a>
@@ -25,7 +25,7 @@
           <ul class="footer-links">
             <li><router-link to="/about">Về chúng tôi</router-link></li>
             <li><router-link to="/instructors">Giảng viên</router-link></li>
-            <li><router-link to="/tuition">Học phí & Ưu đãi</router-link></li>
+            <!-- <li><router-link to="/tuition">Học phí & Ưu đãi</router-link></li> -->
             <li><router-link to="/faq">FAQ</router-link></li>
           </ul>
         </div>
