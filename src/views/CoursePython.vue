@@ -4,10 +4,10 @@
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-7 mb-4 mb-lg-0">
-            <h1 class="course-title animate__animated animate__fadeInDown">
+            <h1 class="course-title animate__animated animate__fadeInDown fs-1">
               Lập trình Python AI
             </h1>
-            <p class="course-description animate__animated animate__fadeIn animate__delay-1s">
+            <p class="course-description animate__animated animate__fadeIn animate__delay-1s fs-4">
               Khóa học Python AI toàn diện giúp bạn làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay, từ nền tảng cơ bản đến ứng dụng AI. Tập trung vào thực hành và dự án thực tế, phù hợp cho cả người mới bắt đầu và lập trình viên muốn nâng cao kỹ năng.
             </p>
             <div class="course-meta animate__animated animate__fadeIn animate__delay-2s">
@@ -32,8 +32,8 @@
                 <span>Thứ 3, 5, 7 (18:30 - 20:30)</span>
               </div>
             </div>
-            <div class="course-actions animate__animated animate__fadeIn animate__delay-3s">
-              <router-link to="register" > <button class="btn btn-primary btn-lg me-2 pulse">Đăng ký học</button> </router-link>
+            <div class="course-actions animate__animated animate__fadeIn animate__delay-2s">
+              <button @click="showRegistrationModal = true" class="btn-light btn-lg me-2 pulse">Đăng ký học</button>
             </div>
           </div>
           <div class="col-lg-5">
@@ -512,7 +512,7 @@
               </div>
             </div> -->
 
-          <section class="section  animate-on-scroll" data-animation="animate__fadeInUp">
+          <section class="section animate-on-scroll" data-animation="animate__fadeInUp">
             <h2 class="section-title mb-2 fs-3 ">Khuyến mãi đặc biệt</h2>
             <div class="promotions-section">
               <div class="promotions-list">
@@ -1003,6 +1003,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 18px;
 }
 
 .course-actions {
@@ -1062,6 +1063,7 @@ export default {
 .icon-box {
   width: 50px;
   height: 50px;
+  font-size: 30px;
   background: rgba(74, 107, 255, 0.1);
   border-radius: 8px;
   display: flex;
@@ -1123,6 +1125,22 @@ export default {
 .benefit-card:hover {
   transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+.btn-light {
+   display: inline-block;
+   padding: 0.75rem 1.5rem;
+   border-radius: 4px;
+   text-decoration: none;
+   transition: all 0.3s;
+   font-weight: 600;
+   border: 2px solid #2f80ed;
+}
+.btn-light:hover{
+  background: rgba(255, 255, 255, 0.1);
+
+}
+.course-overview p {
+  font-size: 18px;
 }
 
 .price-card {

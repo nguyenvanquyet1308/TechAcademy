@@ -309,7 +309,7 @@ export default {
 
 <style scoped>
 .page-header {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
+  background: #0d6efd;
   color: white;
   padding: 60px 0;
   text-align: center;

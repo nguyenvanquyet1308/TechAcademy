@@ -62,7 +62,7 @@
               <div class="course-details">
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-clock"></i></span>
-                  <span class="detail-text">3 tháng</span>
+                  <span class="detail-text">3 tháng (36 buổi)</span>
                 </div>
                 <div class="detail-item font-lato">
                   <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
@@ -305,28 +305,28 @@
         <div class="materials-grid">
           <div class="material-card">
             <div class="material-icon">
-              <i class="bi bi-book"></i>
+              <i class="bi bi-book fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Sách và tài liệu điện tử</h3>
             <p class="font-lato">Học viên được cung cấp sách và tài liệu tham khảo đã được biên soạn kỹ lưỡng, cập nhật với xu hướng mới nhất.</p>
           </div>
           <div class="material-card">
             <div class="material-icon">
-              <i class="bi bi-camera-video"></i>
+              <i class="bi bi-camera-video fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Video bài giảng</h3>
             <p class="font-lato">Bài giảng được quay lại thành video, giúp học viên có thể xem lại sau khi buổi học kết thúc.</p>
           </div>
           <div class="material-card">
             <div class="material-icon">
-              <i class="bi bi-laptop"></i>
+              <i class="bi bi-laptop fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Workshop và lab thực hành</h3>
             <p class="font-lato">Nội dung workshop được thiết kế theo hình thức thực hành, giúp học viên áp dụng kiến thức vào thực tế.</p>
           </div>
           <div class="material-card">
             <div class="material-icon">
-              <i class="bi bi-people"></i>
+              <i class="bi bi-people fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Cộng đồng học tập</h3>
             <p class="font-lato">Truy cập vào cộng đồng học tập trực tuyến, nơi học viên có thể trao đổi, hỏi đáp và học hỏi lẫn nhau.</p>
@@ -609,11 +609,12 @@ export default {
 
 .material-card:hover {
   transform: translateY(-10px);
+  background: linear-gradient(145deg, #e8f9ff, #f0f8ff);
 }
 
 .material-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background: rgba(74, 107, 255, 0.1);
   border-radius: 50%;
   display: flex;
@@ -624,13 +625,15 @@ export default {
 }
 
 .material-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   color: #212529;
 }
 
 .material-card p {
   color: #6c757d;
+  font-size: 1rem;
+
 }
 
 .section-desc {

@@ -103,51 +103,52 @@
         <div class="agile-content">
           <div class="agile-text">
             <p>Tại Techzen, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm. Học viên sẽ được tiếp cận và làm quen với phương pháp làm việc chuyên nghiệp này ngay từ khi học tập.</p>
-            
-            <div class="agile-principles">
-              <div class="principle-item">
-                <div class="principle-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                </div>
-                <div class="principle-content">
-                  <h4>Sprint Planning</h4>
-                  <p>Sprint Planning là cuộc họp để nhóm Scrum xác định mục tiêu của sprint và lập kế hoạch cho việc hoàn thành các mục tiêu đó.</p>
-                </div>
-              </div>
-              
-              <div class="principle-item">
-                <div class="principle-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                </div>
-                <div class="principle-content">
-                  <h4>Daily Scrum</h4>
-                  <p>Daily Scrum là cuộc họp ngắn hàng ngày của nhóm Scrum để thảo luận về tiến độ công việc và các vấn đề cần giải quyết.</p>
-                </div>
-              </div>
-              
-              <div class="principle-item">
-                <div class="principle-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                </div>
-                <div class="principle-content">
-                  <h4>Sprint Review</h4>
-                  <p>Sprint Review là cuộc họp để nhóm Scrum trình bày sản phẩm cho khách hàng và nhận phản hồi.</p>
-                </div>
-              </div>
-              
-              <div class="principle-item">
-                <div class="principle-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                </div>
-                <div class="principle-content">
-                  <h4>Sprint Retrospective</h4>
-                  <p>Sprint Retrospective là cuộc họp để nhóm Scrum phản ánh về sprint vừa qua và tìm ra các cách để cải thiện trong sprint tiếp theo.</p>
-                </div>
-              </div>
-            </div>
           </div>
+          
           <div class="agile-image">
             <img src="../assets/images/agile.png" alt="Agile Scrum Methodology" class="img-fluid rounded shadow">
+          </div>
+        </div>
+        
+        <div class="agile-principles-grid">
+          <div class="principle-item">
+            <div class="principle-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <div class="principle-content">
+              <h4>Sprint Planning</h4>
+              <p>Sprint Planning là cuộc họp để nhóm Scrum xác định mục tiêu của sprint và lập kế hoạch cho việc hoàn thành các mục tiêu đó.</p>
+            </div>
+          </div>
+          
+          <div class="principle-item">
+            <div class="principle-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="principle-content">
+              <h4>Daily Scrum</h4>
+              <p>Daily Scrum là cuộc họp ngắn hàng ngày của nhóm Scrum để thảo luận về tiến độ công việc và các vấn đề cần giải quyết.</p>
+            </div>
+          </div>
+          
+          <div class="principle-item">
+            <div class="principle-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <div class="principle-content">
+              <h4>Sprint Review</h4>
+              <p>Sprint Review là cuộc họp để nhóm Scrum trình bày sản phẩm cho khách hàng và nhận phản hồi.</p>
+            </div>
+          </div>
+          
+          <div class="principle-item">
+            <div class="principle-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="principle-content">
+              <h4>Sprint Retrospective</h4>
+              <p>Sprint Retrospective là cuộc họp để nhóm Scrum phản ánh về sprint vừa qua và tìm ra các cách để cải thiện trong sprint tiếp theo.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -439,25 +440,29 @@ export default {
 }
 
 .audience-icon {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   background: rgba(74, 107, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   color: #4a6bff;
 }
 
 .audience-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
   color: #212529;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .audience-card p {
   color: #6c757d;
+  font-size: 1.3rem;
 }
 
 .cta {
@@ -538,36 +543,53 @@ export default {
 /* Agile Scrum Section Styles */
 .agile-scrum {
   background: #f8f9fa;
+  padding: 60px 0;
 }
 
 .agile-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 40px;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .agile-text p {
-  margin-bottom: 30px;
+  margin-bottom: 0;
   color: #495057;
   line-height: 1.7;
+  font-size: 1.3rem;
+}
+
+.agile-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
 }
 
 .agile-image img {
   width: 100%;
+  height: auto;
+  display: block;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
+}
+
+.agile-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .agile-image:hover img {
   transform: scale(1.03);
 }
 
-.agile-principles {
-  display: flex;
-  flex-direction: column;
+.agile-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -577,35 +599,93 @@ export default {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
+  transition: all 0.3s ease;
+  height: 100%;
 }
 
 .principle-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(74, 107, 255, 0.1);
+  border-left: 3px solid #4a6bff;
 }
 
 .principle-icon {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
   background: rgba(74, 107, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 15px;
+  margin-right: 5px;
   color: #4a6bff;
   flex-shrink: 0;
 }
 
+.principle-content {
+  flex: 1;
+}
+
 .principle-content h4 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #212529;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .principle-content p {
   color: #6c757d;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Media Queries for Agile Scrum Section */
+@media (max-width: 992px) {
+  .agile-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .agile-image {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .agile-principles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .agile-scrum {
+    padding: 40px 0;
+  }
+  
+  .agile-principles-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .principle-item {
+    padding: 15px;
+  }
+  
+  .principle-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+  
+  .principle-content h4 {
+    font-size: 1.3rem;
+  }
+  
+  .principle-content p {
+    font-size: 1rem;
+  }
 }
 
 /* Overview Section Animations */

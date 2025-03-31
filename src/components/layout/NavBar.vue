@@ -117,7 +117,11 @@ export default {
 }
 
 .navbar-scrolled .logo-img {
-   height:50px;
+   height:40px;
+   /* background: #0d6efd;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+   border-radius: 8px;
+   padding: 8px; */
 }
 
 .nav-link {

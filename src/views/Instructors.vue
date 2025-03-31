@@ -11,29 +11,43 @@
     <!-- Instructors Section -->
     <section class="section main-instructors">
       <div class="container">
-        <h2 class="section-title">Giảng viên chính</h2>
-        <p class="section-desc">Đội ngũ giảng viên chính của chúng tôi đều là những chuyên gia có nhiều năm kinh nghiệm trong lĩnh vực công nghệ</p>
+        <h2 class="section-title" v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :enter="{ opacity: 1, y: 0, transition: { duration: 800 } }">
+          Giảng viên chính
+        </h2>
+        <p class="section-desc" v-motion
+          :initial="{ opacity: 0 }"
+          :enter="{ opacity: 1, transition: { delay: 200, duration: 800 } }">
+          Đội ngũ giảng viên chính của chúng tôi đều là những chuyên gia có nhiều năm kinh nghiệm trong lĩnh vực công nghệ
+        </p>
         
         <div class="instructors-grid">
-          <div class="instructor-card">
+          <div class="instructor-card" v-motion
+            :initial="{ opacity: 0, x: -100 }"
+            :enter="{ opacity: 1, x: 0, transition: { delay: 300, duration: 800 } }">
             <div class="instructor-image">
               <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <div class="pulse-animation">Xem thêm</div>
+                </div>
+              </div>
             </div>
             <div class="instructor-content">
-              <h3 class="instructor-name">Nguyễn Ngọc Quang</h3>
+              <h3 class="instructor-name text-gradient">Nguyễn Ngọc Quang</h3>
               <p class="instructor-position">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</p>
               <p class="instructor-description">
-7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.
-6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên,
- từ các bạn mới bắt đầu đến những người đã có nền tảng.</p>
+              7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.
+              6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên,
+              từ các bạn mới bắt đầu đến những người đã có nền tảng.</p>
               <div class="instructor-expertise">
                 <h4>Chuyên môn:</h4>
                 <div class="expertise-tags">
-                  
-                  <span>Java</span>
-                  <span>Spring Boot</span>
-                  <span>MySQL</span>
-                  <span>RESTful API</span>
+                  <span class="tag-animation">Java</span>
+                  <span class="tag-animation">Spring Boot</span>
+                  <span class="tag-animation">MySQL</span>
+                  <span class="tag-animation">RESTful API</span>
                 </div>
               </div>
               <div class="instructor-social">
@@ -50,22 +64,29 @@
             </div>
           </div>
 
-          <div class="instructor-card">
+          <div class="instructor-card" v-motion
+            :initial="{ opacity: 0, x: 100 }"
+            :enter="{ opacity: 1, x: 0, transition: { delay: 500, duration: 800 } }">
             <div class="instructor-image">
               <img src="../assets/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <div class="pulse-animation">Xem thêm</div>
+                </div>
+              </div>
             </div>
             <div class="instructor-content">
-              <h3 class="instructor-name">Huỳnh Hải Thiên</h3>
+              <h3 class="instructor-name text-gradient">Huỳnh Hải Thiên</h3>
               <p class="instructor-position">Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm</p>
               <p class="instructor-description">7 năm tập trung triển khai các dự án công nghệ cao cấp, từ xây dựng ứng dụng web đến các giải pháp doanh nghiệp phức tạp,6 năm đồng hành cùng hàng ngàn học viên,
                  từ những người mới chập chững đến các lập trình viên chuyên nghiệp, xây dựng nền tảng vững chắc cho sự nghiệp IT.</p>
               <div class="instructor-expertise">
                 <h4>Chuyên môn:</h4>
                 <div class="expertise-tags">
-                  <span>Python</span>
-                  <span>AI & ML</span>
-                  <span>FastAPI</span>
-                  <span>MySQL</span>
+                  <span class="tag-animation">Python</span>
+                  <span class="tag-animation">AI & ML</span>
+                  <span class="tag-animation">FastAPI</span>
+                  <span class="tag-animation">MySQL</span>
                 </div>
               </div>
               <div class="instructor-social">
@@ -165,11 +186,22 @@
       <div class="container">
         <div class="why-content">
           <div class="why-text">
-            <h2>Tại sao giảng viên của chúng tôi tạo nên sự khác biệt?</h2>
-            <p>Đội ngũ giảng viên của TechAcademy không chỉ có kiến thức chuyên môn sâu rộng mà còn có nhiều năm kinh nghiệm thực tế trong ngành công nghệ.</p>
+            <h2 class="animated-heading" v-motion
+              :initial="{ opacity: 0, y: 50 }"
+              :enter="{ opacity: 1, y: 0, transition: { duration: 800 } }">
+              Tại sao giảng viên của chúng tôi tạo nên sự khác biệt?
+            </h2>
+            <p v-motion
+              :initial="{ opacity: 0 }"
+              :enter="{ opacity: 1, transition: { delay: 200, duration: 800 } }">
+              Đội ngũ giảng viên của TechAcademy không chỉ có kiến thức chuyên môn sâu rộng mà còn có nhiều năm kinh nghiệm thực tế trong ngành công nghệ.
+            </p>
             <ul class="why-list">
-              <li>
-                <div class="list-icon">
+              <li v-motion
+                :initial="{ opacity: 0, x: -50 }"
+                :enter="{ opacity: 1, x: 0, transition: { delay: 300, duration: 600 } }"
+                class="animate-list-item">
+                <div class="list-icon pulse-animation">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
                 <div>
@@ -177,8 +209,11 @@
                   <p>Tất cả giảng viên đều đang làm việc tại các công ty công nghệ hàng đầu, mang đến góc nhìn thực tế từ ngành công nghiệp.</p>
                 </div>
               </li>
-              <li>
-                <div class="list-icon">
+              <li v-motion
+                :initial="{ opacity: 0, x: -50 }"
+                :enter="{ opacity: 1, x: 0, transition: { delay: 500, duration: 600 } }"
+                class="animate-list-item">
+                <div class="list-icon pulse-animation">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
                 <div>
@@ -186,8 +221,11 @@
                   <p>Giảng viên sử dụng phương pháp giảng dạy tương tác, tập trung vào thực hành và giải quyết vấn đề thực tế.</p>
                 </div>
               </li>
-              <li>
-                <div class="list-icon">
+              <li v-motion
+                :initial="{ opacity: 0, x: -50 }"
+                :enter="{ opacity: 1, x: 0, transition: { delay: 700, duration: 600 } }"
+                class="animate-list-item">
+                <div class="list-icon pulse-animation">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
                 <div>
@@ -195,8 +233,11 @@
                   <p>Sự kết nối của giảng viên với các doanh nghiệp công nghệ mang đến cơ hội việc làm và thực tập cho học viên xuất sắc.</p>
                 </div>
               </li>
-              <li>
-                <div class="list-icon">
+              <li v-motion
+                :initial="{ opacity: 0, x: -50 }"
+                :enter="{ opacity: 1, x: 0, transition: { delay: 900, duration: 600 } }"
+                class="animate-list-item">
+                <div class="list-icon pulse-animation">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
                 <div>
@@ -206,8 +247,21 @@
               </li>
             </ul>
           </div>
-          <div class="why-image">
+          <div class="why-image" v-motion
+            :initial="{ opacity: 0, scale: 0.8 }"
+            :enter="{ opacity: 1, scale: 1, transition: { delay: 400, duration: 800 } }">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Giảng viên TechAcademy">
+            <div class="floating-elements">
+              <div class="floating-element element-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <div class="floating-element element-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div class="floating-element element-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -216,11 +270,19 @@
     <!-- CTA Section -->
     <section class="section cta">
       <div class="container">
-        <div class="cta-content">
-          <h2>Học từ những chuyên gia hàng đầu</h2>
+        <div class="cta-content" v-motion
+          :initial="{ opacity: 0, scale: 0.9 }"
+          :enter="{ opacity: 1, scale: 1, transition: { duration: 800 } }">
+          <h2 class="cta-heading">Học từ những chuyên gia hàng đầu</h2>
           <p>Đăng ký ngay để được học tập và trao đổi trực tiếp với đội ngũ giảng viên xuất sắc của chúng tôi!</p>
-          <router-link to="/register" class="btn">Đăng ký ngay</router-link>
+          <router-link to="/register" class="btn btn-glow">Đăng ký ngay</router-link>
         </div>
+      </div>
+      <div class="cta-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
       </div>
     </section>
   </div>
@@ -268,22 +330,69 @@ export default {
 
 .instructor-card {
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   display: grid;
   grid-template-columns: 300px 1fr;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instructor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(74, 107, 255, 0.1);
 }
 
 .instructor-image {
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .instructor-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.instructor-card:hover .instructor-image img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.instructor-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: rgba(74, 107, 255, 0.8);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.overlay-content:hover {
+  transform: scale(1.1);
+  background: rgba(74, 107, 255, 1);
 }
 
 .instructor-content {
@@ -327,6 +436,14 @@ export default {
   padding: 5px 12px;
   border-radius: 4px;
   font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.expertise-tags span:hover {
+  background: #4a6bff;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(74, 107, 255, 0.2);
 }
 
 .instructor-social {
@@ -526,7 +643,7 @@ export default {
   }
 
   .instructor-image {
-    height: 300px;
+    height: 500px;
   }
 
   .why-content {
@@ -535,6 +652,12 @@ export default {
 
   .why-image {
     order: -1;
+    margin-bottom: 30px;
+  }
+  
+  .floating-element {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -554,5 +677,313 @@ export default {
   .lecturer-image {
     height: 200px;
   }
+  
+  .animate-list-item:hover {
+    transform: translateX(5px);
+  }
+  
+  .floating-element {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .instructor-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Additional CSS styles for animations and enhancements */
+.text-gradient {
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pulse-animation {
+  position: relative;
+}
+
+.pulse-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(74, 107, 255, 0.4);
+  opacity: 0;
+  z-index: -1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.tag-animation {
+  animation: tagFadeIn 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.expertise-tags span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.expertise-tags span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.expertise-tags span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.expertise-tags span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes tagFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-heading:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  animation: lineGrow 1.5s forwards 0.5s;
+  border-radius: 3px;
+}
+
+@keyframes lineGrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+.animate-list-item {
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.animate-list-item:hover {
+  background: rgba(74, 107, 255, 0.05);
+  transform: translateX(10px);
+}
+
+.animate-list-item h4 {
+  transition: color 0.3s ease;
+}
+
+.animate-list-item:hover h4 {
+  color: #4a6bff;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.floating-element {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: #4a6bff;
+  font-size: 18px;
+  animation: float 6s infinite ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.element-1 {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0.5s;
+}
+
+.element-2 {
+  top: 25%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.element-3 {
+  bottom: 20%;
+  left: 15%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+.why-image {
+  position: relative;
+}
+
+.why-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.why-image:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cta-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.cta-heading:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  animation: lineGrowCenter 1.5s forwards 0.5s;
+  border-radius: 3px;
+}
+
+@keyframes lineGrowCenter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+.btn-glow {
+  background: white;
+  color: #4a6bff;
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.btn-glow:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.7);
+  background: white;
+  color: #a74dff;
+}
+
+.cta-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 10s infinite ease-in-out;
+}
+
+.particle-1 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.particle-3 {
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.particle-4 {
+  width: 120px;
+  height: 120px;
+  top: 70%;
+  right: 10%;
+  animation-delay: 3s;
 }
 </style> 
