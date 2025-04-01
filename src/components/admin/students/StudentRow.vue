@@ -52,19 +52,19 @@ export default {
     },
     statusText() {
       const statusMap = {
-        ACTIVE: 'Đang học',
-        COMPLETED: 'Đã hoàn thành',
+        // ACTIVE: 'Đang học',
+        COMPLETED: 'Đã gọi điện',
         PENDING: 'Chờ xác nhận',
-        DROPPED: 'Đã nghỉ học'
+        // DROPPED: 'Đã nghỉ học'
       };
       return statusMap[this.student.status] || this.student.status;
     },
     statusBadgeClass() {
       const classMap = {
-        ACTIVE: 'badge bg-success',
-        COMPLETED: 'badge bg-primary',
+        // ACTIVE: 'badge bg-success',
+        COMPLETED: 'badge bg-success',
         PENDING: 'badge bg-warning',
-        DROPPED: 'badge bg-danger'
+        // DROPPED: 'badge bg-danger'
       };
       return classMap[this.student.status] || 'badge bg-secondary';
     },

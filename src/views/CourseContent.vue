@@ -111,7 +111,7 @@
                 <span class="font-lato tag-animation">RESTful API</span>
               </div>
               <div class="course-footer">
-                <div class="course-price font-lato-bold fs-3 animated-text">6.999.000đ</div>
+                <div class="course-price font-lato-bold fs-3 animated-text">4.999.000đ</div>
                 <router-link to="/course-java-spring" class="btn btn-outline-primary font-lato animated-btn">Xem chi tiết</router-link>
               </div>
             </div>

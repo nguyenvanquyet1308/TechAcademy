@@ -53,6 +53,16 @@ export default {
   },
 
   /**
+   * Update a course and its curriculum in a single request
+   * @param {Number} id - Course ID
+   * @param {Object} course - Updated course data including curriculum
+   * @returns {Promise} - Promise with updated course
+   */
+  updateCourseWithCurriculum(id, course) {
+    return apiClient.put(`${API_PATH}/${id}/with-curriculum`, course);
+  },
+
+  /**
    * Delete a course
    * @param {Number} id - Course ID
    * @returns {Promise} - Promise with delete confirmation

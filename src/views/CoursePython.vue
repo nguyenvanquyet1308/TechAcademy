@@ -367,7 +367,7 @@
           </section>
 
           <section class="section mb-3 animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-4 typewriter">Lợi ích khi tham gia khóa học</h2>
+            <h2 class="section-title mb-4">Lợi ích khi tham gia khóa học</h2>
             <div class="benefits-list">
               <div class="row">
                 <div class="col-md-6 mb-4">

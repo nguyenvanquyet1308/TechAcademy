@@ -396,7 +396,7 @@
               <div class="price-header">
                 <h3 class="font-lato-bold">Học phí</h3>
                 <div class="price-amount">
-                  <span class="amount">6.999.000 VND</span>
+                  <span class="amount">4.999.000 VND</span>
                   <p class="text-muted">Lộ trình: 3 tháng</p>
                 </div>
               </div>

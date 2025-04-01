@@ -23,7 +23,7 @@
         <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
           <h3 class="footer-heading mb-4">Liên kết</h3>
           <ul class="footer-links">
-            <li><router-link to="/about">Về chúng tôi</router-link></li>
+            <li><router-link to="/course-intro">Về chúng tôi</router-link></li>
             <li><router-link to="/instructors">Giảng viên</router-link></li>
             <!-- <li><router-link to="/tuition">Học phí & Ưu đãi</router-link></li> -->
             <li><router-link to="/faq">FAQ</router-link></li>

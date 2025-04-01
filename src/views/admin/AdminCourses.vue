@@ -20,14 +20,6 @@
               </div>
             </div>
             <div class="col-md-3">
-              <select class="form-select" v-model="filters.category" @change="applyFilters">
-                <option value="">-- Tất cả danh mục --</option>
-                <option v-for="category in categories" :key="category.id" :value="category.id">
-                  {{ category.name }}
-                </option>
-              </select>
-            </div>
-            <div class="col-md-3">
               <select class="form-select" v-model="filters.status" @change="applyFilters">
                 <option value="">-- Tất cả trạng thái --</option>
                 <option value="active">Đang hoạt động</option>
@@ -50,7 +42,8 @@
         <div v-for="course in filteredCourses" :key="course.id" class="col-xl-4 col-md-6 mb-4">
           <div class="card border-0 shadow h-100">
             <div class="position-relative">
-              <img :src="course.thumbnail" class="card-img-top" alt="Course thumbnail" style="height: 180px; object-fit: cover;">
+              <img :src="course.thumbnails && course.thumbnails.length > 0 ? course.thumbnails[0] : course.thumbnail || 'https://via.placeholder.com/400x180?text=No+Image'" 
+                  class="card-img-top" alt="Course thumbnail" style="height: 180px; object-fit: cover;">
               <div class="position-absolute top-0 end-0 m-2">
                 <span class="badge" :class="{
                   'bg-success': course.status === 'active',
@@ -59,12 +52,15 @@
                   'bg-info': course.status === 'completed'
                 }">{{ getStatusDisplay(course.status) }}</span>
               </div>
+              <div v-if="course.thumbnails && course.thumbnails.length > 1" 
+                  class="position-absolute bottom-0 start-0 m-2">
+                <span class="badge bg-dark">
+                  <i class="bi bi-images me-1"></i> {{ course.thumbnails.length }}
+                </span>
+              </div>
             </div>
             <div class="card-body">
               <h5 class="card-title">{{ course.title }}</h5>
-              <div class="small text-muted mb-2">
-                <i class="bi bi-tag me-1"></i> {{ getCategoryName(course.categoryId) }}
-              </div>
               <p class="card-text text-truncate">{{ course.shortDescription }}</p>
               <div class="d-flex justify-content-between mb-2">
                 <div>
@@ -121,20 +117,10 @@
                       <input type="text" class="form-control" id="courseTitle" v-model="currentCourse.title" required>
                     </div>
                   </div>
-                  <!-- <div class="col-md-4">
-                    <div class="mb-3">
-                      <label for="courseCategory" class="form-label">Danh mục <span class="text-danger">*</span></label>
-                      <select class="form-select" id="courseCategory" v-model="currentCourse.categoryId" required>
-                        <option v-for="category in categories" :key="category.id" :value="category.id">
-                          {{ category.name }}
-                        </option>
-                      </select>
-                    </div>
-                  </div> -->
                   <div class="col-md-12">
                     <div class="mb-3">
                       <label for="courseShortDesc" class="form-label">Mô tả ngắn <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="courseShortDesc" v-model="currentCourse.shortDescription" required>
+                      <input type="text" class="form-control" id="shortDescription" v-model="currentCourse.shortDescription" required>
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -143,10 +129,44 @@
                       <textarea class="form-control" id="courseDescription" rows="5" v-model="currentCourse.description" required></textarea>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <div class="mb-3">
-                      <label for="courseThumbnail" class="form-label">URL ảnh thumbnail <span class="text-danger">*</span></label>
-                      <input type="url" class="form-control" id="courseThumbnail" v-model="currentCourse.thumbnail" required>
+                      <label class="form-label">Hình ảnh khóa học <span class="text-danger">*</span></label>
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <input type="file" class="form-control" id="courseThumbnails" accept="image/*" multiple @change="uploadThumbnail">
+                            <div v-if="imageUploading" class="mt-2">
+                              <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                <span class="visually-hidden">Đang tải...</span>
+                              </div>
+                              <span class="ms-2">Đang tải ảnh lên...</span>
+                            </div>
+                            <div v-if="uploadError" class="text-danger mt-2">
+                              {{ uploadError }}
+                            </div>
+                          </div>
+                          <div class="thumbnail-gallery d-flex flex-wrap">
+                            <div v-for="(thumbnail, index) in currentCourse.thumbnails" :key="index" class="thumbnail-item position-relative me-3 mb-3">
+                              <img :src="thumbnail" class="rounded" alt="Thumbnail" style="width: 120px; height: 90px; object-fit: cover;">
+                              <div class="thumbnail-actions position-absolute top-0 end-0 d-flex">
+                                <button type="button" class="btn btn-sm btn-light me-1" title="Đặt làm ảnh chính" @click="setMainThumbnail(index)">
+                                  <i class="bi" :class="index === 0 ? 'bi-star-fill text-warning' : 'bi-star'"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-danger" title="Xóa ảnh" @click="removeThumbnail(index)">
+                                  <i class="bi bi-trash"></i>
+                                </button>
+                              </div>
+                              <div v-if="index === 0" class="main-indicator position-absolute bottom-0 start-50 translate-middle-x">
+                                <span class="badge bg-primary">Ảnh chính</span>
+                              </div>
+                            </div>
+                            <div v-if="currentCourse.thumbnails.length === 0" class="text-muted">
+                              Chưa có ảnh nào. Vui lòng tải lên ít nhất một ảnh.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -267,7 +287,43 @@
             <div class="modal-body" v-if="currentCourse.id">
               <div class="row">
                 <div class="col-md-4">
-                  <img :src="currentCourse.thumbnail" class="img-fluid rounded mb-3" alt="Course thumbnail">
+                  <!-- Thumbnail carousel -->
+                  <div id="courseImagesCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div v-for="(thumbnail, index) in currentCourse.thumbnails" :key="index" 
+                          class="carousel-item" :class="{ 'active': index === 0 }">
+                        <img :src="thumbnail" class="d-block w-100 rounded" alt="Course thumbnail" 
+                            style="height: 200px; object-fit: cover;">
+                      </div>
+                      <div v-if="!currentCourse.thumbnails || currentCourse.thumbnails.length === 0" class="carousel-item active">
+                        <img :src="currentCourse.thumbnail || 'https://via.placeholder.com/400x200?text=No+Image'" 
+                            class="d-block w-100 rounded" alt="Course thumbnail" style="height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <button v-if="currentCourse.thumbnails && currentCourse.thumbnails.length > 1" 
+                        class="carousel-control-prev" type="button" data-bs-target="#courseImagesCarousel" 
+                        data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button v-if="currentCourse.thumbnails && currentCourse.thumbnails.length > 1" 
+                        class="carousel-control-next" type="button" data-bs-target="#courseImagesCarousel" 
+                        data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  
+                  <!-- Thumbnail thumbnails for quick navigation -->
+                  <div class="d-flex flex-wrap mb-3" v-if="currentCourse.thumbnails && currentCourse.thumbnails.length > 1">
+                    <div v-for="(thumbnail, index) in currentCourse.thumbnails" :key="`thumb-${index}`" 
+                        class="thumbnail-nav me-2 mb-2" style="width: 60px; height: 45px; cursor: pointer;"
+                        data-bs-target="#courseImagesCarousel" :data-bs-slide-to="index">
+                      <img :src="thumbnail" class="img-fluid rounded" alt="Thumbnail" 
+                          style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                  </div>
+                  
                   <div class="d-flex justify-content-between mb-2">
                     <span class="badge" :class="{
                       'bg-success': currentCourse.status === 'active',
@@ -302,9 +358,6 @@
                 </div>
                 <div class="col-md-8">
                   <h4>{{ currentCourse.title }}</h4>
-                  <p class="text-muted small">
-                    <i class="bi bi-tag me-1"></i> {{ getCategoryName(currentCourse.categoryId) }}
-                  </p>
                   <p>{{ currentCourse.description }}</p>
                   
                   <div class="instructor-info d-flex align-items-center mb-3">
@@ -357,6 +410,7 @@
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import { Modal } from 'bootstrap'
 import axios from 'axios'
+import Swal from 'sweetalert2';
 
 const API_URL = 'http://localhost:8080/api'; // Update this to your actual API base URL
 
@@ -379,18 +433,20 @@ export default {
       // Filters
       filters: {
         search: '',
-        category: '',
         status: ''
       },
       
       // Data from API
-      categories: [],
       instructors: [],
       courses: [],
       
       // Loading state
       loading: false,
-      error: null
+      error: null,
+      
+      // File upload state
+      imageUploading: false,
+      uploadError: null
     }
   },
   
@@ -401,10 +457,9 @@ export default {
           course.title.toLowerCase().includes(this.filters.search.toLowerCase()) ||
           course.shortDescription.toLowerCase().includes(this.filters.search.toLowerCase());
         
-        const matchCategory = !this.filters.category || course.categoryId === parseInt(this.filters.category);
         const matchStatus = !this.filters.status || course.status === this.filters.status;
         
-        return matchSearch && matchCategory && matchStatus;
+        return matchSearch && matchStatus;
       });
     }
   },
@@ -417,7 +472,6 @@ export default {
     
     // Fetch data from API
     this.fetchCourses();
-    this.fetchCategories();
     this.fetchInstructors();
   },
   
@@ -437,16 +491,6 @@ export default {
       }
     },
     
-    async fetchCategories() {
-      try {
-        // Replace with your actual categories API endpoint
-        const response = await axios.get(`${API_URL}/categories`);
-        this.categories = response.data;
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-      }
-    },
-    
     async fetchInstructors() {
       try {
         // Replace with your actual instructors API endpoint
@@ -462,16 +506,16 @@ export default {
       return {
         id: apiCourse.id,
         title: apiCourse.name,
-        shortDescription: apiCourse.description?.substring(0, 100) || '',
+        shortDescription: apiCourse.shortDescription,
         description: apiCourse.description,
         thumbnail: apiCourse.thumbnail,
+        thumbnails: apiCourse.thumbnails || [apiCourse.thumbnail].filter(Boolean),
         price: apiCourse.price,
         duration: apiCourse.duration,
         level: apiCourse.level,
         rating: 0, // Add if your API provides this
         enrolledCount: apiCourse.studentsCount || 0,
         status: apiCourse.isActive ? 'active' : 'draft', // Map isActive to status
-        categoryId: 1, // Update if your API provides category
         instructorId: apiCourse.instructorId,
         curriculum: this.mapApiCurriculumToLocal(apiCourse.chapters)
       };
@@ -505,48 +549,67 @@ export default {
         id: localCourse.id,
         name: localCourse.title,
         description: localCourse.description,
+        shortDescription: localCourse.shortDescription,
         price: localCourse.price,
-        thumbnail: localCourse.thumbnail,
+        thumbnail: localCourse.thumbnails && localCourse.thumbnails.length > 0 ? localCourse.thumbnails[0] : '',
+        thumbnails: localCourse.thumbnails || [],
         duration: localCourse.duration,
         level: localCourse.level,
         instructorId: localCourse.instructorId,
         isActive: localCourse.status === 'active',
-        chapters: this.mapLocalCurriculumToApi(localCourse.curriculum, localCourse.id)
+        chapters: this.mapLocalCurriculumToApiChapters(localCourse.curriculum, localCourse.id)
       };
     },
     
-    mapLocalCurriculumToApi(curriculum, courseId) {
+    mapLocalCurriculumToApiChapters(curriculum, courseId) {
+      if (!curriculum) return [];
+      
       return curriculum.map((module, index) => ({
         id: module.id,
         title: module.title,
         position: index + 1,
         courseId: courseId,
-        lessons: module.lessons.map((lesson, lIndex) => ({
-          id: lesson.id,
-          title: lesson.title,
-          duration: lesson.duration,
-          position: lIndex + 1,
-          chapterId: module.id,
-          content: lesson.content || '',
-          videoUrl: lesson.videoUrl || ''
-        }))
+        lessons: this.mapLocalCurriculumToApiLessons(module.lessons, module.id)
+      }));
+    },
+    
+    mapLocalCurriculumToApiLessons(lessons, chapterId) {
+      if (!lessons) return [];
+      
+      return lessons.map((lesson, index) => ({
+        id: lesson.id,
+        title: lesson.title,
+        duration: lesson.duration,
+        position: index + 1,
+        chapterId: chapterId,
+        content: lesson.content || '',
+        videoUrl: lesson.videoUrl || ''
       }));
     },
     
     // CRUD methods
     async saveCourse() {
       try {
+        // Validate required images
+        if (!this.currentCourse.thumbnails || this.currentCourse.thumbnails.length === 0) {
+          this.uploadError = 'Vui lòng tải lên ít nhất một ảnh cho khóa học.';
+          return;
+        }
+        
         this.loading = true;
         const courseData = this.mapLocalCourseToApi(this.currentCourse);
         
         let savedCourse;
         if (this.isEditMode) {
-          // Update existing course
-          const response = await axios.put(`${API_URL}/courses/${courseData.id}`, courseData);
+          // Update existing course with curriculum in a single request
+          const response = await axios.put(`${API_URL}/courses/${courseData.id}/with-curriculum`, courseData);
           savedCourse = response.data;
-          
-          // Update chapters and lessons
-          await this.updateCurriculum(savedCourse.id, this.currentCourse.curriculum);
+          Swal.fire({
+                icon: 'success',
+                title: 'Chỉnh sửa khóa học thành công!',
+                showConfirmButton: false,
+                timer: 1500,
+            });
           
           const index = this.courses.findIndex(c => c.id === savedCourse.id);
           if (index !== -1) {
@@ -559,7 +622,12 @@ export default {
           
           // Create chapters and lessons
           await this.createCurriculum(savedCourse.id, this.currentCourse.curriculum);
-          
+          Swal.fire({
+                icon: 'success',
+                title: 'Thêm khóa học thành công!',
+                showConfirmButton: false,
+                timer: 1500,
+            });
           this.courses.push(this.mapApiCourseToLocal(savedCourse));
         }
         
@@ -707,7 +775,6 @@ export default {
     resetFilters() {
       this.filters = {
         search: '',
-        category: '',
         status: ''
       };
     },
@@ -720,13 +787,13 @@ export default {
         shortDescription: '',
         description: '',
         thumbnail: '',
+        thumbnails: [],
         price: 0,
         duration: 0,
         level: 'beginner',
         rating: 0,
         enrolledCount: 0,
         status: 'draft',
-        categoryId: this.categories && this.categories.length > 0 ? this.categories[0].id : null,
         instructorId: this.instructors && this.instructors.length > 0 ? this.instructors[0].id : null,
         curriculum: [
           {
@@ -735,11 +802,6 @@ export default {
           }
         ]
       };
-    },
-    
-    getCategoryName(categoryId) {
-      const category = this.categories.find(c => c.id === categoryId);
-      return category ? category.name : 'Chưa phân loại';
     },
     
     getInstructor(instructorId) {
@@ -832,6 +894,83 @@ export default {
         this.addLesson(moduleIndex);
       }
     },
+    
+    // File upload methods
+    uploadThumbnail(event) {
+      const files = event.target.files;
+      if (!files.length) return;
+      
+      this.imageUploading = true;
+      
+      // Create an array to store the promises
+      const uploadPromises = [];
+      
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const formData = new FormData();
+        formData.append('image', file);
+        
+        // Push the promise to the array
+        uploadPromises.push(
+          axios.post(`${API_URL}/upload`, formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            }
+          })
+          .then(response => {
+            // Add the new thumbnail URL to the thumbnails array
+            if (!this.currentCourse.thumbnails) {
+              this.currentCourse.thumbnails = [];
+            }
+            this.currentCourse.thumbnails.push(response.data.url);
+            
+            // If this is the first image, set it as the primary thumbnail
+            if (this.currentCourse.thumbnails.length === 1) {
+              this.currentCourse.thumbnail = response.data.url;
+            }
+          })
+          .catch(error => {
+            console.error('Error uploading image:', error);
+            this.uploadError = 'Lỗi khi tải ảnh lên.';
+          })
+        );
+      }
+      
+      // Wait for all uploads to complete
+      Promise.all(uploadPromises)
+        .then(() => {
+          this.imageUploading = false;
+          this.uploadError = null;
+        })
+        .catch(() => {
+          this.imageUploading = false;
+        });
+    },
+    
+    removeThumbnail(index) {
+      this.currentCourse.thumbnails.splice(index, 1);
+      
+      // If we removed the primary thumbnail and have other thumbnails, set the first one as primary
+      if (index === 0 && this.currentCourse.thumbnails.length > 0) {
+        this.currentCourse.thumbnail = this.currentCourse.thumbnails[0];
+      } else if (this.currentCourse.thumbnails.length === 0) {
+        this.currentCourse.thumbnail = '';
+      }
+    },
+    
+    setMainThumbnail(index) {
+      // Set the selected thumbnail as the primary one
+      if (this.currentCourse.thumbnails && this.currentCourse.thumbnails.length > index) {
+        const newMainThumbnail = this.currentCourse.thumbnails[index];
+        
+        // Move this thumbnail to the first position
+        this.currentCourse.thumbnails.splice(index, 1);
+        this.currentCourse.thumbnails.unshift(newMainThumbnail);
+        
+        // Set as main thumbnail
+        this.currentCourse.thumbnail = newMainThumbnail;
+      }
+    },
   }
 }
 </script>
@@ -850,5 +989,53 @@ export default {
   font-size: 0.75rem;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+}
+
+/* Thumbnail gallery styles */
+.thumbnail-item {
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.thumbnail-item:hover {
+  border-color: #0d6efd;
+}
+
+.thumbnail-item:first-child {
+  border-color: #0d6efd;
+}
+
+.thumbnail-actions {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.thumbnail-item:hover .thumbnail-actions {
+  opacity: 1;
+}
+
+.thumbnail-nav {
+  border: 2px solid transparent;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.thumbnail-nav:hover {
+  border-color: #0d6efd;
+}
+
+/* Carousel navigation */
+.carousel-item img {
+  border-radius: 5px;
+}
+
+/* Make the carousel controls more visible */
+.carousel-control-prev, .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 10%;
+  border-radius: 3px;
 }
 </style> 
