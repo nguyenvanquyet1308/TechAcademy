@@ -2,7 +2,7 @@
   <div class="faq-container">
     <div class="page-header">
       <h1>Câu hỏi thường gặp</h1>
-      <p class="lead">Giải đáp những thắc mắc phổ biến về khóa học tại TechAcademy</p>
+      <p class="lead">Giải đáp những thắc mắc phổ biến về khóa học tại Techzen Academy</p>
     </div>
 
     <div class="faq-section">
@@ -54,12 +54,12 @@ export default {
     return {
       faqs: [
         {
-          question: 'TechAcademy có những khóa học nào?',
-          answer: 'TechAcademy cung cấp nhiều khóa học đa dạng trong lĩnh vực công nghệ, bao gồm: Lập trình Web (Frontend & Backend), Phát triển ứng dụng di động, Data Science, UI/UX Design, DevOps, Cloud Computing, và nhiều khóa học chuyên sâu khác.'
+          question: 'Techzen Academy có những khóa học nào?',
+          answer: 'Techzen Academy cung cấp nhiều khóa học đa dạng trong lĩnh vực công nghệ, bao gồm: Lập trình Web (Frontend & Backend), Phát triển ứng dụng di động, Data Science, UI/UX Design, DevOps, Cloud Computing, và nhiều khóa học chuyên sâu khác.'
         },
         {
           question: 'Làm thế nào để đăng ký khóa học?',
-          answer: 'Bạn có thể đăng ký khóa học tại TechAcademy bằng cách: <br>1. Truy cập trang đăng ký trên website của chúng tôi.<br>2. Điền thông tin cá nhân và chọn khóa học mong muốn.<br>3. Thanh toán học phí.<br>4. Nhận email xác nhận và hướng dẫn tham gia khóa học.'
+          answer: 'Bạn có thể đăng ký khóa học tại Techzen Academy bằng cách: <br>1. Truy cập trang đăng ký trên website của chúng tôi.<br>2. Điền thông tin cá nhân và chọn khóa học mong muốn.<br>3. Thanh toán học phí.<br>4. Nhận email xác nhận và hướng dẫn tham gia khóa học.'
         },
         {
           question: 'Tôi cần có kiến thức nền tảng gì để tham gia khóa học?',
@@ -67,27 +67,27 @@ export default {
         },
         {
           question: 'Khóa học được tổ chức online hay offline?',
-          answer: 'TechAcademy tổ chức cả hai hình thức học tập:<br>- <strong>Học trực tuyến (Online)</strong>: Học viên tham gia lớp học thông qua nền tảng học trực tuyến của chúng tôi.<br>- <strong>Học trực tiếp (Offline)</strong>: Học viên đến trực tiếp trung tâm để tham gia lớp học.'
+          answer: 'Techzen Academy tổ chức cả hai hình thức học tập:<br>- <strong>Học trực tuyến (Online)</strong>: Học viên tham gia lớp học thông qua nền tảng học trực tuyến của chúng tôi.<br>- <strong>Học trực tiếp (Offline)</strong>: Học viên đến trực tiếp trung tâm để tham gia lớp học.'
         },
         {
           question: 'Tôi có thể thanh toán học phí bằng hình thức nào?',
-          answer: 'TechAcademy chấp nhận nhiều hình thức thanh toán: Chuyển khoản ngân hàng, Thanh toán qua thẻ tín dụng/ghi nợ, Ví điện tử (MoMo, ZaloPay, VNPay), Thanh toán trực tiếp tại trung tâm.'
+          answer: 'Techzen Academy chấp nhận nhiều hình thức thanh toán: Chuyển khoản ngân hàng, Thanh toán qua thẻ tín dụng/ghi nợ, Ví điện tử (MoMo, ZaloPay, VNPay), Thanh toán trực tiếp tại trung tâm.'
         },
         {
-          question: 'TechAcademy có cấp chứng chỉ sau khi hoàn thành khóa học không?',
+          question: 'Techzen Academy có cấp chứng chỉ sau khi hoàn thành khóa học không?',
           answer: 'Có, học viên sẽ được cấp chứng chỉ hoàn thành khóa học sau khi đáp ứng các yêu cầu đánh giá. Chứng chỉ của TechAcademy được nhiều doanh nghiệp công nghệ trong và ngoài nước công nhận.'
         },
         {
           question: 'Tôi có được hỗ trợ tìm việc làm sau khi hoàn thành khóa học không?',
-          answer: 'Có, TechAcademy có chương trình hỗ trợ việc làm cho học viên xuất sắc. Chúng tôi có mạng lưới đối tác doanh nghiệp rộng lớn và thường xuyên tổ chức các buổi gặp gỡ nhà tuyển dụng, workshop kỹ năng phỏng vấn và hỗ trợ hoàn thiện hồ sơ xin việc.'
+          answer: 'Có, Techzen Academy có chương trình hỗ trợ việc làm cho học viên xuất sắc. Chúng tôi có mạng lưới đối tác doanh nghiệp rộng lớn và thường xuyên tổ chức các buổi gặp gỡ nhà tuyển dụng, workshop kỹ năng phỏng vấn và hỗ trợ hoàn thiện hồ sơ xin việc.'
         },
         {
           question: 'Nếu tôi bỏ lỡ một buổi học, tôi có thể học bù không?',
-          answer: 'Có, TechAcademy cung cấp bản ghi hình của các buổi học và học viên có thể xem lại bất kỳ lúc nào. Ngoài ra, học viên cũng có thể đặt lịch học bù với mentor nếu cần thiết.'
+          answer: 'Có, Techzen Academy cung cấp bản ghi hình của các buổi học và học viên có thể xem lại bất kỳ lúc nào. Ngoài ra, học viên cũng có thể đặt lịch học bù với mentor nếu cần thiết.'
         },
         {
-          question: 'TechAcademy có chính sách hoàn tiền không?',
-          answer: 'Có, TechAcademy có chính sách hoàn tiền trong vòng 7 ngày đầu tiên của khóa học nếu học viên không hài lòng với nội dung khóa học. Tuy nhiên, chính sách này chỉ áp dụng khi học viên đã tham gia ít hơn 25% tổng số buổi học.'
+          question: 'Techzen Academy có chính sách hoàn tiền không?',
+          answer: 'Có, Techzen Academy có chính sách hoàn tiền trong vòng 7 ngày đầu tiên của khóa học nếu học viên không hài lòng với nội dung khóa học. Tuy nhiên, chính sách này chỉ áp dụng khi học viên đã tham gia ít hơn 25% tổng số buổi học.'
         },
         {
           question: 'Tôi cần chuẩn bị những thiết bị gì để tham gia khóa học?',

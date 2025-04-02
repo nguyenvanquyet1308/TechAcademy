@@ -175,6 +175,7 @@ import { Modal } from 'bootstrap'
 import { StudentRow, StudentForm, StudentDetail } from '../../components/admin/students'
 import studentService from '../../api/services/studentService'
 import Swal from 'sweetalert2'
+import { courseService } from '@/api'
 
 export default {
   name: 'AdminStudents',
@@ -204,12 +205,7 @@ export default {
       selectedStatus: '',
       
       // Data
-      courses: [
-        { id: 1, name: 'Vue.js Development' },
-        { id: 2, name: 'React Native Mobile App' },
-        { id: 3, name: 'Database Management' },
-        { id: 4, name: 'DevOps Engineering' }
-      ],
+      courses: [],
       students: []
     }
   },
@@ -235,6 +231,7 @@ export default {
   
   created() {
     this.fetchStudents();
+    this.fetchAllCourse();
   },
   
   mounted() {
@@ -271,7 +268,19 @@ export default {
         this.fetchFilteredStudents();
       }
     },
-    
+    async fetchAllCourse(){
+      this.loading = true;
+      try{
+        const response = await courseService.getAllCourses();
+        this.courses = response.data.map(course => ({
+          id: course.id,
+          name: course.name
+        }));
+
+      }catch{
+
+      }
+    },
     async fetchFilteredStudents() {
       this.loading = true;
       

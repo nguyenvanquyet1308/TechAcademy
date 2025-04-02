@@ -71,15 +71,26 @@ export default {
     }
   },
   methods: {
-    handleLogin() {
+    async handleLogin() {
       this.loading = true
       this.error = null
       
-      // Simple demo authentication - in a real app, you would call an API
-      setTimeout(() => {
-        // Hardcoded credentials for demo purposes
-        // In a real application, you would validate against a backend
-        if (this.username === 'admin' && this.password === 'admin123') {
+      try {
+        const response = await fetch('http://localhost:8080/api/admin/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            username: this.username,
+            password: this.password
+          }),
+          credentials: 'include'
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
           // Store authentication status
           localStorage.setItem('adminAuthenticated', 'true')
           if (this.rememberMe) {
@@ -88,13 +99,18 @@ export default {
             localStorage.removeItem('adminUsername')
           }
           
-          // Redirect to admin dashboard
-          this.$router.push('/admin')
+          // Handle redirect after successful login
+          const redirectPath = this.$route.query.redirect || '/admin'
+          this.$router.push(redirectPath)
         } else {
-          this.error = 'Tên đăng nhập hoặc mật khẩu không đúng'
+          this.error = data.message || 'Tên đăng nhập hoặc mật khẩu không đúng'
         }
+      } catch (error) {
+        this.error = 'Có lỗi xảy ra khi đăng nhập. Vui lòng thử lại.'
+        console.error('Login error:', error)
+      } finally {
         this.loading = false
-      }, 1000)
+      }
     }
   },
   mounted() {

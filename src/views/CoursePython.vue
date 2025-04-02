@@ -10,7 +10,7 @@
             <p class="course-description animate__animated animate__fadeIn animate__delay-1s fs-4">
               Khóa học Python AI toàn diện giúp bạn làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay, từ nền tảng cơ bản đến ứng dụng AI. Tập trung vào thực hành và dự án thực tế, phù hợp cho cả người mới bắt đầu và lập trình viên muốn nâng cao kỹ năng.
             </p>
-            <div class="course-meta animate__animated animate__fadeIn animate__delay-2s">
+            <div class="course-meta animate__animated animate__fadeIn animate__delay-1s">
               <div class="meta-item">
                 <i class="bi bi-clock me-2"></i>
                 <span>5 tháng (64 buổi)</span>
@@ -32,7 +32,7 @@
                 <span>Thứ 3, 5, 7 (18:30 - 20:30)</span>
               </div>
             </div>
-            <div class="course-actions animate__animated animate__fadeIn animate__delay-2s">
+            <div class="course-actions animate__animated animate__fadeIn animate__delay-1s">
               <button @click="showRegistrationModal = true" class="btn-light btn-lg me-2 pulse">Đăng ký học</button>
             </div>
           </div>
@@ -365,9 +365,9 @@
               </div>
             </div>
           </section>
-
+<!-- 
           <section class="section mb-3 animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-4 typewriter">Lợi ích khi tham gia khóa học</h2>
+            <h2 class="section-title mb-4">Lợi ích khi tham gia khóa học</h2>
             <div class="benefits-list">
               <div class="row">
                 <div class="col-md-6 mb-4">
@@ -410,7 +410,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         </div>
 
         <div class="col-lg-4">
@@ -427,7 +427,8 @@
               <div class="price-features">
                 <ul>
                   <li v-for="(benefit, index) in benefits" :key="index" :style="{ animationDelay: index * 0.1 + 's' }">
-                    <i class="fas fa-check"></i> {{ benefit }}
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    {{ benefit }}
                   </li>
                 </ul>
               </div>
@@ -560,8 +561,59 @@
             </div> -->
           </div>
         </div>
+        <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-3 font-lato-bold">Lợi ích khi tham gia khóa học</h2>
+            <div class="benefits-list">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary text-center">
+                      <i class="bi bi-code-square fs-1" style="font-size: 3rem !important;"></i>
+                    </div>
+                    <h3 class="mb-3 text-center fw-bold">Lập trình Python Core và OOP</h3>
+                    <h5>Hiểu và thành thạo kỹ thuật lập trình hướng đối tượng với Java, có khả năng sử dụng các cấu trúc điều kiện, cấu trúc lặp, phương thức, và quản lý mảng một chiều.</h5>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary text-center">
+                      <i class="bi bi-database fs-1" style="font-size: 3rem !important;"></i>
+                    </div>
+                    <h3 class="mb-3 text-center fw-bold">Làm việc với cơ sở dữ liệu MySQL</h3>
+                    <h5>Nắm vững từ cú pháp cơ bản đến lập trình hướng đối tượng với Python, tạo nền tảng vững chắc để phát triển các ứng dụng phức tạp.</h5>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary text-center">
+                      <i class="bi bi-gear fs-1" style="font-size: 3rem !important;"></i>
+                    </div>
+                    <h3 class="mb-3 text-center fw-bold">Tạo ra sản phẩm thực tế</h3>
+                    <h5>Hoàn thành dự án cuối khóa, giúp học viên áp dụng kiến thức vào dự án hoàn chỉnh, đóng góp vào portfolio cá nhân.</h5>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-danger text-center">
+                      <i class="bi bi-building fs-1" style="font-size: 3rem !important;"></i>
+                    </div>
+                    <h3 class="mb-3 text-center fw-bold">Chứng nhận và hỗ trợ thực tập</h3>
+                    <h5>Học viên được hỗ trợ tham gia thực tập các dự án thực tế của công ty Techzen. Chứng chỉ học và thực hành tại Công ty TNHH Techzen, cùng hỗ trợ đặc biệt cho các bạn học viên năm cuối.</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
       </div>
     </div>
+    
 
     <div class="cta-section animated-gradient animate-on-scroll" data-animation="animate__fadeIn">
       <div class="container">

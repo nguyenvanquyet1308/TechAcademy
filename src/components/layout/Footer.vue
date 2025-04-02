@@ -3,13 +3,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h2 class="footer-logo">TechZen <span class="text-primary">Academy</span></h2>
+          <h2 class="footer-logo">Techzen <span class="text-primary">Academy</span></h2>
           <p class="mt-3">Trung tâm đào tạo lập trình chuyên nghiệp. Với đội ngũ giảng viên giàu kinh nghiệm, chúng tôi cam kết mang đến các khóa học chất lượng cao.</p>
           <div class="social-links mt-4">
-            <a href="#" class="me-3"><i class="bi bi-facebook fs-5"></i></a>
-            <a href="#" class="me-3"><i class="bi bi-youtube fs-5"></i></a>
-            <a href="#" class="me-3"><i class="bi bi-linkedin fs-5"></i></a>
-            <a href="#"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="https://www.facebook.com/techzenacademy.vn" class="me-3" target="_blank">
+              <i class="bi bi-facebook fs-5"></i>
+            </a>
+            <a href="https://www.youtube.com/@TechzenAcademy/featured"  target="_blank" class="me-3"><i class="bi bi-youtube fs-5"></i></a>
           </div>
         </div>
         <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
@@ -23,7 +23,7 @@
         <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
           <h3 class="footer-heading mb-4">Liên kết</h3>
           <ul class="footer-links">
-            <li><router-link to="/about">Về chúng tôi</router-link></li>
+            <li><router-link to="/course-intro">Về chúng tôi</router-link></li>
             <li><router-link to="/instructors">Giảng viên</router-link></li>
             <!-- <li><router-link to="/tuition">Học phí & Ưu đãi</router-link></li> -->
             <li><router-link to="/faq">FAQ</router-link></li>
@@ -55,12 +55,12 @@
       <hr class="mt-5 border-secondary">
       <div class="row mt-4">
         <div class="col-md-6 text-center text-md-start">
-          <p class="mb-md-0">© 2025 TechAcademy. Tất cả quyền được bảo lưu.</p>
+          <p class="mb-md-0">© 2025 Techzen Academy. Tất cả quyền được bảo lưu.</p>
         </div>
-        <div class="col-md-6 text-center text-md-end">
+        <!-- <div class="col-md-6 text-center text-md-end">
           <router-link to="/privacy" class="text-white me-3">Chính sách bảo mật</router-link>
           <router-link to="/terms" class="text-white">Điều khoản sử dụng</router-link>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>

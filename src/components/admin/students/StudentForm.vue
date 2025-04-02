@@ -34,10 +34,10 @@
         <div class="mb-3">
           <label for="studentStatus" class="form-label">Trạng thái <span class="text-danger">*</span></label>
           <select class="form-select" id="studentStatus" v-model="formData.status" required>
-            <option value="ACTIVE">Đang học</option>
-            <option value="COMPLETED">Đã hoàn thành</option>
-            <option value="PENDING">Chờ xác nhận</option>
-            <option value="DROPPED">Đã nghỉ học</option>
+            <!-- <option value="ACTIVE">Đang học</option> -->
+            <option value="COMPLETED">Đã gọi điện</option>
+            <option value="PENDING">Chờ gọi điện</option>
+            <!-- <option value="DROPPED">Đã nghỉ học</option> -->
           </select>
         </div>
       </div>

@@ -8,7 +8,7 @@
             <p class="course-description animate__animated animate__fadeIn animate__delay-1s fs-4">
               Khóa học Java Back-end toàn diện giúp bạn làm chủ ngôn ngữ lập trình Java và xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Phù hợp cho sinh viên ngành CNTT và những người muốn nâng cao kỹ năng lập trình.
             </p>
-            <div class="course-meta animate__animated animate__fadeIn animate__delay-2s">
+            <div class="course-meta animate__animated animate__fadeIn animate__delay-1s">
               <div class="meta-item">
                 <i class="bi bi-clock me-2"></i>
                 <span>3 tháng (36 buổi)</span>
@@ -30,7 +30,7 @@
                 <span>Thứ 2, 4, 6 từ 18h00 - 21h00 hàng tuần</span>
               </div>
             </div>
-            <div class="course-actions animate__animated animate__fadeIn animate__delay-2s">
+            <div class="course-actions animate__animated animate__fadeIn animate__delay-1s">
               <button @click="showRegistrationModal = true" class="btn btn-light btn-lg me-2 pulse">Đăng ký học</button>
             </div>
           </div>
@@ -341,53 +341,6 @@
             </div>
           </section>
 
-          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-3 font-lato-bold">Lợi ích khi tham gia khóa học</h2>
-            <div class="benefits-list">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
-                    <div class="benefit-icon mb-3 text-primary">
-                      <i class="bi bi-code-square fs-1"></i>
-                    </div>
-                    <h4 class="mb-3">Lập trình Java Core và OOP</h4>
-                    <p>Hiểu và thành thạo kỹ thuật lập trình hướng đối tượng với Java, có khả năng sử dụng các cấu trúc điều kiện, cấu trúc lặp, phương thức, và quản lý mảng một chiều.</p>
-                  </div>
-                </div>
-                
-                <div class="col-md-6 mb-3">
-                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
-                    <div class="benefit-icon mb-3 text-primary">
-                      <i class="bi bi-database fs-1"></i>
-                    </div>
-                    <h4 class="mb-3">Làm việc với cơ sở dữ liệu MySQL</h4>
-                    <p>Nắm vững kiến thức cơ bản về thiết kế, thao tác với CSDL, và kỹ thuật xử lý dữ liệu với MySQL. Hiểu cách làm việc với các cơ chế truy vấn trong cơ sở dữ liệu.</p>
-                  </div>
-                </div>
-                
-                <div class="col-md-6 mb-3">
-                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
-                    <div class="benefit-icon mb-3 text-primary">
-                      <i class="bi bi-gear fs-1"></i>
-                    </div>
-                    <h4 class="mb-3">Xử lý Backend với Spring Boot</h4>
-                    <p>Xây dựng API theo kiến trúc RESTful, nắm vững mô hình MVC, và thao tác với JDBC. Thành thạo ORM với Spring Data JPA, làm việc với nhiều bảng, và sử dụng các công cụ kiểm tra chất lượng mã nguồn.</p>
-                  </div>
-                </div>
-                
-                <div class="col-md-6 mb-3">
-                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
-                    <div class="benefit-icon mb-3 text-danger">
-                      <i class="bi bi-building fs-1"></i>
-                    </div>
-                    <h4 class="mb-3">Thực tập tại doanh nghiệp</h4>
-                    <p>Học viên được hỗ trợ tham gia thực tập các dự án thực tế của công ty Techzen. Chứng chỉ học và thực hành tại Công ty TNHH Techzen, cùng hỗ trợ đặc biệt cho các bạn học viên năm cuối.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
         </div>
 
         <div class="col-lg-4">
@@ -404,7 +357,8 @@
                 <div class="price-features">
                 <ul>
                   <li v-for="(benefit, index) in benefits" :key="index" :style="{ animationDelay: index * 0.1 + 's' }">
-                    <i class="fas fa-check"></i> {{ benefit }}
+                    <i class="bi bi-check-circle-fill text-primary "></i>
+                    {{ benefit }}
                   </li>
                 </ul>
               </div>
@@ -441,97 +395,99 @@
                 </div>
               </div>
             </div>
-<!-- 
-            <div class="countdown-card mb-4 animate-on-scroll" data-animation="animate__fadeInRight">
-              <div class="card-header bg-primary text-white">
-                <h4 class="mb-0"><i class="bi bi-calendar-event me-2"></i> Lịch khai giảng sắp tới</h4>
-              </div>
-              <div class="card-body text-center">
-                <div class="opening-date">
-                  <span class="date-label">Ngày khai giảng:</span>
-                  <h3 class="mb-3 text-primary">09/5/2025</h3>
-                </div>
-                <div class="countdown-timer">
-                  <div class="row g-2">
-                    <div class="col-3">
-                      <div class="countdown-box">
-                        <div class="countdown-value" id="countdown-days">--</div>
-                        <div class="countdown-label">Ngày</div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="countdown-box">
-                        <div class="countdown-value" id="countdown-hours">--</div>
-                        <div class="countdown-label">Giờ</div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="countdown-box">
-                        <div class="countdown-value" id="countdown-minutes">--</div>
-                        <div class="countdown-label">Phút</div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="countdown-box">
-                        <div class="countdown-value" id="countdown-seconds">--</div>
-                        <div class="countdown-label">Giây</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <button @click="showRegistrationModal = true" class="btn btn-primary pulse">Đăng ký ngay</button>
-                </div>
-              </div>
-            </div> -->
 
-          <section class="section animate-on-scroll" data-animation="animate__fadeInUp">
-            <h2 class="section-title mb-2 fs-3 ">Khuyến mãi đặc biệt</h2>
-            <div class="promotions-section">
-              <div class="promotions-list">
-                <div class="promotion-item compact d-flex align-items-start">
-                  <div class="promotion-icon me-2">
-                    <i class="bi bi-tag-fill text-danger"></i>
+            <section class="section animate-on-scroll" data-animation="animate__fadeInUp">
+              <h2 class="section-title mb-2 fs-3 ">Khuyến mãi đặc biệt</h2>
+              <div class="promotions-section">
+                <div class="promotions-list">
+                  <div class="promotion-item compact d-flex align-items-start">
+                    <div class="promotion-icon me-2">
+                      <i class="bi bi-tag-fill text-danger"></i>
+                    </div>
+                    <div>
+                      <h5>Đăng ký sớm</h5>
+                      <p class="small mb-0">Giảm 20% học phí cho học viên đăng ký trước ngày 8/3/2024.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h5>Đăng ký sớm</h5>
-                    <p class="small mb-0">Giảm 20% học phí cho học viên đăng ký trước ngày 8/3/2024.</p>
+                  <div class="promotion-item compact d-flex align-items-start">
+                    <div class="promotion-icon me-2">
+                      <i class="bi bi-people-fill text-primary"></i>
+                    </div>
+                    <div>
+                      <h5>Đăng ký nhóm</h5>
+                      <p class="small mb-0">Giảm 200.000đ/người với nhóm 2 người, 500.000đ/người với nhóm 3 người trở lên.</p>
+                    </div>
+                  </div>
+                  <div class="promotion-item compact d-flex align-items-start">
+                    <div class="promotion-icon me-2">
+                      <i class="bi bi-briefcase-fill text-success"></i>
+                    </div>
+                    <div>
+                      <h5>Cơ hội thực tập</h5>
+                      <p class="small mb-0">100% học viên được thực tập tại Techzen với cơ hội làm việc lâu dài.</p>
+                    </div>
                   </div>
                 </div>
-                <div class="promotion-item compact d-flex align-items-start">
-                  <div class="promotion-icon me-2">
-                    <i class="bi bi-people-fill text-primary"></i>
-                  </div>
-                  <div>
-                    <h5>Đăng ký nhóm</h5>
-                    <p class="small mb-0">Giảm 200.000đ/người với nhóm 2 người, 500.000đ/người với nhóm 3 người trở lên.</p>
-                  </div>
-                </div>
-                <div class="promotion-item compact d-flex align-items-start">
-                  <div class="promotion-icon me-2">
-                    <i class="bi bi-briefcase-fill text-success"></i>
-                  </div>
-                  <div>
-                    <h5>Cơ hội thực tập</h5>
-                    <p class="small mb-0">100% học viên được thực tập tại Techzen với cơ hội làm việc lâu dài.</p>
+                <div class="hotline mt-4 pulse">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <i class="bi bi-telephone-fill text-primary me-2 fs-4"></i>
+                    <p class="mb-0 fw-bold fs-5">Hotline đăng ký: <span class="text-primary">093 550 56 40</span></p>
                   </div>
                 </div>
               </div>
-              <div class="hotline mt-4 pulse">
-                <div class="d-flex align-items-center justify-content-center">
-                  <i class="bi bi-telephone-fill text-primary me-2 fs-4"></i>
-                  <p class="mb-0 fw-bold fs-5">Hotline đăng ký: <span class="text-primary">093 550 56 40</span></p>
+            </section>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <section class="section mb-2 animate-on-scroll" data-animation="animate__fadeInUp">
+            <h2 class="section-title mb-3 font-lato-bold">Lợi ích khi tham gia khóa học</h2>
+            <div class="benefits-list">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary text-center">
+                      <i class="bi bi-code-square fs-1" style="font-size: 3rem !important;"></i>
+                    </div>
+                    <h3 class="mb-3 text-center fw-bold">Lập trình Java Core và OOP</h3>
+                    <h5>Hiểu và thành thạo kỹ thuật lập trình hướng đối tượng với Java, có khả năng sử dụng các cấu trúc điều kiện, cấu trúc lặp, phương thức, và quản lý mảng một chiều.</h5>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary text-center">
+                      <i class="bi bi-database fs-1" style="font-size: 3rem !important;"></i>
+                    </div>
+                    <h3 class="mb-3 text-center fw-bold">Làm việc với cơ sở dữ liệu MySQL</h3>
+                    <h5>Nắm vững kiến thức cơ bản về thiết kế, thao tác với CSDL, và kỹ thuật xử lý dữ liệu với MySQL. Hiểu cách làm việc với các cơ chế truy vấn trong cơ sở dữ liệu.</h5>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-primary text-center">
+                      <i class="bi bi-gear fs-1" style="font-size: 3rem !important;"></i>
+                    </div>
+                    <h3 class="mb-3 text-center fw-bold">Xử lý Backend với Spring Boot</h3>
+                    <h5>Xây dựng API theo kiến trúc RESTful, nắm vững mô hình MVC, và thao tác với JDBC. Thành thạo ORM với Spring Data JPA, làm việc với nhiều bảng, và sử dụng các công cụ kiểm tra chất lượng mã nguồn.</h5>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="benefit-card h-100 p-3 border rounded shadow-sm">
+                    <div class="benefit-icon mb-3 text-danger text-center">
+                      <i class="bi bi-building fs-1" style="font-size: 3rem !important;"></i>
+                    </div>
+                    <h3 class="mb-3 text-center fw-bold">Thực tập tại doanh nghiệp</h3>
+                    <h5>Học viên được hỗ trợ tham gia thực tập các dự án thực tế của công ty Techzen. Chứng chỉ học và thực hành tại Công ty TNHH Techzen, cùng hỗ trợ đặc biệt cho các bạn học viên năm cuối.</h5>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
-          <!-- <div class="course-location  animate-on-scroll" data-animation="animate__fadeInRight" style="animation-delay: 0.7s">
-              <h3 class="sidebar-title">Địa điểm học</h3>
-              <div class="location-card p-3 border rounded">
-                <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i> 06 Trần Phú, Hải Châu, Đà Nẵng</p>
-          </div>
-          </div> -->
-          </div>
         </div>
       </div>
     </div>
@@ -1260,7 +1216,7 @@ export default {
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+  background: #0d6efd;
   color: white;
   padding: 4rem 0;
   text-align: center;
@@ -1563,7 +1519,7 @@ html {
 }
 
 .curriculum-overview .table th {
-  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+  background: #0d6efd;
   color: white;
   font-weight: 600;
   border: none;
@@ -1679,7 +1635,6 @@ html {
 }
 
 .hotline {
-  background: linear-gradient(135deg, #f6f9fc 0%, #eef4fd 100%);
   border-left: 4px solid #2f80ed;
 }
 
@@ -1737,7 +1692,7 @@ html {
 
 /* Add animated background gradient */
 .animated-gradient {
-  background: linear-gradient(135deg, #2f80ed 0%, #56ccf2 100%);
+  background: #0d6efd;
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
 }

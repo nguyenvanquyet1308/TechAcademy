@@ -112,4 +112,22 @@ const router = createRouter({
   }
 })
 
+// Add navigation guard for admin routes
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = localStorage.getItem('adminAuthenticated') === 'true'
+  
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!isAuthenticated) {
+      next({
+        path: '/admin/login',
+        query: { redirect: to.fullPath }
+      })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
+
 export default router 

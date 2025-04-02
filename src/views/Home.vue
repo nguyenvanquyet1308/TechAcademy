@@ -176,7 +176,7 @@
     </section>
 
     <!-- Agile Scrum Methodology Section -->
-    <section class="section agile-scrum py-5 wave-section">
+    <!-- <section class="section agile-scrum py-5 wave-section">
       <div class="container">
         <div class="row">
           <div 
@@ -282,7 +282,7 @@
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
       </div>
-    </section>
+    </section> -->
 
     <!-- Stats Section -->
     <div class="stats-section py-5 text-white parallax-bg">
@@ -533,7 +533,7 @@
                 </div>
                 <div class="course-price-action mt-4 d-flex justify-content-between align-items-center">
                   <div class="course-price">
-                    <span class="new-price">6.500.000 VNĐ</span>
+                    <span class="new-price">6.999.000 VNĐ</span>
                     <span class="old-price">7.800.000 VNĐ</span>
                   </div>
                   <router-link to="/course-java-spring" class="btn btn-primary btn-sm animated-btn fs-5">Xem chi tiết</router-link>
@@ -1071,7 +1071,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .text-glow {
@@ -1104,7 +1104,10 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
   transition: opacity 0.5s;
 }
-
+.btn-light{
+  box-shadow: 0 10px 25px rgba(74, 107, 255, 0.5);
+  font-weight: 600;
+}
 .btn-glow:hover:before {
   opacity: 1;
 }
@@ -1518,7 +1521,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stats-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
 }
@@ -1643,8 +1646,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .instructor-image {
   position: relative;
-  width: 140px;
-  height: 180px;
+  width: 150px;
+  height: 210px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
@@ -1786,7 +1789,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .course-content p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #6c757d;
   font-weight: 500;
 }
@@ -1828,7 +1831,7 @@ h1, h2, h3, h4, h5, h6 {
 .old-price {
   font-size: 1.3rem;
   text-decoration: line-through;
-  color: #adb5bd;
+  color: black;
 }
 
 .animated-btn {

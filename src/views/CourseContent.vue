@@ -3,8 +3,16 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container-fluid px-0">
-        <h1 class="page-title font-lato-bold">Nội dung khóa học</h1>
-        <p class="page-description font-lato">Khám phá chi tiết các chương trình và bài giảng trong khóa học của chúng tôi</p>
+        <h1 class="page-title font-lato-bold" v-motion
+          :initial="{ opacity: 0, y: -50 }"
+          :enter="{ opacity: 1, y: 0, transition: { duration: 800 } }">
+          Nội dung khóa học
+        </h1>
+        <p class="page-description font-lato" v-motion
+          :initial="{ opacity: 0 }"
+          :enter="{ opacity: 1, transition: { delay: 200, duration: 800 } }">
+          Khám phá chi tiết các chương trình và bài giảng trong khóa học của chúng tôi
+        </p>
       </div>
     </section>
 
@@ -12,77 +20,99 @@
     <section class="section available-courses">
       <div class="container">
         <div class="courses-intro">
-          <h2 class="section-title font-lato-bold">Các khóa học hiện có</h2>
-          <p class="courses-desc font-lato">Chúng tôi cung cấp các khóa học chất lượng cao với nội dung cập nhật, phương pháp giảng dạy hiện đại và đội ngũ giảng viên giàu kinh nghiệm.</p>
+          <h2 class="section-title font-lato-bold" v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }">
+            Các khóa học hiện có
+          </h2>
+          <p class="courses-desc font-lato" v-motion
+            :initial="{ opacity: 0 }"
+            :visible="{ opacity: 1, transition: { delay: 200, duration: 800 } }">
+            Chúng tôi cung cấp các khóa học chất lượng cao với nội dung cập nhật, phương pháp giảng dạy hiện đại và đội ngũ giảng viên giàu kinh nghiệm.
+          </p>
         </div>
 
         <div class="courses-grid">
           <!-- Python AI Course -->
-          <div class="course-card">
+          <div class="course-card" v-motion
+            :initial="{ opacity: 0, x: -100 }"
+            :visible="{ opacity: 1, x: 0, transition: { delay: 300, duration: 800 } }">
             <div class="course-image">
               <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Python AI Course">
+              <div class="course-overlay">
+                <div class="overlay-content">
+                  <router-link to="/course-python" class="btn-view-overlay">Xem chi tiết</router-link>
+                </div>
+              </div>
             </div>
             <div class="course-content" style="padding: 20px;">
-              <h3 class="course-name font-lato-bold fs-2">Lập trình Python AI</h3>
+              <h3 class="course-name font-lato-bold fs-2 text-gradient">Lập trình Python AI</h3>
               <div class="course-details">
                 <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-clock"></i></span>
+                  <span class="detail-icon pulse-animation"><i class="bi bi-clock"></i></span>
                   <span class="detail-text">5 tháng (64 buổi)</span>
                 </div>
                 <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
+                  <span class="detail-icon pulse-animation"><i class="bi bi-geo-alt"></i></span>
                   <span class="detail-text">Offline tại văn phòng Techzen</span>
                 </div>
                 <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-people"></i></span>
+                  <span class="detail-icon pulse-animation"><i class="bi bi-people"></i></span>
                   <span class="detail-text">Thứ 3, 5, 7 (18:30 - 20:30)</span>
                 </div>
               </div>
               <p class="course-brief font-lato">Khóa học Python AI toàn diện giúp bạn làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay, từ nền tảng cơ bản đến ứng dụng AI. Tập trung vào thực hành và dự án thực tế, phù hợp cho cả người mới bắt đầu và lập trình viên muốn nâng cao kỹ năng.</p>
               <div class="course-highlights">
-                <span class="font-lato">Python Core & OOP</span>
-                <span class="font-lato">MySQL</span>
-                <span class="font-lato">FastAPI</span>
-                <span class="font-lato">AI Integration</span>
+                <span class="font-lato tag-animation">Python Core & OOP</span>
+                <span class="font-lato tag-animation">MySQL</span>
+                <span class="font-lato tag-animation">FastAPI</span>
+                <span class="font-lato tag-animation">AI Integration</span>
               </div>
               <div class="course-footer">
-                <div class="course-price font-lato-bold fs-3">7.999.000đ</div>
-                <router-link to="/course-python" class="btn btn-outline-primary font-lato">Xem chi tiết</router-link>
+                <div class="course-price font-lato-bold fs-3 animated-text">7.999.000đ</div>
+                <router-link to="/course-python" class="btn btn-outline-primary font-lato animated-btn">Xem chi tiết</router-link>
               </div>
             </div>
           </div>
 
           <!-- Java Backend Course -->
-          <div class="course-card">
+          <div class="course-card" v-motion
+            :initial="{ opacity: 0, x: 100 }"
+            :visible="{ opacity: 1, x: 0, transition: { delay: 500, duration: 800 } }">
             <div class="course-image">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Java Spring Boot Course">
+              <div class="course-overlay">
+                <div class="overlay-content">
+                  <router-link to="/course-java-spring" class="btn-view-overlay">Xem chi tiết</router-link>
+                </div>
+              </div>
             </div>
             <div class="course-content" style="padding: 20px;">
-              <h3 class="course-name font-lato-bold fs-2">Lập trình Java Back-end</h3>
+              <h3 class="course-name font-lato-bold fs-2 text-gradient">Lập trình Java Back-end</h3>
               <div class="course-details">
                 <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-clock"></i></span>
+                  <span class="detail-icon pulse-animation"><i class="bi bi-clock"></i></span>
                   <span class="detail-text">3 tháng (36 buổi)</span>
                 </div>
                 <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-geo-alt"></i></span>
+                  <span class="detail-icon pulse-animation"><i class="bi bi-geo-alt"></i></span>
                   <span class="detail-text">Học offline tại văn phòng Techzen</span>
                 </div>
                 <div class="detail-item font-lato">
-                  <span class="detail-icon"><i class="bi bi-people"></i></span>
+                  <span class="detail-icon pulse-animation"><i class="bi bi-people"></i></span>
                   <span class="detail-text">Thứ 2, 4, 6 (18:00 - 21:00)</span>
                 </div>
               </div>
               <p class="course-brief font-lato">Khóa học Java Back-end toàn diện giúp bạn làm chủ ngôn ngữ lập trình Java và xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Phù hợp cho sinh viên ngành CNTT và những người muốn nâng cao kỹ năng lập trình.</p>
               <div class="course-highlights">
-                <span class="font-lato">Java Core & OOP</span>
-                <span class="font-lato">MySQL</span>
-                <span class="font-lato">Spring Boot</span>
-                <span class="font-lato">RESTful API</span>
+                <span class="font-lato tag-animation">Java Core & OOP</span>
+                <span class="font-lato tag-animation">MySQL</span>
+                <span class="font-lato tag-animation">Spring Boot</span>
+                <span class="font-lato tag-animation">RESTful API</span>
               </div>
               <div class="course-footer">
-                <div class="course-price font-lato-bold  fs-3">6.999.000đ</div>
-                <router-link to="/course-java-spring" class="btn btn-outline-primary font-lato">Xem chi tiết</router-link>
+                <div class="course-price font-lato-bold fs-3 animated-text">4.999.000đ</div>
+                <router-link to="/course-java-spring" class="btn btn-outline-primary font-lato animated-btn">Xem chi tiết</router-link>
               </div>
             </div>
           </div>
@@ -301,30 +331,42 @@
     <!-- Materials Section -->
     <section class="section materials">
       <div class="container">
-        <h2 class="section-title font-lato-bold">Tài liệu học tập</h2>
+        <h2 class="section-title font-lato-bold" v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }">
+          Tài liệu học tập
+        </h2>
         <div class="materials-grid">
-          <div class="material-card">
+          <div class="material-card" v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 600 } }">
             <div class="material-icon">
               <i class="bi bi-book fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Sách và tài liệu điện tử</h3>
             <p class="font-lato">Học viên được cung cấp sách và tài liệu tham khảo đã được biên soạn kỹ lưỡng, cập nhật với xu hướng mới nhất.</p>
           </div>
-          <div class="material-card">
+          <div class="material-card" v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }">
             <div class="material-icon">
               <i class="bi bi-camera-video fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Video bài giảng</h3>
             <p class="font-lato">Bài giảng được quay lại thành video, giúp học viên có thể xem lại sau khi buổi học kết thúc.</p>
           </div>
-          <div class="material-card">
+          <div class="material-card" v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }">
             <div class="material-icon">
               <i class="bi bi-laptop fs-2"></i>
             </div>
             <h3 class="font-lato-bold">Workshop và lab thực hành</h3>
             <p class="font-lato">Nội dung workshop được thiết kế theo hình thức thực hành, giúp học viên áp dụng kiến thức vào thực tế.</p>
           </div>
-          <div class="material-card">
+          <div class="material-card" v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 800, duration: 600 } }">
             <div class="material-icon">
               <i class="bi bi-people fs-2"></i>
             </div>
@@ -338,16 +380,27 @@
     <!-- Projects Section -->
     <section class="section projects">
       <div class="container">
-        <h2 class="section-title font-lato-bold">Các dự án thực tế</h2>
-        <p class="section-desc font-lato">Trong khóa học, học viên sẽ được tham gia vào các dự án thực tế để áp dụng kiến thức đã học. Dưới đây là một số dự án tiêu biểu:</p>
+        <h2 class="section-title font-lato-bold" v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 800 } }">
+          Các dự án thực tế
+        </h2>
+        <p class="section-desc font-lato" v-motion
+          :initial="{ opacity: 0 }"
+          :visible="{ opacity: 1, transition: { delay: 200, duration: 800 } }">
+          Trong khóa học, học viên sẽ được tham gia vào các dự án thực tế để áp dụng kiến thức đã học. Dưới đây là một số dự án tiêu biểu:
+        </p>
         
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" v-motion
+            :initial="{ opacity: 0, scale: 0.9 }"
+            :visible="{ opacity: 1, scale: 1, transition: { delay: 300, duration: 800 } }">
             <div class="project-image">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="E-commerce Website">
+              <div class="project-badge">Web</div>
             </div>
             <div class="project-content">
-              <h3 class="font-lato-bold">Xây dựng website thương mại điện tử</h3>
+              <h3 class="font-lato-bold animated-heading">Xây dựng website thương mại điện tử</h3>
               <p class="font-lato">Phát triển website thương mại điện tử đầy đủ tính năng với giỏ hàng, thanh toán và quản lý sản phẩm.</p>
               <div class="project-tech">
                 <span class="font-lato">HTML/CSS</span>
@@ -358,12 +411,15 @@
             </div>
           </div>
           
-          <div class="project-card">
+          <div class="project-card" v-motion
+            :initial="{ opacity: 0, scale: 0.9 }"
+            :visible="{ opacity: 1, scale: 1, transition: { delay: 500, duration: 800 } }">
             <div class="project-image">
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mobile App">
+              <div class="project-badge">Mobile</div>
             </div>
             <div class="project-content">
-              <h3 class="font-lato-bold">Ứng dụng quản lý cá nhân</h3>
+              <h3 class="font-lato-bold animated-heading">Ứng dụng quản lý cá nhân</h3>
               <p class="font-lato">Xây dựng ứng dụng quản lý công việc và thời gian với các tính năng như lịch, công việc và thống kê.</p>
               <div class="project-tech">
                 <span class="font-lato">React Native</span>
@@ -373,12 +429,15 @@
             </div>
           </div>
           
-          <div class="project-card">
+          <div class="project-card" v-motion
+            :initial="{ opacity: 0, scale: 0.9 }"
+            :visible="{ opacity: 1, scale: 1, transition: { delay: 700, duration: 800 } }">
             <div class="project-image">
               <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Data Dashboard">
+              <div class="project-badge">Data</div>
             </div>
             <div class="project-content">
-              <h3 class="font-lato-bold">Bảng điều khiển dữ liệu</h3>
+              <h3 class="font-lato-bold animated-heading">Bảng điều khiển dữ liệu</h3>
               <p class="font-lato">Phát triển bảng điều khiển để hiển thị và phân tích dữ liệu với các biểu đồ và bảng tương tác.</p>
               <div class="project-tech">
                 <span class="font-lato">Vue.js</span>
@@ -394,10 +453,12 @@
     <!-- CTA Section -->
     <section class="section cta">
       <div class="container-fluid px-0">
-        <div class="cta-content">
-          <h2 class="font-lato-bold">Sẵn sàng để bắt đầu hành trình học tập?</h2>
+        <div class="cta-content" v-motion
+          :initial="{ opacity: 0, scale: 0.9 }"
+          :visible="{ opacity: 1, scale: 1, transition: { duration: 800 } }">
+          <h2 class="font-lato-bold cta-heading">Sẵn sàng để bắt đầu hành trình học tập?</h2>
           <p class="font-lato">Đăng ký ngay để tham gia khóa học và nâng cao kỹ năng của bạn!</p>
-          <router-link to="/register" class="btn font-lato">Đăng ký ngay</router-link>
+          <router-link to="/register" class="btn font-lato btn-glow">Đăng ký ngay</router-link>
         </div>
       </div>
     </section>
@@ -935,5 +996,402 @@ export default {
 .btn {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
+}
+
+/* Additional CSS for Animations */
+.text-gradient {
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.animated-text {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-text::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  left: 0;
+  background: rgba(74, 107, 255, 0.2);
+  z-index: -1;
+  transition: height 0.3s ease;
+}
+
+.animated-text:hover::before {
+  height: 50%;
+}
+
+.animated-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.animated-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(74, 107, 255, 0.2), transparent);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.animated-btn:hover::before {
+  left: 100%;
+}
+
+.animated-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-heading::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(90deg, #4a6bff, #a74dff);
+  transition: width 0.3s ease;
+}
+
+.animated-heading:hover::after {
+  width: 100%;
+}
+
+.pulse-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.pulse-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(74, 107, 255, 0.4);
+  opacity: 0;
+  z-index: -1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.tag-animation {
+  animation: tagFadeIn 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.course-highlights span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.course-highlights span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.course-highlights span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.course-highlights span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.course-highlights span:hover {
+  background: #4a6bff;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+}
+
+@keyframes tagFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.course-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.course-card:hover .course-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .overlay-content {
+  transform: translateY(0);
+}
+
+.btn-view-overlay {
+  display: inline-block;
+  padding: 10px 25px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #4a6bff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-view-overlay:hover {
+  background: white;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.material-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.material-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  background: rgba(74, 107, 255, 0.05);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.material-card:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+.material-card:hover {
+  transform: translateY(-15px);
+}
+
+.material-card:hover .material-icon {
+  transform: rotateY(180deg);
+  background: rgba(74, 107, 255, 0.3);
+}
+
+.material-icon {
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.project-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #4a6bff;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-badge {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.project-tech span {
+  transition: all 0.3s ease;
+}
+
+.project-tech span:hover {
+  background: #4a6bff;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+}
+
+.btn-glow {
+  background: white;
+  color: #4a6bff;
+  font-size: 1.1rem;
+  padding: 15px 40px;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-glow:hover {
+  background: white;
+  color: #a74dff;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.cta-heading::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  animation: lineGrow 1.5s forwards 0.5s;
+  border-radius: 4px;
+}
+
+@keyframes lineGrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+.cta-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 10s infinite ease-in-out;
+}
+
+.particle-1 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.particle-3 {
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.particle-4 {
+  width: 120px;
+  height: 120px;
+  top: 70%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(20px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 992px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .particle {
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .tag-animation, .project-tech span {
+    margin-bottom: 5px;
+  }
+  
+  .material-card:hover {
+    transform: translateY(-5px);
+  }
 }
 </style> 

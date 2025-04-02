@@ -40,17 +40,29 @@
             <div class="course-tag" v-if="testimonial.course">
               <i class="bi bi-journal-code"></i> {{ testimonial.course }}
             </div>
+          
           </div>
           <div class="testimonial-author">
-            <img :src="testimonial.avatar" :alt="testimonial.name">
-            <div class="author-info">
-              <h4>{{ testimonial.name }}</h4>
-              <p>{{ testimonial.title }}</p>
-              <small v-if="testimonial.date">{{ testimonial.date }}</small>
-            </div>
+          <img :src="testimonial.avatar" :alt="testimonial.name">
+          <div class="author-info">
+            <h4>{{ testimonial.name }}</h4>
+            <p>{{ testimonial.title }}</p>
+            <small v-if="testimonial.date">{{ testimonial.date }}</small>
           </div>
+          <a :href="testimonial.facebookLink" target="_blank" class="facebook-icon">
+            <i class="bi bi-facebook"></i> 
+          </a>
+        </div>
+
+        
         </div>
       </transition-group>
+      <div class = "mt-3 text-center">
+        <iframe width="580" height="350" 
+        src="https://www.youtube.com/embed/sEoCtsvL8R8?si=wSsfWh45Jf4v0YBU&amp;start=10" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 </template>
@@ -74,34 +86,36 @@ export default {
       defaultTestimonials: [
         {
           id: 1,
-          content: '"Khóa học đã giúp tôi từ một người không biết gì về lập trình trở thành một developer chuyên nghiệp. Các kiến thức được truyền đạt dễ hiểu và thực tế."',
-          avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-          name: 'Nguyễn Văn A',
-          title: 'Frontend Developer',
+          content: '"Trong thị trường canh tranh khóc liệt hiện nay, việc bổ sung kinh nghiệm thực chiến từ sớm là một điểm cộng lớn. Và Techzen Academy chính là nơi giúp mình phát triển và tự tin hơn trên con đường theo đuổi sự nghiệp công nghệ"',
+          avatar: '/src/assets/images/lengocanh.png', 
+          name: 'Lê Ngọc Anh',
+          title: 'Java Developer',
           rating: 5,
-          course: 'JavaScript Advanced',
-          date: 'Tháng 3, 2023',
-          highlight: true
+          course: 'Java Backend',
+          date: 'Tháng 3, 2025',
+          highlight: true,
+          facebookLink: "https://www.facebook.com/share/p/14MRdqgs61/"
         },
         {
           id: 2,
-          content: '"Giảng viên rất tận tâm, luôn sẵn sàng giải đáp mọi thắc mắc. Tôi đặc biệt ấn tượng với cách tiếp cận thực tế trong các bài học."',
-          avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-          name: 'Trần Thị B',
-          title: 'UX/UI Designer',
+          content: '"Với Tuấn, điểm thu hút nhất của Techzen Academy chính là chương trình đào tạo kết hợp với thực chiến, được hướng dẫn bởi anh Nguyễn Ngọc Quang - Mentor giàu kinh nghiệm tại Techzen.."',
+          avatar: '/src/assets/images/thanhtuan.png', 
+          name: 'Đỗ Lê Thanh Tuấn',
+          title: 'Java Developer',
           rating: 4,
-          course: 'UI/UX Design',
-          date: 'Tháng 5, 2023'
+          course: 'Java Backend',
+          date: 'Tháng 2, 2025',
+          facebookLink: "https://www.facebook.com/share/p/1HAtar51UQ/"
         },
         {
           id: 3,
           content: '"Nhờ khóa học Python AI tại Techzen, tôi đã được nhận vào vị trí Data Analyst tại công ty công nghệ hàng đầu. Kiến thức thực tế và các dự án trong khóa học đã giúp tôi rất nhiều."',
           avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
-          name: 'Lê Minh Tuấn',
-          title: 'Data Analyst',
+          name: 'Hồ Minh Tùng',
+          title: 'Python dev',
           rating: 5,
           course: 'Python AI',
-          date: 'Tháng 6, 2023',
+          date: 'Tháng 1, 2025',
           highlight: true
         },
         {
@@ -113,16 +127,6 @@ export default {
           rating: 5,
           course: 'Java Backend',
           date: 'Tháng 7, 2023'
-        },
-        {
-          id: 5,
-          content: '"Tôi đánh giá cao cách Techzen Academy cập nhật liên tục nội dung khóa học theo xu hướng công nghệ mới nhất. Điều này giúp tôi luôn tự tin với kiến thức của mình khi phỏng vấn."',
-          avatar: 'https://randomuser.me/api/portraits/men/56.jpg',
-          name: 'Phạm Văn Hùng',
-          title: 'DevOps Engineer',
-          rating: 4,
-          course: 'Cloud & DevOps',
-          date: 'Tháng 8, 2023'
         }
       ]
     }
@@ -159,6 +163,16 @@ export default {
 </script>
 
 <style scoped>
+.facebook-icon {
+  color: #8F87F1; 
+  font-size: 2.5rem; 
+  text-decoration: none;
+  margin-top: 20px;
+  margin-left: auto;
+}
+.facebook-icon:hover {
+  color: blue; /* Màu khi hover */
+}
 .section-subtitle {
   text-align: center;
   color: #6c757d;
@@ -258,7 +272,7 @@ export default {
 }
 
 .testimonial-content {
-  padding: 30px;
+  padding: 10px;
   font-style: italic;
   color: #495057;
   position: relative;
@@ -294,8 +308,8 @@ export default {
 }
 
 .testimonial-author img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 15px;

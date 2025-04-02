@@ -110,47 +110,26 @@ export default {
     return {
       reviews: [
         {
-          name: 'Nguyễn Văn A',
+          name: 'Thái Hoàng Bảo',
           avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
-          course: 'Khóa học Web Development',
+          course: 'Khóa học Java Backend ',
           rating: 5,
           comment: 'Khóa học rất hay và chi tiết. Giảng viên nhiệt tình và có nhiều kinh nghiệm thực tế.'
         },
         {
-          name: 'Trần Thị B',
+          name: 'Dương Văn Nghĩa',
           avatar: 'https://randomuser.me/api/portraits/women/2.jpg',
-          course: 'Khóa học Java Programming',
+          course: 'Khóa học Java Backend',
           rating: 4,
-          comment: 'Tôi đã học được rất nhiều từ khóa học này. Nội dung cập nhật và phù hợp với nhu cầu thị trường.'
+          comment: 'Mình đã học được rất nhiều từ khóa học này. Nội dung cập nhật và phù hợp với nhu cầu thị trường.'
         },
         {
-          name: 'Lê Văn C',
+          name: 'Nguyễn Văn Quyết',
           avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
-          course: 'Khóa học Data Science',
+          course: 'Khóa học Python AI',
           rating: 5,
-          comment: 'Khóa học giúp tôi hiểu rõ về Data Science và cách áp dụng vào công việc thực tế.'
+          comment: 'Khóa học giúp mình hiểu rõ về hơn về AI và cách áp dụng vào công việc thực tế.'
         },
-        {
-          name: 'Phạm Thị D',
-          avatar: 'https://randomuser.me/api/portraits/women/4.jpg',
-          course: 'Khóa học Mobile App Development',
-          rating: 5,
-          comment: 'Tôi đã có thể phát triển ứng dụng di động của riêng mình sau khi hoàn thành khóa học này.'
-        },
-        {
-          name: 'Hoàng Văn E',
-          avatar: 'https://randomuser.me/api/portraits/men/5.jpg',
-          course: 'Khóa học UI/UX Design',
-          rating: 4,
-          comment: 'Khóa học cung cấp kiến thức toàn diện về thiết kế UI/UX và các công cụ hiện đại.'
-        },
-        {
-          name: 'Ngô Thị F',
-          avatar: 'https://randomuser.me/api/portraits/women/6.jpg',
-          course: 'Khóa học DevOps',
-          rating: 5,
-          comment: 'Tôi đã học được cách triển khai và quản lý hệ thống một cách hiệu quả từ khóa học này.'
-        }
       ],
       testimonials: [
         {
