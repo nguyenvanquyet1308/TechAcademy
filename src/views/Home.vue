@@ -533,8 +533,8 @@
                 </div>
                 <div class="course-price-action mt-4 d-flex justify-content-between align-items-center">
                   <div class="course-price">
-                    <span class="new-price">4.999.000 VNĐ</span>
-                    <span class="old-price">5.800.000 VNĐ</span>
+                    <span class="new-price">6.999.000 VNĐ</span>
+                    <span class="old-price">7.800.000 VNĐ</span>
                   </div>
                   <router-link to="/course-java-spring" class="btn btn-primary btn-sm animated-btn fs-5">Xem chi tiết</router-link>
                 </div>
@@ -1071,7 +1071,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .text-glow {
@@ -1104,7 +1104,10 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
   transition: opacity 0.5s;
 }
-
+.btn-light{
+  box-shadow: 0 10px 25px rgba(74, 107, 255, 0.5);
+  font-weight: 600;
+}
 .btn-glow:hover:before {
   opacity: 1;
 }
@@ -1518,7 +1521,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stats-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
 }

@@ -10,7 +10,7 @@
             <p class="course-description animate__animated animate__fadeIn animate__delay-1s fs-4">
               Khóa học Python AI toàn diện giúp bạn làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay, từ nền tảng cơ bản đến ứng dụng AI. Tập trung vào thực hành và dự án thực tế, phù hợp cho cả người mới bắt đầu và lập trình viên muốn nâng cao kỹ năng.
             </p>
-            <div class="course-meta animate__animated animate__fadeIn animate__delay-2s">
+            <div class="course-meta animate__animated animate__fadeIn animate__delay-1s">
               <div class="meta-item">
                 <i class="bi bi-clock me-2"></i>
                 <span>5 tháng (64 buổi)</span>
@@ -32,7 +32,7 @@
                 <span>Thứ 3, 5, 7 (18:30 - 20:30)</span>
               </div>
             </div>
-            <div class="course-actions animate__animated animate__fadeIn animate__delay-2s">
+            <div class="course-actions animate__animated animate__fadeIn animate__delay-1s">
               <button @click="showRegistrationModal = true" class="btn-light btn-lg me-2 pulse">Đăng ký học</button>
             </div>
           </div>

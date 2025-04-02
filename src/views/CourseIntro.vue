@@ -54,7 +54,6 @@
               <h3 class="academy-title">Techzen Academy</h3>
               <p>Tại <strong>Techzen Academy</strong>, chúng tôi mang đến chương trình đào tạo lập trình toàn diện, <strong>từ nền tảng cơ bản đến các công nghệ hiện đại. Đội ngũ giảng viên giàu kinh nghiệm</strong> của chúng tôi sẽ hướng dẫn bạn một cách tỉ mỉ và chi tiết, giúp bạn nắm vững kiến thức và <strong>phát triển kỹ năng lập trình chuyên nghiệp</strong>.</p>
               <p>Chương trình học tập tại Techzen Academy không chỉ tập trung vào lý thuyết, mà còn chú trọng vào tình huống thực tế. Với sự chuẩn bị kỹ lưỡng từ Techzen Academy, bạn sẽ tự tin bước vào thế giới công nghệ và sẵn sàng chinh phục những cơ hội nghề nghiệp đầy triển vọng.</p>
-              
               <div class="company-info">
                 <div class="info-item">
                   <span class="info-label">Thành lập:</span>
@@ -69,16 +68,37 @@
                   <span class="info-value">0236 628 1189 | contact@techzen.vn</span>
                 </div>
               </div>
-            </div>
-            <div class="instructor-highlight">
-              <div class="instructor-card">
-                <div class="instructor-image">
-                  <img src="../assets/images/CEO.png" alt="CEO Le Duy Linh" onerror="this.src='https://via.placeholder.com/150?text=CEO'">
+              
+              <div class="profile-card">
+                <div class="profile-image">
+                  <img src="../assets/images/CEO.png" alt="CEO Le Duy Linh">
                 </div>
-                <div class="instructor-details">
-                  <h4>Lê Duy Linh</h4>
-                  <p class="instructor-title">CEO Techzen</p>
-                  <p class="instructor-desc">Đã trực tiếp đào tạo phát triển Agile cho nhân sự tại Việt Nam, Trung Quốc và Nhật Bản</p>
+                <div class="profile-content">
+                  <h2 class="profile-name">LÊ DUY LINH</h2>
+                  <p class="profile-title">CEO Techzen | Giám đốc Điều hành Techzen & Sáng lập Techzen Academy – Trung tâm Đào tạo Công nghệ Thực hành</p>
+                  <div class="profile-section">
+                    <div>
+                      <i class="bi bi-handbag me-2 fs-4"></i>
+                      <h3>Kinh nghiệm làm việc</h3>
+                    </div>
+                    <ul class="profile-list">
+                      <li><span class="check-icon"></span> CEO & Founder của Techzen</li>
+                      <li><span class="check-icon"></span> Giám đốc điều hành Techzen & Sáng lập Techzen Academy</li>
+                      <li><span class="check-icon"></span> Hơn 10 năm kinh nghiệm trong ngành công nghệ thông tin</li>
+                      <li><span class="check-icon"></span> Đã trực tiếp đào tạo phát triển Agile cho nhân sự tại Việt Nam, Trung Quốc và Nhật Bản</li>
+                      <li><span class="check-icon"></span> Tư vấn cho nhiều dự án phần mềm lớn trong và ngoài nước</li>
+                    </ul>
+                  </div>
+                  <div class="profile-section">
+                    <i class="bi bi-bullseye me-2 fs-4"></i>  
+                    <h3>Tầm nhìn</h3>
+                    <ul class="profile-list">
+                      <li><span class="check-icon"></span> 
+                        Anh Lê Duy Linh không ngừng mở rộng Techzen và Techzen Academy với mục tiêu trở thành hệ sinh thái công nghệ và đào tạo toàn diện, 
+                       không chỉ cung cấp dịch vụ công nghệ mà còn là cái nôi đào tạo những tài năng trẻ, tiên phong trong các giải pháp số hóa và công nghệ tại Việt Nam.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -108,7 +128,7 @@
                 </div>
                 <div class="highlight-text">
                   <h4>Quy mô lớp học</h4>
-                  <p>10-15 học viên/lớp</p>
+                  <p>15-20 học viên/lớp</p>
                 </div>
               </div>
               <div class="highlight-item animated-item"
@@ -119,7 +139,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
                 <div class="highlight-text">
-                  <h4>Chứng chỉ</h4>
+                  <h4>Chứng nhận</h4>
                   <p>Được cấp sau khi hoàn thành khóa học</p>
                 </div>
               </div>
@@ -387,6 +407,7 @@ export default {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .highlight-icon {
@@ -1033,7 +1054,7 @@ export default {
 
 /* Company Introduction Section Styles */
 .company-intro {
-  padding: 60px 0;
+  padding: 20px 0;
   background: linear-gradient(to right, #f8f9fa, #e9f2ff);
   position: relative;
   overflow: hidden;
@@ -1176,7 +1197,7 @@ export default {
 
 .academy-intro {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 40px;
   background: white;
   border-radius: 20px;
@@ -1191,6 +1212,7 @@ export default {
 
 .academy-content {
   padding: 40px;
+  width: 100%;
 }
 
 .academy-title {
@@ -1238,88 +1260,188 @@ export default {
   margin-right: 10px;
 }
 
-.instructor-highlight {
-  background: linear-gradient(135deg, #4a6bff 0%, #6a3aef 100%);
-  padding: 40px;
+.instructor-card {
+  display: none;
+}
+
+/* Profile Card Styles */
+.profile-card {
   display: flex;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(74, 107, 255, 0.1);
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(74, 107, 255, 0.2);
+  border-color: rgba(74, 107, 255, 0.3);
+}
+
+.profile-image {
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-image img {
+  width:100%;
+  max-width: 550px;
+  height: 100%;
+  border-radius: 8px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-content {
+  width: 70%;
+  padding: 15px;
+  background: #fff;
+}
+
+.profile-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile-title {
+  font-size: 1.2rem;
+  color: #4a6bff;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.profile-section {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.section-icon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.instructor-card {
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-}
-
-.instructor-image {
-  width: 125px;
-  height: 150px;
-  min-width: 125px;
+  width: 36px;
+  height: 36px;
+  background: rgba(74, 107, 255, 0.1);
   border-radius: 50%;
-  overflow: hidden;
-  margin-right: 20px;
-  border: 3px solid white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.instructor-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.instructor-details h4 {
-  font-size: 1.3rem;
-  margin-bottom: 5px;
-  color: #212529;
-  font-weight: 700;
-}
-
-.instructor-title {
+  margin-right: 10px;
   color: #4a6bff;
-  font-weight: 600;
-  margin-bottom: 10px;
-  font-size: 1rem;
+  vertical-align: middle;
 }
 
-.instructor-desc {
-  color: #495057;
-  font-size: 0.9rem;
-  line-height: 1.5;
+.profile-section h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.profile-list {
+  list-style: none;
   margin: 0;
 }
 
+.profile-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.check-icon:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #4a6bff, #6a3aef);
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(74, 107, 255, 0.2);
+}
+
+.check-icon:after {
+  content: '✓';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skill-tag {
+  background: rgba(74, 107, 255, 0.1);
+  color: #4a6bff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
 @media (max-width: 992px) {
-  .academy-intro {
-    grid-template-columns: 1fr;
+  .profile-card {
+    flex-direction: column;
   }
   
-  .instructor-highlight {
-    padding: 30px;
+  .profile-image, .profile-content {
+    width: 100%;
+  }
+  
+  .profile-image {
+    height: 300px;
+  }
+  
+  .profile-name {
+    font-size: 2rem;
+    margin-top: 15px;
   }
 }
 
 @media (max-width: 768px) {
-  .company-cards {
-    grid-template-columns: 1fr;
+  .section-icon-wrapper {
+    width: 36px;
+    height: 36px;
   }
   
-  .academy-content {
-    padding: 30px;
+  .section-icon-wrapper i {
+    font-size: 1.2rem;
   }
   
-  .instructor-card {
-    flex-direction: column;
-    text-align: center;
+  .profile-list li {
+    font-size: 1rem;
   }
   
-  .instructor-image {
-    margin: 0 auto 20px;
+  .profile-name {
+    font-size: 1.8rem;
+  }
+  
+  .profile-title {
+    font-size: 1.1rem;
+  }
+  
+  .profile-image {
+    height: 250px;
   }
 }
 </style> 
