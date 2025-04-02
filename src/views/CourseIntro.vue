@@ -166,7 +166,7 @@
                :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }">
           <div class="objective-card">
             <div class="objective-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </div>
             <h3 class="font-lato-bold">Hiểu sâu về kiến thức nền tảng</h3>
             <p class="font-lato">Nắm vững các khái niệm cơ bản và nền tảng trong lĩnh vực công nghệ</p>
@@ -644,6 +644,55 @@ export default {
   .cta-buttons {
     flex-direction: column;
     gap: 15px;
+  }
+
+  /* Make academy-intro full width on mobile */
+  .academy-intro {
+    margin-left: -15px; /* Adjust based on actual container padding */
+    margin-right: -15px; /* Adjust based on actual container padding */
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .academy-content {
+    padding-left: 15px; /* Restore padding */
+    padding-right: 15px; /* Restore padding */
+  }
+  
+  /* Reset profile card margin adjusted by academy-intro margin */
+  .profile-card {
+      margin-left: 15px;
+      margin-right: 15px;
+  }
+  
+  /* Adjust profile content padding if necessary */
+   .profile-content {
+     padding: 15px; /* Ensure consistent padding */
+   }
+   
+   .section-icon-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .section-icon-wrapper i {
+    font-size: 1.2rem;
+  }
+  
+  .profile-list li {
+    font-size: 1rem;
+  }
+  
+  .profile-name {
+    font-size: 1.8rem;
+  }
+  
+  .profile-title {
+    font-size: 1.1rem;
+  }
+  
+  .profile-image {
+    overflow: visible; /* Allow image to determine height */
   }
 }
 
@@ -1211,7 +1260,7 @@ export default {
 }
 
 .academy-content {
-  padding: 40px;
+  padding: 20px;
   width: 100%;
 }
 
@@ -1290,15 +1339,10 @@ export default {
 }
 
 .profile-image img {
-  width:100%;
-  max-width: 550px;
-  height: 100%;
-  border-radius: 8px;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block; /* Ensure block display */
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Keep the radius if desired */
 }
 
 .profile-content {
@@ -1409,7 +1453,7 @@ export default {
   }
   
   .profile-image {
-    height: 300px;
+    overflow: visible; /* Allow image to determine height */
   }
   
   .profile-name {
@@ -1441,7 +1485,7 @@ export default {
   }
   
   .profile-image {
-    height: 250px;
+    overflow: visible; /* Allow image to determine height */
   }
 }
 </style> 
