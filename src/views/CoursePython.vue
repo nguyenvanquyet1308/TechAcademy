@@ -743,12 +743,20 @@
         <button class="btn" @click="acceptTerms">Tôi đồng ý</button>
       </div>
     </div>
+
+    <!-- Facebook Chatbot -->
+    <FacebookChatbot />
   </div>
 </template>
 
 <script>
+import FacebookChatbot from '@/components/FacebookChatbot.vue'
+
 export default {
   name: 'CoursePythonView',
+  components: {
+    FacebookChatbot
+  },
   data() {
     return {
       benefits: [

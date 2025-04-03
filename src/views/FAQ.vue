@@ -34,10 +34,8 @@
             <p>Đừng ngần ngại liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi nào khác.</p>
             <div class="contact-buttons">
               <a href="tel:+8493 550 56 40"class="btn btn-primary me-2">
-                <i class="fas fa-phone-alt me-1"></i> Gọi ngay
-              </a>
-              <a href="mailto:academy@techzen.vn" class="btn btn-outline-primary">
-                <i class="fas fa-envelope me-1"></i> Gửi email
+                <i class="bi bi-chat-dots-fill"></i>
+                Liên hệ ngay
               </a>
             </div>
           </div>

@@ -346,7 +346,7 @@
             <h3 class="font-lato-bold">Sách và tài liệu điện tử</h3>
             <p class="font-lato">Học viên được cung cấp sách và tài liệu tham khảo đã được biên soạn kỹ lưỡng, cập nhật với xu hướng mới nhất.</p>
           </div>
-          <div class="material-card" v-motion
+          <!-- <div class="material-card" v-motion
             :initial="{ opacity: 0, y: 50 }"
             :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }">
             <div class="material-icon">
@@ -354,7 +354,7 @@
             </div>
             <h3 class="font-lato-bold">Video bài giảng</h3>
             <p class="font-lato">Bài giảng được quay lại thành video, giúp học viên có thể xem lại sau khi buổi học kết thúc.</p>
-          </div>
+          </div> -->
           <div class="material-card" v-motion
             :initial="{ opacity: 0, y: 50 }"
             :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }">
