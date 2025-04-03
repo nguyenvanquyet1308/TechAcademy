@@ -27,10 +27,6 @@
                 <i class="bi bi-geo-alt me-2"></i>
                 <span>Offline tại văn phòng Techzen</span>
               </div>
-              <div class="meta-item">
-                <i class="bi bi-people me-2"></i>
-                <span>Thứ 3, 5, 7 (18:30 - 20:30)</span>
-              </div>
             </div>
             <div class="course-actions animate__animated animate__fadeIn animate__delay-1s">
               <button @click="showRegistrationModal = true" class="btn-light btn-lg me-2 pulse">Đăng ký học</button>
@@ -440,9 +436,9 @@
               <div class="instructor-body">
               <div class="instructor-infomation">
                 <div class="instructor-avatar">
-                  <img src="../assets/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
+                  <img src="/public/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
                 </div>
-                <div class="instructor-name mt-4">HUỲNH HẢI THIÊN</div>
+                <div class="instructor-name mt-4 fs-4">HUỲNH HẢI THIÊN</div>
               </div>
                 <div class="instructor-title mt-2">Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm</div>
                 <div class="instructor-info mt-3">
@@ -1045,7 +1041,9 @@ export default {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
+.instructor-name{
+  font-weight: 550;
+}
 .course-description {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
@@ -1330,8 +1328,8 @@ export default {
   align-items: center;
 }
 .instructor-avatar {
-  width: 150px;
-  height: 170px;
+  width: 160px;
+  height: 180px;
   border-radius: 20%;
   overflow: hidden;
 }

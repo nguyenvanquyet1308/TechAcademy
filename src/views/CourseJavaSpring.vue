@@ -25,10 +25,6 @@
                 <i class="bi bi-geo-alt me-2"></i>
                 <span>Học offline tại văn phòng Techzen</span>
               </div>
-              <div class="meta-item">
-                <i class="bi bi-calendar-week me-2"></i>
-                <span>Thứ 2, 4, 6 từ 18h00 - 21h00 hàng tuần</span>
-              </div>
             </div>
             <div class="course-actions animate__animated animate__fadeIn animate__delay-1s">
               <button @click="showRegistrationModal = true" class="btn btn-light btn-lg me-2 pulse">Đăng ký học</button>
@@ -370,9 +366,9 @@
               <div class="instructor-body">
               <div class="instructor-infomation">
                 <div class="instructor-avatar">
-                  <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
+                  <img src="/public/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
                 </div>
-                <div class="instructor-name mt-4 font-lato-bold">NGUYỄN NGỌC QUANG</div>
+                <div class="instructor-name mt-4 fs-4 font-lato-bold">NGUYỄN NGỌC QUANG</div>
               </div>
                 <div class="instructor-title mt-2">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</div>
                 <div class="instructor-info mt-3">
@@ -1062,8 +1058,8 @@ export default {
   align-items: center;
 }
 .instructor-avatar {
-  width: 150px;
-  height: 170px;
+  width: 160px;
+  height: 180px;
   border-radius: 20%;
   overflow: hidden;
 }

@@ -21,6 +21,9 @@
               <h3 class="academy-title">Techzen Academy</h3>
               <p>Tại <strong>Techzen Academy</strong>, chúng tôi mang đến chương trình đào tạo lập trình toàn diện, <strong>từ nền tảng cơ bản đến các công nghệ hiện đại. Đội ngũ giảng viên giàu kinh nghiệm</strong> của chúng tôi sẽ hướng dẫn bạn một cách tỉ mỉ và chi tiết, giúp bạn nắm vững kiến thức và <strong>phát triển kỹ năng lập trình chuyên nghiệp</strong>.</p>
               <p>Chương trình học tập tại Techzen Academy không chỉ tập trung vào lý thuyết, mà còn chú trọng vào tình huống thực tế. Với sự chuẩn bị kỹ lưỡng từ Techzen Academy, bạn sẽ tự tin bước vào thế giới công nghệ và sẵn sàng chinh phục những cơ hội nghề nghiệp đầy triển vọng.</p>
+              <div class="infoTechzen">
+              <a href="https://techzen.vn/"  target="_blank">  <button class ="btn btn-primary">Thông tin thêm về Techzen</button></a>
+              </div>
               <div class="company-info">
                 <div class="info-items-wrapper">
                   <div class="info-item">
@@ -36,8 +39,8 @@
                     <span class="info-value">0236 628 1189 | contact@techzen.vn</span>
                   </div>
                 </div>
-              <a href="https://techzen.vn/"  target="_blank">  <button class ="btn btn-primary">Thông tin thêm về Techzen</button></a>
               </div>
+              
               
               <div class="profile-card">
                 <div class="profile-image">
@@ -343,7 +346,10 @@ export default {
   padding: 60px 0;
   text-align: center;
 }
-
+.infoTechzen{
+  display: flex;
+  justify-content: end;
+}
 .page-title {
   font-size: 2.8rem;
   margin-bottom: 15px;
@@ -495,7 +501,7 @@ export default {
 .benefit-content h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #212529;
 }
 
@@ -1429,7 +1435,7 @@ export default {
   }
   
   .profile-image {
-    height: 300px;
+    height: 450px;
   }
   
   .profile-name {
@@ -1460,9 +1466,6 @@ export default {
     font-size: 1.1rem;
   }
   
-  .profile-image {
-    height: 250px;
-  }
 }
 
 .company-info {

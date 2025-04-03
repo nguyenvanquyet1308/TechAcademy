@@ -21,6 +21,7 @@ export default {
   bottom: 20px;
   right: 20px;
   z-index: 9999;
+  animation: pulse 2s infinite ease-in-out;
 }
 
 .facebook-chatbot a {
@@ -83,4 +84,17 @@ export default {
     display: none;
   }
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 </style> 

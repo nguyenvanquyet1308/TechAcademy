@@ -86,19 +86,14 @@
                 
                 <div v-else class="blog-content" v-html="blog.content"></div>
               </div>
-              <!-- Tags -->
-              <div class="blog-tags" v-if="blog.tags && blog.tags.length > 0">
-                <span class="tag-label"><i class="fas fa-tags"></i> Tags:</span>
-                <span class="tag-item" v-for="(tag, index) in blog.tags" :key="index">{{ tag }}</span>
-              </div>
               
               <!-- Share Buttons -->
-              <div class="blog-share">
+              <!-- <div class="blog-share">
                 <h5>Xem chi tiết hơn tại</h5>
                 <div class="share-buttons">
                   <a href="https://techzen.vn/news/" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Techzen</a>
                 </div>
-              </div>
+              </div> -->
               
               <!-- Back Button -->
               <div class="blog-actions">
@@ -191,11 +186,11 @@ export default {
             {
               type: 'image',
               src: 'https://techzen.vn/wp-content/uploads/2024/07/ROM01127-min-2048x1365.jpg',
-              caption: 'Các khoảnh khắc trong buổi lễ ký kết MOU giữa Techzen và Trung tâm phát triển phần mềm SDC'
+              caption: ''
             },
             {
               type: 'text',
-              content: '<p>Hi vọng với những nội dung mà Techzen và Trung tâm phát triển phần mềm SDC đã kí kết, sẽ thúc đẩy sự phát triển nhanh chóng và hiệu quả của Techzen Academy trong tương lai.</p><p>Techzen - Người tử tế sẽ tạo ra những sản phẩm tử tế...</p>'
+              content: '<p>Hi vọng với những nội dung mà Techzen và Trung tâm phát triển phần mềm SDC đã kí kết, sẽ thúc đẩy sự phát triển nhanh chóng và hiệu quả của Techzen Academy trong tương lai.</p><p>Techzen - Người tử tế sẽ tạo ra những sản phẩm tử tế.</p>'
             }
           ]
         },
@@ -219,7 +214,7 @@ export default {
               type: 'image',
               src: '/images/a1.jpg',
               alt: '',
-              caption: 'Các bạn sinh viên demo dự án trước các mentor của công ty.'
+              caption: 'Các bạn học viên demo dự án trước các mentor của công ty.'
             },
             {
               type: 'text',
@@ -235,7 +230,7 @@ export default {
                 { src: '/images/a2.jpg', alt: '' },
                 { src: '/images/a3.jpg', alt: '' }
               ],
-              caption: 'Các bạn sinh viên demo dự án trước các mentor của công ty.'
+              caption: 'Các bạn học viên demo dự án trước các mentor của công ty.'
             },
             {
               type: 'text',
@@ -252,7 +247,7 @@ export default {
           authorName: 'Võ Minh Nguyệt',
           authorPosition: 'Admin tại Techzen',
           authorAvatar: 'https://techzen.vn/wp-content/themes/Techzen/assets/images/msNguyet-read-news.png',
-          tags: ['Business Tour', 'Hợp tác', 'Nhật Bản'],
+          tags: ['Academy', '', 'Nhật Bản'],
           image: '/images/academy1.jpg',
           authorAvatar: 'https://techzen.vn/wp-content/themes/Techzen/assets/images/msNguyet-read-news.png',
           contentSections: [
@@ -277,7 +272,7 @@ export default {
               type: 'image',
               src: '/images/academy1.jpg',
               alt: '',
-              caption: 'Các bạn sinh viên demo dự án trước các mentor của công ty.'
+              caption: ''
             },
             {
               type: 'text',
@@ -293,11 +288,11 @@ export default {
               type: 'image',
               src: '/images/academy2.jpg',
               alt: '',
-              caption: 'Các bạn sinh viên demo dự án trước các mentor của công ty.'
+              caption: ''
             },
             {
               type: 'text',
-              content: '<p>Techzen - Người tử tế sẽ tạo ra những sản phẩm tử tế...</p>'
+              content: '<p>Techzen - Người tử tế sẽ tạo ra những sản phẩm tử tế.</p>'
             }
           ]
         },
@@ -326,19 +321,13 @@ export default {
               type: 'image',
               src: 'https://techzen.vn/wp-content/uploads/2025/03/481766616_631404866316039_3406295449497427355_n.jpg',
               alt: '',
-              caption: 'Các bạn sinh viên demo dự án trước các mentor của công ty.'
+              caption: 'Đoàn sinh viên đến từ Đại học Kyoto Sangyo.'
             },
             {
               type: 'text',
               content: `<div>
               <p>Buổi giao lưu diễn ra trong không khí thân thiện, cởi mở với nhiều hoạt động chia sẻ văn hóa và trò chơi gắn kết. Kết thúc chuyến thăm, đoàn sinh viên bày tỏ sự ngạc nhiên và ấn tượng trước sự phát triển mạnh mẽ của ngành công nghệ Việt Nam nói chung và Techzen nói riêng.</p>
               </div>`
-            },
-            {
-              type: 'image',
-              src: 'https://techzen.vn/wp-content/uploads/2025/03/481766616_631404866316039_3406295449497427355_n.jpg',
-              alt: '',
-              caption: 'Các bạn sinh viên demo dự án trước các mentor của công ty.'
             },
             {
               type: 'text',
@@ -351,7 +340,7 @@ export default {
               type: 'image',
               src: 'https://techzen.vn/wp-content/uploads/2025/03/482020942_631404876316038_6838269712623256208_n.jpg',
               alt: '',
-              caption: 'Các bạn sinh viên demo dự án trước các mentor của công ty.'
+              caption: 'Các bạn sinh viên trường Đại học Kyoto Sangyo.'
             },
             {
               type: 'text',

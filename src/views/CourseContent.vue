@@ -56,10 +56,6 @@
                   <span class="detail-icon pulse-animation"><i class="bi bi-geo-alt"></i></span>
                   <span class="detail-text">Offline tại văn phòng Techzen</span>
                 </div>
-                <div class="detail-item font-lato">
-                  <span class="detail-icon pulse-animation"><i class="bi bi-people"></i></span>
-                  <span class="detail-text">Thứ 3, 5, 7 (18:30 - 20:30)</span>
-                </div>
               </div>
               <p class="course-brief font-lato">Khóa học Python AI toàn diện giúp bạn làm chủ ngôn ngữ lập trình phổ biến nhất hiện nay, từ nền tảng cơ bản đến ứng dụng AI. Tập trung vào thực hành và dự án thực tế, phù hợp cho cả người mới bắt đầu và lập trình viên muốn nâng cao kỹ năng.</p>
               <div class="course-highlights">
@@ -97,10 +93,6 @@
                 <div class="detail-item font-lato">
                   <span class="detail-icon pulse-animation"><i class="bi bi-geo-alt"></i></span>
                   <span class="detail-text">Học offline tại văn phòng Techzen</span>
-                </div>
-                <div class="detail-item font-lato">
-                  <span class="detail-icon pulse-animation"><i class="bi bi-people"></i></span>
-                  <span class="detail-text">Thứ 2, 4, 6 (18:00 - 21:00)</span>
                 </div>
               </div>
               <p class="course-brief font-lato">Khóa học Java Back-end toàn diện giúp bạn làm chủ ngôn ngữ lập trình Java và xây dựng các ứng dụng web hiện đại, RESTful API và hệ thống backend mạnh mẽ. Phù hợp cho sinh viên ngành CNTT và những người muốn nâng cao kỹ năng lập trình.</p>
