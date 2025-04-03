@@ -366,51 +366,26 @@
         </h2>
         <div class="row d-flex justify-content-center">
           <div 
+            v-for="(instructor, index) in instructors" 
+            :key="index"
             v-motion
             :initial="{ opacity: 0, y: 100 }"
-            :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 800 } }"
+            :visible="{ opacity: 1, y: 0, transition: { delay: 200 + (index * 200), duration: 800 } }"
             class="col-lg-4 col-md-6 mb-4"
           >
             <div class="instructor-card-modern text-center h-100">
               <div class="instructor-card-inner">
                 <div class="instructor-image mb-3">
-                  <img src="../assets/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
+                  <img :src="instructor.image" :alt="instructor.name">
                 </div>
-                <h3 class="instructor-name">Huỳnh Hải Thiên</h3>
-                <p class="instructor-title">Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm</p>
+                <h3 class="instructor-name">{{ instructor.name }}</h3>
+                <p class="instructor-title">{{ instructor.title }}</p>
                 <div class="instructor-desc">
-                  <p>Thạc sĩ AI - Institute of Science Tokyo
-                        7+ năm kinh nghiệm AI tại Nhật Bản
-                        6+ năm đào tạo Fresher IT & AI</p>
+                  <p>{{ instructor.description }}</p>
                 </div>
                 <div class="instructor-social fade-in">
-                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                  <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div 
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 800 } }"
-            class="col-lg-4 col-md-6 mb-4"
-          >
-            <div class="instructor-card-modern text-center h-100">
-              <div class="instructor-card-inner">
-                <div class="instructor-image mb-3">
-                  <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
-                </div>
-                <h3 class="instructor-name">Nguyễn Ngọc Quang</h3>
-                <p class="instructor-title">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</p>
-                <div class="instructor-desc">
-                  <p>7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.
-                  6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên,
-                   từ các bạn mới bắt đầu đến những người đã có nền tảng.</p>
-                </div>
-                <div class="instructor-social fade-in">
-                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                  <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                  <a :href="instructor.linkedin" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                  <a :href="instructor.github" class="social-icon"><i class="bi bi-github"></i></a>
                 </div>
               </div>
             </div>
@@ -590,6 +565,32 @@ export default {
       animationObserver: null,
       featuredCourses: [
         // ... existing courses data
+      ],
+      instructors: [
+        {
+          name: 'Huỳnh Hải Thiên',
+          title: 'Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm',
+          description: 'Thạc sĩ AI - Institute of Science Tokyo 7+ năm kinh nghiệm AI tại Nhật Bản 6+ năm đào tạo Fresher IT & AI',
+          image: 'public/images/huynhhaithien.png',
+          linkedin: '#',
+          github: '#'
+        },
+        {
+          name: 'Nguyễn Ngọc Quang',
+          title: 'TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp',
+          description: '7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại. 6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên, từ các bạn mới bắt đầu đến những người đã có nền tảng.',
+          image: 'public/images/nguyenngocquang.png',
+          linkedin: '#',
+          github: '#'
+        },
+        // {
+        //   name: 'Nguyễn Ngọc Quang',
+        //   title: 'TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp',
+        //   description: '7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại. 6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên, từ các bạn mới bắt đầu đến những người đã có nền tảng.',
+        //   image: 'public/images/nguyenngocquang.png',
+        //   linkedin: '#',
+        //   github: '#'
+        // }
       ]
     }
   },
@@ -1651,8 +1652,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .instructor-image {
   position: relative;
-  width: 150px;
-  height: 210px;
+  width: 170px;
+  height: 230px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;

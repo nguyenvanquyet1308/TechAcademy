@@ -23,92 +23,60 @@
         </p>
         
         <div class="instructors-grid">
-          <div class="instructor-card" v-motion
-            :initial="{ opacity: 0, x: -100 }"
-            :enter="{ opacity: 1, x: 0, transition: { delay: 300, duration: 800 } }">
+          <div 
+            v-for="(instructor, index) in instructors" 
+            :key="instructor.id"
+            class="instructor-card" 
+            v-motion
+            :initial="{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }"
+            :enter="{ opacity: 1, x: 0, transition: { delay: 300 + (index * 200), duration: 800 } }"
+          >
             <div class="instructor-image">
-              <img src="../assets/images/nguyenngocquang.png" alt="Nguyễn Ngọc Quang">
-              <div class="image-overlay">
-                <div class="overlay-content">
-                  <div class="pulse-animation">Xem thêm</div>
-                </div>
-              </div>
+              <img :src="instructor.image" :alt="instructor.name">
             </div>
             <div class="instructor-content">
-              <h3 class="instructor-name text-gradient">Nguyễn Ngọc Quang</h3>
-              <p class="instructor-position">TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp</p>
-              <p class="instructor-description">
-              7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.
-              6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên,
-              từ các bạn mới bắt đầu đến những người đã có nền tảng.</p>
+              <h3 class="instructor-name">{{ instructor.name }}</h3>
+              <p class="instructor-position">{{ instructor.position }}</p>
+              
+              <ul class="infoTeacher">
+                <li v-for="(experience, expIndex) in instructor.experiences" :key="expIndex">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  {{ experience }}
+                </li>
+              </ul>
+              
               <div class="instructor-expertise">
                 <h4>Chuyên môn:</h4>
                 <div class="expertise-tags">
-                  <span class="tag-animation">Java</span>
-                  <span class="tag-animation">Spring Boot</span>
-                  <span class="tag-animation">MySQL</span>
-                  <span class="tag-animation">RESTful API</span>
+                  <span 
+                    v-for="(skill, skillIndex) in instructor.skills" 
+                    :key="skillIndex" 
+                    class="tag-animation"
+                  >
+                    {{ skill }}
+                  </span>
                 </div>
               </div>
+              
               <div class="instructor-social">
-                <a href="#" class="social-icon">
+                <a v-if="instructor.linkedin" :href="instructor.linkedin" class="social-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 </a>
-                <a href="#" class="social-icon">
+                <a v-if="instructor.twitter" :href="instructor.twitter" class="social-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
                 </a>
-                <a href="#" class="social-icon">
+                <a v-if="instructor.github" :href="instructor.github" class="social-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
                 </a>
               </div>
             </div>
           </div>
-
-          <div class="instructor-card" v-motion
-            :initial="{ opacity: 0, x: 100 }"
-            :enter="{ opacity: 1, x: 0, transition: { delay: 500, duration: 800 } }">
-            <div class="instructor-image">
-              <img src="../assets/images/huynhhaithien.png" alt="Huỳnh Hải Thiên">
-              <div class="image-overlay">
-                <div class="overlay-content">
-                  <div class="pulse-animation">Xem thêm</div>
-                </div>
-              </div>
-            </div>
-            <div class="instructor-content">
-              <h3 class="instructor-name text-gradient">Huỳnh Hải Thiên</h3>
-              <p class="instructor-position">Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm</p>
-              <p class="instructor-description">7 năm tập trung triển khai các dự án công nghệ cao cấp, từ xây dựng ứng dụng web đến các giải pháp doanh nghiệp phức tạp,6 năm đồng hành cùng hàng ngàn học viên,
-                 từ những người mới chập chững đến các lập trình viên chuyên nghiệp, xây dựng nền tảng vững chắc cho sự nghiệp IT.</p>
-              <div class="instructor-expertise">
-                <h4>Chuyên môn:</h4>
-                <div class="expertise-tags">
-                  <span class="tag-animation">Python</span>
-                  <span class="tag-animation">AI & ML</span>
-                  <span class="tag-animation">FastAPI</span>
-                  <span class="tag-animation">MySQL</span>
-                </div>
-              </div>
-              <div class="instructor-social">
-                <a href="#" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-                <a href="#" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                </a>
-                <a href="#" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
     <!-- Guest Lecturers Section -->
-    <section class="section guest-lecturers">
+    <!-- <section class="section guest-lecturers">
       <div class="container">
         <h2 class="section-title" v-motion
           :initial="{ opacity: 0, y: 100 }"
@@ -179,7 +147,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Why Our Instructors Section -->
     <section class="section why-instructors">
@@ -250,18 +218,8 @@
           <div class="why-image" v-motion
             :initial="{ opacity: 0, scale: 0.8 }"
             :enter="{ opacity: 1, scale: 1, transition: { delay: 400, duration: 800 } }">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Giảng viên TechAcademy">
-            <div class="floating-elements">
-              <div class="floating-element element-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              </div>
-              <div class="floating-element element-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              </div>
-              <div class="floating-element element-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-              </div>
-            </div>
+            <img src="/public/images/academy3.jpg" alt="Giảng viên TechAcademy">
+          
           </div>
         </div>
       </div>
@@ -278,19 +236,61 @@
           <router-link to="/register" class="btn btn-glow">Đăng ký ngay</router-link>
         </div>
       </div>
-      <div class="cta-particles">
-        <div class="particle particle-1"></div>
-        <div class="particle particle-2"></div>
-        <div class="particle particle-3"></div>
-        <div class="particle particle-4"></div>
-      </div>
     </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'InstructorsView'
+  name: 'InstructorsView',
+  data() {
+    return {
+      instructors: [
+        {
+          id: 1,
+          name: 'Nguyễn Ngọc Quang',
+          position: 'TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp',
+          image: 'public/images/nguyenngocquang.png',
+          experiences: [
+            '7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.',
+            '6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên, từ các bạn mới bắt đầu đến những người đã có nền tảng.'
+          ],
+          skills: ['Java', 'Spring Boot', 'MySQL', 'RESTful API'],
+          linkedin: '#',
+          twitter: '#',
+          github: '#'
+        },
+        {
+          id: 2,
+          name: 'Huỳnh Hải Thiên',
+          position: 'Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm',
+          image: 'public/images/huynhhaithien.png',
+          experiences: [
+            '7 năm tập trung triển khai các dự án công nghệ cao cấp, từ xây dựng ứng dụng web đến các giải pháp doanh nghiệp phức tạp.',
+            '6 năm đồng hành cùng hàng ngàn học viên, từ những người mới chập chững đến các lập trình viên chuyên nghiệp, xây dựng nền tảng vững chắc cho sự nghiệp IT.'
+          ],
+          skills: ['Python', 'AI & ML', 'FastAPI', 'MySQL'],
+          linkedin: '#',
+          twitter: '#',
+          github: '#'
+        },
+        // {
+        //   id: 3,
+        //   name: 'Huỳnh Hải Thiên',
+        //   position: 'Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm',
+        //   image: 'public/images/huynhhaithien.png',
+        //   experiences: [
+        //     '7 năm tập trung triển khai các dự án công nghệ cao cấp, từ xây dựng ứng dụng web đến các giải pháp doanh nghiệp phức tạp.',
+        //     '6 năm đồng hành cùng hàng ngàn học viên, từ những người mới chập chững đến các lập trình viên chuyên nghiệp, xây dựng nền tảng vững chắc cho sự nghiệp IT.'
+        //   ],
+        //   skills: ['Python', 'AI & ML', 'FastAPI', 'MySQL'],
+        //   linkedin: '#',
+        //   twitter: '#',
+        //   github: '#'
+        // }
+      ]
+    }
+  }
 }
 </script>
 
@@ -301,7 +301,11 @@ export default {
   padding: 60px 0;
   text-align: center;
 }
-
+.infoTeacher li{
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+}
 .page-title {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -402,13 +406,14 @@ export default {
 .instructor-name {
   font-size: 1.8rem;
   margin-bottom: 5px;
-  color: #212529;
+  color: blue;
 }
 
 .instructor-position {
-  color: #4a6bff;
-  font-size: 1.1rem;
+  color: blue;
+  font-size: 1.3rem;
   margin-bottom: 20px;
+  font-weight: 550;
 }
 
 .instructor-description {
@@ -809,51 +814,6 @@ export default {
 
 .animate-list-item:hover h4 {
   color: #4a6bff;
-}
-
-.floating-elements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.floating-element {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  color: #4a6bff;
-  font-size: 18px;
-  animation: float 6s infinite ease-in-out;
-  opacity: 0;
-  animation-fill-mode: forwards;
-}
-
-.element-1 {
-  top: 15%;
-  left: 10%;
-  animation-delay: 0.5s;
-}
-
-.element-2 {
-  top: 25%;
-  right: 15%;
-  animation-delay: 1s;
-}
-
-.element-3 {
-  bottom: 20%;
-  left: 15%;
-  animation-delay: 1.5s;
 }
 
 @keyframes float {
