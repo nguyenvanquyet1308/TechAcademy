@@ -617,16 +617,21 @@
         <button class="btn" @click="acceptTerms">Tôi đồng ý</button>
       </div>
     </div>
+
+    <!-- Facebook Chatbot -->
+    <FacebookChatbot />
   </div>
 </template>
 
 <script>
 import Testimonials from '@/components/ui/Testimonials.vue'
+import FacebookChatbot from '@/components/FacebookChatbot.vue'
 
 export default {
   name: 'CourseJavaSpringView',
   components: {
-    Testimonials
+    Testimonials,
+    FacebookChatbot
   },
   data() {
     return {
@@ -994,7 +999,9 @@ export default {
   color: #2c3e50;
   position: relative;
 }
-
+.course-overview p {
+  font-size: 18px;
+}
 .section-title:after {
   content: '';
   display: block;

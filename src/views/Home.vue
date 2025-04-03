@@ -563,20 +563,25 @@
         </div>
       </div>
     </section>
+
+    <!-- End of Register Form Section -->
+
+    <!-- Facebook Chatbot -->
+    <FacebookChatbot />
   </div>
 </template>
 
 <script>
-import ThreeJSHero from '@/components/ThreeJSHero.vue'
+import ParallaxEffect from '@/components/ParallaxEffect.vue'
 import AnimatedCount from '@/components/AnimatedCount.vue'
-import Testimonials from '@/components/ui/Testimonials.vue'
+import FacebookChatbot from '@/components/FacebookChatbot.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    ThreeJSHero,
+    ParallaxEffect,
     AnimatedCount,
-    Testimonials
+    FacebookChatbot
   },
   data() {
     return {
@@ -1684,12 +1689,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #4a6bff;
   font-weight: 600;
   margin-bottom: 1rem;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
 }
 
 .instructor-desc {
   color: #6c757d;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   opacity: 0.9;
 }
@@ -2026,4 +2031,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #6c757d;
   line-height: 1.6;
 }
+
+/* Đã chuyển CSS của Facebook Chatbot sang component riêng */
 </style> 

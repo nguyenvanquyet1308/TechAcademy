@@ -14,39 +14,6 @@
              :visible="{ opacity: 1, transition: { duration: 800 } }">
       <div class="container">
         <div class="company-intro-content">
-          <div class="company-cards">
-         
-            
-            <div class="company-card" v-motion
-                 :initial="{ opacity: 0, y: 50 }"
-                 :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }">
-              <div class="card-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
-              </div>
-              <h3>Technical</h3>
-              <p>Thể hiện cam kết cung cấp giải pháp công nghệ tiên tiến, chất lượng cao, luôn đổi mới để đáp ứng nhu cầu khách hàng và xu hướng xã hội của Techzen.</p>
-            </div>
-            
-            <div class="company-card" v-motion
-                 :initial="{ opacity: 0, y: 50 }"
-                 :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }">
-              <div class="card-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path></svg>
-              </div>
-              <h3>Zen Philosophy</h3>
-              <p>Zen bắt nguồn từ chữ Hán "Thiền" trong Phật Giáo Nhật Bản. "Thiền" theo quan niệm của Nhật Bản còn có nghĩa là 心(Tâm). Chúng tôi muốn phổ biến văn hóa "Thiền" vào Techzen.</p>
-            </div>
-            <div class="company-card" v-motion
-                 :initial="{ opacity: 0, y: 50 }"
-                 :visible="{ opacity: 1, y: 0, transition: { delay: 200, duration: 600 } }">
-              <div class="card-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              </div>
-              <h3>Global</h3>
-              <p>Chữ "Z" là chữ cái cuối cùng trong bảng chữ cái tiếng Anh, tượng trưng cho sự vươn ra toàn cầu. Techzen mong muốn trở thành một công ty công nghệ hàng đầu, cung cấp dịch vụ ổn định và an toàn cho khách hàng trên toàn cầu.</p>
-            </div>
-          </div>
-          
           <div class="academy-intro" v-motion
                :initial="{ opacity: 0, scale: 0.9 }"
                :visible="{ opacity: 1, scale: 1, transition: { delay: 800, duration: 800 } }">
@@ -55,18 +22,21 @@
               <p>Tại <strong>Techzen Academy</strong>, chúng tôi mang đến chương trình đào tạo lập trình toàn diện, <strong>từ nền tảng cơ bản đến các công nghệ hiện đại. Đội ngũ giảng viên giàu kinh nghiệm</strong> của chúng tôi sẽ hướng dẫn bạn một cách tỉ mỉ và chi tiết, giúp bạn nắm vững kiến thức và <strong>phát triển kỹ năng lập trình chuyên nghiệp</strong>.</p>
               <p>Chương trình học tập tại Techzen Academy không chỉ tập trung vào lý thuyết, mà còn chú trọng vào tình huống thực tế. Với sự chuẩn bị kỹ lưỡng từ Techzen Academy, bạn sẽ tự tin bước vào thế giới công nghệ và sẵn sàng chinh phục những cơ hội nghề nghiệp đầy triển vọng.</p>
               <div class="company-info">
-                <div class="info-item">
-                  <span class="info-label">Thành lập:</span>
-                  <span class="info-value">14/01/2022</span>
+                <div class="info-items-wrapper">
+                  <div class="info-item">
+                    <span class="info-label">Thành lập:</span>
+                    <span class="info-value">14/01/2022</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Địa chỉ:</span>
+                    <span class="info-value">06 Trần Phú, P. Thạch Thang, Q. Hải Châu, TP. Đà Nẵng</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Liên hệ:</span>
+                    <span class="info-value">0236 628 1189 | contact@techzen.vn</span>
+                  </div>
                 </div>
-                <div class="info-item">
-                  <span class="info-label">Địa chỉ:</span>
-                  <span class="info-value">06 Trần Phú, P. Thạch Thang, Q. Hải Châu, TP. Đà Nẵng</span>
-                </div>
-                <div class="info-item">
-                  <span class="info-label">Liên hệ:</span>
-                  <span class="info-value">0236 628 1189 | contact@techzen.vn</span>
-                </div>
+              <a href="https://techzen.vn/"  target="_blank">  <button class ="btn btn-primary">Thông tin thêm về Techzen</button></a>
               </div>
               
               <div class="profile-card">
@@ -115,35 +85,34 @@
                v-motion
                :initial="{ opacity: 0, x: -100 }"
                :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }">
-            <h2 class="animated-heading">Tổng quan về khóa học</h2>
-            <p>Khóa học của chúng tôi được thiết kế đặc biệt cho những người muốn nâng cao kỹ năng trong lĩnh vực công nghệ. Dù bạn là người mới bắt đầu hay đã có kinh nghiệm, chúng tôi đều có những chương trình phù hợp để giúp bạn phát triển.</p>
-            <p>Với phương pháp giảng dạy kết hợp giữa lý thuyết và thực hành, học viên sẽ được trang bị đầy đủ kiến thức và kỹ năng cần thiết để có thể tự tin ứng dụng vào công việc thực tế.</p>
-            <div class="overview-highlights">
-              <div class="highlight-item animated-item"
-                   v-motion
-                   :initial="{ opacity: 0, y: 30 }"
-                   :visible="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }">
-                <div class="highlight-icon pulse-animation">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                </div>
-                <div class="highlight-text">
-                  <h4>Quy mô lớp học</h4>
-                  <p>15-20 học viên/lớp</p>
-                </div>
-              </div>
-              <div class="highlight-item animated-item"
-                   v-motion
-                   :initial="{ opacity: 0, y: 30 }"
-                   :visible="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }">
-                <div class="highlight-icon pulse-animation">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                </div>
-                <div class="highlight-text">
-                  <h4>Chứng nhận</h4>
-                  <p>Được cấp sau khi hoàn thành khóa học</p>
-                </div>
+            <h2 class="animated-heading">Lợi ích khi tham gia khóa học</h2>
+            <div>
+              <p class="fs-5">Techzen Academy cung cấp khóa học lập trình thực chiến với học phí tiết kiệm, lịch học linh hoạt và giảng viên giàu kinh nghiệm. Học viên được thực hành dự án thực tế, đào tạo từ cơ bản đến nâng cao và hỗ trợ định hướng nghề nghiệp.
+                 Đây là môi trường lý tưởng để phát triển sự nghiệp trong ngành CNTT.</p>
+            </div>
+            <div class="benefits-list mt-2">
+            <div class="benefit-item">
+              <div class="benefit-number">01</div>
+              <div class="benefit-content">
+                <h3>Nâng cao cơ hội việc làm</h3>
+                <p> Tăng khả năng cạnh tranh trên thị trường lao động với các kỹ năng đang được nhiều nhà tuyển dụng tìm kiếm.</p>
               </div>
             </div>
+            <div class="benefit-item">
+              <div class="benefit-number">02</div>
+              <div class="benefit-content">
+                <h3>Cập nhật xu hướng công nghệ mới</h3>
+                <p>Luôn được cập nhật các kiến thức và công nghệ mới nhất trong ngành.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-number">03</div>
+              <div class="benefit-content">
+                <h3>Hỗ trợ cơ hội việc làm</h3>
+                <p>100% được thực tập tại Techzen</p>
+              </div>
+            </div>
+          </div>
           </div>
           <div class="overview-image"
                v-motion
@@ -204,7 +173,7 @@
                :initial="{ opacity: 0, x: 100 }"
                :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }" >
           <div class="agile-text">
-            <p>Tại Techzen, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm. Học viên sẽ được tiếp cận và làm quen với phương pháp làm việc chuyên nghiệp này ngay từ khi bắt đầu khóa học.</p>
+            <p>Tại Techzen Academy, chúng tôi áp dụng phương pháp Agile Scrum vào quy trình phát triển phần mềm và đào tạo. Phương pháp này giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và chất lượng sản phẩm. Học viên sẽ được tiếp cận và làm quen với phương pháp làm việc chuyên nghiệp này ngay từ khi bắt đầu khóa học.</p>
           </div>
           
           <div class="agile-image"  v-motion
@@ -259,7 +228,7 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="section benefits">
+    <!-- <section class="section benefits">
       <div class="container">
         <h2 class="section-title font-lato-bold">Lợi ích khi tham gia khóa học</h2>
         <div class="benefits-container">
@@ -298,7 +267,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Target Audience Section -->
     <section class="section target-audience">
@@ -350,12 +319,20 @@
         </div>
       </div>
     </section>
+
+    <!-- Facebook Chatbot -->
+    <FacebookChatbot />
   </div>
 </template>
 
 <script>
+import FacebookChatbot from '@/components/FacebookChatbot.vue'
+
 export default {
-  name: 'CourseIntroView'
+  name: 'CourseIntroView',
+  components: {
+    FacebookChatbot
+  }
 }
 </script>
 
@@ -517,12 +494,13 @@ export default {
 
 .benefit-content h3 {
   font-size: 1.3rem;
+  font-weight: 600;
   margin-bottom: 10px;
   color: #212529;
 }
 
 .benefit-content p {
-  color: #6c757d;
+  color: black;
 }
 
 .audience-cards {
@@ -692,7 +670,7 @@ export default {
   }
   
   .profile-image {
-    overflow: visible; /* Allow image to determine height */
+    height: 250px;
   }
 }
 
@@ -712,11 +690,12 @@ export default {
 }
 
 .agile-text p {
-  margin-bottom: 0;
   color: #495057;
   line-height: 1.7;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  text-align: justify;
 }
+
 
 .agile-image {
   position: relative;
@@ -784,7 +763,7 @@ export default {
 }
 
 .principle-content h4 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #212529;
   margin-bottom: 10px;
   font-weight: 600;
@@ -793,7 +772,7 @@ export default {
 .principle-content p {
   color: #6c757d;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
@@ -1263,9 +1242,8 @@ export default {
   padding: 20px;
   width: 100%;
 }
-
 .academy-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   color: #212529;
   position: relative;
@@ -1287,14 +1265,7 @@ export default {
 .academy-content p {
   color: #495057;
   line-height: 1.8;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-}
-
-.company-info {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #e9ecef;
+  font-size: 1.2rem;
 }
 
 .info-item {
@@ -1339,10 +1310,15 @@ export default {
 }
 
 .profile-image img {
-  display: block; /* Ensure block display */
-  width: 100%; /* Make image responsive */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Keep the radius if desired */
+  width:100%;
+  max-width: 550px;
+  height: 100%;
+  border-radius: 8px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .profile-content {
@@ -1412,7 +1388,7 @@ export default {
   top: 5px;
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #4a6bff, #6a3aef);
+  background: #3427c6;
   border-radius: 50%;
   box-shadow: 0 3px 10px rgba(74, 107, 255, 0.2);
 }
@@ -1421,7 +1397,7 @@ export default {
   content: '✓';
   position: absolute;
   left: 5px;
-  top: 1px;
+  top: 4px;
   color: white;
   font-weight: bold;
   font-size: 0.9rem;
@@ -1453,7 +1429,7 @@ export default {
   }
   
   .profile-image {
-    overflow: visible; /* Allow image to determine height */
+    height: 300px;
   }
   
   .profile-name {
@@ -1485,7 +1461,16 @@ export default {
   }
   
   .profile-image {
-    overflow: visible; /* Allow image to determine height */
+    height: 250px;
   }
 }
+
+.company-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+
 </style> 

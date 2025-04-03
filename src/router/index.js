@@ -15,6 +15,7 @@ import AdminCourses from '../views/admin/AdminCourses.vue'
 import AdminInstructors from '../views/admin/AdminInstructors.vue'
 import AdminBlog from '../views/admin/AdminBlog.vue'
 import AdminStudents from '../views/admin/AdminStudents.vue'
+import BlogDetail from '../views/BlogDetail.vue'
 
 const routes = [
   {
@@ -51,6 +52,12 @@ const routes = [
     path: '/reviews',
     name: 'reviews',
     component: Reviews
+  },
+  {
+    path: '/blog/:id',
+    name: 'BlogDetail',
+    component: BlogDetail,
+    props: true
   },
   {
     path: '/faq',
