@@ -571,7 +571,7 @@ export default {
           name: 'Huỳnh Hải Thiên',
           title: 'Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm',
           description: 'Thạc sĩ AI - Institute of Science Tokyo 7+ năm kinh nghiệm AI tại Nhật Bản 6+ năm đào tạo Fresher IT & AI',
-          image: 'public/images/huynhhaithien.png',
+          image: '/images/huynhhaithien.png',
           linkedin: '#',
           github: '#'
         },
@@ -579,7 +579,7 @@ export default {
           name: 'Nguyễn Ngọc Quang',
           title: 'TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp',
           description: '7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại. 6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên, từ các bạn mới bắt đầu đến những người đã có nền tảng.',
-          image: 'public/images/nguyenngocquang.png',
+          image: '/images/nguyenngocquang.png',
           linkedin: '#',
           github: '#'
         },
@@ -587,7 +587,7 @@ export default {
         //   name: 'Nguyễn Ngọc Quang',
         //   title: 'TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp',
         //   description: '7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại. 6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên, từ các bạn mới bắt đầu đến những người đã có nền tảng.',
-        //   image: 'public/images/nguyenngocquang.png',
+        //   image: '/images/nguyenngocquang.png',
         //   linkedin: '#',
         //   github: '#'
         // }

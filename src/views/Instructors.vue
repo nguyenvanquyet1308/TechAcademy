@@ -250,7 +250,7 @@ export default {
           id: 1,
           name: 'Nguyễn Ngọc Quang',
           position: 'TeamLeader Developer tại Techzen & Giảng viên IT chuyên nghiệp',
-          image: 'public/images/nguyenngocquang.png',
+          image: '/images/nguyenngocquang.png',
           experiences: [
             '7 năm tập trung vào các dự án web phức tạp, công nghệ hiện đại.',
             '6 năm truyền đạt kiến thức từ căn bản đến nâng cao cho hàng ngàn học viên, từ các bạn mới bắt đầu đến những người đã có nền tảng.'
@@ -264,7 +264,7 @@ export default {
           id: 2,
           name: 'Huỳnh Hải Thiên',
           position: 'Manager bộ phận phát triển giải pháp AI tại Techzen & Giảng viên IT giàu kinh nghiệm',
-          image: 'public/images/huynhhaithien.png',
+          image: '/images/huynhhaithien.png',
           experiences: [
             '7 năm tập trung triển khai các dự án công nghệ cao cấp, từ xây dựng ứng dụng web đến các giải pháp doanh nghiệp phức tạp.',
             '6 năm đồng hành cùng hàng ngàn học viên, từ những người mới chập chững đến các lập trình viên chuyên nghiệp, xây dựng nền tảng vững chắc cho sự nghiệp IT.'
